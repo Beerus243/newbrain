@@ -1,0 +1,97 @@
+"use client";
+import React from "react";
+import styles from "./body.module.css";
+import { FaCalendarAlt, FaChartLine, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
+// Importation de la navbar sticky
+
+type Formation = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+};
+
+const formations: Formation[] = [
+  { id: 1, title: "Formation 1", description: "Description de la formation 1.", image: "https://picsum.photos/seed/formation1/400/300" },
+  { id: 2, title: "Formation 2", description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
+  { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
+  { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
+  { id: 5, title: "Formation 5", description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
+  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" },
+];
+
+export default function Body() {
+  return (
+    <>     
+      <div className={styles.container}>
+        <h2 className={styles.title}>Nos offres et formations</h2>
+        <div className={styles.titre3}>
+          De nombreuses formations en intelligence artificielle existent pour répondre aux enjeux actuels des entreprises.
+        </div>
+        <div className={styles.grid}>
+          {formations.map((formation) => (
+            <div key={formation.id} className={styles.card}>
+              <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{formation.title}</h3>
+                <p className={styles.cardDescription}>{formation.description}</p>
+                <button className={styles.cardButton}>Voir plus</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Section des statistiques avec id pour le seuil sticky */}
+      <div id="statsContainer" className={styles.statsContainer}>
+        <div className={styles.statsGrid}>
+          <div className={styles.statsCard}>
+            <FaChartLine className={styles.icon} />
+            <div className={styles.statValue}>+27%</div>
+            <div className={styles.statLabel}>de Productivité</div>
+          </div>
+          <div className={styles.statsCard}>
+            <FaMoneyBillWave className={styles.icon} />
+            <div className={styles.statValue}>+30%</div>
+            <div className={styles.statLabel}>d'économie grâce à l'IA</div>
+          </div>
+          <div className={styles.statsCard}>
+            <FaUserGraduate className={styles.icon} />
+            <div className={styles.statValue}>+1000</div>
+            <div className={styles.statLabel}>apprenants formés</div>
+          </div>
+        </div>
+      </div>
+
+        
+           {/* Nouvelle section en bas du body */}
+           <section className={styles.newbrainSection}>
+        <h2 className={styles.newbrainTitle}>Newbrain</h2>
+        <div className={styles.subtitles}>
+          <span className={styles.subtitle}>Audit</span>
+          <span className={styles.subtitle}>Formation</span>
+          <span className={styles.subtitle}>Implémentation</span>
+          <span className={styles.subtitle}>Suivi des résultats</span>
+        </div>
+
+        {/* Card dédiée à l'Audit */}
+        <div className={styles.auditCard}>
+          <h3>Audit</h3>
+          <p>Informations relatives à l'audit.</p>
+        </div>
+
+        {/* Grille de cards (2 par 2) */}
+        <div className={styles.cardGrid}>
+          <div className={styles.card}>
+            <FaCalendarAlt className={styles.cardIcon} />
+            <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+          </div>
+          <div className={styles.card}>
+            <FaUserFriends className={styles.cardIcon} />
+            <h3 className={styles.cardGridTitle}>Acculturation</h3>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

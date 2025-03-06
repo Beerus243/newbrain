@@ -1,0 +1,113 @@
+.navbar {
+    background-color: #333;          /* Fond gris foncé */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;  /* Espace entre logo et menu */
+    align-items: center;
+  }
+  
+  .navLeft {
+    color: #333;
+  }
+  
+  .navRight {
+    /* La section droite pour le menu */
+    display: flex;
+    align-items: center;
+  }
+  
+  .navMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navItem {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: 1.5rem;
+  }
+  
+  .navItem:first-child {
+    margin-left: 0;
+  }
+  
+  .navItem:hover {
+    color: #f0a500;    /* Couleur au survol */
+    transform: translateY(-2px);
+  }
+
+.titre1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+    margin-top: 20;
+    color: black;
+    text-align: center;
+    background: aliceblue;
+    margin-left: 400;
+    margin-right: 400;
+}
+
+.titre2 {
+  font-family: "Poppins", sans-serif;
+    margin-top: 20;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.titre3 {
+    font-family: "Poppins", sans-serif;
+    margin-top: 20;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espace entre les boutons */
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .btnAppointment {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btnTraining {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  
