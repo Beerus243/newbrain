@@ -2,9 +2,21 @@
 import React, { useState, useEffect } from "react";
 import styles from "./body.module.css";
 import styles2 from "./responsive.module.css";
-import { FaCalendarAlt, FaChartLine, FaCheckCircle, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import {
+  FaCalendarAlt,
+  FaChartLine,
+  FaCheckCircle,
+  FaMoneyBillWave,
+  FaUserFriends,
+  FaUserGraduate
+} from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Importation des styles Swiper
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 type Formation = {
   id: number;
@@ -19,7 +31,7 @@ const formations: Formation[] = [
   { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
   { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
   { id: 5, title: "Formation 5", description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
-  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" },
+  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
 ];
 
 export default function Body() {
@@ -43,39 +55,31 @@ export default function Body() {
           De nombreuses formations en intelligence artificielle existent pour répondre aux enjeux actuels des entreprises.
         </div>
 
-        {isMobile ? (
-          // Swiper pour les écrans mobiles
-          <div className={styles2.swiperContainer}>
-            <Swiper spaceBetween={50} slidesPerView={1}>
-              {formations.map((formation) => (
-                <SwiperSlide key={formation.id}>
-                  <img src={formation.image} alt={formation.title} />
-                  <div className="legend">
-                    <h3>{formation.title}</h3>
-                    <p>{formation.description}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        ) : (
-          // Grid pour les écrans plus larges
-          <div className={styles.grid}>
+        <div className={styles2.swiperContainer}>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            className={styles2.styledSwiper}
+          >
             {formations.map((formation) => (
-              <div key={formation.id} className={styles.card}>
-                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{formation.title}</h3>
-                  <p className={styles.cardDescription}>{formation.description}</p>
-                  <button className={styles.cardButton}>Voir plus</button>
+              <SwiperSlide key={formation.id} className={styles2.swiperSlide}>
+                <img src={formation.image} alt={formation.title} className={styles2.slideImage} />
+                <div className={styles2.slideContent}>
+                  <h3>{formation.title}</h3>
+                  <p>{formation.description}</p>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
-        )}
+          </Swiper>
+        </div>
       </div>
 
-      {/* La suite de votre composant Body (statistiques, Newbrain, etc.) peut suivre ici */}
+      {/* La suite de votre composant Body (statistiques, Newbrain, etc.) */}
       <div id="statsContainer" className={styles.statsContainer}>
         <div className={styles.statsGrid}>
           <div className={styles.statsCard}>

@@ -102,6 +102,11 @@
   top: 9px;
 }
 
+.headerText {
+  text-align: center;
+  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Affiche le menu hamburger sur les petits écrans */
@@ -135,7 +140,17 @@
   }
 
   .navButtonContainer {
+    display: none; /* Cache le bouton dans le conteneur principal */
+  }
+
+  .navItemMobile {
+    display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
+    justify-content: center; /* Centrer le bouton */
+  }
+
+  .headerText {
+    display: none;
   }
 }
 
@@ -159,7 +174,12 @@
   }
 
   .navButtonContainer {
+    display: flex; /* Affiche le bouton dans le conteneur principal */
     margin-left: 1rem;
+  }
+
+  .navItemMobile {
+    display: none; /* Cache le bouton dans le menu hamburger */
   }
 }
 
@@ -276,10 +296,6 @@
     display: none;
   }
 }
-
-
-
-
 
 /* Styles généraux pour les téléphones */
 @media (max-width: 768px) {
