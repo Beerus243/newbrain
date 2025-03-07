@@ -1,0 +1,136 @@
+/* Styles généraux pour les téléphones */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
+    gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .statsContainer {
+    padding: 2rem 1rem;
+  }
+
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statsCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .newbrainSection {
+    padding: 20px 10px;
+  }
+
+  .newbrainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitles {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .auditCard {
+    padding: 15px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
+    gap: 10px;
+  }
+
+  .cardIcon {
+    font-size: 2rem;
+  }
+
+  .cardGridTitle {
+    font-size: 1rem;
+  }
+
+  /* Styles pour le menu hamburger */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navRight {
+    display: none; /* Cache les éléments de navigation écrits */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .navMenuContainer {
+    display: none;
+  }
+
+  .navMenuContainer.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    z-index: 1000;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    padding: 10px 0;
+  }
+}

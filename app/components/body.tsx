@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./body.module.css";
+import styles2 from "./responsive.module.css";
 import { FaCalendarAlt, FaChartLine, FaCheckCircle, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
 
 type Formation = {

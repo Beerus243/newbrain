@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.container1 {
+body {
+  background-color: #171717; /* Fond de couleur #171717 */
+  color: #f0f0f0; /* Couleur de texte claire pour contraste */
+}
+
+.container {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -11,7 +16,7 @@
   margin-top: 50px;
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: #f0f0f0; /* Couleur de texte claire */
 }
 
 .banner {
@@ -40,6 +45,8 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2a2a2a; /* Fond de carte plus sombre */
+  color: #f0f0f0; /* Couleur de texte claire */
 }
 
 .card:hover {
@@ -55,19 +62,19 @@
 
 .cardContent {
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #333; /* Fond de contenu de carte plus sombre */
 }
 
 .cardTitle {
   margin: 0;
   font-size: 1.2rem;
-  color: black;
+  color: #f0f0f0; /* Couleur de texte claire */
   font-family: "Poppins", sans-serif;
 }
 
 .cardDescription {
   margin: 0;
-  color: #555;
+  color: #ccc; /* Couleur de texte légèrement plus claire */
   font-size: 0.9rem;
 }
 
@@ -95,7 +102,7 @@
 .titre3 {
   font-family: "Poppins", sans-serif;
   margin-top: 20;
-  color: white;
+  color: #f0f0f0; /* Couleur de texte claire */
   text-align: center;
 }
 
@@ -112,13 +119,14 @@
 }
 
 .statsCard {
-  background-color: #fff;
+  background-color: #2a2a2a; /* Fond de carte plus sombre */
   border-radius: 12px;
   padding: 1.5rem;
   width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  color: #f0f0f0; /* Couleur de texte claire */
 }
 
 .statsCard:hover {
@@ -142,7 +150,7 @@
 
 .statLabel {
   font-size: 1.1rem;
-  color: #555;
+  color: #ccc; /* Couleur de texte légèrement plus claire */
   font-weight: 500;
 }
 
@@ -168,10 +176,10 @@
 .newbrainTitle {
   font-family: "Poppins", sans-serif;
   margin-top: 20;
-  color:   black; /* Changer la couleur pour correspondre au fond */
+  color: #f0f0f0; /* Couleur de texte claire */
   text-align: center;
-  font-size: 3.5rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 /* Sous-titres avec soulignement */
@@ -187,7 +195,7 @@
   font-weight: 600;
   position: relative;
   padding-bottom: 5px;
-  color:  black; /* Changer la couleur pour correspondre au fond */
+  color: #f0f0f0; /* Couleur de texte claire */
 }
 
 .subtitle::after {
@@ -204,8 +212,11 @@
 .auditCard {
   margin-bottom: 20px;
   padding: 20px;
+  border: 1px solid #444; /* Bordure plus sombre */
+  border-radius: 8px;
+  background: #2a2a2a; /* Fond de carte plus sombre */
   text-align: center;
-  color: #333;
+  color: #f0f0f0; /* Couleur de texte claire */
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
 }
@@ -220,13 +231,13 @@
 
 /* Card de la grille avec icône et titre */
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #444; /* Bordure plus sombre */
   padding: 20px;
   border-radius: 8px;
-  background: #fefefe;
+  background: #2a2a2a; /* Fond de carte plus sombre */
   text-align: center;
   width: 100%;
-  color: #333;
+  color: #f0f0f0; /* Couleur de texte claire */
 }
 
 .cardIcon {
@@ -238,5 +249,5 @@
 .cardGridTitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #222;
+  color: #f0f0f0; /* Couleur de texte claire */
 }
