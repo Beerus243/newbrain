@@ -10,8 +10,11 @@
   }
 
   .grid {
-    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
-    gap: 10px;
+    display: none; /* Cache la grille d'images */
+  }
+
+  .swiper-container {
+    display: block; /* Affiche le carrousel */
   }
 
   .card {
@@ -101,14 +104,43 @@
   .hamburger {
     display: block;
     cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 21px;
   }
 
   .hamburger div {
-    width: 25px;
+    width: 100%;
     height: 3px;
-    background-color: #f0f0f0;
-    margin: 5px;
+    background-color: #fff;
+    position: absolute;
     transition: all 0.3s ease;
+  }
+
+  .hamburger div:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger div:nth-child(2) {
+    top: 9px;
+  }
+
+  .hamburger div:nth-child(3) {
+    top: 18px;
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
   }
 
   .navMenuContainer {
@@ -132,5 +164,48 @@
 
   .navItem {
     padding: 10px 0;
+  }
+
+  .navButtonContainer {
+    margin-top: 10px;
+  }
+
+  .navButton {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .navButton:hover {
+    background-color: #e65c00;
+  }
+}
+
+/* Styles pour les écrans plus larges */
+@media (min-width: 769px) {
+  .navRight {
+    display: flex; /* Affiche les éléments de navigation écrits */
+  }
+
+  .hamburger {
+    display: none; /* Cache le menu hamburger */
+  }
+
+  .navMenuContainer {
+    display: flex; /* Affiche le conteneur de menu */
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex; /* Affiche le menu */
+    flex-direction: row;
+  }
+
+  .navButtonContainer {
+    margin-left: 1rem;
   }
 }

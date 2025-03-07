@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import responsiveStyles from "./responsive.module.css";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,14 +17,13 @@ const Navigation = () => {
           {/* Logo à gauche */}
           <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
         </div>
-        <div className={responsiveStyles.hamburger} onClick={toggleMenu}>
+        <div className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`} onClick={toggleMenu}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <div className={`${styles.navRight} ${menuOpen ? responsiveStyles.active : ""}`}>
-          {/* Box pour les liens */}
-          <div className={`${styles.navMenuContainer} ${menuOpen ? responsiveStyles.active : ""}`}>
+        <div className={`${styles.navRight} ${menuOpen ? styles.active : ""}`}>
+          <div className={`${styles.navMenuContainer} ${menuOpen ? styles.active : ""}`}>
             <ul className={styles.navMenu}>
               <li className={styles.navItem}>Home</li>
               <li className={styles.navItem}>Formation Ai</li>
@@ -33,23 +31,24 @@ const Navigation = () => {
               <li className={styles.navItem}>Ressource</li>
             </ul>
           </div>
-          {/* Bouton "Prendre un rendez-vous" */}
           <div className={styles.navButtonContainer}>
             <button className={styles.navButton}>Prendre un rendez-vous</button>
           </div>
         </div>
       </nav>
-      <h6 className={styles.titre1}> FORMATION IA POUR PROFESSIONNELS & PARTICULIERS </h6>
-      <h1 className={styles.titre2}> Gagnez en productivité<br /> grace à l'IA </h1>
-      <div className={styles.buttons}>
-        <button className={`${styles.button} ${styles.btnAppointment}`}>
-          Prenez rendez-vous
-        </button>
-        <button className={`${styles.button} ${styles.btnTraining}`}>
-          Nos formations
-        </button>
+      <div className={styles.headerText}>
+        <h6 className={styles.titre1}>FORMATION IA POUR PROFESSIONNELS & PARTICULIERS</h6>
+        <h1 className={styles.titre2}>Gagnez en productivité<br />grâce à l'IA</h1>
+        <div className={styles.buttons}>
+          <button className={`${styles.button} ${styles.btnAppointment}`}>
+            Prenez rendez-vous
+          </button>
+          <button className={`${styles.button} ${styles.btnTraining}`}>
+            Nos formations
+          </button>
+        </div>
+        <p className={styles.titre3}>Ils ont été formés par nous</p>
       </div>
-      <p className={styles.titre3}> ils ont été former par nous</p>
     </>
   );
 };

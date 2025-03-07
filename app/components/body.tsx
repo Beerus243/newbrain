@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./body.module.css";
 import styles2 from "./responsive.module.css";
 import { FaCalendarAlt, FaChartLine, FaCheckCircle, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 type Formation = {
   id: number;
@@ -21,28 +23,59 @@ const formations: Formation[] = [
 ];
 
 export default function Body() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    // Vérifier au chargement
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <>     
+    <>
       <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
           De nombreuses formations en intelligence artificielle existent pour répondre aux enjeux actuels des entreprises.
         </div>
-        <div className={styles.grid}>
-          {formations.map((formation) => (
-            <div key={formation.id} className={styles.card}>
-              <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{formation.title}</h3>
-                <p className={styles.cardDescription}>{formation.description}</p>
-                <button className={styles.cardButton}>Voir plus</button>
+
+        {isMobile ? (
+          // Swiper pour les écrans mobiles
+          <div className={styles2.swiperContainer}>
+            <Swiper spaceBetween={50} slidesPerView={1}>
+              {formations.map((formation) => (
+                <SwiperSlide key={formation.id}>
+                  <img src={formation.image} alt={formation.title} />
+                  <div className="legend">
+                    <h3>{formation.title}</h3>
+                    <p>{formation.description}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : (
+          // Grid pour les écrans plus larges
+          <div className={styles.grid}>
+            {formations.map((formation) => (
+              <div key={formation.id} className={styles.card}>
+                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{formation.title}</h3>
+                  <p className={styles.cardDescription}>{formation.description}</p>
+                  <button className={styles.cardButton}>Voir plus</button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
-      
-      {/* Section combinée des statistiques et Newbrain avec id pour le seuil sticky */}
+
+      {/* La suite de votre composant Body (statistiques, Newbrain, etc.) peut suivre ici */}
       <div id="statsContainer" className={styles.statsContainer}>
         <div className={styles.statsGrid}>
           <div className={styles.statsCard}>
@@ -77,23 +110,29 @@ export default function Body() {
             <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
           </div>
 
-          {/* Grille de cards (2 par 2) */}
+          {/* Grille de cards pour l'Audit */}
           <div className={styles.cardGrid}>
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
-              <p className={styles.cardGridDescription}> <FaCheckCircle style={{color:'green', marginRight: '8px'}}/> Mise en place d'un questionnaire en ligne pour évaluer
-                la maturité, la vision et les attentes des collaborateurs en matière d'IA.
+              <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.
               </p>
-              <p className={styles.cardGridDescription}> Définition des priorités et choix des cas d'usages à prioriser .</p>
+              <p className={styles.cardGridDescription}>
+                Définition des priorités et choix des cas d'usages à prioriser.
+              </p>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles </h3>
-              <p className={styles.cardGridDescription}> Utilisation de matrices d'évaluation. Scoring des données.</p>
+              <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles</h3>
+              <p className={styles.cardGridDescription}>
+                Utilisation de matrices d'évaluation et scoring des données.
+              </p>
             </div>
           </div>
           <br />
+
           {/* Card dédiée à la Formation */}
           <div className={styles.auditCard}>
             <h3>Formation</h3>
@@ -101,7 +140,7 @@ export default function Body() {
           </div>
           <br />
 
-          {/* Grille de cards (2 par 2) */}
+          {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
@@ -112,23 +151,12 @@ export default function Body() {
               <h3 className={styles.cardGridTitle}>Acculturation</h3>
             </div>
           </div>
-            <br />
+          <br />
+
           {/* Card dédiée à l'Implémentation */}
           <div className={styles.auditCard}>
             <h3>Implémentation</h3>
             <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
-          </div>
-
-          {/* Grille de cards (2 par 2) */}
-          <div className={styles.cardGrid}>
-            <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Acculturation</h3>
-            </div>
           </div>
         </section>
       </div>

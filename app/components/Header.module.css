@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
 .navbar {
   background-color: #333;
   opacity: 0.9;
@@ -10,9 +12,10 @@
   border-radius: 0.7rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 98%;
+  width: 95%; /* Ajustez la largeur pour éviter le dépassement */
+  max-width: 1200px; /* Ajoutez une largeur maximale pour les grands écrans */
   z-index: 1000;
-  height: 4.5rem;
+  height: 6.5rem;
   top: 30px;
 }
 
@@ -20,6 +23,10 @@
   background-color: #585858; /* Couleur de fond de la box */
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ajouté pour espacer les éléments */
+  flex-wrap: wrap; /* Ajouté pour gérer le débordement */
 }
 
 .navMenu {
@@ -37,6 +44,9 @@
 
 .navButtonContainer {
   margin-left: 1rem;
+  flex-shrink: 0; /* Empêche le bouton de rétrécir */
+  display: flex; /* Ajouté pour aligner le bouton correctement */
+  align-items: center; /* Ajouté pour aligner le bouton verticalement */
 }
 
 .navButton {
@@ -47,115 +57,438 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap; /* Empêche le texte de se casser */
 }
 
 .navButton:hover {
   background-color: #e65c00;
 }
 
+.hamburger {
+  display: none; /* Cache le menu hamburger par défaut */
+}
 
-  .navLeft {
-    color: #333;
-  }
-  
-  .navRight {
-    /* La section droite pour le menu */
-    display: flex;
-    align-items: center;
-  }
-  
-  .navMenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navItem {
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.hamburger div:nth-child(1) {
+  top: 0;
+}
+
+.hamburger div:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger div:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Affiche le menu hamburger sur les petits écrans */
     cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-    margin-left: 1.5rem;
-  }
-  
-  .navItem:first-child {
-    margin-left: 0;
-  }
-  
-  .navItem:hover {
-    color: #f0a500;    /* Couleur au survol */
-    transform: translateY(-2px);
+    position: relative;
+    width: 30px;
+    height: 21px;
   }
 
+  .navRight {
+    display: none; /* Cache les éléments de navigation écrits */
+  }
+
+  .navMenuContainer.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    z-index: 1000;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    padding: 10px 0;
+  }
+
+  .navButtonContainer {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Cache le menu hamburger sur les grands écrans */
+  }
+
+  .navRight {
+    display: flex; /* Affiche les éléments de navigation écrits */
+  }
+
+  .navMenuContainer {
+    display: flex; /* Affiche le conteneur de menu */
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex; /* Affiche le menu */
+    flex-direction: row;
+  }
+
+  .navButtonContainer {
+    margin-left: 1rem;
+  }
+}
+
+.navLeft {
+  color: #333;
+}
+
+.navRight {
+  /* La section droite pour le menu */
+  display: flex;
+  align-items: center;
+}
+
+.navMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.navItem:first-child {
+  margin-left: 0;
+}
+
+.navItem:hover {
+  color: #f0a500;    /* Couleur au survol */
+  transform: translateY(-2px);
+}
 
 .titre1 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-    margin-top: 200;
-    color: black;
-    text-align: center;
-    background: aliceblue;
-    margin-left: 400;
-    margin-right: 400;
+  margin-top: 200;
+  color: black;
+  text-align: center;
+  background: aliceblue;
+  margin-left: 400;
+  margin-right: 400;
 }
 
 .titre2 {
   font-family: "Poppins", sans-serif;
-    margin-top: 20;
-    color: white;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
+  margin-top: 20;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .titre3 {
-    font-family: "Poppins", sans-serif;
-    margin-top: 20;
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espace entre les boutons */
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.btnAppointment {
+  background-color: #007bff;
+  color: white;
+}
+
+.btnTraining {
+  background-color: #28a745;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Conteneur pour le texte du header */
+.headerText {
+  text-align: center;
+  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
+}
+
+/* Masquer le texte du header sur petit écran */
+@media (max-width: 768px) {
+  .headerText {
+    display: none;
+  }
 }
 
 
 
-.buttons {
+
+
+/* Styles généraux pour les téléphones */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .grid {
+    display: none; /* Cache la grille d'images */
+  }
+
+  .swiper-container {
+    display: block; /* Affiche le carrousel */
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .statsContainer {
+    padding: 2rem 1rem;
+  }
+
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statsCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .newbrainSection {
+    padding: 20px 10px;
+  }
+
+  .newbrainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitles {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .auditCard {
+    padding: 15px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
+    gap: 10px;
+  }
+
+  .cardIcon {
+    font-size: 2rem;
+  }
+
+  .cardGridTitle {
+    font-size: 1rem;
+  }
+
+  /* Styles pour le menu hamburger */
+  .navbar {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* espace entre les boutons */
-    margin-top: 20px;
-    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  .button {
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
+
+  .navRight {
+    display: none; /* Cache les éléments de navigation écrits */
+  }
+
+  .hamburger {
+    display: block;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s ease-in-out;
+    position: relative;
+    width: 30px;
+    height: 21px;
   }
-  
-  .btnAppointment {
-    background-color: #007bff;
-    color: white;
+
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease;
   }
-  
-  .btnTraining {
-    background-color: #28a745;
-    color: white;
+
+  .hamburger div:nth-child(1) {
+    top: 0;
   }
-  
-  .button:hover {
-    transform: scale(1.05);
+
+  .hamburger div:nth-child(2) {
+    top: 9px;
   }
-  
-  .button:active {
-    transform: scale(0.95);
+
+  .hamburger div:nth-child(3) {
+    top: 18px;
   }
-  
-  
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+
+  .navMenuContainer {
+    display: none;
+  }
+
+  .navMenuContainer.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    z-index: 1000;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    padding: 10px 0;
+  }
+
+  .navButtonContainer {
+    margin-top: 10px;
+  }
+
+  .navButton {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .navButton:hover {
+    background-color: #e65c00;
+  }
+}
+
+/* Styles pour les écrans plus larges */
+@media (min-width: 769px) {
+  .navRight {
+    display: flex; /* Affiche les éléments de navigation écrits */
+  }
+
+  .hamburger {
+    display: none; /* Cache le menu hamburger */
+  }
+
+  .navMenuContainer {
+    display: flex; /* Affiche le conteneur de menu */
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex; /* Affiche le menu */
+    flex-direction: row;
+  }
+
+  .navButtonContainer {
+    margin-left: 1rem;
+  }
+}
