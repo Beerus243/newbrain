@@ -26,7 +26,6 @@ const Navigation = () => {
     </div>
   </div>
 </nav>
-    <div className={styles.container3}>
     <h6 className={styles.titre1}> FORMATION IA POUR PROFESSIONNELS & PARTICULIERS </h6>
     <h1 className={styles.titre2}> Gagnez en productivité<br /> grace à l'IA </h1>
     <div className={styles.buttons}>
@@ -38,7 +37,6 @@ const Navigation = () => {
         </button>
       </div>
       <p className={styles.titre3}> ils ont été former par nous</p>
-      </div>
     </>
   );
 };
