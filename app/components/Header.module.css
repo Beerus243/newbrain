@@ -1,12 +1,59 @@
 .navbar {
-    background-color: #333;          /* Fond gris foncé */
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;  /* Espace entre logo et menu */
-    align-items: center;
-  }
-  
+  background-color: #333;
+  opacity: 0.9;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  border-radius: 0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  z-index: 1000;
+  height: 4.5rem;
+  top: 30px;
+}
+
+.navMenuContainer {
+  background-color: #585858; /* Couleur de fond de la box */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-right: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navButtonContainer {
+  margin-left: 1rem;
+}
+
+.navButton {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #e65c00;
+}
+
+
   .navLeft {
     color: #333;
   }
@@ -44,10 +91,11 @@
     transform: translateY(-2px);
   }
 
+
 .titre1 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-    margin-top: 20;
+    margin-top: 200;
     color: black;
     text-align: center;
     background: aliceblue;

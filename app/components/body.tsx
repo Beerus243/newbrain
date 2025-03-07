@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./body.module.css";
-import { FaCalendarAlt, FaChartLine, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
+import { FaCalendarAlt, FaChartLine, FaCheckCircle, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
 
 type Formation = {
   id: number;
@@ -22,7 +22,7 @@ const formations: Formation[] = [
 export default function Body() {
   return (
     <>     
-      <div className={styles.container}>
+      <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
           De nombreuses formations en intelligence artificielle existent pour répondre aux enjeux actuels des entreprises.
@@ -80,11 +80,16 @@ export default function Body() {
           <div className={styles.cardGrid}>
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+              <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
+              <p className={styles.cardGridDescription}> <FaCheckCircle style={{color:'green', marginRight: '8px'}}/> Mise en place d'un questionnaire en ligne pour évaluer
+                la maturité, la vision et les attentes des collaborateurs en matière d'IA.
+              </p>
+              <p className={styles.cardGridDescription}> Définition des priorités et choix des cas d'usages à prioriser .</p>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Acculturation</h3>
+              <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles </h3>
+              <p className={styles.cardGridDescription}> Utilisation de matrices d'évaluation. Scoring des données.</p>
             </div>
           </div>
           <br />

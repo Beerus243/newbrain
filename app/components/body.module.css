@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.container {
+.container1 {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -162,7 +162,7 @@
   padding: 40px 20px;
   background: linear-gradient(135deg, #4d65ff, #6b8cff); /* Utiliser le même fond que statsContainer */
   margin-top: 40px;
-  border-top: 2px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .newbrainTitle {
@@ -170,8 +170,8 @@
   margin-top: 20;
   color:   black; /* Changer la couleur pour correspondre au fond */
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 500;
 }
 
 /* Sous-titres avec soulignement */
@@ -204,10 +204,10 @@
 .auditCard {
   margin-bottom: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   text-align: center;
   color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
 }
 
 /* Grille de cards pour la nouvelle section (2 par 2) */
