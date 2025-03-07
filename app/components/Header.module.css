@@ -20,13 +20,13 @@
 }
 
 .navMenuContainer {
-  background-color: #585858; /* Couleur de fond de la box */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Ajouté pour espacer les éléments */
   flex-wrap: wrap; /* Ajouté pour gérer le débordement */
+  background-color: #585858; /* Couleur de fond de la boîte */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
 .navMenu {
@@ -140,11 +140,6 @@
   }
 
   .navButtonContainer {
-    display: none; /* Cache le bouton dans le conteneur principal */
-  }
-
-  .navItemMobile {
-    display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
   }
@@ -176,10 +171,6 @@
   .navButtonContainer {
     display: flex; /* Affiche le bouton dans le conteneur principal */
     margin-left: 1rem;
-  }
-
-  .navItemMobile {
-    display: none; /* Cache le bouton dans le menu hamburger */
   }
 }
 
