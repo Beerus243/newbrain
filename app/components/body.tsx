@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "./body.module.css";
 import { FaCalendarAlt, FaChartLine, FaMoneyBillWave, FaUserFriends, FaUserGraduate } from "react-icons/fa";
-// Importation de la navbar sticky
 
 type Formation = {
   id: number;
@@ -42,7 +41,7 @@ export default function Body() {
         </div>
       </div>
       
-      {/* Section des statistiques avec id pour le seuil sticky */}
+      {/* Section combinée des statistiques et Newbrain avec id pour le seuil sticky */}
       <div id="statsContainer" className={styles.statsContainer}>
         <div className={styles.statsGrid}>
           <div className={styles.statsCard}>
@@ -61,37 +60,72 @@ export default function Body() {
             <div className={styles.statLabel}>apprenants formés</div>
           </div>
         </div>
+
+        <section className={styles.newbrainSection}>
+          <h2 className={styles.newbrainTitle}>Newbrain</h2>
+          <div className={styles.subtitles}>
+            <span className={styles.subtitle}>Audit</span>
+            <span className={styles.subtitle}>Formation</span>
+            <span className={styles.subtitle}>Implémentation</span>
+            <span className={styles.subtitle}>Suivi des résultats</span>
+          </div>
+
+          {/* Card dédiée à l'Audit */}
+          <div className={styles.auditCard}>
+            <h3>Audit</h3>
+            <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
+          </div>
+
+          {/* Grille de cards (2 par 2) */}
+          <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Acculturation</h3>
+            </div>
+          </div>
+          <br />
+          {/* Card dédiée à la Formation */}
+          <div className={styles.auditCard}>
+            <h3>Formation</h3>
+            <p>Acculturation et formation de vos équipes aux outils IA métiers</p>
+          </div>
+          <br />
+
+          {/* Grille de cards (2 par 2) */}
+          <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Acculturation</h3>
+            </div>
+          </div>
+            <br />
+          {/* Card dédiée à l'Implémentation */}
+          <div className={styles.auditCard}>
+            <h3>Implémentation</h3>
+            <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
+          </div>
+
+          {/* Grille de cards (2 par 2) */}
+          <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Acculturation</h3>
+            </div>
+          </div>
+        </section>
       </div>
-
-        
-           {/* Nouvelle section en bas du body */}
-           <section className={styles.newbrainSection}>
-        <h2 className={styles.newbrainTitle}>Newbrain</h2>
-        <div className={styles.subtitles}>
-          <span className={styles.subtitle}>Audit</span>
-          <span className={styles.subtitle}>Formation</span>
-          <span className={styles.subtitle}>Implémentation</span>
-          <span className={styles.subtitle}>Suivi des résultats</span>
-        </div>
-
-        {/* Card dédiée à l'Audit */}
-        <div className={styles.auditCard}>
-          <h3>Audit</h3>
-          <p>Informations relatives à l'audit.</p>
-        </div>
-
-        {/* Grille de cards (2 par 2) */}
-        <div className={styles.cardGrid}>
-          <div className={styles.card}>
-            <FaCalendarAlt className={styles.cardIcon} />
-            <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
-          </div>
-          <div className={styles.card}>
-            <FaUserFriends className={styles.cardIcon} />
-            <h3 className={styles.cardGridTitle}>Acculturation</h3>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
