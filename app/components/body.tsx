@@ -11,7 +11,7 @@ import {
   FaUserGraduate
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 // Importation des styles Swiper
 import "swiper/css";
@@ -26,7 +26,7 @@ type Formation = {
 };
 
 const formations: Formation[] = [
-  { id: 1, title: "Formation 1", description: "Description de la formation 1.", image: "https://picsum.photos/seed/formation1/400/300" },
+  { id: 1, title: "Formation 1", description: "inscrivez vous rapidement.", image: "https://picsum.photos/seed/formation1/400/300" },
   { id: 2, title: "Formation 2", description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
   { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
   { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
@@ -61,7 +61,7 @@ export default function Body() {
           // Swiper stylisé pour les écrans mobiles
           <div className={styles2.swiperContainer}>
             <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
+              modules={[Navigation, Pagination, ]}
               spaceBetween={30}
               slidesPerView={1}
               navigation
@@ -76,6 +76,7 @@ export default function Body() {
                   <div className={styles2.slideContent}>
                     <h3>{formation.title}</h3>
                     <p>{formation.description}</p>
+                    <button className={styles.cardButton}>Voir plus</button>
                   </div>
                 </SwiperSlide>
               ))}
