@@ -164,9 +164,9 @@
 
 /* Conteneur pour le texte du header */
 .headerText {
+  padding-bottom: 50px;
   justify-content: center;
   text-align: center;
-  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
 }
 
 
