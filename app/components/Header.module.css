@@ -16,7 +16,7 @@
   max-width: 1200px; /* Ajoutez une largeur maximale pour les grands écrans */
   z-index: 1000;
   height: 6.5rem;
-  top: 30px;
+  top: 20px;
 }
 
 .navMenuContainer {
@@ -64,119 +64,6 @@
   background-color: #e65c00;
 }
 
-.hamburger {
-  display: none; /* Cache le menu hamburger par défaut */
-}
-
-.hamburger div {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-.hamburger div:nth-child(1) {
-  top: 0;
-}
-
-.hamburger div:nth-child(2) {
-  top: 9px;
-}
-
-.hamburger div:nth-child(3) {
-  top: 18px;
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 9px;
-}
-
-.headerText {
-  text-align: center;
-  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Affiche le menu hamburger sur les petits écrans */
-    cursor: pointer;
-    position: relative;
-    width: 30px;
-    height: 21px;
-  }
-
-  .navRight {
-    display: none; /* Cache les éléments de navigation écrits */
-  }
-
-  .navMenuContainer.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #171717;
-    z-index: 1000;
-  }
-
-  .navMenu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navItem {
-    padding: 10px 0;
-  }
-
-  .navButtonContainer {
-    margin-top: 10px;
-    justify-content: center; /* Centrer le bouton */
-  }
-
-  .headerText {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .hamburger {
-    display: none; /* Cache le menu hamburger sur les grands écrans */
-  }
-
-  .navRight {
-    display: flex; /* Affiche les éléments de navigation écrits */
-  }
-
-  .navMenuContainer {
-    display: flex; /* Affiche le conteneur de menu */
-    align-items: center;
-  }
-
-  .navMenu {
-    display: flex; /* Affiche le menu */
-    flex-direction: row;
-  }
-
-  .navButtonContainer {
-    display: flex; /* Affiche le bouton dans le conteneur principal */
-    margin-left: 1rem;
-  }
-}
-
-.navLeft {
-  color: #333;
-}
 
 .navRight {
   /* La section droite pour le menu */
@@ -277,21 +164,34 @@
 
 /* Conteneur pour le texte du header */
 .headerText {
+  justify-content: center;
   text-align: center;
   margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
 }
 
-/* Masquer le texte du header sur petit écran */
-@media (max-width: 768px) {
-  .headerText {
-    display: none;
-  }
-}
 
-/* Styles généraux pour les téléphones */
+
+
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;
+  }
+
+  .titre1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    margin-top: 150;
+    color: black;
+    text-align: center;
+    background: aliceblue;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .navbar {
+    top: 15px;
+    height: 80px;
   }
 
   .title {
@@ -472,30 +372,5 @@
 
   .navButton:hover {
     background-color: #e65c00;
-  }
-}
-
-/* Styles pour les écrans plus larges */
-@media (min-width: 769px) {
-  .navRight {
-    display: flex; /* Affiche les éléments de navigation écrits */
-  }
-
-  .hamburger {
-    display: none; /* Cache le menu hamburger */
-  }
-
-  .navMenuContainer {
-    display: flex; /* Affiche le conteneur de menu */
-    align-items: center;
-  }
-
-  .navMenu {
-    display: flex; /* Affiche le menu */
-    flex-direction: row;
-  }
-
-  .navButtonContainer {
-    margin-left: 1rem;
   }
 }

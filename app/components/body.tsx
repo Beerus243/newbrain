@@ -52,7 +52,9 @@ export default function Body() {
       <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
-          De nombreuses formations en intelligence artificielle existent pour répondre aux enjeux actuels des entreprises.
+          <p className={styles.paragraphe}>
+            De nombreuses formations en intelligence artificielle existent 
+            pour répondre aux enjeux actuels des entreprises.</p>
         </div>
 
         {isMobile ? (
@@ -98,10 +100,9 @@ export default function Body() {
 
       <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.btnAppointment}`}>
-          Prenez rendez-vous
+
         </button>
         <button className={`${styles.button} ${styles.btnTraining}`}>
-          Nos formations
         </button>
       </div>
 
