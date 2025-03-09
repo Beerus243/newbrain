@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
 import styles from "./body.module.css";
 import {
   FaCalendarAlt,
@@ -9,6 +10,8 @@ import {
   FaUserFriends,
   FaUserGraduate
 } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 type Formation = {
   id: number;
@@ -28,7 +31,6 @@ const formations: Formation[] = [
 
 export default function Body() {
   const [isMobile, setIsMobile] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,16 +42,13 @@ export default function Body() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
   };
 
   return (
@@ -77,23 +76,19 @@ export default function Body() {
             ))}
           </div>
         ) : (
-          // Version mobile : même forme que PC, avec scroll horizontal
-          <div className={styles.carouselContainer}>
-            <button className={styles.carouselButton} onClick={scrollLeft}>{"<"}</button>
-            <div className={styles.horizontalContainer} ref={scrollContainerRef}>
-              {formations.map((formation) => (
-                <div key={formation.id} className={styles.card}>
-                  <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                  <div className={styles.cardContent}>
-                    <h3 className={styles.cardTitle}>{formation.title}</h3>
-                    <p className={styles.cardDescription}>{formation.description}</p>
-                    <button className={styles.cardButton}>Voir plus</button>
-                  </div>
+          // Version mobile : swiper
+          <Slider {...settings} className={styles.swiperContainer}>
+            {formations.map((formation) => (
+              <div key={formation.id} className={styles.card}>
+                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{formation.title}</h3>
+                  <p className={styles.cardDescription}>{formation.description}</p>
+                  <button className={styles.cardButton}>Voir plus</button>
                 </div>
-              ))}
-            </div>
-            <button className={styles.carouselButton} onClick={scrollRight}>{">"}</button>
-          </div>
+              </div>
+            ))}
+          </Slider>
         )}
       </div>
 

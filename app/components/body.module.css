@@ -37,6 +37,7 @@
 /* ------------------------------------------------- */
 /*           Swiper (carousel responsive)           */
 /* ------------------------------------------------- */
+/* Conteneur pour le swiper */
 .swiperContainer {
   width: 100%;
   max-width: 600px;
@@ -117,7 +118,6 @@
 }
 
 /* Carte de formation / générale */
-/* Fusion des deux définitions de .card */
 .card {
   background-color: #f5f5dc; /* Couleur de fond beige */
   color: #333; /* Couleur du texte */
