@@ -443,6 +443,7 @@
   gap: 10px;                /* Espace entre les images */
   padding: 10px;            /* Padding interne pour aérer le contenu */
   scroll-behavior: smooth;  /* Pour un défilement fluide */
+  width: 100%; /* Assure que le conteneur prend toute la largeur */
 }
 
 /* Personnalisation de la scrollbar sur WebKit */
@@ -477,6 +478,8 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  overflow: hidden; /* Empêche le débordement */
+  width: 100%; /* Assure que le carrousel prend toute la largeur */
 }
 
 /* Boutons de navigation du carrousel */
