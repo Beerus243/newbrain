@@ -56,14 +56,7 @@ export default function Body() {
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{formation.title}</h3>
                 <p className={styles.cardDescription}>{formation.description}</p>
-                <button className={styles.cardButton}>Voir plus</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.buttons}>
+                <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.btnAppointment}`}>
           Prenez rendez-vous
         </button>
@@ -71,6 +64,13 @@ export default function Body() {
           Nos formations
         </button>
       </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
 
       {/* La suite de votre composant Body (statistiques, Newbrain, etc.) */}
       <div id="statsContainer" className={styles.statsContainer}>
