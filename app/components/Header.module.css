@@ -64,114 +64,48 @@
   background-color: #e65c00;
 }
 
-
-.navRight {
-  /* La section droite pour le menu */
-  display: flex;
-  align-items: center;
+.hamburger {
+  display: none; /* Cache le menu hamburger par défaut */
 }
 
-.navMenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease;
 }
 
-.navItem {
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin-left: 1.5rem;
+.hamburger div:nth-child(1) {
+  top: 0;
 }
 
-.navItem:first-child {
-  margin-left: 0;
+.hamburger div:nth-child(2) {
+  top: 9px;
 }
 
-.navItem:hover {
-  color: #f0a500;    /* Couleur au survol */
-  transform: translateY(-2px);
+.hamburger div:nth-child(3) {
+  top: 18px;
 }
 
-.titre1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  margin-top: 200;
-  color: black;
-  text-align: center;
-  background: aliceblue;
-  margin-left: 400;
-  margin-right: 400;
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
 }
 
-.titre2 {
-  font-family: "Poppins", sans-serif;
-  margin-top: 20;
-  color: white;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
 }
 
-.titre3 {
-  font-family: "Poppins", sans-serif;
-  margin-top: 20;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* espace entre les boutons */
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.button {
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s ease-in-out;
-}
-
-.btnAppointment {
-  background-color: #007bff;
-  color: white;
-}
-
-.btnTraining {
-  background-color: #28a745;
-  color: white;
-}
-
-.button:hover {
-  transform: scale(1.05);
-}
-
-.button:active {
-  transform: scale(0.95);
-}
-
-/* Conteneur pour le texte du header */
 .headerText {
-  padding-bottom: 50px;
-  justify-content: center;
   text-align: center;
+  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .container {
@@ -373,4 +307,165 @@
   .navButton:hover {
     background-color: #e65c00;
   }
+
+  .navMenuContainer.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    z-index: 1000;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    padding: 10px 0;
+  }
+
+  .navButtonContainer {
+    margin-top: 10px;
+    justify-content: center; /* Centrer le bouton */
+  }
+
+  .headerText {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Cache le menu hamburger sur les grands écrans */
+  }
+
+  .navRight {
+    display: flex; /* Affiche les éléments de navigation écrits */
+  }
+
+  .navMenuContainer {
+    display: flex; /* Affiche le conteneur de menu */
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex; /* Affiche le menu */
+    flex-direction: row;
+  }
+
+  .navButtonContainer {
+    display: flex; /* Affiche le bouton dans le conteneur principal */
+    margin-left: 1rem;
+  }
+}
+
+.navLeft {
+  color: #333;
+}
+
+.navRight {
+  /* La section droite pour le menu */
+  display: flex;
+  align-items: center;
+}
+
+.navMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.navItem:first-child {
+  margin-left: 0;
+}
+
+.navItem:hover {
+  color: #f0a500;    /* Couleur au survol */
+  transform: translateY(-2px);
+}
+
+.titre1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 200;
+  color: black;
+  text-align: center;
+  background: aliceblue;
+  margin-left: 400;
+  margin-right: 400;
+}
+
+.titre2 {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.titre3 {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espace entre les boutons */
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.btnAppointment {
+  background-color: #007bff;
+  color: white;
+}
+
+.btnTraining {
+  background-color: #28a745;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Conteneur pour le texte du header */
+.headerText {
+  padding-bottom: 50px;
+  justify-content: center;
+  text-align: center;
 }

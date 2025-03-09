@@ -152,6 +152,7 @@ export default function Body() {
                 Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.
               </p>
               <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
                 Définition des priorités et choix des cas d'usages à prioriser.
               </p>
             </div>
@@ -159,6 +160,7 @@ export default function Body() {
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles</h3>
               <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
                 Utilisation de matrices d'évaluation et scoring des données.
               </p>
             </div>
