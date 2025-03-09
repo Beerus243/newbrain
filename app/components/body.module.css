@@ -434,3 +434,39 @@
 .cardButton:hover {
   background-color: #0056b3;
 }
+
+/* Conteneur pour le défilement horizontal */
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 10px;                /* Espace entre les images */
+  padding: 10px;            /* Padding interne pour aérer le contenu */
+  scroll-behavior: smooth;  /* Pour un défilement fluide */
+}
+
+/* Personnalisation de la scrollbar sur WebKit */
+.horizontalContainer::-webkit-scrollbar {
+  height: 8px;              /* Hauteur de la barre de défilement */
+}
+
+.horizontalContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;      /* Couleur de fond de la piste */
+}
+
+.horizontalContainer::-webkit-scrollbar-thumb {
+  background: #888;         /* Couleur de la barre */
+  border-radius: 4px;
+}
+
+.horizontalContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* S'assurer que les images gardent leur taille sans se rétrécir */
+.horizontalContainer img {
+  flex-shrink: 0;
+  max-height: 200px; /* Ajustez selon vos besoins */
+  width: auto;
+  border-radius: 4px;
+}

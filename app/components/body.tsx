@@ -65,9 +65,9 @@ export default function Body() {
           </div>
         ) : (
           // Version mobile : même forme que PC, avec scroll horizontal
-          <div className={styles.horizontalScroll}>
+          <div className={styles.horizontalContainer}>
             {formations.map((formation) => (
-              <div key={formation.id} className={styles.horizontalCard}>
+              <div key={formation.id} className={styles.card}>
                 <img src={formation.image} alt={formation.title} className={styles.cardImage} />
                 <div className={styles.cardContent}>
                   <h3 className={styles.cardTitle}>{formation.title}</h3>
