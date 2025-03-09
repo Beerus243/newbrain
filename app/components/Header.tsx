@@ -34,7 +34,7 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
-          <div className={`${styles.navButtonContainer} ${menuOpen ? styles.hide : ""}`}>
+          <div className={styles.navButtonContainer}>
             <button className={styles.navButton}>Prendre un rendez-vous</button>
           </div>
         </div>
