@@ -131,14 +131,14 @@ export default function Body() {
           </div>
 
           {/* Card dédiée à l'Audit */}
-          <div className={styles.auditCard}>
+          <div className={`${styles.auditCard} overflow-hidden`}>
             <h3>Audit</h3>
             <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
           </div>
 
           {/* Grille de cards pour l'Audit */}
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} overflow-hidden`}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
               <p className={styles.cardGridDescription}>
@@ -150,7 +150,7 @@ export default function Body() {
                 Définition des priorités et choix des cas d'usages à prioriser.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} overflow-hidden`}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles</h3>
               <p className={styles.cardGridDescription}>
@@ -162,7 +162,7 @@ export default function Body() {
           <br />
 
           {/* Card dédiée à la Formation */}
-          <div className={styles.auditCard}>
+          <div className={`${styles.auditCard} overflow-hidden`}>
             <h3>Formation</h3>
             <p>Acculturation et formation de vos équipes aux outils IA métiers</p>
           </div>
@@ -170,11 +170,11 @@ export default function Body() {
 
           {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} overflow-hidden`}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} overflow-hidden`}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Acculturation</h3>
             </div>
@@ -182,7 +182,7 @@ export default function Body() {
           <br />
 
           {/* Card dédiée à l'Implémentation */}
-          <div className={styles.auditCard}>
+          <div className={`${styles.auditCard} overflow-hidden`}>
             <h3>Implémentation</h3>
             <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
           </div>
