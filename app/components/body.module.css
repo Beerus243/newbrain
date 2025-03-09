@@ -108,7 +108,7 @@
 @media (max-width: 768px) {
   .grid {
     /* Fixer la largeur de chaque colonne pour que la grille dépasse l’écran */
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(6, 300px); /* 6 colonnes pour les 6 images */
     width: max-content; /* la grille prendra la largeur de son contenu */
     gap: 20px;
     padding: 20px 0;

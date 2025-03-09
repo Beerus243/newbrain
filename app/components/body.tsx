@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "./body.module.css";
-import styles2 from "./responsive.module.css";
 import {
   FaCalendarAlt,
   FaChartLine,
@@ -66,19 +65,17 @@ export default function Body() {
           </div>
         ) : (
           // Version mobile : même forme que PC, avec scroll horizontal
-          <div className={styles.gridWrapper}>
-            <div className={styles.grid}>
-              {formations.map((formation) => (
-                <div key={formation.id} className={styles.card}>
-                  <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                  <div className={styles.cardContent}>
-                    <h3 className={styles.cardTitle}>{formation.title}</h3>
-                    <p className={styles.cardDescription}>{formation.description}</p>
-                    <button className={styles.cardButton}>Voir plus</button>
-                  </div>
+          <div className={styles.horizontalScroll}>
+            {formations.map((formation) => (
+              <div key={formation.id} className={styles.horizontalCard}>
+                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{formation.title}</h3>
+                  <p className={styles.cardDescription}>{formation.description}</p>
+                  <button className={styles.cardButton}>Voir plus</button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
