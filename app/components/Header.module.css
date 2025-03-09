@@ -65,6 +65,7 @@
 }
 
 .hamburger {
+
   display: none; /* Cache le menu hamburger par défaut */
 }
 
@@ -103,24 +104,27 @@
 }
 
 .headerText {
+  padding-top: 20%;
+  position: relative;
   text-align: center;
-  margin-top: 25%; /* Ajustez selon la hauteur de la navbar */
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
+
 
   .titre1 {
+    position: relative;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    margin-top: 150;
     color: black;
     text-align: center;
     background: aliceblue;
-    margin-left: 15%;
-    margin-right: 15%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: aliceblue;
   }
 
   .navbar {
@@ -373,14 +377,20 @@
 }
 
 .titre1 {
+  position: relative;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  margin-top: 200;
+  font-weight: 200;
   color: black;
   text-align: center;
-  background: aliceblue;
-  margin-left: 400;
-  margin-right: 400;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-align: center;
+  background-color: aliceblue;
+  margin-right: 80;
+  margin-left: 80;
+  font-size: 12;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .titre2 {
@@ -438,7 +448,8 @@
 
 /* Conteneur pour le texte du header */
 .headerText {
-  margin-top: 20%; /* Ajustez selon la hauteur de la navbar */
+  position: relative;
+  margin-top: 15%;
   justify-content: center;
   text-align: center;
 }
@@ -455,10 +466,4 @@
   .navItemMobile {
     display: none; /* Cache le bouton dans le menu hamburger */
   }
-  .headerText {
-    margin-top: 1%; /* Ajustez selon la hauteur de la navbar */
-    justify-content: center;
-    text-align: center;
-  }
-  
 }
