@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./body.module.css";
 import {
   FaCalendarAlt,
@@ -28,6 +28,7 @@ const formations: Formation[] = [
 
 export default function Body() {
   const [isMobile, setIsMobile] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,6 +39,18 @@ export default function Body() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -65,17 +78,21 @@ export default function Body() {
           </div>
         ) : (
           // Version mobile : même forme que PC, avec scroll horizontal
-          <div className={styles.horizontalContainer}>
-            {formations.map((formation) => (
-              <div key={formation.id} className={styles.card}>
-                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{formation.title}</h3>
-                  <p className={styles.cardDescription}>{formation.description}</p>
-                  <button className={styles.cardButton}>Voir plus</button>
+          <div className={styles.carouselContainer}>
+            <button className={styles.carouselButton} onClick={scrollLeft}>{"<"}</button>
+            <div className={styles.horizontalContainer} ref={scrollContainerRef}>
+              {formations.map((formation) => (
+                <div key={formation.id} className={styles.card}>
+                  <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>{formation.title}</h3>
+                    <p className={styles.cardDescription}>{formation.description}</p>
+                    <button className={styles.cardButton}>Voir plus</button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <button className={styles.carouselButton} onClick={scrollRight}>{">"}</button>
           </div>
         )}
       </div>

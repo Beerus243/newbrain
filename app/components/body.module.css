@@ -470,3 +470,26 @@
   width: auto;
   border-radius: 4px;
 }
+
+/* Conteneur pour le carrousel */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Boutons de navigation du carrousel */
+.carouselButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
