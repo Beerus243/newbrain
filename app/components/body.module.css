@@ -90,6 +90,11 @@
 /*                Grille et cartes                  */
 /* ------------------------------------------------- */
 
+.gridWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* pour un défilement plus fluide sur iOS */
+}
+
 /* Grille principale (3 colonnes) */
 .grid {
   display: grid;
@@ -97,6 +102,18 @@
   gap: 20px;
   margin-bottom: 50px;
   background-color: #171717; /* Fond de grille sombre */
+}
+
+/* Adaptation de la grille en responsive (mobile) */
+@media (max-width: 768px) {
+  .grid {
+    /* Fixer la largeur de chaque colonne pour que la grille dépasse l’écran */
+    grid-template-columns: repeat(3, 300px);
+    width: max-content; /* la grille prendra la largeur de son contenu */
+    gap: 20px;
+    padding: 20px 0;
+    margin: 20px auto; /* centre éventuellement la grille dans le conteneur de scroll */
+  }
 }
 
 /* Carte de formation / générale */
@@ -108,6 +125,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s;
+  padding: 20px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .card:hover {
@@ -118,6 +138,8 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 /* Contenu interne de la carte */
@@ -147,6 +169,16 @@
 
 .cardButton:hover {
   background-color: #0056b3;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cardContent p {
+  font-size: 1rem;
+  color: #666;
 }
 
 /* ------------------------------------------------- */

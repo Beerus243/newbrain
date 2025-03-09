@@ -11,11 +11,6 @@ import {
   FaUserGraduate
 } from "react-icons/fa";
 
-// Importation des styles Swiper
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 type Formation = {
   id: number;
   title: string;
@@ -55,9 +50,9 @@ export default function Body() {
             pour répondre aux enjeux actuels des entreprises.</p>
         </div>
 
-        {isMobile ? (
-          // Grille horizontale pour les écrans mobiles
-          <div className={styles2.horizontalScroll}>
+        {!isMobile ? (
+          // Version PC : affichage en grille standard
+          <div className={styles.grid}>
             {formations.map((formation) => (
               <div key={formation.id} className={styles.card}>
                 <img src={formation.image} alt={formation.title} className={styles.cardImage} />
@@ -70,18 +65,20 @@ export default function Body() {
             ))}
           </div>
         ) : (
-          // Grid pour les écrans plus larges
-          <div className={styles.grid}>
-            {formations.map((formation) => (
-              <div key={formation.id} className={styles.card}>
-                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{formation.title}</h3>
-                  <p className={styles.cardDescription}>{formation.description}</p>
-                  <button className={styles.cardButton}>Voir plus</button>
+          // Version mobile : même forme que PC, avec scroll horizontal
+          <div className={styles.gridWrapper}>
+            <div className={styles.grid}>
+              {formations.map((formation) => (
+                <div key={formation.id} className={styles.card}>
+                  <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>{formation.title}</h3>
+                    <p className={styles.cardDescription}>{formation.description}</p>
+                    <button className={styles.cardButton}>Voir plus</button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>
