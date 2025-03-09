@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
 import styles from "./body.module.css";
 import {
   FaCalendarAlt,
@@ -10,8 +9,6 @@ import {
   FaUserFriends,
   FaUserGraduate
 } from "react-icons/fa";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 type Formation = {
   id: number;
@@ -42,15 +39,6 @@ export default function Body() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true
-  };
-
   return (
     <>
       <div className={styles.container1}>
@@ -61,35 +49,18 @@ export default function Body() {
             pour répondre aux enjeux actuels des entreprises.</p>
         </div>
 
-        {!isMobile ? (
-          // Version PC : affichage en grille standard
-          <div className={styles.grid}>
-            {formations.map((formation) => (
-              <div key={formation.id} className={styles.card}>
-                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{formation.title}</h3>
-                  <p className={styles.cardDescription}>{formation.description}</p>
-                  <button className={styles.cardButton}>Voir plus</button>
-                </div>
+        <div className={styles.grid}>
+          {formations.map((formation) => (
+            <div key={formation.id} className={styles.card}>
+              <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{formation.title}</h3>
+                <p className={styles.cardDescription}>{formation.description}</p>
+                <button className={styles.cardButton}>Voir plus</button>
               </div>
-            ))}
-          </div>
-        ) : (
-          // Version mobile : swiper
-          <Slider {...settings} className={styles.swiperContainer}>
-            {formations.map((formation) => (
-              <div key={formation.id} className={styles.card}>
-                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{formation.title}</h3>
-                  <p className={styles.cardDescription}>{formation.description}</p>
-                  <button className={styles.cardButton}>Voir plus</button>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        )}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={styles.buttons}>
