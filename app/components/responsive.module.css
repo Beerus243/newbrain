@@ -301,3 +301,46 @@
   font-size: 1rem;
   color: #666;
 }
+
+.horizontalScroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontalScroll::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement */
+}
+
+.horizontalCard {
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cardContent {
+  padding: 10px;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cardContent p {
+  font-size: 1rem;
+  color: #666;
+}

@@ -29,9 +29,12 @@ const Navigation = () => {
               <li className={styles.navItem}>Formation Ai</li>
               <li className={styles.navItem}>Audit et consulting</li>
               <li className={styles.navItem}>Ressource</li>
+              <li className={styles.navItemMobile}>
+                <button className={styles.navButton}>Prendre un rendez-vous</button>
+              </li>
             </ul>
           </div>
-          <div className={styles.navButtonContainer}>
+          <div className={`${styles.navButtonContainer} ${menuOpen ? styles.hide : ""}`}>
             <button className={styles.navButton}>Prendre un rendez-vous</button>
           </div>
         </div>

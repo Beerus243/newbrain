@@ -10,8 +10,6 @@ import {
   FaUserFriends,
   FaUserGraduate
 } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 
 // Importation des styles Swiper
 import "swiper/css";
@@ -58,29 +56,18 @@ export default function Body() {
         </div>
 
         {isMobile ? (
-          // Swiper stylisé pour les écrans mobiles
-          <div className={styles2.swiperContainer}>
-            <Swiper
-              modules={[Navigation, Pagination, ]}
-              spaceBetween={30}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              loop={true}
-              className={styles2.styledSwiper}
-            >
-              {formations.map((formation) => (
-                <SwiperSlide key={formation.id} className={styles2.swiperSlide}>
-                  <img src={formation.image} alt={formation.title} className={styles2.slideImage} />
-                  <div className={styles2.slideContent}>
-                    <h3>{formation.title}</h3>
-                    <p>{formation.description}</p>
-                    <button className={styles.cardButton}>Voir plus</button>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          // Grille horizontale pour les écrans mobiles
+          <div className={styles2.horizontalScroll}>
+            {formations.map((formation) => (
+              <div key={formation.id} className={styles.card}>
+                <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{formation.title}</h3>
+                  <p className={styles.cardDescription}>{formation.description}</p>
+                  <button className={styles.cardButton}>Voir plus</button>
+                </div>
+              </div>
+            ))}
           </div>
         ) : (
           // Grid pour les écrans plus larges
@@ -101,9 +88,10 @@ export default function Body() {
 
       <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.btnAppointment}`}>
-
+          Prenez rendez-vous
         </button>
         <button className={`${styles.button} ${styles.btnTraining}`}>
+          Nos formations
         </button>
       </div>
 

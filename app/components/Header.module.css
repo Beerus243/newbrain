@@ -16,7 +16,7 @@
   max-width: 1200px; /* Ajoutez une largeur maximale pour les grands écrans */
   z-index: 1000;
   height: 6.5rem;
-  top: 5%;
+  top: 20px;
 }
 
 .navMenuContainer {
@@ -104,7 +104,7 @@
 
 .headerText {
   text-align: center;
-  margin-top: 15%; /* Ajustez selon la hauteur de la navbar */
+  margin-top: 5rem; /* Ajustez selon la hauteur de la navbar */
 }
 
 @media (max-width: 768px) {
@@ -291,43 +291,11 @@
   }
 
   .navButtonContainer {
-    margin-top: 10px;
+    display: none; /* Cache le bouton dans le conteneur principal */
   }
 
-  .navButton {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .navButton:hover {
-    background-color: #e65c00;
-  }
-
-  .navMenuContainer.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #171717;
-    z-index: 1000;
-  }
-
-  .navMenu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navItem {
-    padding: 10px 0;
-  }
-
-  .navButtonContainer {
+  .navItemMobile {
+    display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
   }
@@ -359,6 +327,10 @@
   .navButtonContainer {
     display: flex; /* Affiche le bouton dans le conteneur principal */
     margin-left: 1rem;
+  }
+
+  .navItemMobile {
+    display: none; /* Cache le bouton dans le menu hamburger */
   }
 }
 
@@ -468,4 +440,18 @@
   padding-bottom: 50px;
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navItemMobile {
+    display: block; /* Affiche le bouton dans le menu hamburger */
+    margin-top: 10px;
+    justify-content: center; /* Centrer le bouton */
+  }
+}
+
+@media (min-width: 769px) {
+  .navItemMobile {
+    display: none; /* Cache le bouton dans le menu hamburger */
+  }
 }
