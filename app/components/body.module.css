@@ -523,3 +523,34 @@
 .button:active {
   transform: scale(0.95);
 }
+
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; /* Empêche le débordement vertical */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: max-content;
+    height: auto;
+  }
+  
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    scroll-snap-align: center;
+  }
+  .cardImage {
+    width: 80%;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
+    max-width: 200px; /* Limite la largeur maximale de l'image */
+    height: auto;     /* Conserve les proportions de l'image */
+  }
+  
+}

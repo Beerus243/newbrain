@@ -371,11 +371,11 @@
 
 .titre3 {
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
   margin-top: 20;
   color: white;
   text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .buttons {
