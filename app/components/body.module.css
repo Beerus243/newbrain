@@ -534,23 +534,27 @@
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
-    width: max-content;
-    height: auto;
+    width: 400px;
+    height: 500px;
+    background-color: #007bff;
+    padding: 20;
   }
-  
-  .grid::-webkit-scrollbar {
-    display: none;
+  .grid .card {
+    background-color: black;
+    flex: 0 0 auto;
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    scroll-snap-align: center;
   }
   
   .card {
+    background-color: black;
     flex: 0 0 auto;
     width: 80%; /* Ajustez la largeur selon vos besoins */
     scroll-snap-align: center;
   }
   .cardImage {
-    width: 80%;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
-    max-width: 200px; /* Limite la largeur maximale de l'image */
-    height: auto;     /* Conserve les proportions de l'image */
+    width: 300;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
+    height: 150;     /* Conserve les proportions de l'image */
   }
   
 }
