@@ -66,6 +66,7 @@
 
 .hamburger {
   display: none; /* Cache le menu hamburger par défaut */
+  left: 100;
 }
 
 .hamburger div {
