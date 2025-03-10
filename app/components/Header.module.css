@@ -381,17 +381,19 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px; /* espace entre les boutons */
+  gap: 7px; /* espace entre les boutons */
   margin-top: 20px;
   font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .button {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
   transition: background 0.3s, transform 0.2s ease-in-out;
 }
 
