@@ -1,28 +1,9 @@
 @import "tailwindcss";
 @import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss/utilities";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171717;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  h1, h2, h3, p, span, a {
-    font-family: 'Poppins', sans-serif;
-}
+  background-color: #171717;
 }

@@ -236,7 +236,6 @@
     position: relative;
     width: 30px;
     height: 25px;
-    left: 170px;
   }
 
   .navMenuContainer {
@@ -361,7 +360,7 @@
   margin-top: 20;
   color: white;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -375,9 +374,8 @@
 }
 
 .buttons {
-  padding: 0 30 0 30;
+  padding: 0 25 0 25;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 7px; /* espace entre les boutons */
   margin-top: 20px;
@@ -426,6 +424,44 @@
     display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
+  }
+  .buttons {
+    padding: 0 25 0 25;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px; /* espace entre les boutons */
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+  
+  .button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .btnAppointment {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btnTraining {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
   }
 }
 
