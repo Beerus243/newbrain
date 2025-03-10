@@ -112,8 +112,8 @@
 
 @media (max-width: 768px) {
   .headerText {
-    margin-right: 20;
-    margin-left: 20;
+    margin-right: 10;
+    margin-left: 10;
     padding-top: 15%;
     position: relative;
     text-align: center;
@@ -271,10 +271,6 @@
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
   }
-
-  .headerText {
-    margin-top: 8%;
-  }
 }
 
 @media (min-width: 769px) {
@@ -379,7 +375,9 @@
 }
 
 .buttons {
+  padding: 0 30 0 30;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 7px; /* espace entre les boutons */
   margin-top: 20px;

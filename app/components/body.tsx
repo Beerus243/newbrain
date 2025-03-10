@@ -46,10 +46,7 @@ export default function Body() {
                 <p className={styles.cardDescription}>{formation.description}</p>
                 <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.btnAppointment}`}>
-          Prenez rendez-vous
-        </button>
-        <button className={`${styles.button} ${styles.btnTraining}`}>
-          Nos formations
+          Voir la Formation
         </button>
       </div>
               </div>

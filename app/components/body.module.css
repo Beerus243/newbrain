@@ -548,14 +548,12 @@
     gap: 7px; /* espace entre les boutons */
     margin-top: 85px;
     font-family: "Poppins", sans-serif;
-    width: 350;
-    height: auto;
-    padding-right: 120;
+
   }
   
   .button {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
