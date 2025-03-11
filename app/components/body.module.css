@@ -510,6 +510,17 @@
   transform: scale(0.95);
 }
 
+.cardLarge {
+  padding: 100px;
+  background-color: #e4e7e9;
+}
+
+.cardLargeTitre {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
   .grid {

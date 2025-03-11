@@ -9,6 +9,7 @@ import {
   FaUserFriends,
   FaUserGraduate
 } from "react-icons/fa";
+import { start } from "repl";
 
 type Formation = {
   id: number;
@@ -88,7 +89,7 @@ export default function Body() {
 
           {/* Card dédiée à l'Audit */}
           <div className={styles.auditCard}>
-            <h3>Audit</h3>
+            <h3>Audit de Maturité IA</h3>
             <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
           </div>
 
@@ -114,6 +115,26 @@ export default function Body() {
                 Utilisation de matrices d'évaluation et scoring des données.
               </p>
             </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
+              <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.
+              </p>
+              <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Définition des priorités et choix des cas d'usages à prioriser.
+                </p>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Création de la road map de formation</h3>
+              <p className={styles.cardGridDescription}>
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Rapport d'audit: Synthèse des données collectées, analyses effectuées et conclusions tirées.
+              </p>
+            </div>
           </div>
           <br />
 
@@ -129,18 +150,130 @@ export default function Body() {
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Séances de formation en présentiel ou à distance.   
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenu adapté aux besoins spécifiques de l'entreprise.
+              </p>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Acculturation</h3>
+              <h3 className={styles.cardGridTitle}>Acculturation - Jour 1</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Déploiement d'un support de formation avec les rédoffusions des sessions.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+              </p>
+            </div>
+          </div>
+          
+          <br />
+          <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Démonstration de cas réels en entreprise.   
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}> Cas pratiques - Jour 2</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Démonstration de cas réels en entreprise.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité. 
+              </p>
+            </div>
+          </div>
+          <br/>
+          <div className={styles.cardLarge}>
+            <h3 className={styles.cardLargeTitre}> Récommandation post-formation</h3>
+            <p className={styles.cardLargeDescription}>
+            <FaCheckCircle style={{ color: "green", marginRight: "8px"}} />
+            Livrable de la fin de la formation rédigé par nos consultants.<br />
+            Proposition de la road map d'Implémentation des outils IA.
+            </p>
+          </div>
+
+          <br />
+          <div className={styles.auditCard}>
+            <h3>Implémentation </h3>
+            <p>Une approche personnalisée pour favoriser la collaboration et l'innovation</p>
+          </div>
+          <br />
+          {/* Grille de cards pour la Formation */}
+          <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Planification de l'Implémentation</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+             Plan d'action avec un plan stratégiques pour l'adoption de l'IA, incluant les priorités, les ressources nécessaires et les échéances.  
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenu adapté aux besoins spécifiques de l'entreprise.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Deploiement des outils IA & <br /> autonomisations</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Déploiement d'un support de formation avec les rédoffusions des sessions.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+              </p>
             </div>
           </div>
           <br />
 
-          {/* Card dédiée à l'Implémentation */}
-          <div className={styles.auditCard}>
-            <h3>Implémentation</h3>
-            <p>Une approche personnalisée pour favoriser la collaboration et l’innovation</p>
+                    {/* Grille de cards pour la Formation */}
+                    <div className={styles.cardGrid}>
+            <div className={styles.card}>
+              <FaCalendarAlt className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Suivi continu du <br /> Déploiement</h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Séances de formation en présentiel ou à distance.   
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenu adapté aux besoins spécifiques de l'entreprise.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}> Plateforme pour la gestion <br /></h3>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Déploiement d'un support de formation avec les rédoffusions des sessions.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+              </p>
+            </div>
           </div>
         </section>
       </div>

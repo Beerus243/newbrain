@@ -12,10 +12,9 @@
   border-radius: 0.7rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%; /* Ajustez la largeur pour éviter le dépassement */
-  max-width: 1200px; /* Ajoutez une largeur maximale pour les grands écrans */
+  width: 97%; /* Ajustez la largeur pour éviter le dépassement */
   z-index: 1000;
-  height: 6.5rem;
+  height: 5.5rem;
   top: 20px;
 }
 
