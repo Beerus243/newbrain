@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./body.module.css";
 import {
+  FaSink,
   FaCalendarAlt,
   FaChartLine,
   FaCheckCircle,
@@ -9,6 +10,7 @@ import {
   FaUserFriends,
   FaUserGraduate
 } from "react-icons/fa";
+import { SiNike } from "react-icons/si";
 import { start } from "repl";
 
 type Formation = {
@@ -99,7 +101,7 @@ export default function Body() {
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                <SiNike style={{ color: "green", paddingRight: "8px", fontSize:"30px" }} />
                 Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.
               </p>
               <p className={styles.cardGridDescription}>
@@ -250,8 +252,8 @@ export default function Body() {
                     {/* Grille de cards pour la Formation */}
                     <div className={styles.cardGrid}>
             <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Suivi continu du <br /> Déploiement</h3>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Suivi continu du Déploiement</h3>
               <p className={styles.cardGridDescription}>
               <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
               Séances de formation en présentiel ou à distance.   
@@ -275,8 +277,84 @@ export default function Body() {
               </p>
             </div>
           </div>
+          <br />
+          <div className={styles.auditCard}>
+            <h3 className={styles.title}>Suivis des resultats </h3>
+            <p  className={styles.paragraphe}>Un suivi rigoureux pour garantir la réussite du project</p>
+          </div>
+          <div className={styles.cardLarge}>
+            <h3 className={styles.cardLargeTitre}> Optimisation et suivi continue</h3>
+            <p className={styles.cardLargeDescription}>
+            <SiNike style={{ color: "green", marginRight: "8px"}} />
+            intégration des retours d'expérience.
+            </p>
+            <p className={styles.cardLargeDescription}>
+            <SiNike style={{ color: "green", marginRight: "8px"}} />
+            Suivi des indicateurs de performance post-implémentation.(KPI) 
+            </p>
+            <p className={styles.cardLargeDescription}>
+            <SiNike style={{ color: "green", marginRight: "8px"}} />
+            Analyse des gains de temps et des réductions de couts.
+            </p>
+          </div>
         </section>
-      </div>
+        <br/>
+        <h3 className={styles.title}> Les Services IA NewBrain</h3>
+        <br />
+        <div className={styles.cardGrid}>
+        <div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Formation IA</h3>
+              <p className={styles.paragraphe}>
+                Formation IA de vos collaborateurs aux <strong>Fondamentaux  et techniques d'IA générative</strong>pour comprendre 
+                cette rupture technologique et ses applications
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Contenu adapté aux besoins spécifiques de l'entreprise.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Implémentatez les outils IA les plus Adaptés à vos process
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Maitrisez les Fondamentaux du Prompt Engineering
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Formation en présentiel ou a distance
+              </p>
+              
+</div>
+<div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Audit & Consulting</h3>
+              <p className={styles.paragraphe}>
+                Identifiez les opportinités d'innovation et de croissance grace à notre audit IA, spécialement
+                concu pour aligner votre technologie avec vos ambitions stratégiques 
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Qiestion dd préparation.
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Tour d'Horizon des outils existants
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Entretien avec vos collaorateurs par type de métier
+              </p>
+              <p className={styles.cardGridDescription}>
+              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              Réalisation d'un rapport de récommendations générales
+              </p>
+              
+</div>
+   </div>
+   
+        </div>
     </>
   );
 }
