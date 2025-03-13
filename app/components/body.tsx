@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
 import { start } from "repl";
+import { text } from "stream/consumers";
+import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
 
 type Formation = {
   id: number;
@@ -298,6 +300,7 @@ export default function Body() {
             </p>
           </div>
         </section>
+        </div>
         <br/>
         <h3 className={styles.title}> Les Services IA NewBrain</h3>
         <br />
@@ -353,8 +356,81 @@ export default function Body() {
               
 </div>
    </div>
-   
-        </div>
+   <br/>
+        <h3 className={styles.title}> Pourquoi choisir NewBrain</h3>
+        <br />
+        <div className={styles.cardGrid}>
+        <div className={styles.card}>
+        <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Expertise de pointe</h3>
+              <p className={styles.paragraphe}>
+                Nos Formateurs et consultant maitrisent les outils IA adaptés à votre secteur et vous guident avec précsion
+                <br /> Ces exxperts sélectionnent les outils d'IA les plus performants pour optimiser
+                le gain de Productivité.
+              </p>
+              
+</div>
+<div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Une approche sur-mesure</h3>
+              <p className={styles.paragraphe}>
+                Nos Consultants analysent vos méthodes de travail pendant l'audit.
+                <br />
+                <br />
+                Développement d'un parcours personnalisé suite aux informations
+                Recueillis en interne.
+                <br />
+                <br />
+                Automatisation et assistants IA Développés pour vous.
+              </p>
+              
+</div>
+<div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Roi mesurable</h3>
+              <p className={styles.paragraphe}>
+                Avec Newbrain, vous bénéficiez de résultats concrets.
+                <br />
+                <br />
+                Nos formations et soltions permettent de réduire vos couts opérationnels, d'augmenter la
+                productivité et favoriser la montée en competences de vos équipes.
+          </p>
+              
+
+   </div>
+   <br/>
+        <h3 className={styles.title}> Certifications et financement<br />
+        par vos OPCOs. </h3>
+        <br />
+        <p className={styles.paragraphe}> Newbrain est certifier Qualiopi et propose des solutions de financement pour vos formations</p>
+   </div>
+   <div className={styles.cardGrid}>
+        <div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Pour les Entreprises</h3>
+              <p className={styles.paragraphe}>
+                Nos Formations sont éligibles  au plans de déveppement des compétences. Vous pouvez donc
+                béneficier des subventions par les Opco et FNE
+              </p>
+              
+</div>
+<div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Pour les particuliers </h3>
+              <p className={styles.paragraphe}>
+                Formations financiables à 100% grace aux aides à la formation et au CPF.
+              </p>
+              
+</div>
+<div className={styles.card}>
+              <FaSink className={styles.cardIcon} />
+              <div className={styles.buttons}>
+        <button className={`${styles.button} ${styles.btnAppointment}`}>
+          Prenez rendez-vous
+        </button>
+      </div>
+</div>
+</div>
     </>
   );
 }
