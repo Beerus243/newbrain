@@ -1,71 +1,110 @@
-// components/Footer.tsx
-import Link from "next/link";
-import { FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaMapMarkerAlt, FaPhone, FaEnvelopeOpen, FaTelegramPlane, FaFacebook } from 'react-icons/fa';
+import styles from './Footer.module.css';
 
-export function Footer() {
+const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white pt-8">
-      {/* Forme de wave */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-full">
-        <svg
-          className="relative block w-[calc(100%+1.3px)] h-20"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0V46.29c47.6,22,103,29.67,158,19.11,70.21-14.82,136.39-48,206-48,77.47,0,146,32.85,222,37.85,70.75,4.76,136-16.14,206-25.85,59.84-7.87,117.69-6.66,176,6.3V0Z"
-            opacity=".25"
-            fill="currentColor"
-          />
-          <path
-            d="M0,0V15.81C47.42,29,103,35.75,158,30.65c70.25-7.59,136.39-34.3,206-34.3,77.47,0,146,27.06,222,31.7,70.76,4.88,136-12.43,206-19.88,59.83-6.4,117.68-5.36,176,4.8V0Z"
-            opacity=".5"
-            fill="currentColor"
-          />
-          <path
-            d="M0,0V5.63C47.42,14,103,21,158,16.82c70.25-6,136.39-26.88,206-26.88,77.47,0,146,20.42,222,24,70.76,3.6,136-10.25,206-16.68,59.83-5.69,117.68-4.77,176,3.19V0Z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-      {/* Contenu du footer */}
-      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between">
-        {/* Bio de l'entreprise */}
-        <div className="mb-8 md:mb-0 text-center md:text-left">
-          <p className="text-lg">
-            Nous sommes une entreprise innovante dédiée à offrir la meilleure expérience digitale.
-          </p>
+    <footer className={styles.footerSection}>
+      <div className={styles.footerCta}>
+        <div className={styles.singleCta}>
+          <FaMapMarkerAlt className={styles.icon} />
+          <div className={styles.ctaText}>
+            <h4>Find us</h4>
+            <span>1010 Avenue, sw 54321, chandigarh</span>
+          </div>
         </div>
-        {/* Logo et réseaux sociaux */}
-        <div className="flex flex-col items-center md:items-end">
-          <Link href="/" legacyBehavior>
-            <a className="flex items-center gap-2">
-              <span className="text-2xl font-bold">Mon Entreprise</span>
-            </a>
-          </Link>
-          <div className="flex space-x-4 mt-4">
-            <Link href="https://www.youtube.com" legacyBehavior>
-              <a className="hover:text-gray-200">
-                <FaYoutube size={24} />
-                <span className="sr-only">YouTube</span>
+        <div className={styles.singleCta}>
+          <FaPhone className={styles.icon} />
+          <div className={styles.ctaText}>
+            <h4>Call us</h4>
+            <span>9876543210 0</span>
+          </div>
+        </div>
+        <div className={styles.singleCta}>
+          <FaEnvelopeOpen className={styles.icon} />
+          <div className={styles.ctaText}>
+            <h4>Mail us</h4>
+            <span>mail@info.com</span>
+          </div>
+        </div>
+      </div>
+      <div className={styles.footerContent}>
+        <div className={styles.footerWidget}>
+          <div className={styles.footerLogo}>
+            <Link href="/" legacyBehavior>
+              <a>
+               <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
               </a>
             </Link>
-            <Link href="https://twitter.com" legacyBehavior>
-              <a className="hover:text-gray-200">
-                <FaTwitter size={24} />
-                <span className="sr-only">Twitter</span>
+          </div>
+          <div className={styles.footerText}>
+            <p>Newbrain est un cabinet de conseil spécialisé en intelligence artificielle. Nous proposons des formations en intelligence artificielle ainsi que des prestations d'audit et de conseil pour décupler la productivité des entreprises..</p>
+          </div>
+          <div className={styles.footerSocialIcon}>
+            <span>Follow us</span>
+            <Link href="#" legacyBehavior>
+              <a>
+                <FaFacebook className={styles.facebookBg} />
               </a>
             </Link>
-            <Link href="https://linkedin.com" legacyBehavior>
-              <a className="hover:text-gray-200">
-                <FaLinkedin size={24} />
-                <span className="sr-only">LinkedIn</span>
+            <Link href="#" legacyBehavior>
+              <a>
+                <FaTwitter className={styles.twitterBg} />
+              </a>
+            </Link>
+            <Link href="#" legacyBehavior>
+              <a>
+                <FaGooglePlusG className={styles.googleBg} />
               </a>
             </Link>
           </div>
         </div>
+        <div className={styles.footerWidget}>
+          <div className={styles.footerWidgetHeading}>
+            <h3>Useful Links</h3>
+          </div>
+          <ul>
+            <li><Link href="#" legacyBehavior><a>Home</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>About</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Contact</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Nos services</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Contact us</a></Link></li>
+            
+          </ul>
+        </div>
+        <div className={styles.footerWidget}>
+          <div className={styles.footerWidgetHeading}>
+            <h3>Subscribe</h3>
+          </div>
+          <div className={`${styles.footerText} mb-25`}>
+            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+          </div>
+          <div className={styles.subscribeForm}>
+            <form action="#">
+              <input type="text" placeholder="Email Address" />
+              <button><FaTelegramPlane /></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div className={styles.copyrightArea}>
+        <div className={styles.copyrightText}>
+          <p>Copyright &copy; 2023, All Right Reserved <Link href="#" legacyBehavior><a>Company Name</a></Link></p>
+        </div>
+        <div className={styles.footerMenu}>
+          <ul>
+            <li><Link href="#" legacyBehavior><a>Home</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Terms</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Privacy</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Policy</a></Link></li>
+            <li><Link href="#" legacyBehavior><a>Contact</a></Link></li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

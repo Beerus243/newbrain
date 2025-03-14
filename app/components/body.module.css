@@ -3,7 +3,7 @@
 /*        Styles de base et typographie              */
 
 .paragraphe {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'roboto', sans-serif;
   color: #f0f0f0; /* Texte clair */
   line-height: 1.6;
   padding-bottom: 20px;
