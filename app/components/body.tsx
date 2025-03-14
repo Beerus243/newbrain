@@ -11,9 +11,8 @@ import {
   FaUserGraduate
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
-import { start } from "repl";
-import { text } from "stream/consumers";
-import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
+import 'animate.css/animate.min.css';
+import WOW from 'wow.js';
 
 type Formation = {
   id: number;
@@ -32,6 +31,10 @@ const formations: Formation[] = [
 ];
 
 export default function Body() {
+  useEffect(() => {
+    new WOW().init();
+  }, []);
+
   return (
     <>
       <div className={styles.container1}>
@@ -44,23 +47,21 @@ export default function Body() {
 
         <div className={styles.grid}>
           {formations.map((formation) => (
-            <div key={formation.id} className={styles.card}>
+            <div key={formation.id} className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <img src={formation.image} alt={formation.title} className={styles.cardImage} />
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{formation.title}</h3>
                 <p className={styles.cardDescription}>{formation.description}</p>
                 <div className={styles.buttons}>
-        <button className={`${styles.button} ${styles.btnAppointment}`}>
-          Voir la Formation
-        </button>
-      </div>
+                  <button className={`${styles.button} ${styles.btnAppointment}`}>
+                    Voir la Formation
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-
 
       {/* La suite de votre composant Body (statistiques, Newbrain, etc.) */}
       <div id="statsContainer" className={styles.statsContainer}>
@@ -99,7 +100,7 @@ export default function Body() {
 
           {/* Grille de cards pour l'Audit */}
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
               <p className={styles.cardGridDescription}>
@@ -111,7 +112,7 @@ export default function Body() {
                 Définition des priorités et choix des cas d'usages à prioriser.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles</h3>
               <p className={styles.cardGridDescription}>
@@ -119,7 +120,7 @@ export default function Body() {
                 Utilisation de matrices d'évaluation et scoring des données.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
               <p className={styles.cardGridDescription}>
@@ -129,9 +130,9 @@ export default function Body() {
               <p className={styles.cardGridDescription}>
                 <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
                 Définition des priorités et choix des cas d'usages à prioriser.
-                </p>
+              </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Création de la road map de formation</h3>
               <p className={styles.cardGridDescription}>
@@ -151,67 +152,67 @@ export default function Body() {
 
           {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Séances de formation en présentiel ou à distance.   
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Séances de formation en présentiel ou à distance.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenu adapté aux besoins spécifiques de l'entreprise.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenu adapté aux besoins spécifiques de l'entreprise.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Acculturation - Jour 1</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Déploiement d'un support de formation avec les rédoffusions des sessions.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Déploiement d'un support de formation avec les rédoffusions des sessions.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
-              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+                Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
               </p>
             </div>
           </div>
           
           <br />
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Démonstration de cas réels en entreprise.   
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Démonstration de cas réels en entreprise.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}> Cas pratiques - Jour 2</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Démonstration de cas réels en entreprise.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Démonstration de cas réels en entreprise.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité. 
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Atéliers pratiques sur l'Utilisation des outils IA les plus adaptés à votre activité.
               </p>
             </div>
           </div>
           <br/>
-          <div className={styles.cardLarge}>
+          <div className={`${styles.cardLarge} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
             <h3 className={styles.cardLargeTitre}> Récommandation post-formation</h3>
             <p className={styles.cardLargeDescription}>
-            <FaCheckCircle style={{ color: "green", marginRight: "8px"}} />
-            Livrable de la fin de la formation rédigé par nos consultants.<br />
-            Proposition de la road map d'Implémentation des outils IA.
+              <FaCheckCircle style={{ color: "green", marginRight: "8px"}} />
+              Livrable de la fin de la formation rédigé par nos consultants.<br />
+              Proposition de la road map d'Implémentation des outils IA.
             </p>
           </div>
 
@@ -223,84 +224,83 @@ export default function Body() {
           <br />
           {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Planification de l'Implémentation</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-             Plan d'action avec un plan stratégiques pour l'adoption de l'IA, incluant les priorités, les ressources nécessaires et les échéances.  
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Plan d'action avec un plan stratégiques pour l'adoption de l'IA, incluant les priorités, les ressources nécessaires et les échéances.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenu adapté aux besoins spécifiques de l'entreprise.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenu adapté aux besoins spécifiques de l'entreprise.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Deploiement des outils IA & <br /> autonomisations</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Déploiement d'un support de formation avec les rédoffusions des sessions.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Déploiement d'un support de formation avec les rédoffusions des sessions.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
-              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+                Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
               </p>
             </div>
           </div>
           <br />
 
-                    {/* Grille de cards pour la Formation */}
-                    <div className={styles.cardGrid}>
-            <div className={styles.card}>
+          {/* Grille de cards pour la Formation */}
+          <div className={styles.cardGrid}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaSink className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Suivi continu du Déploiement</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Séances de formation en présentiel ou à distance.   
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Séances de formation en présentiel ou à distance.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenu adapté aux besoins spécifiques de l'entreprise.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenu adapté aux besoins spécifiques de l'entreprise.
               </p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}> Plateforme pour la gestion <br /></h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Déploiement d'un support de formation avec les rédoffusions des sessions.
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Déploiement d'un support de formation avec les rédoffusions des sessions.
               </p>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Contenue adapté aux besoins spécifiques de l'entreprise.<br />
-              Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
+                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
+                Contenue adapté aux besoins spécifiques de l'entreprise.<br />
+                Acculturation à l'IA (histoire, principaux usages, outils, biais éthique...)
               </p>
             </div>
           </div>
           <br />
-          <div className={styles.auditCard}>
+          <div className={`${styles.auditCard} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
             <h3 className={styles.title}>Suivis des resultats </h3>
-            <p  className={styles.paragraphe}>Un suivi rigoureux pour garantir la réussite du project</p>
+            <p className={styles.paragraphe}>Un suivi rigoureux pour garantir la réussite du project</p>
           </div>
-          <div className={styles.cardLarge}>
+          <div className={`${styles.cardLarge} wow fadeInUp`} data-wow-duration="1s" data-wow-delay="0.5s">
             <h3 className={styles.cardLargeTitre}> Optimisation et suivi continue</h3>
             <p className={styles.cardLargeDescription}>
-            <SiNike style={{ color: "green", marginRight: "8px"}} />
-            intégration des retours d'expérience.
+              <SiNike style={{ color: "green", marginRight: "8px"}} />
+              intégration des retours d'expérience.
             </p>
             <p className={styles.cardLargeDescription}>
-            <SiNike style={{ color: "green", marginRight: "8px"}} />
-            Suivi des indicateurs de performance post-implémentation.(KPI) 
+              <SiNike style={{ color: "green", marginRight: "8px"}} />
+              Suivi des indicateurs de performance post-implémentation.(KPI)
             </p>
             <p className={styles.cardLargeDescription}>
-            <SiNike style={{ color: "green", marginRight: "8px"}} />
-            Analyse des gains de temps et des réductions de couts.
+              <SiNike style={{ color: "green", marginRight: "8px"}} />
+              Analyse des gains de temps et des réductions de couts.
             </p>
           </div>
         </section>
-        </div>
         <br/>
         <h3 className={styles.title}> Les Services IA NewBrain</h3>
         <br />
@@ -429,6 +429,7 @@ export default function Body() {
           Prenez rendez-vous
         </button>
       </div>
+</div>
 </div>
 </div>
     </>
