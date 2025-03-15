@@ -11,8 +11,6 @@ import {
   FaUserGraduate
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
-import { start } from "repl";
-import { text } from "stream/consumers";
 import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
 
 type Formation = {
@@ -23,12 +21,18 @@ type Formation = {
 };
 
 const formations: Formation[] = [
-  { id: 1, title: "Formation 1", description: "inscrivez vous rapidement.", image: "https://picsum.photos/seed/formation1/400/300" },
-  { id: 2, title: "Formation 2", description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
-  { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
-  { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
-  { id: 5, title: "Formation 5", description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
-  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
+  { id: 1, title: "Formation 1",
+     description: "Audit IA Inclus", image: "https://picsum.photos/seed/formation1/400/300" },
+  { id: 2, title: "Formation 2",
+     description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
+  { id: 3, title: "Formation 3",
+     description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
+  { id: 4, title: "Formation 4",
+     description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
+  { id: 5, title: "Formation 5",
+     description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
+  { id: 6, title: "Formation 6",
+     description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
 ];
 
 export default function Body() {
@@ -395,8 +399,6 @@ export default function Body() {
                 Nos formations et soltions permettent de réduire vos couts opérationnels, d'augmenter la
                 productivité et favoriser la montée en competences de vos équipes.
           </p>
-              
-
    </div>
    <br/>
         <h3 className={styles.title}> Certifications et financement par vos OPCOs. </h3>
