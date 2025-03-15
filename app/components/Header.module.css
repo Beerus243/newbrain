@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
+
+.paragraphe {
+  font-family: 'roboto', sans-serif;
+  color: #f0f0f0; /* Texte clair */
+  line-height: 1.6;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
 .navbar {
   background-color: #333;
   opacity: 0.9;
@@ -339,34 +348,33 @@
 }
 
 .titre1 {
+  bottom: 25;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   color: black;
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: black;
-  text-align: center;
   background-color: aliceblue;
   margin-right: 80;
   margin-left: 80;
-  font-size: 12;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-size: 16;
+  padding: 1px;
 }
 
 .titre2 {
   font-family: "Poppins", sans-serif;
-  margin-top: 20;
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+}
+.highlight {
+  color: #ff6600;
 }
 
 .titre3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: "franklin gothic medium", "arial narrow", arial, sans-serif;
+  font-weight: 100;
   margin-top: 20;
   color: white;
   text-align: center;
@@ -394,13 +402,25 @@
 }
 
 .btnAppointment {
-  background-color: #007bff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color:#ff6600;
   color: white;
 }
 
 .btnTraining {
-  background-color: #28a745;
-  color: white;
+  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
+  color: #fff;
+  border: 2px solid #fff; /* Bordure blanche */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Effet hover */
+.btnTraining:hover {
+  border-color: #ff6600; /* Change aussi la bordure */
 }
 
 .button:hover {

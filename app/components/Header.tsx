@@ -41,7 +41,13 @@ const Navigation = () => {
       </nav>
       <div className={styles.headerText}>
         <h6 className={styles.titre1}>FORMATION IA POUR PROFESSIONNELS & PARTICULIERS</h6>
-        <h1 className={styles.titre2}>Gagnez en productivité<br />grâce à l'IA</h1>
+        <h1 className={styles.titre2}>Gagnez en productivité<br /><span className={styles.highlight}>grâce à l'IA</span></h1>
+        <p className={styles.paragraphe}>
+          Newbrain est un cabinet de conseil spécialisé en 
+          intelligence artificielle. Nous proposons des formations
+           en intelligence artificielle ainsi que des prestations d'audit et
+            de conseil pour décupler la productivité des entreprises.
+        </p>
         <div className={styles.buttons}>
           <button className={`${styles.button} ${styles.btnAppointment}`}>
             Prenez rendez-vous
