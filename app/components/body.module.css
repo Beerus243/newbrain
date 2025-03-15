@@ -75,9 +75,10 @@
 }
 
 .title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   margin-top: 50px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #f0f0f0;
 }
@@ -116,8 +117,8 @@
 
 /* Carte de formation / générale */
 .card {
-  background-color: #f5f5dc; /* Couleur de fond beige */
-  color: #333; /* Couleur du texte */
+  background-color: #ffffff; /* Couleur de fond beige */
+  color: white; /* Couleur du texte */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -127,13 +128,10 @@
   scroll-snap-align: start;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
 
 .cardImage {
   width: 100%;
-  height: 200px;
+  height: 100px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -141,32 +139,22 @@
 
 /* Contenu interne de la carte */
 .cardContent {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .cardContent h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .cardContent p {
+  font-family: 'roboto', sans-serif;
   font-size: 1rem;
-  color: #666;
+  color: white;
 }
 
-.cardButton {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.cardButton:hover {
-  background-color: #0056b3;
-}
 
 /* ------------------------------------------------- */
 /*                   Titres et sous-titres          */
@@ -461,42 +449,25 @@
   box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
-
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* espace entre les boutons */
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.button {
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s ease-in-out;
-}
-
 .btnAppointment {
-  background-color: #007bff;
+  background-color: #ff6600;
+  font-family: 'roboto', sans-serif;
   color: white;
+  padding: 12px 24px; /* Ajoute de l'espace autour du texte */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 8px; /* Arrondi les bords pour une belle forme */
+  font-size: 15px; /* Ajuste la taille du texte */
+  cursor: pointer; /* Change le curseur au survol */
+  transition: all 0.3s ease; /* Effet fluide lors du hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
 }
 
-.btnTraining {
-  background-color: #28a745;
-  color: white;
+/* Effet au survol */
+.btnAppointment:hover {
+  background-color: #e65c00; /* Légèrement plus foncé au hover */
+  transform: scale(1.05); /* Effet d'agrandissement */
 }
 
-.button:hover {
-  transform: scale(1.05);
-}
-
-.button:active {
-  transform: scale(0.95);
-}
 
 .cardLarge {
   padding: 100px;
@@ -504,7 +475,7 @@
 }
 
 .cardLargeTitre {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -561,22 +532,10 @@
   }
   
   .btnAppointment {
-    background-color: #007bff;
+    background-color: #ff6600;
     color: white;
   }
   
-  .btnTraining {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .button:hover {
-    transform: scale(1.05);
-  }
-  
-  .button:active {
-    transform: scale(0.95);
-  }
   .subtitle {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.8rem;
