@@ -238,28 +238,17 @@
 
 .statLabel {
   font-size: 1.1rem;
-  color: #ccc;
+  color: white;
   font-weight: 500;
 }
 
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* ------------------------------------------------- */
 /*               Section "Newbrain"                 */
 /* ------------------------------------------------- */
 .newbrainSection {
   padding: 40px 20px;
-  background: linear-gradient(135deg, #4d65ff, #6b8cff);
+  background: linear-gradient(135deg, #363d6b, #6b8cff);
   margin-top: 40px;
   border-top: 1px solid #eee;
 }
@@ -308,7 +297,7 @@
 /* Carte de la grille avec icône et titre */
 .cardIcon {
   font-size: 2.5rem;
-  color: #4d65ff;
+  color: #ff6600;
   margin-bottom: 10px;
 }
 
@@ -383,21 +372,7 @@
 
 .cardContent p {
   font-size: 1rem;
-  color: #666;
-}
-
-.cardButton {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cardButton:hover {
-  background-color: #0056b3;
+  color: white;
 }
 
 /* Conteneur pour le défilement horizontal */
@@ -427,7 +402,7 @@
 }
 
 .horizontalContainer::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #720a0a;
 }
 
 /* S'assurer que les images gardent leur taille sans se rétrécir */
