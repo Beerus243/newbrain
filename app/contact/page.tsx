@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./Contact.module.css";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Contact = () => {
   const [contactType, setContactType] = useState<"personal" | "enterprise">("personal");
@@ -42,6 +43,7 @@ const Contact = () => {
 
   return (
     <>
+    <Header />
     <div className={styles.container}>
       <h1 className={styles.title}>Contactez-nous</h1>
 
@@ -145,7 +147,7 @@ const Contact = () => {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/image/informatique.png"
+            src="/image/call.jpg"
             alt="Illustration Informatique"
             width={400}
             height={400}
