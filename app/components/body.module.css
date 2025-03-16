@@ -3,6 +3,7 @@
 /*        Styles de base et typographie              */
 
 .paragraphe {
+  text-align: center;
   font-family: 'roboto', sans-serif;
   color: #f0f0f0; /* Texte clair */
   line-height: 1.6;
@@ -55,6 +56,8 @@
 /* Grille principale (3 colonnes) */
 .grid {
   display: grid;
+  padding-right: 20;
+  padding-left: 20px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding-bottom: 50px;
@@ -68,29 +71,16 @@
     /* Fixer la largeur de chaque colonne pour que la grille dépasse l’écran */
     grid-template-columns: repeat(6, 100%); /* 6 colonnes pour les 6 images */
     width: max-content; /* la grille prendra la largeur de son contenu */
-    gap: 20px;
+    gap: 200px;
     justify-self: center;
+    padding: 200;
     box-sizing: border-box; /* Inclut le padding dans la largeur totale */
   }
 }
 
-/* Carte de formation / générale */
-.card {
-  background-color: #ffffff; /* Couleur de fond beige */
-  color: white; /* Couleur du texte */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-  padding-right: 20px;
-  padding-left: 20px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
 
 .cardImage {
-  width: 90%;
+  width: 80%;
   height: 90px;
   object-fit: cover;
   border-radius: 10px;
@@ -238,6 +228,7 @@
 
 /* Grille de cartes pour la nouvelle section (2 colonnes) */
 .cardGrid {
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -263,6 +254,7 @@
 }
 
 .cardGridTitle {
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
   color: #f0f0f0;
@@ -374,16 +366,6 @@
   border-radius: 4px;
 }
 
-/* Conteneur pour le carrousel */
-.carouselContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden; /* Empêche le débordement */
-  width: 100%; /* Assure que le carrousel prend toute la largeur */
-  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-}
 
 .btnAppointment {
   background-color: #ff6600;
@@ -406,8 +388,8 @@
 
 
 .cardLarge {
-  padding: 100px;
-  background-color: #e4e7e9;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .cardLargeTitre {

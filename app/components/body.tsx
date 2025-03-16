@@ -400,11 +400,12 @@ export default function Body() {
                 productivité et favoriser la montée en competences de vos équipes.
           </p>
    </div>
-   <br/>
-        <h3 className={styles.title}> Certifications et financement par vos OPCOs. </h3>
-        <br />
-        <p className={styles.paragraphe}> Newbrain est certifier Qualiopi et propose des solutions de financement pour vos formations</p>
    </div>
+
+   <h3 className={styles.title}> Certifications et financement par vos OPCOs. </h3>
+        <p className={styles.paragraphe}> Newbrain est certifier 
+          Qualiopi et propose des solutions de financement pour vos formations</p>
+   
    <div className={styles.cardGrid}>
         <div className={styles.card}>
               <FaSink className={styles.cardIcon} />
