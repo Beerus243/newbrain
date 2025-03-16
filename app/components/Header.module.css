@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
+
 .paragraphe {
   font-family: 'roboto', sans-serif;
   color: #f0f0f0; /* Texte clair */
@@ -119,6 +120,236 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .headerText {
+    margin-right: 10;
+    margin-left: 10;
+    padding-top: 15%;
+    position: relative;
+    text-align: center;
+  }
+  .titre1 {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    color: black;
+    text-align: center;
+    background: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: aliceblue;
+  }
+
+  .navbar {
+    top: 15px;
+    height: 80px;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .grid {
+    display: none; /* Cache la grille d'images */
+  }
+
+  .swiper-container {
+    display: block; /* Affiche le carrousel */
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .statsContainer {
+    padding: 2rem 1rem;
+  }
+
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statsCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .newbrainSection {
+    padding: 20px 10px;
+  }
+
+  .newbrainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitles {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .auditCard {
+    padding: 15px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
+    gap: 10px;
+  }
+
+  .cardIcon {
+    font-size: 2rem;
+  }
+
+  .cardGridTitle {
+    font-size: 1rem;
+  }
+
+  /* Styles pour le menu hamburger */
+  .navRight {
+    display: none; /* Cache les éléments de navigation écrits */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 25px;
+  }
+
+  .navMenuContainer {
+    display: none;
+  }
+
+  .navMenuContainer.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    padding: 10px 0;
+  }
+
+  .navButtonContainer {
+    display: none; /* Cache le bouton dans le conteneur principal */
+  }
+
+  .navItemMobile {
+    display: block; /* Affiche le bouton dans le menu hamburger */
+    margin-top: 10px;
+    justify-content: center; /* Centrer le bouton */
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Cache le menu hamburger sur les grands écrans */
+  }
+
+  .navRight {
+    display: flex; /* Affiche les éléments de navigation écrits */
+  }
+
+  .navMenuContainer {
+    display: flex; /* Affiche le conteneur de menu */
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex; /* Affiche le menu */
+    flex-direction: row;
+  }
+
+  .navButtonContainer {
+    display: flex; /* Affiche le bouton dans le conteneur principal */
+    margin-left: 1rem;
+  }
+
+  .navItemMobile {
+    display: none; /* Cache le bouton dans le menu hamburger */
+  }
+}
+
+.navLeft {
+  color: #333;
+}
+
+.navRight {
+  /* La section droite pour le menu */
+  display: flex;
+  align-items: center;
+}
+
+.navMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.navItem:first-child {
+  margin-left: 0;
+}
+
+.navItem:hover {
+  color: #f0a500;    /* Couleur au survol */
+  transform: translateY(-2px);
+}
+
 .titre1 {
   bottom: 25;
   position: relative;
@@ -140,7 +371,6 @@
   font-size: 3rem;
   font-weight: bold;
 }
-
 .highlight {
   color: #ff6600;
 }
@@ -212,159 +442,14 @@
   text-align: center;
 }
 
-.navLeft {
-  color: #333;
-}
-
-.navRight {
-  /* La section droite pour le menu */
-  display: flex;
-  align-items: center;
-}
-
-.navMenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navItem {
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin-left: 1.5rem;
-}
-
-.navItem:first-child {
-  margin-left: 0;
-}
-
-.navItem:hover {
-  color: #f0a500;    /* Couleur au survol */
-  transform: translateY(-2px);
-}
-
-/* Styles pour le menu hamburger */
-.hamburger {
-  display: none; /* Cache le menu hamburger par défaut */
-  left: 100;
-}
-
-.hamburger div {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-.hamburger div:nth-child(1) {
-  top: 0;
-}
-
-.hamburger div:nth-child(2) {
-  top: 9px;
-}
-
-.hamburger div:nth-child(3) {
-  top: 18px;
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 9px;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
-  .headerText {
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-top: 15%;
-    position: relative;
-    text-align: center;
-  }
-
-  .titre1 {
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    color: black;
-    text-align: center;
-    background: aliceblue;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: black;
-    text-align: center;
-    margin-bottom: 100px;
-    background-color: aliceblue;
-  }
-
-  .navbar {
-    top: 15px;
-    height: auto;
-    justify-content: space-between;
-    padding: 1rem;
-    flex-direction: column;
-  }
-
-  .navMenuContainer {
-    display: none;
-  }
-
-  .navMenuContainer.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #171717;
-    z-index: 1000;
-    padding: 1rem;
-  }
-
-  .navMenu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navItem {
-    padding: 10px 0;
-  }
-
-  .navButtonContainer {
-    display: none; /* Cache le bouton dans le conteneur principal */
-  }
-
   .navItemMobile {
     display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
   }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    width: 30px;
-    height: 25px;
-  }
-
   .buttons {
-    padding: 0 25px;
+    padding: 0 25 0 25;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,7 +458,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
   }
-
+  
   .button {
     padding: 15px;
     border: none;
@@ -383,21 +468,21 @@
     font-size: 15px;
     transition: background 0.3s, transform 0.2s ease-in-out;
   }
-
+  
   .btnAppointment {
     background-color: #007bff;
     color: white;
   }
-
+  
   .btnTraining {
     background-color: #28a745;
     color: white;
   }
-
+  
   .button:hover {
     transform: scale(1.05);
   }
-
+  
   .button:active {
     transform: scale(0.95);
   }
@@ -406,28 +491,5 @@
 @media (min-width: 769px) {
   .navItemMobile {
     display: none; /* Cache le bouton dans le menu hamburger */
-  }
-
-  .hamburger {
-    display: none; /* Cache le menu hamburger sur les grands écrans */
-  }
-
-  .navRight {
-    display: flex; /* Affiche les éléments de navigation écrits */
-  }
-
-  .navMenuContainer {
-    display: flex; /* Affiche le conteneur de menu */
-    align-items: center;
-  }
-
-  .navMenu {
-    display: flex; /* Affiche le menu */
-    flex-direction: row;
-  }
-
-  .navButtonContainer {
-    display: flex; /* Affiche le bouton dans le conteneur principal */
-    margin-left: 1rem;
   }
 }
