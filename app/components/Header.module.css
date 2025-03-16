@@ -447,6 +447,7 @@
     display: block; /* Affiche le bouton dans le menu hamburger */
     margin-top: 10px;
     justify-content: center; /* Centrer le bouton */
+    width: 80%;
   }
   .buttons {
     padding: 0 25 0 25;
