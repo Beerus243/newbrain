@@ -112,13 +112,12 @@
     gap: 1rem;
   }
   
-  .form,
-  .imageContainer {
+  .form {
     width: 100%;
     min-width: 100%;
   }
   
   .imageContainer {
-    margin-top: 1rem;
+    display: none;
   }
 }
