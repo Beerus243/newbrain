@@ -11,6 +11,14 @@
   padding-right: 30px;
 }
 
+.headerText {
+  padding-top: 2%;
+  margin-right: 25%;
+  margin-left: 25%;
+  position: relative;
+  text-align: center;
+}
+
 
 /*           Navbar et Header Text                  */
 
@@ -30,6 +38,98 @@
   color: #f0f0f0;
 }
 
+
+.titre1 {
+  bottom: 25;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: black;
+  text-align: center;
+  background-color: aliceblue;
+  margin-right: 80;
+  margin-left: 80;
+  font-size: 16;
+  padding: 1px;
+}
+
+.titre2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.highlight {
+  color: #ff6600;
+}
+
+.titre3 {
+  font-family: "franklin gothic medium", "arial narrow", arial, sans-serif;
+  font-weight: 100;
+  margin-top: 20;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  padding: 0 25 0 25;
+  display: flex;
+  justify-content: center;
+  gap: 7px; /* espace entre les boutons */
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.btnAppointment {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color:#ff6600;
+  color: white;
+}
+
+.btnTraining {
+  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
+  color: #fff;
+  border: 2px solid #fff; /* Bordure blanche */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Effet hover */
+.btnTraining:hover {
+  border-color: #ff6600; /* Change aussi la bordure */
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Conteneur pour le texte du header */
+.headerText {
+  position: relative;
+  margin-top: 15%;
+  justify-content: center;
+  text-align: center;
+}
 /* ------------------------------------------------- */
 /*                Conteneur général                 */
 /* ------------------------------------------------- */

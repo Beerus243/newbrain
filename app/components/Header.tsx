@@ -26,7 +26,9 @@ const Navigation = () => {
         <div className={`${styles.navRight} ${menuOpen ? styles.active : ""}`}>
           <div className={`${styles.navMenuContainer} ${menuOpen ? styles.active : ""}`}>
             <ul className={styles.navMenu}>
+              <Link href="/" legacyBehavior>
               <li className={styles.navItem}>Home</li>
+              </Link>
               <li className={styles.navItem}>Formation Ai</li>
               <li className={styles.navItem}>Audit et consulting</li>
               <li className={styles.navItem}>Ressource</li>
@@ -47,31 +49,6 @@ const Navigation = () => {
           </div>
         </div> 
       </nav>
-      <div className={styles.headerText}>
-        <h6 className={styles.titre1}>FORMATION IA POUR PROFESSIONNELS & PARTICULIERS</h6>
-        <h1 className={styles.titre2}>
-          Gagnez en productivité
-          <br />
-          <span className={styles.highlight}>grâce à l'IA</span>
-        </h1>
-        <p className={styles.paragraphe}>
-          Newbrain est un cabinet de conseil spécialisé en 
-          intelligence artificielle. Nous proposons des formations
-           en intelligence artificielle ainsi que des prestations d'audit et
-            de conseil pour décupler la productivité des entreprises.
-        </p>
-        <div className={styles.buttons}>
-          <Link href="/contact" legacyBehavior>
-            <button className={`${styles.button} ${styles.btnAppointment}`}>
-              Prenez rendez-vous
-            </button>
-          </Link>
-          <button className={`${styles.button} ${styles.btnTraining}`}>
-            Nos formations
-          </button>
-        </div>
-        <p className={styles.titre3}>Ils ont été formés par nous</p>
-      </div>
     </>
   );
 };

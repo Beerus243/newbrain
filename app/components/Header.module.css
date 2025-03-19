@@ -121,13 +121,6 @@
 }
 
 @media (max-width: 768px) {
-  .headerText {
-    margin-right: 10;
-    margin-left: 10;
-    padding-top: 15%;
-    position: relative;
-    text-align: center;
-  }
   .titre1 {
     position: relative;
     font-family: "Poppins", sans-serif;
@@ -471,7 +464,7 @@
   }
   
   .btnAppointment {
-    background-color: #007bff;
+    background-color: #e65c00;
     color: white;
   }
   

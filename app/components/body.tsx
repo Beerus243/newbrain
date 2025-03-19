@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
 import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
+import Link from "next/link";
 
 type Formation = {
   id: number;
@@ -38,6 +39,31 @@ const formations: Formation[] = [
 export default function Body() {
   return (
     <>
+          <div className={styles.headerText}>
+        <h6 className={styles.titre1}>FORMATION IA POUR PROFESSIONNELS & PARTICULIERS</h6>
+        <h1 className={styles.titre2}>
+          Gagnez en productivité
+          <br />
+          <span className={styles.highlight}>grâce à l'IA</span>
+        </h1>
+        <p className={styles.paragraphe}>
+          Newbrain est un cabinet de conseil spécialisé en 
+          intelligence artificielle. Nous proposons des formations
+           en intelligence artificielle ainsi que des prestations d'audit et
+            de conseil pour décupler la productivité des entreprises.
+        </p>
+        <div className={styles.buttons}>
+          <Link href="/contact" legacyBehavior>
+            <button className={`${styles.button} ${styles.btnAppointment}`}>
+              Prenez rendez-vous
+            </button>
+          </Link>
+          <button className={`${styles.button} ${styles.btnTraining}`}>
+            Nos formations
+          </button>
+        </div>
+        <p className={styles.titre3}>Ils ont été formés par nous</p>
+      </div>
       <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
