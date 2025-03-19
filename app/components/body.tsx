@@ -22,18 +22,27 @@ type Formation = {
 };
 
 const formations: Formation[] = [
-  { id: 1, title: "Formation 1",
-     description: "Audit IA Inclus", image: "https://picsum.photos/seed/formation1/400/300" },
-  { id: 2, title: "Formation 2",
-     description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
-  { id: 3, title: "Formation 3",
-     description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
-  { id: 4, title: "Formation 4",
-     description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
-  { id: 5, title: "Formation 5",
-     description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
-  { id: 6, title: "Formation 6",
-     description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
+  {
+    id: 1,
+    title: "Formation 1",
+    description: `
+      <ul>
+        <li>Entreprise</li>
+        <li>Audit IA Inclus</li>
+        <li>Focus outils IA décisionnels et de gestion</li>
+        <li>Définir et déployer un plan d'action IA personnalisé</li>
+        <li>Suivi personnalisé pour mesurer les gains concrets</li>
+        <li>La règlementation française & européenne en matière d'IA</li>
+        <li>La règlementation internationale en matière d'IA</li>
+      </ul>
+    `,
+    image: "https://picsum.photos/seed/formation1/400/300",
+  },
+  { id: 2, title: "Formation 2", description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
+  { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
+  { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
+  { id: 5, title: "Formation 5", description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
+  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
 ];
 
 export default function Body() {
@@ -64,6 +73,8 @@ export default function Body() {
         </div>
         <p className={styles.titre3}>Ils ont été formés par nous</p>
       </div>
+
+      
       <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
