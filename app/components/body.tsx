@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./body.module.css";
 import {
   FaSink,
@@ -8,7 +8,7 @@ import {
   FaCheckCircle,
   FaMoneyBillWave,
   FaUserFriends,
-  FaUserGraduate
+  FaUserGraduate,
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
 import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
@@ -17,7 +17,8 @@ import Link from "next/link";
 type Formation = {
   id: number;
   title: string;
-  description: string;
+  description?: string;
+  points?: string[];
   image: string;
 };
 
@@ -25,41 +26,66 @@ const formations: Formation[] = [
   {
     id: 1,
     title: "Formation 1",
-    description: `
-      <ul>
-        <li>Entreprise</li>
-        <li>Audit IA Inclus</li>
-        <li>Focus outils IA décisionnels et de gestion</li>
-        <li>Définir et déployer un plan d'action IA personnalisé</li>
-        <li>Suivi personnalisé pour mesurer les gains concrets</li>
-        <li>La règlementation française & européenne en matière d'IA</li>
-        <li>La règlementation internationale en matière d'IA</li>
-      </ul>
-    `,
+    points: [
+      "Entreprise",
+      "Audit IA Inclus",
+      "Focus outils IA décisionnels et de gestion",
+      "Définir et déployer un plan d'action IA personnalisé",
+      "Suivi personnalisé pour mesurer les gains concrets",
+      "La règlementation française & européenne en matière d'IA",
+      "La règlementation internationale en matière d'IA",
+    ],
     image: "https://picsum.photos/seed/formation1/400/300",
   },
-  { id: 2, title: "Formation 2", description: "Description de la formation 2.", image: "https://picsum.photos/seed/formation2/400/300" },
-  { id: 3, title: "Formation 3", description: "Description de la formation 3.", image: "https://picsum.photos/seed/formation3/400/300" },
-  { id: 4, title: "Formation 4", description: "Description de la formation 4.", image: "https://picsum.photos/seed/formation4/400/300" },
-  { id: 5, title: "Formation 5", description: "Description de la formation 5.", image: "https://picsum.photos/seed/formation5/400/300" },
-  { id: 6, title: "Formation 6", description: "Description de la formation 6.", image: "https://picsum.photos/seed/formation6/400/300" }
+  {
+    id: 2,
+    title: "Formation 2",
+    description: "Description de la formation 2.",
+    image: "https://picsum.photos/seed/formation2/400/300",
+  },
+  {
+    id: 3,
+    title: "Formation 3",
+    description: "Description de la formation 3.",
+    image: "https://picsum.photos/seed/formation3/400/300",
+  },
+  {
+    id: 4,
+    title: "Formation 4",
+    description: "Description de la formation 4.",
+    image: "https://picsum.photos/seed/formation4/400/300",
+  },
+  {
+    id: 5,
+    title: "Formation 5",
+    description: "Description de la formation 5.",
+    image: "https://picsum.photos/seed/formation5/400/300",
+  },
+  {
+    id: 6,
+    title: "Formation 6",
+    description: "Description de la formation 6.",
+    image: "https://picsum.photos/seed/formation6/400/300",
+  },
 ];
 
 export default function Body() {
   return (
     <>
-          <div className={styles.headerText}>
-        <h6 className={styles.titre1}>FORMATION IA POUR PROFESSIONNELS & PARTICULIERS</h6>
+      <div className={styles.headerText}>
+        <h6 className={styles.titre1}>
+          FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
+        </h6>
         <h1 className={styles.titre2}>
           Gagnez en productivité
           <br />
           <span className={styles.highlight}>grâce à l'IA</span>
         </h1>
         <p className={styles.paragraphe}>
-          Newbrain est un cabinet de conseil spécialisé en 
-          intelligence artificielle. Nous proposons des formations
-           en intelligence artificielle ainsi que des prestations d'audit et
-            de conseil pour décupler la productivité des entreprises.
+          Newbrain est un cabinet de conseil spécialisé en intelligence
+          artificielle. Nous proposons des formations en intelligence
+          artificielle ainsi que des prestations d'audit et de conseil pour
+          décupler la productivité des entreprises.
         </p>
         <div className={styles.buttons}>
           <Link href="/contact" legacyBehavior>
@@ -74,36 +100,50 @@ export default function Body() {
         <p className={styles.titre3}>Ils ont été formés par nous</p>
       </div>
 
-      
       <div className={styles.container1}>
         <h2 className={styles.title}>Nos offres et formations</h2>
         <div className={styles.titre3}>
           <p className={styles.paragraphe}>
-            De nombreuses formations en intelligence artificielle existent 
-            pour répondre aux enjeux actuels des entreprises.</p>
+            De nombreuses formations en intelligence artificielle existent pour
+            répondre aux enjeux actuels des entreprises.
+          </p>
         </div>
 
         <div className={styles.grid}>
           {formations.map((formation) => (
             <div key={formation.id} className={styles.card}>
-              <img src={formation.image} alt={formation.title} className={styles.cardImage} />
+              <img
+                src={formation.image}
+                alt={formation.title}
+                className={styles.cardImage}
+              />
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{formation.title}</h3>
-                <p className={styles.cardDescription}>{formation.description}</p>
+                {formation.points ? (
+                  <ul className={styles.cardList}>
+                    {formation.points.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={styles.cardDescription}>
+                    {formation.description}
+                  </p>
+                )}
                 <div className={styles.buttons}>
-        <button className={`${styles.button} ${styles.btnAppointment}`}>
-          Voir la Formation
-        </button>
-      </div>
+                  <button
+                    className={`${styles.button} ${styles.btnAppointment}`}
+                  >
+                    Voir la Formation
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-
-
-      {/* La suite de votre composant Body (statistiques, Newbrain, etc.) */}
+      {/* Reste du composant Body (statistiques, Newbrain, etc.) */}
       <div id="statsContainer" className={styles.statsContainer}>
         <div className={styles.statsGrid}>
           <div className={styles.statsCard}>
