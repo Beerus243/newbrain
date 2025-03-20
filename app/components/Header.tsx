@@ -22,7 +22,21 @@ const Navigation = () => {
           </Link>
         </div>
 
-        {/* Hamburger à droite */}
+        {/* Menu central pour les écrans larges */}
+        <div className={styles.navMiddle}>
+          <ul className={styles.navMenu}>
+            <li className={styles.navItem}>Home</li>
+            <li className={styles.navItem}>Formation AI</li>
+            <li className={styles.navItem}>Audit et Consulting</li>
+            <li className={styles.navItem}>Ressource</li>
+          </ul>
+        </div>
+                  {/* Bouton "Prendre un rendez-vous" */}
+                  <button className={`${styles.navButton} ${styles.navButtonPrimary}`}>
+            Prendre un rendez-vous
+          </button>
+
+        {/* Hamburger pour les écrans mobiles */}
         <div className={styles.hamburger} onClick={toggleMenu}>
           <div></div>
           <div></div>
@@ -33,35 +47,12 @@ const Navigation = () => {
       {/* Menu mobile déroulant */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}>
         <ul className={styles.mobileNavMenu}>
+          <li className={styles.navItem}>Home</li>
+          <li className={styles.navItem}>Formation AI</li>
+          <li className={styles.navItem}>Audit et Consulting</li>
+          <li className={styles.navItem}>Ressource</li>
           <li className={styles.navItem}>
-            <Link href="/" legacyBehavior>
-              <a>Home</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/formation-ai" legacyBehavior>
-              <a>Formation AI</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/audit-consulting" legacyBehavior>
-              <a>Audit et Consulting</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/ressource" legacyBehavior>
-              <a>Ressource</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/contact" legacyBehavior>
-              <a>Contact</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/contact" legacyBehavior>
-              <button className={styles.navButton}>Prendre un rendez-vous</button>
-            </Link>
+            <button className={styles.navButton}>Prendre un rendez-vous</button>
           </li>
         </ul>
       </div>
