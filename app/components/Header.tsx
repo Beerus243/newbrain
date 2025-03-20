@@ -7,49 +7,65 @@ import styles from "./Header.module.css";
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <>
-      <nav className={styles.navbar}>
+    <nav className={styles.navbar} role="navigation" aria-label="Main Navigation">
+      <div className={styles.navContainer}>
+        {/* Logo à gauche */}
         <div className={styles.navLeft}>
-          {/* Logo à gauche */}
-          <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
+          <Link href="/" legacyBehavior>
+            <a>
+              <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
+            </a>
+          </Link>
         </div>
-        <div className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`} onClick={toggleMenu}>
+
+        {/* Hamburger à droite */}
+        <div className={styles.hamburger} onClick={toggleMenu}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <div className={`${styles.navRight} ${menuOpen ? styles.active : ""}`}>
-          <div className={`${styles.navMenuContainer} ${menuOpen ? styles.active : ""}`}>
-            <ul className={styles.navMenu}>
-              <Link href="/" legacyBehavior>
-              <li className={styles.navItem}>Home</li>
-              </Link>
-              <li className={styles.navItem}>Formation Ai</li>
-              <li className={styles.navItem}>Audit et consulting</li>
-              <li className={styles.navItem}>Ressource</li>
-              <li className={styles.navItemMobile}>
-                <Link href="/contact" legacyBehavior>
-                  <a>Contact</a>
-                </Link>
-                <Link href="/contact" legacyBehavior>
-                  <button className={styles.navButton}>Prendre un rendez-vous</button>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.navButtonContainer}>
+      </div>
+
+      {/* Menu mobile déroulant */}
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}>
+        <ul className={styles.mobileNavMenu}>
+          <li className={styles.navItem}>
+            <Link href="/" legacyBehavior>
+              <a>Home</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/formation-ai" legacyBehavior>
+              <a>Formation AI</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/audit-consulting" legacyBehavior>
+              <a>Audit et Consulting</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/ressource" legacyBehavior>
+              <a>Ressource</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/contact" legacyBehavior>
+              <a>Contact</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
             <Link href="/contact" legacyBehavior>
               <button className={styles.navButton}>Prendre un rendez-vous</button>
             </Link>
-          </div>
-        </div> 
-      </nav>
-    </>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 

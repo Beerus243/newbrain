@@ -11,17 +11,18 @@
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #333; /* Couleur de fond sombre */
   border-radius: 8px;
-  width: calc(33% - 2rem);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); /* Animation au survol */
+  background-color: #444; /* Couleur légèrement différente au survol */
 }
 
 .cardImage {
@@ -66,23 +67,6 @@
   color: #ff6600; /* Couleur personnalisée pour la puce */
 }
 
-.buttons {
-  margin-top: 1rem;
-}
-
-.button {
-  background: #0070f3;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.btnAppointment {
-  margin-right: 1rem;
-}
 
 
 
@@ -96,6 +80,10 @@
   line-height: 1.6;
   padding-bottom: 20px;
   padding-right: 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Centrer le texte */
 }
 
 .headerText {
@@ -158,6 +146,10 @@
   color: white;
   text-align: center;
   font-size: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .buttons {
@@ -168,6 +160,10 @@
   margin-top: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacement entre les boutons */
+  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
 }
 
 .button {
@@ -178,12 +174,24 @@
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   transition: background 0.3s, transform 0.2s ease-in-out;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btnAppointment {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color:#ff6600;
   color: white;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+}
+
+.btnAppointment:hover {
+  background-color: #e65c00;
 }
 
 .btnTraining {
@@ -195,11 +203,15 @@
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   white-space: nowrap;
+  background-color: #444;
+  color: #fff;
+  border: none;
 }
 
 /* Effet hover */
 .btnTraining:hover {
   border-color: #ff6600; /* Change aussi la bordure */
+  background-color: #333;
 }
 
 .button:hover {
@@ -575,8 +587,17 @@
 
 
 .cardLarge {
-  padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #333; /* Couleur de fond sombre */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
+}
+
+.cardLarge:hover {
+  background-color: #444; /* Couleur légèrement différente au survol */
 }
 
 .cardLargeTitre {
@@ -622,7 +643,10 @@
     gap: 7px; /* espace entre les boutons */
     margin-top: 85px;
     font-family: "Poppins", sans-serif;
-
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espacement entre les boutons */
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
   }
   
   .button {
@@ -634,6 +658,8 @@
     font-family: "Poppins", sans-serif;
     font-size: 10px;
     transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 0.9rem; /* Réduction de la taille des boutons */
+    padding: 0.5rem 1rem;
   }
   
   .btnAppointment {
@@ -648,5 +674,223 @@
     padding-bottom: 5px;
     color: #f0f0f0;
   }
-  
+  .cardGrid {
+    padding: 8px; /* Réduction de la marge intérieure sur les petits écrans */
+  }
+
+  .card {
+    flex: 0 0 80%; /* Réduction de la largeur des cartes sur mobile */
+  }  
+  .paragraphe {
+    font-size: 0.9rem; /* Réduction de la taille du texte */
+    padding: 0 1rem; /* Ajout de marges pour éviter que le texte touche les bords */
+  }
+
+  .titre3 {
+    font-size: 1rem; /* Réduction de la taille du titre */
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraphe {
+    font-size: 0.8rem; /* Réduction supplémentaire pour les très petits écrans */
+  }
+
+  .button {
+    font-size: 0.8rem; /* Réduction supplémentaire pour les boutons */
+    padding: 0.5rem 0.8rem;
+  }
+
+  .titre3 {
+    font-size: 0.9rem; /* Réduction supplémentaire pour le titre */
+  }
+}
+
+/* Styles pour la section headerText */
+.headerText {
+  text-align: center;
+  padding: 2rem;
+}
+
+.titre1 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.titre2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .headerText {
+    padding: 1rem;
+  }
+
+  .titre1 {
+    font-size: 1rem; /* Réduction de la taille du texte */
+  }
+
+  .titre2 {
+    font-size: 1.8rem; /* Réduction de la taille du titre */
+  }
+
+  .highlight {
+    font-size: 1.8rem; /* Ajustement de la taille du texte en surbrillance */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerText {
+    padding: 0.5rem;
+  }
+
+  .titre1 {
+    font-size: 0.9rem; /* Réduction supplémentaire pour les très petits écrans */
+  }
+
+  .titre2 {
+    font-size: 1.5rem; /* Réduction supplémentaire pour les très petits écrans */
+  }
+
+  .highlight {
+    font-size: 1.5rem;
+  }
+}
+
+/* Styles pour les cartes */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+  gap: 1.5rem; /* Espacement entre les cartes */
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #333; /* Couleur de fond sombre */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Animation au survol */
+  background-color: #444; /* Couleur légèrement différente au survol */
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.cardGridTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cardGridDescription {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Styles pour les grandes cartes */
+.cardLarge {
+  background-color: #333; /* Couleur de fond sombre */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
+}
+
+.cardLarge:hover {
+  background-color: #444; /* Couleur légèrement différente au survol */
+}
+
+.cardLargeTitre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cardLargeDescription {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr; /* Une seule colonne sur les écrans moyens */
+  }
+
+  .card {
+    padding: 1rem; /* Réduction de l'espacement interne */
+  }
+
+  .cardGridTitle {
+    font-size: 1rem; /* Réduction de la taille du titre */
+  }
+
+  .cardGridDescription {
+    font-size: 0.9rem; /* Réduction de la taille du texte */
+  }
+
+  .cardLarge {
+    padding: 1.5rem; /* Réduction de l'espacement interne */
+  }
+
+  .cardLargeTitre {
+    font-size: 1.2rem; /* Réduction de la taille du titre */
+  }
+
+  .cardLargeDescription {
+    font-size: 0.9rem; /* Réduction de la taille du texte */
+  }
+}
+
+@media (max-width: 480px) {
+  .cardGrid {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+  }
+
+  .card {
+    padding: 0.8rem; /* Réduction supplémentaire de l'espacement interne */
+  }
+
+  .cardGridTitle {
+    font-size: 0.9rem; /* Réduction supplémentaire de la taille du titre */
+  }
+
+  .cardGridDescription {
+    font-size: 0.8rem; /* Réduction supplémentaire de la taille du texte */
+  }
+
+  .cardLarge {
+    padding: 1rem; /* Réduction supplémentaire de l'espacement interne */
+  }
+
+  .cardLargeTitre {
+    font-size: 1rem; /* Réduction supplémentaire de la taille du titre */
+  }
+
+  .cardLargeDescription {
+    font-size: 0.8rem; /* Réduction supplémentaire de la taille du texte */
+  }
 }

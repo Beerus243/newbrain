@@ -1,99 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
-
-.paragraphe {
-  font-family: 'roboto', sans-serif;
-  color: #f0f0f0; /* Texte clair */
-  line-height: 1.6;
-  padding: 30px 0;
-  font-size: 0.9rem;
-}
-
+/* Structure de base de la navbar */
 .navbar {
   background-color: #333;
   opacity: 0.9;
-  padding: 1rem 2rem;
+  padding-top: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 97%;
+  height: 5.5rem;
+  border-radius: 0.7rem;
+  z-index: 1000;
+}
+
+/* Conteneur principal de la navbar */
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  border-radius: 0.7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 97%; /* Ajustez la largeur pour éviter le dépassement */
-  z-index: 1000;
-  height: 5.5rem;
-  top: 20px;
+}
+
+/* Section gauche pour le logo */
+.navLeft {
+  flex: 1;
+}
+
+/* Section centrale pour le menu (affiché en desktop) */
+.navMiddle {
+  flex: 2;
 }
 
 .navMenuContainer {
+  background-color: #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between; /* Ajouté pour espacer les éléments */
-  flex-wrap: wrap; /* Ajouté pour gérer le débordement */
-  background-color: #585858; /* Couleur de fond de la boîte */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
 }
 
 .navMenu {
-  display: flex;
   list-style: none;
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .navItem {
-  margin-right: 1rem;
   color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
   cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.navButtonContainer {
-  margin-left: 1rem;
-  flex-shrink: 0; /* Empêche le bouton de rétrécir */
-  display: flex; /* Ajouté pour aligner le bouton correctement */
-  align-items: center; /* Ajouté pour aligner le bouton verticalement */
+.navItem:hover {
+  color: #f0a500;
 }
 
+/* Section droite pour le bouton et le hamburger */
+.navRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Bouton "Prendre un rendez-vous" */
 .navButton {
   background-color: #ff6600;
-  font-family: 'roboto', sans-serif;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease;
-  white-space: nowrap; /* Empêche le texte de se casser */
+  white-space: nowrap;
+  margin-right: 1rem;
 }
 
 .navButton:hover {
+  color: black;
   background-color: #e65c00;
 }
 
+/* Bouton hamburger */
 .hamburger {
-  display: none; /* Cache le menu hamburger par défaut */
-  left: 100;
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  background: none;
+  border: none;
 }
 
 .hamburger div {
+  position: absolute;
   width: 100%;
   height: 3px;
   background-color: #fff;
-  position: absolute;
   transition: all 0.3s ease;
 }
 
 .hamburger div:nth-child(1) {
   top: 0;
 }
-
 .hamburger div:nth-child(2) {
   top: 9px;
 }
-
 .hamburger div:nth-child(3) {
   top: 18px;
 }
@@ -102,388 +123,97 @@
   transform: rotate(45deg);
   top: 9px;
 }
-
 .hamburger.active div:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active div:nth-child(3) {
   transform: rotate(-45deg);
   top: 9px;
 }
 
-.headerText {
-  padding-top: 2%;
-  margin-right: 25%;
-  margin-left: 25%;
-  position: relative;
-  text-align: center;
+/* Menu mobile déroulant */
+.mobileMenu {
+  display: none;
+  background-color: #171717;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  max-width: 97%;
+  margin: 0 auto;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .titre1 {
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    color: black;
-    text-align: center;
-    background: aliceblue;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: black;
-    text-align: center;
-    margin-bottom: 100px;
-    background-color: aliceblue;
-  }
-
-  .navbar {
-    top: 15px;
-    height: 80px;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-    margin-top: 30px;
-  }
-
-  .grid {
-    display: none; /* Cache la grille d'images */
-  }
-
-  .swiper-container {
-    display: block; /* Affiche le carrousel */
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .cardTitle {
-    font-size: 1rem;
-  }
-
-  .cardDescription {
-    font-size: 0.8rem;
-  }
-
-  .cardButton {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .statsContainer {
-    padding: 2rem 1rem;
-  }
-
-  .statsGrid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .statsCard {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .statValue {
-    font-size: 2rem;
-  }
-
-  .statLabel {
-    font-size: 1rem;
-  }
-
-  .newbrainSection {
-    padding: 20px 10px;
-  }
-
-  .newbrainTitle {
-    font-size: 2rem;
-  }
-
-  .subtitles {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .auditCard {
-    padding: 15px;
-  }
-
-  .cardGrid {
-    grid-template-columns: 1fr; /* Une seule colonne pour les téléphones */
-    gap: 10px;
-  }
-
-  .cardIcon {
-    font-size: 2rem;
-  }
-
-  .cardGridTitle {
-    font-size: 1rem;
-  }
-
-  /* Styles pour le menu hamburger */
-  .navRight {
-    display: none; /* Cache les éléments de navigation écrits */
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    width: 30px;
-    height: 25px;
-  }
-
-  .navMenuContainer {
-    display: none;
-  }
-
-  .navMenuContainer.active {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #171717;
-    z-index: 1000;
-    padding: 1rem;
-  }
-
-  .navMenu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navItem {
-    padding: 10px 0;
-  }
-
-  .navButtonContainer {
-    display: none; /* Cache le bouton dans le conteneur principal */
-  }
-
-  .navItemMobile {
-    display: block; /* Affiche le bouton dans le menu hamburger */
-    margin-top: 10px;
-    justify-content: center; /* Centrer le bouton */
-  }
+.mobileMenu.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (min-width: 769px) {
-  .hamburger {
-    display: none; /* Cache le menu hamburger sur les grands écrans */
-  }
-
-  .navRight {
-    display: flex; /* Affiche les éléments de navigation écrits */
-  }
-
-  .navMenuContainer {
-    display: flex; /* Affiche le conteneur de menu */
-    align-items: center;
-  }
-
-  .navMenu {
-    display: flex; /* Affiche le menu */
-    flex-direction: row;
-  }
-
-  .navButtonContainer {
-    display: flex; /* Affiche le bouton dans le conteneur principal */
-    margin-left: 1rem;
-  }
-
-  .navItemMobile {
-    display: none; /* Cache le bouton dans le menu hamburger */
-  }
-}
-
-.navLeft {
-  color: #333;
-}
-
-.navRight {
-  /* La section droite pour le menu */
-  display: flex;
-  align-items: center;
-}
-
-.navMenu {
+.mobileNavMenu {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.navItem {
+.mobileNavMenu .navItem {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease;
+}
+
+.mobileNavMenu .navItem:hover {
+  background-color: #333;
+}
+
+/* Bouton dans le menu mobile */
+.mobileNavMenu .navButton {
+  display: block; /* Assurez-vous que le bouton est affiché comme un bloc */
+  background-color: #ff6600;
   color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin-left: 1.5rem;
-}
-
-.navItem:first-child {
-  margin-left: 0;
-}
-
-.navItem:hover {
-  color: #f0a500;    /* Couleur au survol */
-  transform: translateY(-2px);
-}
-
-.titre1 {
-  bottom: 25;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  color: black;
-  text-align: center;
-  background-color: aliceblue;
-  margin-right: 80;
-  margin-left: 80;
-  font-size: 16;
-  padding: 1px;
-}
-
-.titre2 {
-  font-family: "Poppins", sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-}
-.highlight {
-  color: #ff6600;
-}
-
-.titre3 {
-  font-family: "franklin gothic medium", "arial narrow", arial, sans-serif;
-  font-weight: 100;
-  margin-top: 20;
-  color: white;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.buttons {
-  padding: 0 25 0 25;
-  display: flex;
-  justify-content: center;
-  gap: 7px; /* espace entre les boutons */
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-}
-
-.button {
-  padding: 15px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  transition: background 0.3s, transform 0.2s ease-in-out;
-}
-
-.btnAppointment {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color:#ff6600;
-  color: white;
-}
-
-.btnTraining {
-  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
-  color: #fff;
-  border: 2px solid #fff; /* Bordure blanche */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  white-space: nowrap;
-}
-
-/* Effet hover */
-.btnTraining:hover {
-  border-color: #ff6600; /* Change aussi la bordure */
-}
-
-.button:hover {
-  transform: scale(1.05);
-}
-
-.button:active {
-  transform: scale(0.95);
-}
-
-/* Conteneur pour le texte du header */
-.headerText {
-  position: relative;
-  margin-top: 15%;
-  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem; /* Espacement au-dessus du bouton */
   text-align: center;
+  width: 100%; /* S'assure que le bouton prend toute la largeur */
 }
 
+.mobileNavMenu .navButton:hover {
+  background-color: #e65c00;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .navItemMobile {
-    display: block; /* Affiche le bouton dans le menu hamburger */
-    margin-top: 10px;
-    justify-content: center; /* Centrer le bouton */
-    width: 80%;
-  }
-  .buttons {
-    padding: 0 25 0 25;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 7px; /* espace entre les boutons */
-    margin-top: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
+  .navMiddle {
+    display: none;
   }
   
-  .button {
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    transition: background 0.3s, transform 0.2s ease-in-out;
+  /* Afficher à la fois le bouton et le hamburger dans la barre principale */
+  .navRight {
+    justify-content: space-between;
   }
   
-  .btnAppointment {
-    background-color: #e65c00;
-    color: white;
+  .navButton {
+    display: inline-block;
+    margin-right: 0;
   }
   
-  .btnTraining {
-    background-color: #28a745;
-    color: white;
+  .hamburger {
+    display: block;
   }
   
-  .button:hover {
-    transform: scale(1.05);
-  }
-  
-  .button:active {
-    transform: scale(0.95);
-  }
-}
-
-@media (min-width: 769px) {
-  .navItemMobile {
-    display: none; /* Cache le bouton dans le menu hamburger */
+  /* Masquer le bouton "Prendre un rendez-vous" dans la navbar en mode responsive */
+  .navRight .navButton {
+    display: none; /* Cache le bouton dans la navbar */
   }
 }
