@@ -183,42 +183,45 @@ export default function Body() {
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Evaluation du degré de maturité en IA</h3>
-              <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", paddingRight: "8px", fontSize:"30px" }} />
-                Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.
-              </p>
-              <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Définition des priorités et choix des cas d'usages à prioriser.
-              </p>
+              <ul className={styles.cardList}>
+                <li>
+                  Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.
+                </li>
+                <li>
+                  Définition des priorités et choix des cas d'usages à prioriser.
+                </li>
+              </ul>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Identification des inefficacités opérationnelles</h3>
-              <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Utilisation de matrices d'évaluation et scoring des données.
-              </p>
+              <ul className={styles.cardList}>
+                <li>
+                  Utilisation de matrices d'évaluation et scoring des données.
+                </li>
+              </ul>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
-              <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.
-              </p>
-              <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Définition des priorités et choix des cas d'usages à prioriser.
-                </p>
+              <ul className={styles.cardList}>
+               <li> Recueillir les informations détaillées sur les modes opératoires,
+                 les outilsutilisés et la culture d'entreprise.</li>
+              </ul>
+              <ul className={styles.cardList}>
+                <li>Définition des priorités et choix des cas d'usages à prioriser.</li>
+                </ul>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Création de la road map de formation</h3>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Rapport d'audit: Synthèse des données collectées, analyses effectuées et conclusions tirées.
+              <ul className={styles.cardList}>
+                <li>Rapport d'audit: Synthèse des données collectées,
+                   analyses effectuées et conclusions tirées.</li>
+              </ul>
               </p>
+              
             </div>
           </div>
           <br />
@@ -236,8 +239,9 @@ export default function Body() {
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Planification de la formation</h3>
               <p className={styles.cardGridDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-              Séances de formation en présentiel ou à distance.   
+              <ul className={styles.cardList}>
+              <li>Séances de formation en présentiel ou à distance.</li>
+              </ul>
               </p>
               <p className={styles.cardGridDescription}>
               <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
@@ -393,22 +397,26 @@ export default function Body() {
                 Formation IA de vos collaborateurs aux <strong>Fondamentaux  et techniques d'IA générative</strong>pour comprendre 
                 cette rupture technologique et ses applications
               </p>
+              <ul className={styles.cardList}>
+                <li>Contenu adapté aux besoins spécifiques de l'entreprise.</li>
+              </ul>
               <p className={styles.cardGridDescription}>
               <SiNike style={{ color: "green", marginRight: "8px" }} />
               Contenu adapté aux besoins spécifiques de l'entreprise.
               </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Implémentatez les outils IA les plus Adaptés à vos process
-              </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              <ul className={styles.cardList}>
+              <li>Implémentatez les outils IA les plus
+                 Adaptés à vos process</li>
+              </ul>
+              <ul className={styles.cardList}>
+              
               Maitrisez les Fondamentaux du Prompt Engineering
-              </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
+              </ul>
+              <ul className={styles.cardList}>
+              <li>
               Formation en présentiel ou a distance
-              </p>
+              </li>
+              </ul>
               
 </div>
 <div className={styles.card}>
@@ -418,22 +426,21 @@ export default function Body() {
                 Identifiez les opportinités d'innovation et de croissance grace à notre audit IA, spécialement
                 concu pour aligner votre technologie avec vos ambitions stratégiques 
               </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Question dd préparation.
-              </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Tour d'Horizon des outils existants
-              </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Entretien avec vos collaorateurs par type de métier
-              </p>
-              <p className={styles.cardGridDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Réalisation d'un rapport de récommendations générales
-              </p>
+              
+              <ul className={styles.cardList}>
+             <li> Question de préparation. </li>
+              </ul>
+
+              <ul className={styles.cardList}>
+              <li>Tour d'Horizon des outils existants</li>
+              </ul>
+              <ul className={styles.cardList}>
+             <li>Entretien avec vos collaorateurs par type de métier</li>
+              </ul>
+             <ul className={styles.cardList}>
+              <li>
+              Réalisation d'un rapport de récommendations générales</li>
+              </ul>
               
 </div>
    </div>

@@ -10,19 +10,9 @@
   padding: 2rem;
 }
 
-.card {
-  background: #333; /* Couleur de fond sombre */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
-}
 
 .card:hover {
-  transform: translateY(-5px); /* Animation au survol */
-  background-color: #444; /* Couleur légèrement différente au survol */
+  transform: translateY(-1px); /* Animation au survol */
 }
 
 .cardImage {
@@ -39,31 +29,29 @@
   margin-bottom: 0.75rem;
 }
 
-/* Stylisation de la liste */
+/* Liste des descriptions dans les cartes */
 .cardList {
   list-style: none; /* Supprime les puces par défaut */
-  padding-left: 0;
-  margin: 0 0 1rem 0;
-  text-align: left;
+  padding-left: 0; /* Supprime le retrait gauche */
+  margin: 0;
 }
 
 .cardList li {
-  font-family: 'roboto', sans-serif;
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
+  padding-left: 1.5rem; /* Ajoute de l'espace pour la puce */
+  margin-bottom: 0.5rem; /* Espacement entre les éléments */
   font-size: 1rem;
-  color: #ffffff;
-  text-align: start;
+  color: #fff; /* Couleur du texte */
+  line-height: 1.5;
 }
 
 .cardList li::before {
-  content: "✓"; /* Vous pouvez personnaliser cette puce */
+  content: "✓"; /* Puce personnalisée */
   position: absolute;
-  font-size:1rem;
-  font-weight :bold;
+  font-size: 1rem;
+  font-weight: bold;
   line-height: 1.5rem;
-  left: 0;
+  left: 0; /* Positionne la puce à gauche */
   color: #ff6600; /* Couleur personnalisée pour la puce */
 }
 
@@ -260,7 +248,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding-bottom: 50px;
-  background-color: #171717; /* Fond de grille sombre */
+  background-color: black; /* Fond de grille sombre */
   box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
@@ -344,7 +332,6 @@
 /*               Section Statistiques               */
 /* ------------------------------------------------- */
 .statsContainer {
-  background: #333333;
   padding-bottom: 3rem;
   padding-top: 3rem;
   width: 100%;
@@ -775,7 +762,7 @@
 }
 
 .card {
-  background-color: #333; /* Couleur de fond sombre */
+  background-color: #222222; /* Couleur de fond sombre */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -809,7 +796,7 @@
 
 /* Styles pour les grandes cartes */
 .cardLarge {
-  background-color: #333; /* Couleur de fond sombre */
+  background-color: #222222; /* Couleur de fond sombre */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -818,11 +805,9 @@
   color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
 }
 
-.cardLarge:hover {
-  background-color: #444; /* Couleur légèrement différente au survol */
-}
 
 .cardLargeTitre {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
