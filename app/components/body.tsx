@@ -25,11 +25,11 @@ type Formation = {
 const formations: Formation[] = [
   {
     id: 1,
-    title: "Formation 1",
+    title: "1. Initiation à l'IA pour les Entreprises",
     points: [
-      "Entreprise",
-      "Audit IA Inclus",
-      "Focus outils IA décisionnels et de gestion",
+      "Audit complet en intelligence artificielle inclus",
+      "Programmes sur mesure, adaptés à votre domaine d'activité",
+      "Découverte des outils IA essentiels (ChatGPT, Claude, Perplexity, etc.)",
       "Définir et déployer un plan d'action IA personnalisé",
       "Suivi personnalisé pour mesurer les gains concrets",
       "La règlementation française & européenne en matière d'IA",
@@ -77,15 +77,14 @@ export default function Body() {
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
         <h1 className={styles.titre2}>
-          Gagnez en productivité
+          Améliorez votre éfficacité Grâce aux outils de
           <br />
-          <span className={styles.highlight}>grâce à l'IA</span>
+          <span className={styles.highlight}> l'intelligence artificielle </span>
         </h1>
         <p className={styles.paragraphe1}>
-          Newbrain est un cabinet de conseil spécialisé en intelligence
-          artificielle. Nous proposons des formations en intelligence
-          artificielle ainsi que des prestations d'audit et de conseil pour
-          décupler la productivité des entreprises.
+        Équipez vos équipes avec les compétences nécessaires
+         et intégrez les solutions d'intelligence artificielle les plus pertinentes 
+         pour optimiser vos processus. Concentrez-vous sur les activités qui génèrent le plus d'impact.
         </p>
         <div className={styles.buttons}>
           <Link href="/contact" legacyBehavior>
@@ -97,15 +96,17 @@ export default function Body() {
             Nos formations
           </button>
         </div>
-        <p className={styles.titre3}>Ils ont été formés par nous</p>
+        <p className={styles.titre3}>Ils ont bénéficié de l'expertise 
+          et de l'accompagnement de nos 
+          formateurs spécialisés.</p>
       </div>
 
       <div className={styles.container1}>
-        <h2 className={styles.title}>Nos offres et formations</h2>
+        <h2 className={styles.title}>Nos programmes de formation en intelligence artificielle </h2>
         <div className={styles.titre3}>
           <p className={styles.paragraphe}>
-            De nombreuses formations en intelligence artificielle existent pour
-            répondre aux enjeux actuels des entreprises.
+          De nombreux parcours de formation en IA 
+          sont disponibles pour accompagner les entreprises face aux défis actuels.
           </p>
         </div>
 

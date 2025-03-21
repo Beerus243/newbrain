@@ -75,7 +75,6 @@
 }
 
 .headerText {
-  padding-top: 2%;
   margin-right: 25%;
   margin-left: 25%;
   position: relative;
@@ -88,11 +87,9 @@
   font-family: 'roboto', sans-serif;
   color: #f0f0f0; /* Texte clair */
   font-size: 1.2rem;
+  padding-top: 20;
+  padding-bottom: 20;
   line-height: 1.8; /* Augmente l'espacement entre les lignes */
-  margin-bottom: 1.5rem; /* Ajoute un espacement en bas */
-  margin-left: 10%; /* Réduction de la marge gauche */
-  margin-right: 10%; /* Réduction de la marge droite */
-  padding: 0; /* Supprime le padding */
 }
 
 /*           Navbar et Header Text                  */

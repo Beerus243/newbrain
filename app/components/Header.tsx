@@ -15,17 +15,19 @@ const Navigation = () => {
       <div className={styles.navContainer}>
         {/* Logo à gauche */}
         <div className={styles.navLeft}>
-          <Link href="/" legacyBehavior>
+          
             <a>
               <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
             </a>
-          </Link>
+          
         </div>
 
         {/* Menu central pour les écrans larges */}
         <div className={styles.navMiddle}>
           <ul className={styles.navMenu}>
-            <li className={styles.navItem}>Home</li>
+          <Link href="/" legacyBehavior>
+            <li className={styles.navItem}>Accueil</li>
+            </Link>
             <li className={styles.navItem}>Formation AI</li>
             <li className={styles.navItem}>Audit et Consulting</li>
             <li className={styles.navItem}>Ressource</li>
@@ -47,7 +49,9 @@ const Navigation = () => {
       {/* Menu mobile déroulant */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}>
         <ul className={styles.mobileNavMenu}>
-          <li className={styles.navItem}>Home</li>
+        <Link href="/" legacyBehavior>
+          <li className={styles.navItem}>Accueil</li>
+          </Link>
           <li className={styles.navItem}>Formation AI</li>
           <li className={styles.navItem}>Audit et Consulting</li>
           <li className={styles.navItem}>Ressource</li>
