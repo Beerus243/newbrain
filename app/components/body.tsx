@@ -81,7 +81,7 @@ export default function Body() {
           <br />
           <span className={styles.highlight}>grâce à l'IA</span>
         </h1>
-        <p className={styles.paragraphe}>
+        <p className={styles.paragraphe1}>
           Newbrain est un cabinet de conseil spécialisé en intelligence
           artificielle. Nous proposons des formations en intelligence
           artificielle ainsi que des prestations d'audit et de conseil pour

@@ -83,6 +83,18 @@
 }
 
 
+.paragraphe1 {
+  width: 100%;
+  font-family: 'roboto', sans-serif;
+  color: #f0f0f0; /* Texte clair */
+  font-size: 1.2rem;
+  line-height: 1.8; /* Augmente l'espacement entre les lignes */
+  margin-bottom: 1.5rem; /* Ajoute un espacement en bas */
+  margin-left: 10%; /* Réduction de la marge gauche */
+  margin-right: 10%; /* Réduction de la marge droite */
+  padding: 0; /* Supprime le padding */
+}
+
 /*           Navbar et Header Text                  */
 
 .navbar {
@@ -95,25 +107,17 @@
   padding: 10px 20px;
 }
 
-.headerText {
-  margin-top: 60px; /* Ajustez selon la hauteur de la navbar */
-  text-align: center;
-  color: #f0f0f0;
-}
-
 
 .titre1 {
-  bottom: 25;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   color: black;
   text-align: center;
   background-color: aliceblue;
-  margin-right: 80;
-  margin-left: 80;
   font-size: 16;
-  padding: 1px;
 }
 
 .titre2 {
@@ -151,7 +155,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem; /* Espacement entre les boutons */
-  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
 }
 
 .button {
@@ -163,26 +166,34 @@
   font-size: 15px;
   transition: background 0.3s, transform 0.2s ease-in-out;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 300;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btnAppointment {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color:#ff6600;
-  color: white;
+  font-size: 20;
+  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
+  color: #fff;
+  border: 2px solid #fff; /* Bordure blanche */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
   background-color: #ff6600;
   color: #fff;
   border: none;
 }
 
 .btnAppointment:hover {
-  background-color: #e65c00;
+  border-color: #ff6600; /* Change aussi la bordure */
+  background-color: #333;
 }
 
 .btnTraining {
+  font-size: 20;
   font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
   color: #fff;
   border: 2px solid #fff; /* Bordure blanche */
@@ -552,20 +563,6 @@
   border-radius: 4px;
 }
 
-
-.btnAppointment {
-  background-color: #ff6600;
-  font-family: 'roboto', sans-serif;
-  color: white;
-  padding: 12px 24px; /* Ajoute de l'espace autour du texte */
-  border: none; /* Supprime la bordure par défaut */
-  border-radius: 8px; /* Arrondi les bords pour une belle forme */
-  font-size: 15px; /* Ajuste la taille du texte */
-  cursor: pointer; /* Change le curseur au survol */
-  transition: all 0.3s ease; /* Effet fluide lors du hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
-}
-
 /* Effet au survol */
 .btnAppointment:hover {
   background-color: #e65c00; /* Légèrement plus foncé au hover */
@@ -676,6 +673,14 @@
   .titre3 {
     font-size: 1rem; /* Réduction de la taille du titre */
   }
+
+  .paragraphe1 {
+    font-size: 1rem; /* Réduction de la taille du texte */
+    line-height: 2; /* Augmente encore l'espacement entre les lignes */
+    padding: 0 1rem; /* Ajoute des marges pour éviter que le texte touche les bords */
+    margin-left: 5%; /* Réduction supplémentaire de la marge gauche */
+    margin-right: 5%; /* Réduction supplémentaire de la marge droite */
+  }
 }
 
 @media (max-width: 480px) {
@@ -690,6 +695,14 @@
 
   .titre3 {
     font-size: 0.9rem; /* Réduction supplémentaire pour le titre */
+  }
+
+  .paragraphe1 {
+    font-size: 0.9rem; /* Réduction supplémentaire pour les très petits écrans */
+    line-height: 2.2; /* Augmente davantage l'espacement entre les lignes */
+    padding: 0 0.5rem; /* Réduction des marges pour les très petits écrans */
+    margin-left: 2%; /* Réduction maximale de la marge gauche */
+    margin-right: 2%; /* Réduction maximale de la marge droite */
   }
 }
 
@@ -719,7 +732,8 @@
 /* Responsivité */
 @media (max-width: 768px) {
   .headerText {
-    padding: 1rem;
+    padding-top: 35%;
+    margin: 0;
   }
 
   .titre1 {
@@ -732,24 +746,6 @@
 
   .highlight {
     font-size: 1.8rem; /* Ajustement de la taille du texte en surbrillance */
-  }
-}
-
-@media (max-width: 480px) {
-  .headerText {
-    padding: 0.5rem;
-  }
-
-  .titre1 {
-    font-size: 0.9rem; /* Réduction supplémentaire pour les très petits écrans */
-  }
-
-  .titre2 {
-    font-size: 1.5rem; /* Réduction supplémentaire pour les très petits écrans */
-  }
-
-  .highlight {
-    font-size: 1.5rem;
   }
 }
 
