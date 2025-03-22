@@ -28,7 +28,9 @@ const Navigation = () => {
           <Link href="/" legacyBehavior>
             <li className={styles.navItem}>Accueil</li>
             </Link>
+            <Link href="/Formation">
             <li className={styles.navItem}>Formation AI</li>
+            </Link>
             <li className={styles.navItem}>Audit et Consulting</li>
             <li className={styles.navItem}>Ressource</li>
           </ul>
@@ -52,7 +54,9 @@ const Navigation = () => {
         <Link href="/" legacyBehavior>
           <li className={styles.navItem}>Accueil</li>
           </Link>
+          <Link href="/Formation">
           <li className={styles.navItem}>Formation AI</li>
+          </Link>
           <li className={styles.navItem}>Audit et Consulting</li>
           <li className={styles.navItem}>Ressource</li>
           <li className={styles.navItem}>

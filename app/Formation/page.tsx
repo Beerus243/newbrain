@@ -1,6 +1,9 @@
 "use client";
-import React from "react";
-import styles from "./body.module.css";
+import React, { useState } from "react";
+import Image from "next/image";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import styles from "./Formation.module.css";
 import {
   FaSink,
   FaCalendarAlt,
@@ -92,7 +95,8 @@ const formations: Formation[] = [
 
 export const FormationPage = () => {
   return (
-
+      <>
+      <Header />
     <div className={styles.grid}>
     {formations.map((formation) => (
       <div key={formation.id} className={styles.card}>
@@ -125,5 +129,9 @@ export const FormationPage = () => {
       </div>
     ))}
   </div>
+  < Footer />
+  </>
   );
 };
+
+export default FormationPage;
