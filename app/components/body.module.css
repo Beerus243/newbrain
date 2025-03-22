@@ -300,13 +300,6 @@
 /* ------------------------------------------------- */
 /*                   Titres et sous-titres          */
 /* ------------------------------------------------- */
-.titre3 {
-  font-family: 'Poppins', sans-serif;
-  margin-top: 20px;
-  color: #f0f0f0;
-  text-align: center;
-}
-
 /* Sous-titres avec soulignement */
 .subtitles {
   display: flex;
