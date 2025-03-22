@@ -1,24 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import Footer from "../components/Footer";
+import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import styles from "./Formation.module.css";
-import {
-  FaSink,
-  FaCalendarAlt,
-  FaChartLine,
-  FaCheckCircle,
-  FaMoneyBillWave,
-  FaUserFriends,
-  FaUserGraduate,
-} from "react-icons/fa";
-import { SiNike } from "react-icons/si";
-import Link from "next/link";
 
 type Formation = {
   id: number;
   title: string;
+
   description?: string;
   points?: string[];
   image: string;
@@ -93,45 +82,41 @@ const formations: Formation[] = [
   },
 ];
 
-export const FormationPage = () => {
+export default function FormationPage() {
   return (
-      <>
+    <>
       <Header />
-    <div className={styles.grid}>
-    {formations.map((formation) => (
-      <div key={formation.id} className={styles.card}>
-        <img
-          src={formation.image}
-          alt={formation.title}
-          className={styles.cardImage}
-        />
-        <div className={styles.cardContent}>
-          <h3 className={styles.cardTitle}>{formation.title}</h3>
-          {formation.points ? (
-            <ul className={styles.cardList}>
-              {formation.points.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
-          ) : (
-            <p className={styles.cardDescription}>
-              {formation.description}
-            </p>
-          )}
-          <div className={styles.buttons}>
-            <button
-              className={`${styles.button} ${styles.btnAppointment}`}
-            >
-              Voir la Formation
-            </button>
+      <div className={styles.horizontalScroll}>
+        {formations.map((formation) => (
+          <div key={formation.id} className={styles.card}>
+            <img
+              src={formation.image}
+              alt={formation.title}
+              className={styles.cardImage}
+            />
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>{formation.title}</h3>
+              {formation.points ? (
+                <ul className={styles.cardList}>
+                  {formation.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.cardDescription}>
+                  {formation.description}
+                </p>
+              )}
+              <div className={styles.buttons}>
+                <button className={`${styles.button} ${styles.btnAppointment}`}>
+                  Voir la Formation
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    ))}
-  </div>
-  < Footer />
-  </>
+      <Footer />
+    </>
   );
-};
-
-export default FormationPage;
+}

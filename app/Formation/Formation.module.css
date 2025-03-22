@@ -1,858 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Espace entre le navbar et la section formation */
+.formationSection {
+  margin-top: 80px; /* Ajustez la valeur selon vos besoins */
+}
 
-/*        Styles de base et typographie              */
-
-
-.container {
+/* Conteneur horizontal scrollable pour mobile */
+.horizontalScroll {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-
-.card:hover {
-  transform: translateY(-1px); /* Animation au survol */
+/* Masquer la scrollbar (optionnel) */
+.horizontalScroll::-webkit-scrollbar {
+  height: 8px;
+}
+.horizontalScroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
+/* Animation fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style de chaque carte */
+.card {
+  flex: 0 0 auto;
+  width: 400px;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid #e0e0e0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Délais pour effet cascade sur les cartes */
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.card:nth-child(5) {
+  animation-delay: 1s;
+}
+.card:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+/* Image de la carte */
 .cardImage {
   width: 100%;
   height: auto;
+  display: block;
 }
 
+/* Contenu de la carte */
 .cardContent {
   padding: 1rem;
 }
 
+/* Titre de la carte */
 .cardTitle {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
-/* Liste des descriptions dans les cartes */
+/* Liste des points */
 .cardList {
-  list-style: none; /* Supprime les puces par défaut */
-  padding-left: 0; /* Supprime le retrait gauche */
-  margin: 0;
-}
-
-.cardList li {
-  position: relative;
-  padding-left: 1.5rem; /* Ajoute de l'espace pour la puce */
-  margin-bottom: 0.5rem; /* Espacement entre les éléments */
-  font-size: 1rem;
-  color: #fff; /* Couleur du texte */
-  line-height: 1.5;
-}
-
-.cardList li::before {
-  content: "✓"; /* Puce personnalisée */
-  position: absolute;
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-  left: 0; /* Positionne la puce à gauche */
-  color: #ff6600; /* Couleur personnalisée pour la puce */
-}
-
-
-
-
-
-
-.paragraphe {
-  text-align: center;
-  font-family: 'roboto', sans-serif;
-  color: #f0f0f0; /* Texte clair */
-  line-height: 1.6;
-  padding-bottom: 20px;
-  padding-right: 30px;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  text-align: center; /* Centrer le texte */
-}
-
-.headerText {
-  margin-right: 25%;
-  margin-left: 25%;
-  position: relative;
-  text-align: center;
-}
-
-
-.paragraphe1 {
-  width: 100%;
-  font-family: 'roboto', sans-serif;
-  color: #f0f0f0; /* Texte clair */
-  font-size: 1.2rem;
-  padding-top: 20;
-  padding-bottom: 20;
-  line-height: 1.8; /* Augmente l'espacement entre les lignes */
-}
-
-/*           Navbar et Header Text                  */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #222;
-  z-index: 1000;
-  padding: 10px 20px;
-}
-
-
-.titre1 {
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  color: black;
-  text-align: center;
-  background-color: aliceblue;
-  font-size: 16;
-}
-
-.titre2 {
-  font-family: "Poppins", sans-serif;
+  list-style: disc;
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
   color: white;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-}
-.highlight {
-  color: #ff6600;
 }
 
-.titre3 {
-  font-family: "franklin gothic medium", "arial narrow", arial, sans-serif;
-  font-weight: 100;
-  margin-top: 20;
-  color: white;
-  text-align: center;
-  font-size: 1.2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 2rem;
-}
-
+/* Bouton */
 .buttons {
-  padding: 0 25 0 25;
   display: flex;
   justify-content: center;
-  gap: 7px; /* espace entre les boutons */
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Espacement entre les boutons */
 }
 
 .button {
-  padding: 15px;
+  background-color: #e65c00;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  transition: background 0.3s, transform 0.2s ease-in-out;
-  padding: 0.75rem 1.5rem;
-  font-size: 300;
+  padding: 0.6rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btnAppointment {
-  font-size: 20;
-  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
-  color: #fff;
-  border: 2px solid #fff; /* Bordure blanche */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  white-space: nowrap;
-  background-color: #ff6600;
-  color: #fff;
-  border: none;
-}
-
-.btnAppointment:hover {
-  border-color: #ff6600; /* Change aussi la bordure */
-  background-color: #333;
-}
-
-.btnTraining {
-  font-size: 20;
-  font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
-  color: #fff;
-  border: 2px solid #fff; /* Bordure blanche */
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  white-space: nowrap;
-  background-color: #444;
-  color: #fff;
-  border: none;
-}
-
-/* Effet hover */
-.btnTraining:hover {
-  border-color: #ff6600; /* Change aussi la bordure */
-  background-color: #333;
-}
-
+/* Optionnel : hover pour le bouton */
 .button:hover {
-  transform: scale(1.05);
+  background-color: #cc4d00;
 }
 
-.button:active {
-  transform: scale(0.95);
-}
-
-/* Conteneur pour le texte du header */
-.headerText {
-  position: relative;
-  margin-top: 15%;
-  justify-content: center;
-  text-align: center;
-}
-/* ------------------------------------------------- */
-/*                Conteneur général                 */
-/* ------------------------------------------------- */
-.title {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f0f0f0;
-}
-
-/* ------------------------------------------------- */
-/*                Grille et cartes                  */
-/* ------------------------------------------------- */
-
-.gridWrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* pour un défilement plus fluide sur iOS */
-}
-
-/* Grille principale (3 colonnes) */
-.grid {
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 50px 20px;
-  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-}
-
-/* Adaptation de la grille en responsive (mobile) */
-@media (max-width: 768px) {
-  .grid {
-    height: fit-content;
-    grid-template-columns: repeat(6, 100%); /* 6 colonnes pour les 6 images */
-    width: max-content; /* la grille prendra la largeur de son contenu */
-    gap: 20px;
-    justify-self: center;
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-  }
-}
-
-
-.cardImage {
-  width: 80%;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Contenu interne de la carte */
-.cardContent {
-  padding: 2rem;
-}
-
-.cardContent h3 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.cardContent p {
-  font-family: 'roboto', sans-serif;
-  font-size: 1rem;
-  color: white;
-}
-
-
-
-/* ------------------------------------------------- */
-/*                   Titres et sous-titres          */
-/* ------------------------------------------------- */
-/* Sous-titres avec soulignement */
-.subtitles {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.subtitle {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.2rem;
-  position: relative;
-  padding-bottom: 5px;
-  color: #f0f0f0;
-}
-
-.subtitle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: #fff;
-}
-
-/* ------------------------------------------------- */
-/*               Section Statistiques               */
-/* ------------------------------------------------- */
-.statsContainer {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
-  width: 100%;
-}
-
-.statsGrid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
-  gap: 1.5rem;
-  padding: 1rem; /* Ajoute un padding pour éviter que les cartes touchent les bords */
-}
-
-.statsCard {
-  background-color: #2a2a2a;
-  border-radius: 19px;
-  padding: 1.5rem;
-  width: 250px; /* Largeur fixe pour les cartes */
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #f0f0f0;
-}
-
-.statsCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.icon {
-  font-size: 60px;
-  color: #ff6600;
-  margin-bottom: 1rem;
-}
-
-.statValue {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ff6600;
-  margin-bottom: 0.5rem;
-  animation: fadeInUp 1s ease-out;
-}
-
-.statLabel {
-  font-size: 1.1rem;
-  color: white;
-  font-weight: 500;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-  .statsGrid {
-    flex-direction: column; /* Les cartes s'empilent verticalement */
-    align-items: center; /* Centre les cartes */
-    gap: 1rem; /* Réduit l'espacement entre les cartes */
-    padding: 1rem; /* Réduit le padding pour les petits écrans */
-  }
-
-  .statsCard {
-    width: 90%; /* Les cartes prennent 90% de la largeur de l'écran */
-    padding: 1rem; /* Réduit le padding interne */
-  }
-}
-
-@media (max-width: 480px) {
-  .statsGrid {
-    flex-direction: column; /* Les cartes restent empilées verticalement */
-    gap: 0.5rem; /* Réduit encore l'espacement entre les cartes */
-    padding: 0.5rem; /* Réduit encore le padding pour les très petits écrans */
-  }
-
-  .statsCard {
-    width: 100%; /* Les cartes prennent toute la largeur de l'écran */
-    padding: 0.8rem; /* Réduit encore le padding interne */
-  }
-}
-
-/* ------------------------------------------------- */
-/*               Section "Newbrain"                 */
-/* ------------------------------------------------- */
-.newbrainSection {
-  padding: 40px 20px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-}
-
-.newbrainTitle {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding-top: 20px;
-  color: #f0f0f0;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-/* ------------------------------------------------- */
-/*       Carte dédiée à l'Audit (Newbrain)          */
-/* ------------------------------------------------- */
-.auditCard {
-  margin-bottom: 20px;
-  padding: 20px;
-  text-align: center;
-  color: #f0f0f0; /* Couleur de texte claire */
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-}
-
-
-/* Grille de cartes pour la nouvelle section (2 colonnes) */
-.cardGrid {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-items: center;
-}
-
-/* Card de la grille avec icône et titre */
-.card {
-  border: 1px solid #444; /* Bordure plus sombre */
-  padding: 20px;
-  border-radius: 8px;
-  background: #2a2a2a; /* Fond de carte plus sombre */
-  text-align: center;
-  width: 100%;
-  color: #f0f0f0; /* Couleur de texte claire */
-}
-
-/* Carte de la grille avec icône et titre */
-.cardIcon {
-  font-size: 2.5rem;
-  color: #ff6600;
-  margin-bottom: 10px;
-}
-
-.cardGridTitle {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #f0f0f0;
-}
-
-.cardgridDescription {
-  color: white;
-  margin-top: 10px;
-  justify-content: flex-start;
-}
-
-
-@media (max-width: 768px) {
-  .cardGridDescription {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: justify;
-    margin-bottom: 0.5rem;
-    color: white;
-  }
-}
-
-.horizontalScroll {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px;
-  scroll-snap-type: x mandatory;
-}
-
-.horizontalScroll::-webkit-scrollbar {
-  display: none; /* Cache la barre de défilement */
-}
-
-.horizontalCard {
-  min-width: 300px;
-  background-color: #333; /* Couleur de fond de la carte */
-  color: #fff; /* Couleur du texte de la carte */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  transition: transform 0.2s;
-}
-
-.horizontalCard:hover {
-  transform: translateY(-5px);
-}
-
-.cardImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.cardContent {
-  padding: 1rem;
-}
-
-.cardContent h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.cardContent p {
-  font-size: 1rem;
-  color: white;
-}
-
-/* Conteneur pour le défilement horizontal */
-.horizontalContainer {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 10px;                /* Espace entre les images */
-  padding: 10px;            /* Padding interne pour aérer le contenu */
-  scroll-behavior: smooth;  /* Pour un défilement fluide */
-  width: 100%; /* Assure que le conteneur prend toute la largeur */
-  box-sizing: border-box;   /* Inclut le padding dans la largeur totale */
-}
-
-/* Personnalisation de la scrollbar sur WebKit */
-.horizontalContainer::-webkit-scrollbar {
-  height: 8px;              /* Hauteur de la barre de défilement */
-}
-
-.horizontalContainer::-webkit-scrollbar-track {
-  background: #f1f1f1;      /* Couleur de fond de la piste */
-}
-
-.horizontalContainer::-webkit-scrollbar-thumb {
-  background: #888;         /* Couleur de la barre */
-  border-radius: 4px;
-}
-
-.horizontalContainer::-webkit-scrollbar-thumb:hover {
-  background: #720a0a;
-}
-
-/* S'assurer que les images gardent leur taille sans se rétrécir */
-.horizontalContainer img {
-  flex-shrink: 0;
-  max-height: 200px; /* Ajustez selon vos besoins */
-  width: auto;
-  border-radius: 4px;
-}
-
-/* Effet au survol */
-.btnAppointment:hover {
-  background-color: #e65c00; /* Légèrement plus foncé au hover */
-  transform: scale(1.05); /* Effet d'agrandissement */
-}
-
-
-.cardLarge {
-  background-color: #333; /* Couleur de fond sombre */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
-}
-
-.cardLarge:hover {
-  background-color: #444; /* Couleur légèrement différente au survol */
-}
-
-.cardLargeTitre {
-  font-family: 'roboto', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-
-@media (max-width: 768px) {
-  .grid {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden; /* Empêche le débordement vertical */
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 400px;
-    height: 500px;
-    padding: 0 20px 0 20PX;
-  }
-  .grid .card {
-    background-color: black;
-    flex: 0 0 auto;
-    width: 80%; /* Ajustez la largeur selon vos besoins */
-    scroll-snap-align: center;
-  }
-  
+/* Responsivité : Pour les écrans plus petits, conserve le scroll horizontal */
+@media (max-width: 600px) {
   .card {
-    background-color: black;
-    flex: 0 0 auto;
-    width: 80%; /* Ajustez la largeur selon vos besoins */
-    scroll-snap-align: center;
+    width: 330px;
   }
-  .cardImage {
-    width: 300;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
-    height: 150;     /* Conserve les proportions de l'image */
-  }
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 7px; /* espace entre les boutons */
-    margin-top: 85px;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Espacement entre les boutons */
-    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
-  }
-  
-  .button {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    transition: background 0.3s, transform 0.2s ease-in-out;
-    font-size: 0.9rem; /* Réduction de la taille des boutons */
-    padding: 0.5rem 1rem;
-  }
-  
-  .btnAppointment {
-    background-color: #ff6600;
-    color: white;
-  }
-  
-  .subtitle {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.8rem;
-    position: relative;
-    padding-bottom: 5px;
-    color: #f0f0f0;
-  }
-  .cardGrid {
-    padding: 8px; /* Réduction de la marge intérieure sur les petits écrans */
+}
+
+/* Version PC : Passage en grille 3 colonnes (3 cartes en haut, 3 en bas) */
+@media (min-width: 900px) {
+  .horizontalScroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    overflow-x: hidden;
+    padding: 1rem;
   }
 
   .card {
-    flex: 0 0 80%; /* Réduction de la largeur des cartes sur mobile */
-  }  
-  .paragraphe {
-    font-size: 0.9rem; /* Réduction de la taille du texte */
-    padding: 0 1rem; /* Ajout de marges pour éviter que le texte touche les bords */
-  }
-
-  .titre3 {
-    font-size: 1rem; /* Réduction de la taille du titre */
-  }
-
-  .paragraphe1 {
-    font-size: 1rem; /* Réduction de la taille du texte */
-    line-height: 2; /* Augmente encore l'espacement entre les lignes */
-    padding: 0 1rem; /* Ajoute des marges pour éviter que le texte touche les bords */
-    margin-left: 5%; /* Réduction supplémentaire de la marge gauche */
-    margin-right: 5%; /* Réduction supplémentaire de la marge droite */
-  }
-}
-
-@media (max-width: 480px) {
-  .paragraphe {
-    font-size: 0.8rem; /* Réduction supplémentaire pour les très petits écrans */
-  }
-
-  .button {
-    font-size: 0.8rem; /* Réduction supplémentaire pour les boutons */
-    padding: 0.5rem 0.8rem;
-  }
-
-  .titre3 {
-    font-size: 0.9rem; /* Réduction supplémentaire pour le titre */
-  }
-
-  .paragraphe1 {
-    font-size: 0.9rem; /* Réduction supplémentaire pour les très petits écrans */
-    line-height: 2.2; /* Augmente davantage l'espacement entre les lignes */
-    padding: 0 0.5rem; /* Réduction des marges pour les très petits écrans */
-    margin-left: 2%; /* Réduction maximale de la marge gauche */
-    margin-right: 2%; /* Réduction maximale de la marge droite */
-  }
-}
-
-/* Styles pour la section headerText */
-.headerText {
-  text-align: center;
-  padding: 2rem;
-}
-
-.titre1 {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.titre2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.highlight {
-  color: #ff6600;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-  .headerText {
-    padding-top: 35%;
-    margin: 0;
-  }
-
-  .titre1 {
-    font-size: 1rem; /* Réduction de la taille du texte */
-  }
-
-  .titre2 {
-    font-size: 1.8rem; /* Réduction de la taille du titre */
-  }
-
-  .highlight {
-    font-size: 1.8rem; /* Ajustement de la taille du texte en surbrillance */
-  }
-}
-
-/* Styles pour les cartes */
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
-  gap: 1.5rem; /* Espacement entre les cartes */
-  margin-top: 1rem;
-}
-
-.card {
-  background-color: #222222; /* Couleur de fond sombre */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
-}
-
-.card:hover {
-  transform: translateY(-5px); /* Animation au survol */
-  background-color: #444; /* Couleur légèrement différente au survol */
-}
-
-.cardIcon {
-  font-size: 2rem;
-  color: #ff6600;
-  margin-bottom: 1rem;
-}
-
-.cardGridTitle {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.cardGridDescription {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.5;
-}
-
-/* Styles pour les grandes cartes */
-.cardLarge {
-  background-color: #222222; /* Couleur de fond sombre */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-  color: #fff; /* Couleur du texte pour contraster avec le fond sombre */
-}
-
-
-.cardLargeTitre {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.cardLargeDescription {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.5;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-  .cardImage {
-    width: 2500;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
-    height: 250;     /* Conserve les proportions de l'image */
-  }
-
-  .cardGridTitle {
-    font-size: 1rem; /* Réduction de la taille du titre */
-  }
-
-  .cardGridDescription {
-    font-size: 0.9rem; /* Réduction de la taille du texte */
-  }
-
-  .cardLarge {
-    padding: 1.5rem; /* Réduction de l'espacement interne */
-  }
-
-  .cardLargeTitre {
-    font-size: 1.2rem; /* Réduction de la taille du titre */
-  }
-
-  .cardLargeDescription {
-    font-size: 0.9rem; /* Réduction de la taille du texte */
+    /* La largeur s'adapte à la cellule de la grille */
+    width: 100%;
   }
 }
