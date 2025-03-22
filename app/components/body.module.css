@@ -814,13 +814,18 @@
 
 /* Responsivité */
 @media (max-width: 768px) {
-  .cardGrid {
-    grid-template-columns: 1fr; /* Une seule colonne sur les écrans moyens */
+  .grid {
+    background-color: none;
+    height: 800;
+    width: 500;
+    padding-left: 2rem;
   }
 
-  .card {
-    padding: 1rem; /* Réduction de l'espacement interne */
+  .cardImage {
+    width: 2500;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
+    height: 250;     /* Conserve les proportions de l'image */
   }
+
 
   .cardGridTitle {
     font-size: 1rem; /* Réduction de la taille du titre */
@@ -840,35 +845,5 @@
 
   .cardLargeDescription {
     font-size: 0.9rem; /* Réduction de la taille du texte */
-  }
-}
-
-@media (max-width: 480px) {
-  .cardGrid {
-    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
-  }
-
-  .card {
-    padding: 0.8rem; /* Réduction supplémentaire de l'espacement interne */
-  }
-
-  .cardGridTitle {
-    font-size: 0.9rem; /* Réduction supplémentaire de la taille du titre */
-  }
-
-  .cardGridDescription {
-    font-size: 0.8rem; /* Réduction supplémentaire de la taille du texte */
-  }
-
-  .cardLarge {
-    padding: 1rem; /* Réduction supplémentaire de l'espacement interne */
-  }
-
-  .cardLargeTitre {
-    font-size: 1rem; /* Réduction supplémentaire de la taille du titre */
-  }
-
-  .cardLargeDescription {
-    font-size: 0.8rem; /* Réduction supplémentaire de la taille du texte */
   }
 }
