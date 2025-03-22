@@ -60,7 +60,6 @@
 
 
 
-
 .paragraphe {
   text-align: center;
   font-family: 'roboto', sans-serif;
@@ -348,15 +347,16 @@
 .statsGrid {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
   gap: 1.5rem;
+  padding: 1rem; /* Ajoute un padding pour éviter que les cartes touchent les bords */
 }
 
 .statsCard {
   background-color: #2a2a2a;
   border-radius: 19px;
   padding: 1.5rem;
-  width: 250px;
+  width: 250px; /* Largeur fixe pour les cartes */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -388,6 +388,33 @@
   font-weight: 500;
 }
 
+/* Responsivité */
+@media (max-width: 768px) {
+  .statsGrid {
+    flex-direction: column; /* Les cartes s'empilent verticalement */
+    align-items: center; /* Centre les cartes */
+    gap: 1rem; /* Réduit l'espacement entre les cartes */
+    padding: 1rem; /* Réduit le padding pour les petits écrans */
+  }
+
+  .statsCard {
+    width: 90%; /* Les cartes prennent 90% de la largeur de l'écran */
+    padding: 1rem; /* Réduit le padding interne */
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    flex-direction: column; /* Les cartes restent empilées verticalement */
+    gap: 0.5rem; /* Réduit encore l'espacement entre les cartes */
+    padding: 0.5rem; /* Réduit encore le padding pour les très petits écrans */
+  }
+
+  .statsCard {
+    width: 100%; /* Les cartes prennent toute la largeur de l'écran */
+    padding: 0.8rem; /* Réduit encore le padding interne */
+  }
+}
 
 /* ------------------------------------------------- */
 /*               Section "Newbrain"                 */
@@ -824,15 +851,6 @@
   .cardImage {
     width: 2500;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
     height: 250;     /* Conserve les proportions de l'image */
-  }
-
-  .statsContainer {
-    background-color: burlywood;
-  }
-
-  .statsGrid {
-    background-color: brown;
-    padding: 100;
   }
 
   .cardGridTitle {

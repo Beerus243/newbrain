@@ -99,9 +99,9 @@ export default function Body() {
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
         <h1 className={styles.titre2}>
-          Améliorez votre éfficacité Grâce aux outils de
+          Pro ou Enrepeneur
           <br />
-          <span className={styles.highlight}> l'intelligence artificielle </span>
+          <span className={styles.highlight}>Libérez votre potentiel avec l'IA </span>
         </h1>
         <p className={styles.paragraphe1}>
         Équipez vos équipes avec les compétences nécessaires
