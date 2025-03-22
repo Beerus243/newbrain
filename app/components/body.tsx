@@ -294,13 +294,13 @@ export default function Body() {
                   <li>Séances de formation en présentiel ou à distance.</li>
                 </ul>
               </div>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenu adapté aux besoins spécifiques de l'entreprise.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />

@@ -240,7 +240,7 @@
 .subtitle {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.2rem;
-  position: relative;
+  /* position: relative; */
   padding-bottom: 5px;
   color: #f0f0f0;
 }
@@ -603,7 +603,7 @@
   .subtitle {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 0.8rem;
-    position: relative;
+    /* position: relative; */
     padding-bottom: 5px;
     color: #f0f0f0;
   }

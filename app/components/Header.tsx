@@ -126,7 +126,12 @@ const Navigation: React.FC = () => {
         </span>
 
         <div
-          className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col transition-all max-md:w-full left-0 max-md:bg-[#000000e5] max-md:!p-5 ${
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden fixed h-screen w-screen top-0 left-0 z-10"
+        ></div>
+
+        <div
+          className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col z-20 transition-all max-md:w-full left-0 max-md:bg-[#000000e5] max-md:!p-5 ${
             menuOpen ? "max-md:top-28" : "max-md:top-[-300]"
           }`}
         >
@@ -135,6 +140,7 @@ const Navigation: React.FC = () => {
               return (
                 <Link
                   className="!text-white hover:!text-yellow-600 transition-all"
+                  onClick={() => setMenuOpen(!menuOpen)}
                   key={link.label}
                   href={link.href}
                 >
