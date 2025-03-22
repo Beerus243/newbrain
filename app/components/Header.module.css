@@ -1,4 +1,6 @@
-/* Structure de base de la navbar */
+/* =============================== */
+/*        Barre de navigation      */
+/* =============================== */
 .navbar {
   background-color: #333;
   opacity: 0.9;
@@ -14,11 +16,13 @@
   z-index: 1000;
 }
 
-/* Conteneur principal de la navbar */
+/* Conteneur principal */
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* Section gauche pour le logo */
@@ -26,10 +30,11 @@
   flex: 1;
 }
 
-/* Section centrale pour le menu (affiché en desktop) */
+/* Section centrale pour le menu (affiché sur grand écran) */
 .navMiddle {
   flex: 2;
-  width: 10%;
+  /* Optionnel : une largeur si besoin, mais généralement pas nécessaire */
+  /* width: 10%; */
   background-color: #4b4a4a;
 }
 
@@ -73,8 +78,9 @@
   align-items: center;
 }
 
-/* Bouton "Prendre un rendez-vous" */
-.navButton {
+/* Boutons */
+.navButton,
+.navButtonPrimary {
   background-color: #ff6600;
   color: #fff;
   border: none;
@@ -82,32 +88,18 @@
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   white-space: nowrap;
-  margin-right: 1rem;
+  margin: 0 0.5rem;
 }
 
-.navButton:hover {
-  color: black;
+.navButton:hover,
+.navButtonPrimary:hover {
   background-color: #e65c00;
 }
 
-/* Bouton "Prendre un rendez-vous" */
-.navButtonPrimary {
-  background-color: #ff6600; /* Couleur de fond distincte */
-  color: #fff; /* Couleur du texte */
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-left: 1rem; /* Espacement à gauche du bouton */
-}
-
 .navButtonPrimary:hover {
-  background-color: #e65c00; /* Couleur au survol */
-  transform: translateY(-2px); /* Légère animation au survol */
+  transform: translateY(-2px);
 }
 
 /* Bouton hamburger */
@@ -132,9 +124,11 @@
 .hamburger div:nth-child(1) {
   top: 0;
 }
+
 .hamburger div:nth-child(2) {
   top: 9px;
 }
+
 .hamburger div:nth-child(3) {
   top: 18px;
 }
@@ -143,9 +137,11 @@
   transform: rotate(45deg);
   top: 9px;
 }
+
 .hamburger.active div:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active div:nth-child(3) {
   transform: rotate(-45deg);
   top: 9px;
@@ -155,9 +151,8 @@
 .mobileMenu {
   display: none;
   background-color: #171717;
-  padding: 1rem;
   border-radius: 0 0 8px 8px;
-  max-width: 97%;
+  max-width: 90%;
   margin: 0 auto;
   overflow: hidden;
   opacity: 0;
@@ -194,7 +189,7 @@
 
 /* Bouton dans le menu mobile */
 .mobileNavMenu .navButton {
-  display: block; /* Assurez-vous que le bouton est affiché comme un bloc */
+  display: block;
   background-color: #ff6600;
   color: #fff;
   border: none;
@@ -203,65 +198,49 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top: 1rem; /* Espacement au-dessus du bouton */
+  margin-top: 1rem;
   text-align: center;
-  width: 100%; /* S'assure que le bouton prend toute la largeur */
+  width: 100%;
 }
 
 .mobileNavMenu .navButton:hover {
   background-color: #e65c00;
 }
 
-/* Responsive */
+/* =============================== */
+/*          Responsive             */
+/* =============================== */
 @media (max-width: 768px) {
   .navMiddle {
-    display: none; /* Cache le menu central */
+    display: none; /* Cache le menu central sur mobile */
   }
-  
-  /* Afficher à la fois le bouton et le hamburger dans la barre principale */
+
   .navRight {
     justify-content: space-between;
   }
-  
-  .navButton {
-    display: inline-block;
-    margin-right: 0;
-  }
-  
+
+  /* Affiche le hamburger en mobile */
   .hamburger {
-    display: block; /* Affiche le hamburger */
+    display: block;
   }
-  
-  /* Masquer le bouton "Prendre un rendez-vous" dans la navbar en mode responsive */
+
+  /* Masquer le bouton de la navbar pour privilégier le menu mobile */
   .navRight .navButton {
-    display: none; /* Cache le bouton dans la navbar */
+    display: none;
   }
 
+  /* Le menu mobile sera géré par la classe active via JS */
   .mobileMenu {
-    display: none; /* Cache le menu mobile par défaut */
-  }
-
-  .mobileMenu.active {
-    display: block; /* Affiche le menu mobile lorsqu'il est actif */
-  }
-
-  /* Masquer le bouton "Prendre un rendez-vous" dans la navbar en mode mobile */
-  .navButtonPrimary {
-    display: none; /* Cache le bouton dans la navbar */
+    display: none;
   }
 }
 
-/* Afficher la navbar normale sur les écrans larges */
 @media (min-width: 769px) {
   .navMiddle {
-    display: flex; /* Affiche le menu central */
+    display: flex;
   }
-
-  .hamburger {
-    display: none; /* Cache le hamburger */
-  }
-
+  .hamburger,
   .mobileMenu {
-    display: none; /* Cache le menu mobile */
+    display: none;
   }
 }

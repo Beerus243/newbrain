@@ -272,7 +272,6 @@ export default function Body() {
               </p>
             </div>
           </div>
-          <br />
 
           {/* Card dédiée à la Formation */}
           <div className={styles.auditCard}>
@@ -296,72 +295,82 @@ export default function Body() {
                 </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Contenu adapté aux besoins spécifiques de l'entreprise.
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenu adapté aux besoins spécifiques de l'entreprise.
+                  </li>
+                </ul>
               </p>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Acculturation - Jour 1</h3>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Déploiement d'un support de formation avec les rédoffusions des
-                sessions.
+                <ul className={styles.cardList}>
+                  <li>
+                    Déploiement d'un support de formation avec les rédoffusions
+                    des sessions.
+                  </li>
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Contenue adapté aux besoins spécifiques de l'entreprise.
-                <br />
-                Acculturation à l'IA (histoire, principaux usages, outils, biais
-                éthique...)
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenue adapté aux besoins spécifiques de l'entreprise.
+                    <br />
+                  </li>
+                  Acculturation à l'IA (histoire, principaux usages, outils,
+                  biais éthique...)
+                </ul>
               </p>
             </div>
           </div>
-
-          <br />
           <div className={styles.cardGrid}>
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Démonstration de cas réels en entreprise.
+                <ul className={styles.cardList}>
+                  Démonstration de cas réels en entreprise.
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Atéliers pratiques sur l'Utilisation des outils IA les plus
-                adaptés à votre activité.
+                <ul className={styles.cardList}>
+                  <li> pratiques sur l'Utilisation des outils IA les plus</li>
+                  adaptés à votre activité.
+                </ul>
               </p>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}> Cas pratiques - Jour 2</h3>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Démonstration de cas réels en entreprise.
+                <ul className={styles.cardList}>
+                  <li>Démonstration de cas réels en entreprise.</li>
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
-                Atéliers pratiques sur l'Utilisation des outils IA les plus
-                adaptés à votre activité.
+                <ul className={styles.cardList}>
+                  <li>
+                    {" "}
+                    Atéliers pratiques sur l'Utilisation des outils IA les plus
+                  </li>
+                  adaptés à votre activité.
+                </ul>
               </p>
             </div>
           </div>
-          <br />
           <div className={styles.cardLarge}>
             <h3 className={styles.cardLargeTitre}>
               {" "}
               Récommandation post-formation
             </h3>
             <p className={styles.cardLargeDescription}>
-              <FaCheckCircle style={{ color: "green", marginRight: "8px" }} />
               Livrable de la fin de la formation rédigé par nos consultants.
               <br />
               Proposition de la road map d'Implémentation des outils IA.
             </p>
           </div>
-
-          <br />
           <div className={styles.auditCard}>
             <h3 className={styles.title}>Implémentation </h3>
             <p className={styles.paragraphe}>
@@ -369,7 +378,7 @@ export default function Body() {
               l'innovation
             </p>
           </div>
-          <br />
+
           {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
             <div className={styles.card}>
@@ -378,14 +387,20 @@ export default function Body() {
                 Planification de l'Implémentation
               </h3>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Plan d'action avec un plan stratégiques pour l'adoption de l'IA,
-                incluant les priorités, les ressources nécessaires et les
-                échéances.
+                <ul className={styles.cardList}>
+                  <li>
+                    Plan d'action avec un plan stratégiques pour l'adoption de
+                    l'IA, incluant les priorités, les ressources nécessaires et
+                    les échéances.
+                  </li>
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Contenu adapté aux besoins spécifiques de l'entreprise.
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenu adapté aux besoins spécifiques de l'entreprise.
+                  </li>
+                </ul>
               </p>
             </div>
             <div className={styles.card}>
@@ -394,20 +409,26 @@ export default function Body() {
                 Deploiement des outils IA & <br /> autonomisations
               </h3>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Déploiement d'un support de formation avec les rédoffusions des
-                sessions.
+                <ul className={styles.cardList}>
+                  <li>
+                    Déploiement d'un support de formation avec les rédoffusions
+                    des
+                  </li>
+                  sessions.
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Contenue adapté aux besoins spécifiques de l'entreprise.
-                <br />
-                Acculturation à l'IA (histoire, principaux usages, outils, biais
-                éthique...)
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenue adapté aux besoins spécifiques de l'entreprise.
+                    <br />
+                    Acculturation à l'IA (histoire, principaux usages, outils,
+                    biais éthique...)
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
-          <br />
 
           {/* Grille de cards pour la Formation */}
           <div className={styles.cardGrid}>
@@ -417,12 +438,16 @@ export default function Body() {
                 Suivi continu du Déploiement
               </h3>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Séances de formation en présentiel ou à distance.
+                <ul className={styles.cardList}>
+                  <li>Séances de formation en présentiel ou à distance.</li>
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Contenu adapté aux besoins spécifiques de l'entreprise.
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenu adapté aux besoins spécifiques de l'entreprise.
+                  </li>
+                </ul>
               </p>
             </div>
             <div className={styles.card}>
@@ -432,20 +457,26 @@ export default function Body() {
                 Plateforme pour la gestion <br />
               </h3>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Déploiement d'un support de formation avec les rédoffusions des
-                sessions.
+                <ul className={styles.cardList}>
+                  <li>
+                    Déploiement d'un support de formation avec les rédoffusions
+                    des sessions.
+                  </li>
+                </ul>
               </p>
               <p className={styles.cardGridDescription}>
-                <SiNike style={{ color: "green", marginRight: "8px" }} />
-                Contenue adapté aux besoins spécifiques de l'entreprise.
-                <br />
-                Acculturation à l'IA (histoire, principaux usages, outils, biais
-                éthique...)
+                <ul className={styles.cardList}>
+                  <li>
+                    Contenue adapté aux besoins spécifiques de l'entreprise.
+                    <br />
+                    Acculturation à l'IA (histoire, principaux usages, outils,
+                    biais éthique...)
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
-          <br />
+
           <div className={styles.auditCard}>
             <h3 className={styles.title}>Suivis des resultats </h3>
             <p className={styles.paragraphe}>
@@ -458,21 +489,26 @@ export default function Body() {
               Optimisation et suivi continue
             </h3>
             <p className={styles.cardLargeDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              intégration des retours d'expérience.
+              <ul className={styles.cardList}>
+                <li>intégration des retours d'expériencence.</li>
+              </ul>
             </p>
             <p className={styles.cardLargeDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Suivi des indicateurs de performance post-implémentation.(KPI)
+              <ul className={styles.cardList}>
+                <li>
+                  Suivi des indicateurs de performance post-implémentation.(KPI)
+                </li>
+              </ul>
             </p>
             <p className={styles.cardLargeDescription}>
-              <SiNike style={{ color: "green", marginRight: "8px" }} />
-              Analyse des gains de temps et des réductions de couts.
+              <ul className={styles.cardList}>
+                <li>Analyse des gains de temps et des réductions de couts.</li>
+              </ul>
             </p>
           </div>
         </section>
       </div>
-      <br />
+
       <h3 className={styles.title}> Les Services IA NewBrain</h3>
       <br />
       <div className={styles.cardGrid}>
@@ -488,8 +524,9 @@ export default function Body() {
             <li>Contenu adapté aux besoins spécifiques de l'entreprise.</li>
           </ul>
           <p className={styles.cardGridDescription}>
-            <SiNike style={{ color: "green", marginRight: "8px" }} />
-            Contenu adapté aux besoins spécifiques de l'entreprise.
+            <ul className={styles.cardList}>
+              <li> Contenu adapté aux besoins spécifiques de l'entreprise.</li>
+            </ul>
           </p>
           <ul className={styles.cardList}>
             <li>Implémentatez les outils IA les plus Adaptés à vos process</li>
@@ -545,10 +582,8 @@ export default function Body() {
           <p className={styles.paragraphe}>
             Nos Consultants analysent vos méthodes de travail pendant l'audit.
             <br />
-            <br />
             Développement d'un parcours personnalisé suite aux informations
             Recueillis en interne.
-            <br />
             <br />
             Automatisation et assistants IA Développés pour vous.
           </p>
@@ -558,7 +593,6 @@ export default function Body() {
           <h3 className={styles.cardGridTitle}>Roi mesurable</h3>
           <p className={styles.paragraphe}>
             Avec Newbrain, vous bénéficiez de résultats concrets.
-            <br />
             <br />
             Nos formations et soltions permettent de réduire vos couts
             opérationnels, d'augmenter la productivité et favoriser la montée en

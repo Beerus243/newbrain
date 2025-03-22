@@ -1,27 +1,148 @@
-/* Espace entre le navbar et la section formation */
+/* Formation.module.css */
+
+/* Espacement pour le header */
 .formationSection {
-  margin-top: 80px; /* Ajustez la valeur selon vos besoins */
+  padding: 80px 0 40px;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Conteneur horizontal scrollable pour mobile */
+/* Conteneur principal */
+.horizontalScroll {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Version mobile - Scroll horizontal */
 .horizontalScroll {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Masquer la scrollbar (optionnel) */
+/* Masquer la scrollbar */
 .horizontalScroll::-webkit-scrollbar {
   height: 8px;
 }
 .horizontalScroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(230, 92, 0, 0.5);
   border-radius: 4px;
 }
 
-/* Animation fade-in */
+/* Version Desktop - Grille 3x3 */
+@media (min-width: 768px) {
+  .horizontalScroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(400px, auto);
+    gap: 2rem;
+    overflow-x: visible;
+    padding: 1rem 0;
+  }
+}
+
+/* Carte */
+.card {
+  flex: 0 0 85%;
+  background: #000;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+  min-height: 400px;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contenu de la carte */
+.cardContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #e65c00;
+}
+
+/* Titre */
+.cardTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  line-height: 1.4;
+  min-height: 60px;
+}
+
+/* Liste */
+.cardList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.cardList li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding-left: 1.5rem;
+}
+
+.cardList li::before {
+  content: "✓";
+  color: #e65c00;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.1rem;
+}
+
+/* Boutons */
+.buttons {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background: linear-gradient(135deg, #e65c00 0%, #cc4d00 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(230, 92, 0, 0.4);
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -33,107 +154,34 @@
   }
 }
 
-/* Style de chaque carte */
-.card {
-  flex: 0 0 auto;
-  width: 400px;
-  background-color: #000000;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  scroll-snap-align: start;
-  border: 1px solid #e0e0e0;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-/* Délais pour effet cascade sur les cartes */
-.card:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.card:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.card:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.card:nth-child(4) {
-  animation-delay: 0.8s;
-}
-.card:nth-child(5) {
-  animation-delay: 1s;
-}
-.card:nth-child(6) {
-  animation-delay: 1.2s;
-}
-
-/* Image de la carte */
-.cardImage {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Contenu de la carte */
-.cardContent {
-  padding: 1rem;
-}
-
-/* Titre de la carte */
-.cardTitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: white;
-}
-
-/* Liste des points */
-.cardList {
-  list-style: disc;
-  margin-left: 1.2rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-/* Bouton */
-.buttons {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  background-color: #e65c00;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Optionnel : hover pour le bouton */
-.button:hover {
-  background-color: #cc4d00;
-}
-
-/* Responsivité : Pour les écrans plus petits, conserve le scroll horizontal */
-@media (max-width: 600px) {
-  .card {
-    width: 330px;
-  }
-}
-
-/* Version PC : Passage en grille 3 colonnes (3 cartes en haut, 3 en bas) */
-@media (min-width: 900px) {
-  .horizontalScroll {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    overflow-x: hidden;
-    padding: 1rem;
+/* Responsive */
+@media (max-width: 768px) {
+  .formationSection {
+    padding: 60px 0 30px;
   }
 
   .card {
-    /* La largeur s'adapte à la cellule de la grille */
-    width: 100%;
+    flex: 0 0 90%;
+    min-height: 380px;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .cardList li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+  }
+
+  .cardList li::before {
+    font-size: 1rem;
+    top: 1px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
