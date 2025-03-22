@@ -10,7 +10,7 @@
 
 .footerSection {
   background: #070606;
-  /* position: relative; */
+  position: relative;
   margin-top: 50px; /* Ajoutez cette ligne pour créer un espace entre le footer et le body */
   text-align: center; /* Centrer le texte */
   padding-top: 50px; /* Ajouter du padding pour l'espacement */
@@ -103,7 +103,7 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 40px;
-  /* position: relative; */
+  position: relative;
 }
 .footerWidgetHeading h3::before {
   content: "";
@@ -132,7 +132,7 @@
   text-transform: capitalize;
 }
 .subscribeForm {
-  /* position: relative; */
+  position: relative;
   overflow: hidden;
   text-align: center; /* Centrer le texte */
 }
