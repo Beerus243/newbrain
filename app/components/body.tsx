@@ -94,7 +94,7 @@ export default function Body() {
   return (
     <>
       <div className={styles.headerText}>
-        <h6 className={styles.titre1}>
+        <h6 className={`${styles.titre1} !z-0`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
         <h1 className={styles.titre2}>
@@ -262,14 +262,14 @@ export default function Body() {
               <h3 className={styles.cardGridTitle}>
                 Création de la road map de formation
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Rapport d'audit: Synthèse des données collectées, analyses
                     effectuées et conclusions tirées.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -289,11 +289,11 @@ export default function Body() {
               <h3 className={styles.cardGridTitle}>
                 Planification de la formation
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>Séances de formation en présentiel ou à distance.</li>
                 </ul>
-              </p>
+              </div>
               <p className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
