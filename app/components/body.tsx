@@ -10,8 +10,10 @@ import {
   FaUserFriends,
   FaUserGraduate,
 } from "react-icons/fa";
-import { SiNike } from "react-icons/si";
-import Link from "next/link";
+
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { IoIosCheckmark } from "react-icons/io";
 
 type Formation = {
   id: number;
@@ -91,31 +93,36 @@ const formations: Formation[] = [
 ];
 
 export default function Body() {
+  const router = useRouter();
   return (
     <>
-      <div className={styles.headerText}>
-        <h6 className={`${styles.titre1} !z-0`}>
+      <div
+        className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
+      >
+        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-3`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
-        <h1 className={styles.titre2}>
+        <h1 className={`text-white !text-4xl max-md:!text-2xl !font-semibold`}>
           Pro ou Enrepeneur
-          <br />
-          <span className={styles.highlight}>
-            Libérez votre potentiel avec l'IA{" "}
-          </span>
         </h1>
-        <p className={styles.paragraphe1}>
+        <span
+          className={`!text-orange-500 !text-4xl max-md:!text-2xl !font-semibold`}
+        >
+          Libérez votre potentiel avec l'IA{" "}
+        </span>
+        <div className={`text-white`}>
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
           optimiser vos processus. Concentrez-vous sur les activités qui
           génèrent le plus d'impact.
-        </p>
-        <div className={styles.buttons}>
-          <Link href="/contact" legacyBehavior>
-            <button className={`${styles.button} ${styles.btnAppointment}`}>
-              Prenez rendez-vous
-            </button>
-          </Link>
+        </div>
+        <div className={`flex !justify-center !gap-5`}>
+          <button
+            onClick={() => router.push("/contact")}
+            className={`${styles.button} ${styles.btnAppointment}`}
+          >
+            Prenez rendez-vous
+          </button>
 
           <button className={`${styles.button} ${styles.btnTraining}`}>
             Nos formations
@@ -127,8 +134,10 @@ export default function Body() {
         </p>
       </div>
 
-      <div className={styles.container1}>
-        <h2 className={styles.title}>
+      <div className="!p-5 max-w-6xl !mx-auto flex justify-center flex-col gap-5">
+        <h2
+          className={`text-white !text-4xl text-center max-md:!text-2xl !font-semibold`}
+        >
           Nos programmes de formation en intelligence artificielle{" "}
         </h2>
         <div className={styles.titre3}>
@@ -138,34 +147,50 @@ export default function Body() {
           </p>
         </div>
 
-        <div className={styles.grid}>
+        <div
+          className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+        >
           {formations.map((formation) => (
-            <div key={formation.id} className={styles.card}>
-              <img
+            <div
+              key={formation.id}
+              className={`bg-[#2a2a2a] !w-full max-md:!w-[1000px] !rounded-lg !border-2 !border-[#444]`}
+            >
+              <Image
                 src={formation.image}
                 alt={formation.title}
-                className={styles.cardImage}
+                height={300}
+                width={400}
+                sizes="100vw"
+                className={`w-full max-md:!w-[400px]`}
               />
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{formation.title}</h3>
+              <div
+                className={
+                  "!p-5 !flex !flex-col gap-5 !justify-between max-md:!w-[350px]"
+                }
+              >
+                <h3 className={"!text-2xl"}>{formation.title}</h3>
                 {formation.points ? (
-                  <ul className={styles.cardList}>
-                    {formation.points.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
+                  <div className="">
+                    <ul className={"!h-full flex flex-col gap-3"}>
+                      {formation.points.map((point, index) => (
+                        <li key={index} className="flex items-center gap-3">
+                          <span className="text-green-700">
+                            <IoIosCheckmark size={30} />
+                          </span>{" "}
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : (
-                  <p className={styles.cardDescription}>
-                    {formation.description}
-                  </p>
+                  <p className={"flex-1"}>{formation.description}</p>
                 )}
-                <div className={styles.buttons}>
-                  <button
-                    className={`${styles.button} ${styles.btnAppointment}`}
-                  >
-                    Voir la Formation
-                  </button>
-                </div>
+
+                <button
+                  className={`w-full text-nowrap !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md`}
+                >
+                  Voir la Formation
+                </button>
               </div>
             </div>
           ))}
@@ -305,15 +330,15 @@ export default function Body() {
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Acculturation - Jour 1</h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Déploiement d'un support de formation avec les rédoffusions
                     des sessions.
                   </li>
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenue adapté aux besoins spécifiques de l'entreprise.
@@ -322,7 +347,7 @@ export default function Body() {
                   Acculturation à l'IA (histoire, principaux usages, outils,
                   biais éthique...)
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           <div className={styles.cardGrid}>

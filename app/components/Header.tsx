@@ -125,10 +125,12 @@ const Navigation: React.FC = () => {
           )}
         </span>
 
-        <div
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden fixed h-screen w-screen top-0 left-0 z-10"
-        ></div>
+        {menuOpen && (
+          <div
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden fixed h-screen w-screen top-0 left-0 z-10"
+          ></div>
+        )}
 
         <div
           className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col z-20 transition-all max-md:w-full left-0 max-md:bg-[#000000e5] max-md:!p-5 ${
