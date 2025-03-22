@@ -11,7 +11,6 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 import { SiNike } from "react-icons/si";
-import { CiTextAlignCenter, CiTextAlignJustify } from "react-icons/ci";
 import Link from "next/link";
 
 type Formation = {

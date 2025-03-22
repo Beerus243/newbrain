@@ -249,25 +249,22 @@
 
 /* Grille principale (3 colonnes) */
 .grid {
+  height: fit-content;
   display: grid;
-  padding-right: 20;
-  padding-left: 20px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-bottom: 50px;
-  background-color: black; /* Fond de grille sombre */
+  padding: 50px 20px;
   box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
 /* Adaptation de la grille en responsive (mobile) */
 @media (max-width: 768px) {
   .grid {
-    /* Fixer la largeur de chaque colonne pour que la grille dépasse l’écran */
+    height: fit-content;
     grid-template-columns: repeat(6, 100%); /* 6 colonnes pour les 6 images */
     width: max-content; /* la grille prendra la largeur de son contenu */
-    gap: 200px;
+    gap: 20px;
     justify-self: center;
-    padding: 200;
     box-sizing: border-box; /* Inclut le padding dans la largeur totale */
   }
 }
@@ -841,13 +838,6 @@
 
 /* Responsivité */
 @media (max-width: 768px) {
-  .grid {
-    background-color: brown;
-    height: 800;
-    width: 500;
-    padding-left: 2rem;
-  }
-
   .cardImage {
     width: 2500;       /* Vous pouvez aussi utiliser une valeur fixe, par exemple 200px */
     height: 250;     /* Conserve les proportions de l'image */
