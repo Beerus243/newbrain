@@ -1,11 +1,8 @@
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { IoIosCheckmark } from "react-icons/io";
 import Footer from "../components/Footer";
-import styles from "./Formation.module.css";
 import Header from "../components/Header";
 
 type Formation = {
@@ -85,13 +82,26 @@ const formations: Formation[] = [
   },
 ];
 
-export default function Formation() {
-  const router = useRouter();
+export default function FormationPage() {
+  const [selectedFormation, setSelectedFormation] = useState<Formation | null>(
+    null
+  );
+
+  const openFormation = (formation: Formation) => {
+    setSelectedFormation(formation);
+  };
+
+  const closeFormation = () => {
+    setSelectedFormation(null);
+  };
 
   return (
     <>
       <Header />
-      <div className="md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-9 ">
+      {/* Espace pour ne pas masquer le header fixe */}
+      <div className="h-40"></div>
+
+      <div className="md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-9">
         {formations.map((formation) => (
           <div
             key={formation.id}
@@ -108,7 +118,6 @@ export default function Formation() {
             <div className="!p-5 !flex !flex-col gap-5 !justify-between max-md:!w-[350px]">
               <h3 className="!text-2xl">{formation.title}</h3>
               {formation.points ? (
-                // Remplacement du <p> enveloppant par un <div> pour éviter l'erreur HTML
                 <div className="flex-1">
                   <ul className="!h-full flex flex-col gap-3">
                     {formation.points.map((point, index) => (
@@ -125,13 +134,53 @@ export default function Formation() {
                 <p className="flex-1">{formation.description}</p>
               )}
 
-              <button className="w-full text-nowrap !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md">
+              <button
+                onClick={() => openFormation(formation)}
+                className="w-full text-nowrap !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md"
+              >
                 Voir la Formation
               </button>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Modale de détails de la formation */}
+      {selectedFormation && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full relative">
+            <button
+              onClick={closeFormation}
+              className="absolute top-2 right-2 text-2xl font-bold text-gray-700"
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4">
+              {selectedFormation.title}
+            </h2>
+            <Image
+              src={selectedFormation.image}
+              alt={selectedFormation.title}
+              height={200}
+              width={300}
+              className="mb-4"
+            />
+            {selectedFormation.points && (
+              <ul className="flex flex-col gap-2 mb-4">
+                {selectedFormation.points.map((point, idx) => (
+                  <li key={idx} className="flex items-center gap-2">
+                    <IoIosCheckmark size={20} className="text-green-700" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {selectedFormation.description && (
+              <p className="mb-4">{selectedFormation.description}</p>
+            )}
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>

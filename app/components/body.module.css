@@ -54,16 +54,6 @@
 
 /*           Navbar et Header Text                  */
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #222;
-  z-index: 10;
-  padding: 10px 20px;
-}
-
 .titre1 {
   justify-content: center;
   align-items: center;
@@ -567,7 +557,7 @@
 
   /* Boutons et conteneur de boutons */
   .buttons {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 1rem; /* Espacement uniforme */
     margin-top: 85px;

@@ -99,24 +99,22 @@ export default function Body() {
       <div
         className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
       >
-        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-3`}>
+        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-2`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
-        <h1 className={`text-white !text-4xl max-md:!text-2xl !font-semibold`}>
+        <h1 className={`text-white max-md:!text-3xl !font-semibold`}>
           Pro ou Enrepeneur
         </h1>
-        <span
-          className={`!text-orange-500 !text-4xl max-md:!text-2xl !font-semibold`}
-        >
+        <span className={`!text-orange-500 max-md:!text-3xl !font-semibold`}>
           Libérez votre potentiel avec l'IA{" "}
         </span>
-        <div className={`text-white`}>
+        <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
           optimiser vos processus. Concentrez-vous sur les activités qui
           génèrent le plus d'impact.
         </div>
-        <div className={`flex !justify-center !gap-5`}>
+        <div className="flex !justify-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
           <button
             onClick={() => router.push("/contact")}
             className={`${styles.button} ${styles.btnAppointment}`}
