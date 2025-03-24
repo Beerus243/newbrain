@@ -1,11 +1,10 @@
-"use client";
-import React, { useState, useEffect } from "react";
+// app/Formation/page.tsx
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { IoIosCheckmark } from "react-icons/io";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { detailFormation } from "./data";
+import { IoIosCheckmark } from "react-icons/io";
+import { detailFormation } from "./data"; // Importer les données de Data.tsx
 
 type Formation = {
   id: number;
@@ -84,17 +83,12 @@ const formations: Formation[] = [
   },
 ];
 
-export default function FormationPage() {
-  const [selectedFormation, setSelectedFormation] = useState<Formation | null>(
-    null
-  );
+const FormationPage = () => {
+  const router = useRouter();
 
-  const openFormation = (formation: Formation) => {
-    setSelectedFormation(formation);
-  };
-
-  const closeFormation = () => {
-    setSelectedFormation(null);
+  // Fonction pour ouvrir la page de détails de formation
+  const handleVoirFormation = (formationId: number) => {
+    router.push(`/Formation/${formationId}`);
   };
 
   return (
@@ -135,9 +129,8 @@ export default function FormationPage() {
               ) : (
                 <p className="flex-1">{formation.description}</p>
               )}
-
               <button
-                onClick={() => openFormation(formation)}
+                onClick={() => handleVoirFormation(formation.id)}
                 className="w-full text-nowrap !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md"
               >
                 Voir la Formation
@@ -147,44 +140,9 @@ export default function FormationPage() {
         ))}
       </div>
 
-      {/* Modale de détails de la formation */}
-      {selectedFormation && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-lg w-full relative">
-            <button
-              onClick={closeFormation}
-              className="absolute top-2 right-2 text-2xl font-bold text-gray-700"
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-bold mb-4">
-              {selectedFormation.title}
-            </h2>
-            <Image
-              src={selectedFormation.image}
-              alt={selectedFormation.title}
-              height={200}
-              width={300}
-              className="mb-4"
-            />
-            {selectedFormation.points && (
-              <ul className="flex flex-col gap-2 mb-4">
-                {selectedFormation.points.map((point, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <IoIosCheckmark size={20} className="text-green-700" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {selectedFormation.description && (
-              <p className="mb-4">{selectedFormation.description}</p>
-            )}
-          </div>
-        </div>
-      )}
-
       <Footer />
     </>
   );
-}
+};
+
+export default FormationPage;
