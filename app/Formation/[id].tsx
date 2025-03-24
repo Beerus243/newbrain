@@ -5,7 +5,10 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 // Importez le type et le tableau depuis votre fichier de données
-import { Formations as formationsList, DataFormation } from "../Formation/data";
+import {
+  detailFormation as formationsList,
+  DataFormation,
+} from "../Formation/data";
 
 const FormationDetailPage: React.FC = () => {
   const router = useRouter();

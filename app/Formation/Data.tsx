@@ -14,7 +14,7 @@ export type DataFormation = {
   gain: string;
 };
 
-export const Formations: DataFormation[] = [
+export const detailFormation: DataFormation[] = [
   {
     id: 1,
     title: "Initiation à l'IA pour les Entreprises",
@@ -95,4 +95,4 @@ export const Formations: DataFormation[] = [
   },
 ];
 
-export default DataFormation;
+export default detailFormation;

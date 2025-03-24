@@ -5,7 +5,7 @@ import Image from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { Formations } from "./data";
+import { detailFormation } from "./data";
 
 type Formation = {
   id: number;
