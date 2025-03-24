@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import { Formation } from "./Data";
+import { DataFormation } from "./data";
 import styles from "./Formation.module.css";
 
-type FormationCardProps = {
-  formation: Formation;
+type DataCardProps = {
+  formation: DataFormation;
   index: number;
 };
 
-const FormationCard: React.FC<FormationCardProps> = ({ formation, index }) => {
+const DataCard: React.FC<DataCardProps> = ({ formation, index }) => {
   return (
     <div
       className={styles.formationCard}
@@ -37,6 +37,7 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, index }) => {
           <h3>Public cible</h3>
           <p>{formation.targetAudience}</p>
         </div>
+
         <div className={styles.detailCard}>
           <h3>Objectifs</h3>
           <p>{formation.objectives}</p>
@@ -54,4 +55,4 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, index }) => {
   );
 };
 
-export default FormationCard;
+export default DataCard;

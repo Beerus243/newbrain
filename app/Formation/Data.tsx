@@ -1,6 +1,6 @@
 // FormationData.tsx
 
-export type Data = {
+export type DataFormation = {
   [x: string]: any;
   id: number;
   title: string;
@@ -14,7 +14,7 @@ export type Data = {
   gain: string;
 };
 
-export const formations: Data[] = [
+export const Formations: DataFormation[] = [
   {
     id: 1,
     title: "Initiation à l'IA pour les Entreprises",
@@ -95,4 +95,4 @@ export const formations: Data[] = [
   },
 ];
 
-export default Data;
+export default DataFormation;

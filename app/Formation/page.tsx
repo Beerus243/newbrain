@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { Formations } from "./data";
 
 type Formation = {
   id: number;
@@ -93,6 +95,10 @@ export default function FormationPage() {
 
   const closeFormation = () => {
     setSelectedFormation(null);
+  };
+
+  const Formations = () => {
+    const router = useRouter();
   };
 
   return (
