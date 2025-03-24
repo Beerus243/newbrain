@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Formation } from "./Formation.Data";
+import { Formation } from "./Data";
 import styles from "./Formation.module.css";
 
 type FormationCardProps = {
