@@ -97,10 +97,6 @@ export default function FormationPage() {
     setSelectedFormation(null);
   };
 
-  const Formations = () => {
-    const router = useRouter();
-  };
-
   return (
     <>
       <Header />
