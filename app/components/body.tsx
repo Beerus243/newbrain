@@ -352,27 +352,27 @@ export default function Body() {
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   Démonstration de cas réels en entreprise.
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li> pratiques sur l'Utilisation des outils IA les plus</li>
                   adaptés à votre activité.
                 </ul>
-              </p>
+              </div>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}> Cas pratiques - Jour 2</h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>Démonstration de cas réels en entreprise.</li>
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     {" "}
@@ -380,7 +380,7 @@ export default function Body() {
                   </li>
                   adaptés à votre activité.
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           <div className={styles.cardLarge}>
@@ -409,7 +409,7 @@ export default function Body() {
               <h3 className={styles.cardGridTitle}>
                 Planification de l'Implémentation
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Plan d'action avec un plan stratégiques pour l'adoption de
@@ -417,21 +417,21 @@ export default function Body() {
                     les échéances.
                   </li>
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenu adapté aux besoins spécifiques de l'entreprise.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
                 Deploiement des outils IA & <br /> autonomisations
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Déploiement d'un support de formation avec les rédoffusions
@@ -439,8 +439,8 @@ export default function Body() {
                   </li>
                   sessions.
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenue adapté aux besoins spécifiques de l'entreprise.
@@ -449,7 +449,7 @@ export default function Body() {
                     biais éthique...)
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -460,18 +460,18 @@ export default function Body() {
               <h3 className={styles.cardGridTitle}>
                 Suivi continu du Déploiement
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>Séances de formation en présentiel ou à distance.</li>
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenu adapté aux besoins spécifiques de l'entreprise.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
@@ -479,15 +479,15 @@ export default function Body() {
                 {" "}
                 Plateforme pour la gestion <br />
               </h3>
-              <p className={styles.cardGridDescription}>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Déploiement d'un support de formation avec les rédoffusions
                     des sessions.
                   </li>
                 </ul>
-              </p>
-              <p className={styles.cardGridDescription}>
+              </div>
+              <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
                     Contenue adapté aux besoins spécifiques de l'entreprise.
@@ -496,7 +496,7 @@ export default function Body() {
                     biais éthique...)
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -546,11 +546,11 @@ export default function Body() {
           <ul className={styles.cardList}>
             <li>Contenu adapté aux besoins spécifiques de l'entreprise.</li>
           </ul>
-          <p className={styles.cardGridDescription}>
+          <div className={styles.cardGridDescription}>
             <ul className={styles.cardList}>
               <li> Contenu adapté aux besoins spécifiques de l'entreprise.</li>
             </ul>
-          </p>
+          </div>
           <ul className={styles.cardList}>
             <li>Implémentatez les outils IA les plus Adaptés à vos process</li>
           </ul>
