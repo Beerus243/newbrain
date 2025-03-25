@@ -508,32 +508,32 @@ export default function Body() {
 
           <div className={styles.auditCard}>
             <h3 className={styles.title}>Suivis des resultats </h3>
-            <p className={styles.paragraphe}>
+            <div className={styles.paragraphe}>
               Un suivi rigoureux pour garantir la réussite du project
-            </p>
+            </div>
           </div>
           <div className={styles.cardLarge}>
             <h3 className={styles.cardLargeTitre}>
               {" "}
               Optimisation et suivi continue
             </h3>
-            <p className={styles.cardLargeDescription}>
+            <div className={styles.cardLargeDescription}>
               <ul className={styles.cardList}>
                 <li>intégration des retours d'expériencence.</li>
               </ul>
-            </p>
-            <p className={styles.cardLargeDescription}>
+            </div>
+            <div className={styles.cardLargeDescription}>
               <ul className={styles.cardList}>
                 <li>
                   Suivi des indicateurs de performance post-implémentation.(KPI)
                 </li>
               </ul>
-            </p>
-            <p className={styles.cardLargeDescription}>
+            </div>
+            <div className={styles.cardLargeDescription}>
               <ul className={styles.cardList}>
                 <li>Analyse des gains de temps et des réductions de couts.</li>
               </ul>
-            </p>
+            </div>
           </div>
         </section>
       </div>
@@ -544,11 +544,11 @@ export default function Body() {
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Formation IA</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Formation IA de vos collaborateurs aux{" "}
             <strong>Fondamentaux et techniques d'IA générative</strong>pour
             comprendre cette rupture technologique et ses applications
-          </p>
+          </div>
           <ul className={styles.cardList}>
             <li>Contenu adapté aux besoins spécifiques de l'entreprise.</li>
           </ul>
@@ -570,11 +570,11 @@ export default function Body() {
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Audit & Consulting</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Identifiez les opportinités d'innovation et de croissance grace à
             notre audit IA, spécialement concu pour aligner votre technologie
             avec vos ambitions stratégiques
-          </p>
+          </div>
 
           <ul className={styles.cardList}>
             <li> Question de préparation. </li>
@@ -598,35 +598,35 @@ export default function Body() {
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Expertise de pointe</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Nos Formateurs et consultant maitrisent les outils IA adaptés à
             votre secteur et vous guident avec précsion
             <br /> Ces exxperts sélectionnent les outils d'IA les plus
             performants pour optimiser le gain de Productivité.
-          </p>
+          </div>
         </div>
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Une approche sur-mesure</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Nos Consultants analysent vos méthodes de travail pendant l'audit.
             <br />
             Développement d'un parcours personnalisé suite aux informations
             Recueillis en interne.
             <br />
             Automatisation et assistants IA Développés pour vous.
-          </p>
+          </div>
         </div>
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Roi mesurable</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Avec Newbrain, vous bénéficiez de résultats concrets.
             <br />
             Nos formations et soltions permettent de réduire vos couts
             opérationnels, d'augmenter la productivité et favoriser la montée en
             competences de vos équipes.
-          </p>
+          </div>
         </div>
       </div>
 
@@ -634,29 +634,29 @@ export default function Body() {
         {" "}
         Certifications et financement par vos OPCOs.{" "}
       </h3>
-      <p className={styles.paragraphe}>
+      <div className={styles.paragraphe}>
         {" "}
         Newbrain est certifier Qualiopi et propose des solutions de financement
         pour vos formations
-      </p>
+      </div>
 
       <div className={styles.cardGrid}>
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Pour les Entreprises</h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Nos Formations sont éligibles au plans de déveppement des
             compétences. Vous pouvez donc béneficier des subventions par les
             Opco et FNE
-          </p>
+          </div>
         </div>
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Pour les particuliers </h3>
-          <p className={styles.paragraphe}>
+          <div className={styles.paragraphe}>
             Formations financiables à 100% grace aux aides à la formation et au
             CPF.
-          </p>
+          </div>
         </div>
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
