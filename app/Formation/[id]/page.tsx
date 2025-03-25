@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { detailFormation } from "../../Formation/data"; // Vérifiez le chemin
+import { detailFormation } from "../Data"; // Vérifiez le chemin
 
 export type DataFormation = {
   id: number;
@@ -53,13 +53,13 @@ const FormationDetailPage: React.FC = () => {
       <Header />
       {/* Espace pour compenser le header fixe */}
       <div className="h-40"></div>
-      <main className="max-w-6xl mx-auto px-4 py-10">
+      <main className="max-w-6xl !mx-auto !p-10 flex flex-col gap-5">
         {/* Titre principal */}
-        <section className="mb-12">
-          <h1 className="text-5xl font-extrabold text-white text-center drop-shadow-lg">
-            {formation.title}
-          </h1>
-        </section>
+        {/* <section className="mb-12"> */}
+        <h1 className="!text-3xl !font-extrabold text-white text-center !drop-shadow-lg">
+          {formation.title}
+        </h1>
+        {/* </section> */}
 
         {/* Section Présentation et Image */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
@@ -84,7 +84,7 @@ const FormationDetailPage: React.FC = () => {
 
         {/* Section Détails sous forme de cartes */}
         <section className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               { title: "Prérequis", content: formation.prerequisites },
               {
@@ -98,9 +98,9 @@ const FormationDetailPage: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-800 border border-gray-700 rounded-xl shadow-xl hover:shadow-2xl transition duration-300"
+                className="!p-5 bg-gray-800 border border-gray-700 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col gap-3"
               >
-                <h3 className="text-2xl font-semibold text-white mb-3">
+                <h3 className="text-2xl !font-semibold text-white">
                   {item.title}
                 </h3>
                 <p className="text-gray-400 text-lg leading-relaxed">
