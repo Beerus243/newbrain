@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { detailFormation } from "../Data"; // Vérifiez le chemin
+import { detailFormation } from "../data"; // Vérifiez le chemin
+import Page from "../page";
 
 export type DataFormation = {
   id: number;
@@ -39,7 +40,7 @@ const FormationDetailPage: React.FC = () => {
           <h1 className="text-3xl font-bold tracking-wide">
             Formation non trouvée
           </h1>
-          <p className="text-gray-400 mt-4">
+          <p className="text-white mt-4">
             La formation demandée n'existe pas ou n'a pas pu être chargée.
           </p>
         </section>
@@ -56,7 +57,7 @@ const FormationDetailPage: React.FC = () => {
       <main className="max-w-6xl !mx-auto !p-10 flex flex-col gap-5">
         {/* Titre principal */}
         {/* <section className="mb-12"> */}
-        <h1 className="!text-3xl !font-extrabold text-white text-center !drop-shadow-lg">
+        <h1 className="!text-4xl !font-extrabold text-white text-center !drop-shadow-lg">
           {formation.title}
         </h1>
         {/* </section> */}
@@ -64,10 +65,10 @@ const FormationDetailPage: React.FC = () => {
         {/* Section Présentation et Image */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
           <div>
-            <h2 className="text-3xl font-semibold text-gray-200 mb-4">
+            <h1 className="!text-4xl !font-bold text-white !pt-8 !pb-8">
               Présentation
-            </h2>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            </h1>
+            <p className="text-xl text-white leading-relaxed">
               {formation.presentation}
             </p>
           </div>
@@ -75,7 +76,7 @@ const FormationDetailPage: React.FC = () => {
             <Image
               src={formation.image}
               alt={formation.title}
-              width={450}
+              width={550}
               height={350}
               className="rounded-xl shadow-2xl object-cover border border-gray-700"
             />
@@ -98,12 +99,12 @@ const FormationDetailPage: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="!p-5 bg-gray-800 border border-gray-700 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col gap-3"
+                className="!p-6 bg-[#2a2a2a] border border-white-700 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col gap-3"
               >
                 <h3 className="text-2xl !font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-200 text-lg leading-relaxed">
                   {item.content}
                 </p>
               </div>
@@ -111,6 +112,11 @@ const FormationDetailPage: React.FC = () => {
           </div>
         </section>
       </main>
+      <div className="text-5xl text-center text-white pt-6 font-bold">
+        {" "}
+        Nos autres Formations
+      </div>
+      <Page />
       <Footer />
     </>
   );

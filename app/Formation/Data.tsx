@@ -37,7 +37,8 @@ export const detailFormation: DataFormation[] = [
     prerequisites: "Connaissances de base en informatique.",
     evaluationModalities: "Projets pratiques et simulations.",
     targetAudience: "Dirigeants et cadres.",
-    objectives: "Développer une stratégie IA adaptée à l'organisation.",
+    objectives:
+      "Développer une stratégie IA adaptée à l'organisation Développer une stratégie IA adaptée à l'organisationDévelopper une stratégie IA adaptée à l'organisation.",
     content: "Audit IA, outils de gestion, études de cas réels.",
     gain: "Optimisation des processus et prise de décision améliorée.",
   },

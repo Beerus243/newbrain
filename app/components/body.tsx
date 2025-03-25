@@ -102,12 +102,12 @@ export default function Body() {
         <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-2`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
-        <h1 className={`text-white max-md:!text-3xl !font-semibold`}>
-          Pro ou Enrepeneur
+        <h1 className={`text-white !text-6xl  max-md:!text-3xl !font-bold`}>
+          Pro ou Enrepeneur <br />
+          <span className={`!text-orange-500 max-md:!text-3xl !font-bold`}>
+            Libérez votre potentiel avec l'IA{" "}
+          </span>
         </h1>
-        <span className={`!text-orange-500 max-md:!text-3xl !font-semibold`}>
-          Libérez votre potentiel avec l'IA{" "}
-        </span>
         <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
@@ -234,7 +234,9 @@ export default function Body() {
           </div>
 
           {/* Grille de cards pour l'Audit */}
-          <div className={styles.cardGrid}>
+          <div
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+          >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
@@ -306,7 +308,9 @@ export default function Body() {
           <br />
 
           {/* Grille de cards pour la Formation */}
-          <div className={styles.cardGrid}>
+          <div
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+          >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
@@ -388,22 +392,24 @@ export default function Body() {
               {" "}
               Récommandation post-formation
             </h3>
-            <p className={styles.cardLargeDescription}>
+            <div className={styles.cardLargeDescription}>
               Livrable de la fin de la formation rédigé par nos consultants.
               <br />
               Proposition de la road map d'Implémentation des outils IA.
-            </p>
+            </div>
           </div>
           <div className={styles.auditCard}>
             <h3 className={styles.title}>Implémentation </h3>
-            <p className={styles.paragraphe}>
+            <div className={styles.paragraphe}>
               Une approche personnalisée pour favoriser la collaboration et
               l'innovation
-            </p>
+            </div>
           </div>
 
           {/* Grille de cards pour la Formation */}
-          <div className={styles.cardGrid}>
+          <div
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+          >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
