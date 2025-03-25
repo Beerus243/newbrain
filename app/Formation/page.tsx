@@ -4,7 +4,6 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { IoIosCheckmark } from "react-icons/io";
-import { detailFormation } from "./data"; // Importer les données de Data.tsx
 
 type Formation = {
   id: number;
