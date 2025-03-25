@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { detailFormation } from "../data"; // Vérifiez le chemin
+import { detailFormation } from "../Data"; // Vérifiez le chemin
 import Page from "../page";
 
 export type DataFormation = {
