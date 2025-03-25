@@ -1,7 +1,6 @@
-// FormationData.tsx
+// app/Formation/Data.tsx
 
 export type DataFormation = {
-  [x: string]: any;
   id: number;
   title: string;
   presentation: string;
@@ -20,7 +19,7 @@ export const detailFormation: DataFormation[] = [
     title: "Initiation à l'IA pour les Entreprises",
     presentation:
       "Découvrez les bases de l'intelligence artificielle et ses applications en entreprise.",
-    image: "/images/formation1.jpg",
+    image: "https://picsum.photos/seed/formation1/400/300",
     prerequisites: "Aucune connaissance préalable requise.",
     evaluationModalities: "QCM et études de cas.",
     targetAudience: "Entrepreneurs et managers.",
@@ -34,7 +33,7 @@ export const detailFormation: DataFormation[] = [
     title: "IA pour les Organisations",
     presentation:
       "Une formation dédiée à l'intégration de l'IA dans la gestion d'entreprise.",
-    image: "/images/formation2.jpg",
+    image: "https://picsum.photos/seed/formation1/400/300",
     prerequisites: "Connaissances de base en informatique.",
     evaluationModalities: "Projets pratiques et simulations.",
     targetAudience: "Dirigeants et cadres.",
@@ -46,7 +45,7 @@ export const detailFormation: DataFormation[] = [
     id: 3,
     title: "IA pour les Équipes Commerciales",
     presentation: "Boostez vos équipes commerciales grâce à l'IA.",
-    image: "/images/formation3.jpg",
+    image: "https://picsum.photos/seed/formation1/400/300",
     prerequisites: "Notions de marketing et vente.",
     evaluationModalities: "Ateliers et exercices pratiques.",
     targetAudience: "Commerciaux et responsables marketing.",
@@ -59,7 +58,7 @@ export const detailFormation: DataFormation[] = [
     title: "IA Appliquée au Marketing",
     presentation:
       "Exploitez l'IA pour créer des campagnes marketing innovantes.",
-    image: "/images/formation4.jpg",
+    image: "https://picsum.photos/seed/formation1/400/300",
     prerequisites: "Connaissances de base en marketing digital.",
     evaluationModalities: "Études de cas et travaux pratiques.",
     targetAudience: "Marketers et publicitaires.",
