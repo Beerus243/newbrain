@@ -7,17 +7,23 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { detailFormation } from "../../Formation/data"; // Ajustez le chemin selon votre structure
 
-type Formation = {
+export type DataFormation = {
+  [x: string]: any;
   id: number;
   title: string;
-  description?: string;
-  points?: string[];
+  presentation: string;
   image: string;
+  prerequisites: string;
+  evaluationModalities: string;
+  targetAudience: string;
+  objectives: string;
+  content: string;
+  gain: string;
 };
 
 const FormationDetailPage: React.FC = () => {
   const { id } = useParams(); // id sera une chaîne
-  const [formation, setFormation] = useState<Formation | null>(null);
+  const [formation, setFormation] = useState<DataFormation | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -53,24 +59,34 @@ const FormationDetailPage: React.FC = () => {
           width={400}
           className="mb-5"
         />
-        {formation.points && (
-          <ul className="flex flex-col gap-3 mb-5">
-            {formation.points.map((point: string, index: number) => (
-              <li key={index} className="flex items-center gap-2">
-                <span className="text-green-700">
-                  <Image
-                    src="/icons/check.svg"
-                    alt="Check"
-                    width={20}
-                    height={20}
-                  />
-                </span>
-                {point}
-              </li>
-            ))}
-          </ul>
-        )}
-        {formation.description && <p>{formation.description}</p>}
+        <p>
+          <strong>Presenation:</strong>
+          {formation.presentation}
+        </p>
+        <p>
+          <strong>Prerequis:</strong>
+          {formation.prerequisites}
+        </p>
+        <p>
+          <strong>Modalités:</strong>
+          {formation.evaluationModalities}
+        </p>
+        <p>
+          <strong>Public cible:</strong>
+          {formation.targetAudience}
+        </p>
+        <p>
+          <strong>Objectif:</strong>
+          {formation.objectives}
+        </p>
+        <p>
+          <strong>Contenu:</strong>
+          {formation.content}
+        </p>
+        <p>
+          <strong>Gain:</strong>
+          {formation.gain}
+        </p>
       </div>
       <Footer />
     </>
