@@ -124,11 +124,7 @@ export default function Body() {
             Prenez rendez-vous
           </button>
 
-          <button
-            className={`${
-              styles.button
-            } ${"!border-b-orange-500 !text-white !hover:bg-amber-300"}`}
-          >
+          <button className={`${styles.button} ${"!text-white !text-2xl"}`}>
             Nos formations
           </button>
         </div>
@@ -320,77 +316,59 @@ export default function Body() {
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
-                Planification de la formation
+                Evaluation du degré de maturité en IA
+              </h3>
+              <ul className={styles.cardList}>
+                <li>
+                  Mise en place d'un questionnaire en ligne pour évaluer la
+                  maturité, la vision et les attentes des collaborateurs en
+                  matière d'IA.
+                </li>
+                <li>
+                  Définition des priorités et choix des cas d'usages à
+                  prioriser.
+                </li>
+              </ul>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>
+                Identification des inefficacités opérationnelles
+              </h3>
+              <ul className={styles.cardList}>
+                <li>
+                  Utilisation de matrices d'évaluation et scoring des données.
+                </li>
+              </ul>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
+              <ul className={styles.cardList}>
+                <li>
+                  {" "}
+                  Recueillir les informations détaillées sur les modes
+                  opératoires, les outilsutilisés et la culture d'entreprise.
+                </li>
+              </ul>
+              <ul className={styles.cardList}>
+                <li>
+                  Définition des priorités et choix des cas d'usages à
+                  prioriser.
+                </li>
+              </ul>
+            </div>
+            <div className={styles.card}>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>
+                Création de la road map de formation
               </h3>
               <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
-                  <li>Séances de formation en présentiel ou à distance.</li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
                   <li>
-                    Contenu adapté aux besoins spécifiques de l'entreprise.
+                    Rapport d'audit: Synthèse des données collectées, analyses
+                    effectuées et conclusions tirées.
                   </li>
-                </ul>
-              </div>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Acculturation - Jour 1</h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Déploiement d'un support de formation avec les rédoffusions
-                    des sessions.
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Contenue adapté aux besoins spécifiques de l'entreprise.
-                    <br />
-                  </li>
-                  Acculturation à l'IA (histoire, principaux usages, outils,
-                  biais éthique...)
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5`}
-          >
-            <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  Démonstration de cas réels en entreprise.
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li> pratiques sur l'Utilisation des outils IA les plus</li>
-                  adaptés à votre activité.
-                </ul>
-              </div>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}> Cas pratiques - Jour 2</h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>Démonstration de cas réels en entreprise.</li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    {" "}
-                    Atéliers pratiques sur l'Utilisation des outils IA les plus
-                  </li>
-                  adaptés à votre activité.
                 </ul>
               </div>
             </div>
@@ -416,100 +394,63 @@ export default function Body() {
 
           {/* Grille de cards pour la Formation */}
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5`}
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
           >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
-                Planification de l'Implémentation
+                Evaluation du degré de maturité en IA
               </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Plan d'action avec un plan stratégiques pour l'adoption de
-                    l'IA, incluant les priorités, les ressources nécessaires et
-                    les échéances.
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Contenu adapté aux besoins spécifiques de l'entreprise.
-                  </li>
-                </ul>
-              </div>
+              <ul className={styles.cardList}>
+                <li>
+                  Mise en place d'un questionnaire en ligne pour évaluer la
+                  maturité, la vision et les attentes des collaborateurs en
+                  matière d'IA.
+                </li>
+                <li>
+                  Définition des priorités et choix des cas d'usages à
+                  prioriser.
+                </li>
+              </ul>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
-                Deploiement des outils IA & <br /> autonomisations
+                Identification des inefficacités opérationnelles
               </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Déploiement d'un support de formation avec les rédoffusions
-                    des
-                  </li>
-                  sessions.
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Contenue adapté aux besoins spécifiques de l'entreprise.
-                    <br />
-                    Acculturation à l'IA (histoire, principaux usages, outils,
-                    biais éthique...)
-                  </li>
-                </ul>
-              </div>
+              <ul className={styles.cardList}>
+                <li>
+                  Utilisation de matrices d'évaluation et scoring des données.
+                </li>
+              </ul>
             </div>
-          </div>
-
-          {/* Grille de cards pour la Formation */}
-          <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
-          >
             <div className={styles.card}>
-              <FaSink className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Suivi continu du Déploiement
-              </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>Séances de formation en présentiel ou à distance.</li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Contenu adapté aux besoins spécifiques de l'entreprise.
-                  </li>
-                </ul>
-              </div>
+              <FaUserFriends className={styles.cardIcon} />
+              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
+              <ul className={styles.cardList}>
+                <li>
+                  {" "}
+                  Recueillir les informations détaillées sur les modes
+                  opératoires, les outilsutilisés et la culture d'entreprise.
+                </li>
+              </ul>
+              <ul className={styles.cardList}>
+                <li>
+                  Définition des priorités et choix des cas d'usages à
+                  prioriser.
+                </li>
+              </ul>
             </div>
             <div className={styles.card}>
               <FaUserFriends className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
-                {" "}
-                Plateforme pour la gestion <br />
+                Création de la road map de formation
               </h3>
               <div className={styles.cardGridDescription}>
                 <ul className={styles.cardList}>
                   <li>
-                    Déploiement d'un support de formation avec les rédoffusions
-                    des sessions.
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Contenue adapté aux besoins spécifiques de l'entreprise.
-                    <br />
-                    Acculturation à l'IA (histoire, principaux usages, outils,
-                    biais éthique...)
+                    Rapport d'audit: Synthèse des données collectées, analyses
+                    effectuées et conclusions tirées.
                   </li>
                 </ul>
               </div>
