@@ -99,12 +99,14 @@ export default function Body() {
       <div
         className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
       >
-        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-2`}>
+        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-2 !text-sm/5`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h6>
-        <h1 className={`text-white !text-6xl  max-md:!text-3xl !font-bold`}>
+        <h1
+          className={`text-white !text-6xl  max-md:!text-3xl !font-extrabold`}
+        >
           Pro ou Enrepeneur <br />
-          <span className={`!text-orange-500 max-md:!text-3xl !font-bold`}>
+          <span className={`!text-orange-500 max-md:!text-3xl !font-extrabold`}>
             Libérez votre potentiel avec l'IA{" "}
           </span>
         </h1>
@@ -122,7 +124,11 @@ export default function Body() {
             Prenez rendez-vous
           </button>
 
-          <button className={`${styles.button} ${styles.btnTraining}`}>
+          <button
+            className={`${
+              styles.button
+            } ${"!border-b-orange-500 !text-white !hover:bg-amber-300"}`}
+          >
             Nos formations
           </button>
         </div>
@@ -540,7 +546,9 @@ export default function Body() {
 
       <h3 className={styles.title}> Les Services IA NewBrain</h3>
       <br />
-      <div className={styles.cardGrid}>
+      <div
+        className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+      >
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Formation IA</h3>
@@ -594,7 +602,9 @@ export default function Body() {
       <br />
       <h3 className={styles.title}> Pourquoi choisir NewBrain</h3>
       <br />
-      <div className={styles.cardGrid}>
+      <div
+        className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+      >
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Expertise de pointe</h3>
@@ -640,7 +650,9 @@ export default function Body() {
         pour vos formations
       </div>
 
-      <div className={styles.cardGrid}>
+      <div
+        className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+      >
         <div className={styles.card}>
           <FaSink className={styles.cardIcon} />
           <h3 className={styles.cardGridTitle}>Pour les Entreprises</h3>
@@ -658,14 +670,11 @@ export default function Body() {
             CPF.
           </div>
         </div>
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <div className={styles.buttons}>
-            <button className={`${styles.button} ${styles.btnAppointment}`}>
-              Prenez rendez-vous
-            </button>
-          </div>
-        </div>
+      </div>
+      <div className={styles.buttons}>
+        <button className={`${styles.button} ${styles.btnAppointment}`}>
+          Prenez rendez-vous
+        </button>
       </div>
     </>
   );
