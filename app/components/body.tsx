@@ -358,7 +358,9 @@ export default function Body() {
               </div>
             </div>
           </div>
-          <div className={styles.cardGrid}>
+          <div
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5`}
+          >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>Cas pratiques - Jour2</h3>
@@ -414,7 +416,7 @@ export default function Body() {
 
           {/* Grille de cards pour la Formation */}
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5`}
           >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
@@ -466,7 +468,9 @@ export default function Body() {
           </div>
 
           {/* Grille de cards pour la Formation */}
-          <div className={styles.cardGrid}>
+          <div
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+          >
             <div className={styles.card}>
               <FaSink className={styles.cardIcon} />
               <h3 className={styles.cardGridTitle}>
