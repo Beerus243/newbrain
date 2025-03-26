@@ -99,18 +99,20 @@ export default function Body() {
       <div
         className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
       >
-        <h6 className={`bg-[#f5f5f5] !w-fit !mx-auto !px-2 !text-sm/5`}>
+        <h5 className={`bg-[#f5f5f5] !w-fit  !mx-auto !px-5 !text-sm/5`}>
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
-        </h6>
+        </h5>
         <h1
-          className={`text-white !text-6xl  max-md:!text-3xl !font-extrabold`}
+          className={`text-white !text-5xl  max-md:!text-3xl !font-extrabold`}
         >
           Pro ou Enrepeneur <br />
-          <span className={`!text-orange-500 max-md:!text-3xl !font-extrabold`}>
+          <span
+            className={`!text-orange-500  max-md:!text-3xl !font-extrabold`}
+          >
             Libérez votre potentiel avec l'IA{" "}
           </span>
         </h1>
-        <div className="text-white text-base sm:text-lg md:text-xl lg:text-2xl">
+        <div className="text-white !text-xl sm:text-lg md:text-xl lg:text-2xl !p-5">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
           optimiser vos processus. Concentrez-vous sur les activités qui
@@ -119,16 +121,22 @@ export default function Body() {
         <div className="flex !justify-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
           <button
             onClick={() => router.push("/contact")}
-            className={`${styles.button} ${styles.btnAppointment}`}
+            className={`${
+              styles.button
+            } ${"!text-white max-md:!p-2 !text-lg !bg-[#ff6600] "}`}
           >
             Prenez rendez-vous
           </button>
 
-          <button className={`${styles.button} ${"!text-white !text-2xl"}`}>
+          <button
+            className={`${
+              styles.button
+            } ${"!text-white max-md:!p-2 !text-lg !border-2 !border-[#ff6600] "}`}
+          >
             Nos formations
           </button>
         </div>
-        <p className={styles.titre3}>
+        <p className={"text-center text-xl text-white"}>
           Ils ont bénéficié de l'expertise et de l'accompagnement de nos
           formateurs spécialisés.
         </p>
@@ -237,7 +245,7 @@ export default function Body() {
 
           {/* Grille de cards pour l'Audit */}
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 !text-justify `}
           >
             <div className={styles.card}>
               <FaCalendarAlt className={styles.cardIcon} />
