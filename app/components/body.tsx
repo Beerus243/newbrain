@@ -9,6 +9,7 @@ import Formation from "./formation-info";
 import { StatsSection } from "./stats";
 import { FormationCard, formations } from "../components/formationCard";
 import Services from "./services-newbrain";
+import ImageSlider from "./infiniteCarousel";
 
 type Formation = {
   id: number;
@@ -69,6 +70,18 @@ export default function Body() {
           Ils ont bénéficié de l'expertise et de l'accompagnement de nos
           formateurs spécialisés.
         </p>
+      </div>
+
+      <div className="w-full max-w-5xl !mx-auto">
+        <h2 className="text-center text-2xl font-bold mb-4">Nos Sponsors</h2>
+        <ImageSlider
+          logos={[
+            "/image/call.jpg",
+            "/image/call.jpg",
+            "/image/call.jpg",
+            "/image/call.jpg",
+          ]}
+        />
       </div>
 
       <div className="!p-5 max-w-5xl !mx-auto flex justify-center flex-col gap-5">
