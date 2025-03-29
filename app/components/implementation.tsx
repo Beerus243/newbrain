@@ -8,7 +8,7 @@ export interface AuditCard {
   className?: string;
 }
 
-const Formation = () => {
+const Implementation = () => {
   const auditServices: AuditCard[] = [
     {
       icon: FaCalendarAlt,
@@ -93,4 +93,4 @@ const Formation = () => {
   );
 };
 
-export default Formation;
+export default Implementation;

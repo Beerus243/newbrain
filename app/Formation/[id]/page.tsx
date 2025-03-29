@@ -117,7 +117,6 @@ const FormationDetailPage: React.FC = () => {
         Nos autres Formations
       </div>
       <Page />
-      <Footer />
     </>
   );
 };

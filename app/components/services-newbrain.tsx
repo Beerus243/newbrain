@@ -8,7 +8,7 @@ export interface AuditCard {
   className?: string;
 }
 
-const Formation = () => {
+const Services = () => {
   const auditServices: AuditCard[] = [
     {
       icon: FaCalendarAlt,
@@ -55,7 +55,7 @@ const Formation = () => {
             "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
           }
         >
-          Formation{" "}
+          Les Services Newbrain{" "}
         </h3>
         <div
           className={
@@ -93,4 +93,4 @@ const Formation = () => {
   );
 };
 
-export default Formation;
+export default Services;

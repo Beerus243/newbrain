@@ -8,6 +8,7 @@ import Audit from "./audit";
 import Formation from "./formation-info";
 import { StatsSection } from "./stats";
 import { FormationCard, formations } from "../components/formationCard";
+import Services from "./services-newbrain";
 
 type Formation = {
   id: number;
@@ -52,7 +53,7 @@ export default function Body() {
               "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit !text-white !text-xl !p-5 cursor-pointer flex items-center"
             }
           >
-            <span className="group-hover:scale-110"></span>
+            <span className="!group-hover:scale-110"></span>
             Prenez rendez-vous
           </button>
 
@@ -72,12 +73,12 @@ export default function Body() {
 
       <div className="!p-5 max-w-5xl !mx-auto flex justify-center flex-col gap-5">
         <h2
-          className={`text-white !text-4xl text-center max-md:!text-2xl !font-semibold`}
+          className={`text-white !text-3xl text-center max-md:!text-2xl !font-bold`}
         >
           Nos programmes de formation en intelligence artificielle{" "}
         </h2>
-        <div className={"text-amber-50 text-center text-3xl"}>
-          <p className={"text-amber-50 text-center text-base"}>
+        <div className={"text-amber-50 text-center text-xl"}>
+          <p className={"text-amber-50 text-center text-xl"}>
             De nombreux parcours de formation en IA sont disponibles pour
             accompagner les entreprises face aux défis actuels.
           </p>
@@ -101,86 +102,15 @@ export default function Body() {
         >
           <h2
             className={
-              " !text-7xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
+              " !text-5xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
             }
           >
             Newbrain
           </h2>
-          {/* <div className={"flex justify-center !text-4xl gap-5"}>
-            <span className={"font-sans !text-3xl !pb-6 text-gray-100"}>
-              Audit
-            </span>
-            <span
-              className={
-                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
-              }
-            >
-              Formation
-            </span>
-            <span
-              className={
-                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
-              }
-            >
-              Implémentation
-            </span>
-            <span
-              className={
-                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
-              }
-            >
-              Suivi des résultats
-            </span>
-          </div> */}
 
           <Audit />
           <Formation />
-
-          <div
-            className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}
-          >
-            <h3
-              className={
-                "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
-              }
-            >
-              Suivis des resultats{" "}
-            </h3>
-            <div
-              className={
-                "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
-              }
-            >
-              Un suivi rigoureux pour garantir la réussite du project
-            </div>
-          </div>
-          <div
-            className={
-              "bg-gray-900 rounded-lg shadow-md p-8 mt-8 text-center text-white "
-            }
-          >
-            <h3 className={"font-sans text-lg font-bold mb-4 text-white"}>
-              {" "}
-              Optimisation et suivi continue
-            </h3>
-            <div className={"text-base text-white leanding-6"}>
-              <ul className={"list-none"}>
-                <li>intégration des retours d'expériencence.</li>
-              </ul>
-            </div>
-            <div className={"text-base text-white leanding-6"}>
-              <ul className={"list-none"}>
-                <li>
-                  Suivi des indicateurs de performance post-implémentation.(KPI)
-                </li>
-              </ul>
-            </div>
-            <div className={"text-base text-white leanding-6"}>
-              <ul className={"list-none"}>
-                <li>Analyse des gains de temps et des réductions de couts.</li>
-              </ul>
-            </div>
-          </div>
+          <Services />
         </section>
       </div>
 
