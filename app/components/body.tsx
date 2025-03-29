@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import styles from "./body.module.css";
 import {
   FaSink,
   FaCalendarAlt,
@@ -14,6 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
+import Audit from "./audit";
 
 type Formation = {
   id: number;
@@ -118,20 +118,20 @@ export default function Body() {
           optimiser vos processus. Concentrez-vous sur les activités qui
           génèrent le plus d'impact.
         </div>
-        <div className="flex !justify-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
+        <div className="flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
           <button
             onClick={() => router.push("/contact")}
-            className={`${
-              styles.button
-            } ${"!text-white max-md:!p-2 !text-lg !bg-[#ff6600] "}`}
+            className={
+              "!bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit !text-white !text-xl !p-5 cursor-pointer flex items-center"
+            }
           >
             Prenez rendez-vous
           </button>
 
           <button
-            className={`${
-              styles.button
-            } ${"!text-white max-md:!p-2 !text-lg !border-2 !border-[#ff6600] "}`}
+            className={
+              "!h-fit !text-white !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-orange"
+            }
           >
             Nos formations
           </button>
@@ -148,15 +148,15 @@ export default function Body() {
         >
           Nos programmes de formation en intelligence artificielle{" "}
         </h2>
-        <div className={styles.titre3}>
-          <p className={styles.paragraphe}>
+        <div className={"text-amber-50 text-center text-3xl"}>
+          <p className={"text-amber-50 text-center text-base"}>
             De nombreux parcours de formation en IA sont disponibles pour
             accompagner les entreprises face aux défis actuels.
           </p>
         </div>
 
         <div
-          className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+          className={`md:grid text-white md:grid-cols-3 gap-5 flex w-300 overflow-x-auto py-5 `}
         >
           {formations.map((formation) => (
             <div
@@ -206,195 +206,161 @@ export default function Body() {
       </div>
 
       {/* Reste du composant Body (statistiques, Newbrain, etc.) */}
-      <div id="statsContainer" className={styles.statsContainer}>
-        <div className={styles.statsGrid}>
-          <div className={styles.statsCard}>
-            <FaChartLine className={styles.icon} />
-            <div className={styles.statValue}>+27%</div>
-            <div className={styles.statLabel}>de Productivité</div>
+      <div className={"pb-12 pt-12 w-full"}>
+        <div className={"flex justify-around flex-wrap gap-5 !p-10"}>
+          <div
+            className={
+              "bg-[#2a2a2a] rounded-lg !p-3 h-50 w-80 text-center shadow-lg "
+            }
+          >
+            <FaChartLine className={"text-6xl text-orange-600 p-4"} />
+            <div
+              className={
+                "text-6xl font-bold text-orange-600 !pb-6 animate-fadeInUp"
+              }
+            >
+              +27%
+            </div>
+            <div className={"text-xl  text-white font-medium"}>
+              de Productivité
+            </div>
           </div>
-          <div className={styles.statsCard}>
-            <FaMoneyBillWave className={styles.icon} />
-            <div className={styles.statValue}>+30%</div>
-            <div className={styles.statLabel}>d'économie grâce à l'IA</div>
+          <div
+            className={
+              "bg-[#2a2a2a] rounded-lg !p-3 w-80 text-center shadow-lg "
+            }
+          >
+            <FaMoneyBillWave className={"text-6xl text-orange-600 "} />
+            <div
+              className={
+                " text-5xl font-bold text-orange-600 mb-2 animate-fadeInUp"
+              }
+            >
+              +30%
+            </div>
+            <div
+              className={
+                "text-xl bg-[#2a2a2a] border rounded-md text-center w-full text-gray-100"
+              }
+            >
+              d'économie grâce à l'IA
+            </div>
           </div>
-          <div className={styles.statsCard}>
-            <FaUserGraduate className={styles.icon} />
-            <div className={styles.statValue}>+1000</div>
-            <div className={styles.statLabel}>apprenants formés</div>
+          <div
+            className={
+              "bg-[#2a2a2a] rounded-lg !p-6 h-50  w-80 text-center shadow-lg "
+            }
+          >
+            <FaUserGraduate className={"text-6xl text-orange-600 p-4"} />
+            <div
+              className={
+                "text-5xl font-bold text-orange-600 mb-2 animate-fadeInUp"
+              }
+            >
+              +1000
+            </div>
+            <div
+              className={
+                "text-xl border border-gray-700 p-5 rounded-md text-center w-full text-gray-100"
+              }
+            >
+              apprenants formés
+            </div>
           </div>
         </div>
 
-        <section className={styles.newbrainSection}>
-          <h2 className={styles.newbrainTitle}>Newbrain</h2>
-          <div className={styles.subtitles}>
-            <span className={styles.subtitle}>Audit</span>
-            <span className={styles.subtitle}>Formation</span>
-            <span className={styles.subtitle}>Implémentation</span>
-            <span className={styles.subtitle}>Suivi des résultats</span>
+        <section className={"py-10 px-10 mt-10 border-t border-gray-300"}>
+          <h2
+            className={
+              " !text-7xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
+            }
+          >
+            Newbrain
+          </h2>
+          <div className={"flex justify-center !text-4xl gap-5"}>
+            <span className={"font-sans !text-3xl !pb-6 text-gray-100"}>
+              Audit
+            </span>
+            <span
+              className={
+                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
+              }
+            >
+              Formation
+            </span>
+            <span
+              className={
+                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
+              }
+            >
+              Implémentation
+            </span>
+            <span
+              className={
+                "font-sans text-3xl !pb-6 text-gray-100 max-md:!text-base"
+              }
+            >
+              Suivi des résultats
+            </span>
           </div>
 
           {/* Card dédiée à l'Audit */}
-          <div className={styles.auditCard}>
-            <h3 className={styles.title}>Audit de Maturité IA</h3>
-            <p className={styles.paragraphe}>
+
+          <div className={" !p-7 text-center text-gray-100 font-sans"}>
+            <h3
+              className={
+                "font-sans   text-center justify-center  items-center !pt-7 !text-5xl !font-bold text-gray-100"
+              }
+            >
+              Audit de Maturité IA
+            </h3>
+            <p
+              className={
+                "text-center font-sans text-gray-100 !leading-6 !pb-5 !pt-7 !text-3xl !mb-6"
+              }
+            >
               Une approche personnalisée pour favoriser la collaboration et
               l’innovation
             </p>
           </div>
 
           {/* Grille de cards pour l'Audit */}
-          <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 !text-justify `}
-          >
-            <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Evaluation du degré de maturité en IA
-              </h3>
-              <ul className={styles.cardList}>
-                <li>
-                  Mise en place d'un questionnaire en ligne pour évaluer la
-                  maturité, la vision et les attentes des collaborateurs en
-                  matière d'IA.
-                </li>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Identification des inefficacités opérationnelles
-              </h3>
-              <ul className={styles.cardList}>
-                <li>
-                  Utilisation de matrices d'évaluation et scoring des données.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
-              <ul className={styles.cardList}>
-                <li>
-                  {" "}
-                  Recueillir les informations détaillées sur les modes
-                  opératoires, les outilsutilisés et la culture d'entreprise.
-                </li>
-              </ul>
-              <ul className={styles.cardList}>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Création de la road map de formation
-              </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Rapport d'audit: Synthèse des données collectées, analyses
-                    effectuées et conclusions tirées.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Audit />
 
-          {/* Card dédiée à la Formation */}
-          <div className={styles.auditCard}>
-            <h3 className={styles.title}>Formation</h3>
-            <p className={styles.paragraphe}>
-              Acculturation et formation de vos équipes aux outils IA métiers
-            </p>
-          </div>
           <br />
 
           {/* Grille de cards pour la Formation */}
+
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+            className={
+              "bg-gray-900 rounded-lg shadow-md p-8 mt-8 text-center text-white"
+            }
           >
-            <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Evaluation du degré de maturité en IA
-              </h3>
-              <ul className={styles.cardList}>
-                <li>
-                  Mise en place d'un questionnaire en ligne pour évaluer la
-                  maturité, la vision et les attentes des collaborateurs en
-                  matière d'IA.
-                </li>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Identification des inefficacités opérationnelles
-              </h3>
-              <ul className={styles.cardList}>
-                <li>
-                  Utilisation de matrices d'évaluation et scoring des données.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
-              <ul className={styles.cardList}>
-                <li>
-                  {" "}
-                  Recueillir les informations détaillées sur les modes
-                  opératoires, les outilsutilisés et la culture d'entreprise.
-                </li>
-              </ul>
-              <ul className={styles.cardList}>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
-                Création de la road map de formation
-              </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
-                  <li>
-                    Rapport d'audit: Synthèse des données collectées, analyses
-                    effectuées et conclusions tirées.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className={styles.cardLarge}>
-            <h3 className={styles.cardLargeTitre}>
+            <h3 className={"font-sans text-lg font-bold mb-4 text-white"}>
               {" "}
               Récommandation post-formation
             </h3>
-            <div className={styles.cardLargeDescription}>
+            <div className={"text-white mt-2 text-left"}>
               Livrable de la fin de la formation rédigé par nos consultants.
               <br />
               Proposition de la road map d'Implémentation des outils IA.
             </div>
           </div>
-          <div className={styles.auditCard}>
-            <h3 className={styles.title}>Implémentation </h3>
-            <div className={styles.paragraphe}>
+          <div
+            className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}
+          >
+            <h3
+              className={
+                "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
+              }
+            >
+              Implémentation{" "}
+            </h3>
+            <div
+              className={
+                "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+              }
+            >
               Une approche personnalisée pour favoriser la collaboration et
               l'innovation
             </div>
@@ -402,14 +368,22 @@ export default function Body() {
 
           {/* Grille de cards pour la Formation */}
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
+            className={`md:grid text-white md:grid-cols-3 gap-5 bg-blue-400`}
           >
-            <div className={styles.card}>
-              <FaCalendarAlt className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
+            <div
+              className={
+                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+              }
+            >
+              <FaCalendarAlt className={"text-4xl text-orange-600 mb-2"} />
+              <h3
+                className={
+                  "text-center text-lg font-semibold text-gray-100 mt-2"
+                }
+              >
                 Evaluation du degré de maturité en IA
               </h3>
-              <ul className={styles.cardList}>
+              <ul className={"list-none"}>
                 <li>
                   Mise en place d'un questionnaire en ligne pour évaluer la
                   maturité, la vision et les attentes des collaborateurs en
@@ -421,41 +395,67 @@ export default function Body() {
                 </li>
               </ul>
             </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
+            <div
+              className={
+                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+              }
+            >
+              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
+              <h3
+                className={
+                  "text-center text-lg font-semibold text-gray-100 mt-2"
+                }
+              >
                 Identification des inefficacités opérationnelles
               </h3>
-              <ul className={styles.cardList}>
+              <ul className={"list-none"}>
                 <li>
                   Utilisation de matrices d'évaluation et scoring des données.
                 </li>
               </ul>
             </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>Réalisation de l'audit</h3>
-              <ul className={styles.cardList}>
+            <div
+              className={
+                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+              }
+            >
+              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
+              <h3
+                className={
+                  "text-center text-lg font-semibold text-gray-100 mt-2"
+                }
+              >
+                Réalisation de l'audit
+              </h3>
+              <ul className={"list-none"}>
                 <li>
                   {" "}
                   Recueillir les informations détaillées sur les modes
                   opératoires, les outilsutilisés et la culture d'entreprise.
                 </li>
               </ul>
-              <ul className={styles.cardList}>
+              <ul className={"list-none"}>
                 <li>
                   Définition des priorités et choix des cas d'usages à
                   prioriser.
                 </li>
               </ul>
             </div>
-            <div className={styles.card}>
-              <FaUserFriends className={styles.cardIcon} />
-              <h3 className={styles.cardGridTitle}>
+            <div
+              className={
+                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+              }
+            >
+              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
+              <h3
+                className={
+                  "text-center text-lg font-semibold text-gray-100 mt-2"
+                }
+              >
                 Création de la road map de formation
               </h3>
-              <div className={styles.cardGridDescription}>
-                <ul className={styles.cardList}>
+              <div className={"text-white mt-2 text-left"}>
+                <ul className={"list-none"}>
                   <li>
                     Rapport d'audit: Synthèse des données collectées, analyses
                     effectuées et conclusions tirées.
@@ -465,31 +465,47 @@ export default function Body() {
             </div>
           </div>
 
-          <div className={styles.auditCard}>
-            <h3 className={styles.title}>Suivis des resultats </h3>
-            <div className={styles.paragraphe}>
+          <div
+            className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}
+          >
+            <h3
+              className={
+                "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
+              }
+            >
+              Suivis des resultats{" "}
+            </h3>
+            <div
+              className={
+                "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+              }
+            >
               Un suivi rigoureux pour garantir la réussite du project
             </div>
           </div>
-          <div className={styles.cardLarge}>
-            <h3 className={styles.cardLargeTitre}>
+          <div
+            className={
+              "bg-gray-900 rounded-lg shadow-md p-8 mt-8 text-center text-white "
+            }
+          >
+            <h3 className={"font-sans text-lg font-bold mb-4 text-white"}>
               {" "}
               Optimisation et suivi continue
             </h3>
-            <div className={styles.cardLargeDescription}>
-              <ul className={styles.cardList}>
+            <div className={"text-base text-white leanding-6"}>
+              <ul className={"list-none"}>
                 <li>intégration des retours d'expériencence.</li>
               </ul>
             </div>
-            <div className={styles.cardLargeDescription}>
-              <ul className={styles.cardList}>
+            <div className={"text-base text-white leanding-6"}>
+              <ul className={"list-none"}>
                 <li>
                   Suivi des indicateurs de performance post-implémentation.(KPI)
                 </li>
               </ul>
             </div>
-            <div className={styles.cardLargeDescription}>
-              <ul className={styles.cardList}>
+            <div className={"text-base text-white leanding-6"}>
+              <ul className={"list-none"}>
                 <li>Analyse des gains de temps et des réductions de couts.</li>
               </ul>
             </div>
@@ -497,81 +513,143 @@ export default function Body() {
         </section>
       </div>
 
-      <h3 className={styles.title}> Les Services IA NewBrain</h3>
+      <h3
+        className={
+          "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
+        }
+      >
+        {" "}
+        Les Services IA NewBrain
+      </h3>
       <br />
       <div
         className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
       >
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Formation IA</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Formation IA
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Formation IA de vos collaborateurs aux{" "}
             <strong>Fondamentaux et techniques d'IA générative</strong>pour
             comprendre cette rupture technologique et ses applications
           </div>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Contenu adapté aux besoins spécifiques de l'entreprise.</li>
           </ul>
-          <div className={styles.cardGridDescription}>
-            <ul className={styles.cardList}>
+          <div className={"text-white mt-2 text-left"}>
+            <ul className={"list-none"}>
               <li> Contenu adapté aux besoins spécifiques de l'entreprise.</li>
             </ul>
           </div>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Implémentatez les outils IA les plus Adaptés à vos process</li>
           </ul>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             Maitrisez les Fondamentaux du Prompt Engineering
           </ul>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Formation en présentiel ou a distance</li>
           </ul>
         </div>
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Audit & Consulting</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Audit & Consulting
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Identifiez les opportinités d'innovation et de croissance grace à
             notre audit IA, spécialement concu pour aligner votre technologie
             avec vos ambitions stratégiques
           </div>
 
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li> Question de préparation. </li>
           </ul>
 
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Tour d'Horizon des outils existants</li>
           </ul>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Entretien avec vos collaorateurs par type de métier</li>
           </ul>
-          <ul className={styles.cardList}>
+          <ul className={"list-none"}>
             <li>Réalisation d'un rapport de récommendations générales</li>
           </ul>
         </div>
       </div>
       <br />
-      <h3 className={styles.title}> Pourquoi choisir NewBrain</h3>
+      <h3
+        className={
+          "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
+        }
+      >
+        {" "}
+        Pourquoi choisir NewBrain
+      </h3>
       <br />
       <div
         className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
       >
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Expertise de pointe</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Expertise de pointe
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Nos Formateurs et consultant maitrisent les outils IA adaptés à
             votre secteur et vous guident avec précsion
             <br /> Ces exxperts sélectionnent les outils d'IA les plus
             performants pour optimiser le gain de Productivité.
           </div>
         </div>
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Une approche sur-mesure</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Une approche sur-mesure
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Nos Consultants analysent vos méthodes de travail pendant l'audit.
             <br />
             Développement d'un parcours personnalisé suite aux informations
@@ -580,10 +658,22 @@ export default function Body() {
             Automatisation et assistants IA Développés pour vous.
           </div>
         </div>
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Roi mesurable</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Roi mesurable
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Avec Newbrain, vous bénéficiez de résultats concrets.
             <br />
             Nos formations et soltions permettent de réduire vos couts
@@ -593,11 +683,19 @@ export default function Body() {
         </div>
       </div>
 
-      <h3 className={styles.title}>
+      <h3
+        className={
+          "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
+        }
+      >
         {" "}
         Certifications et financement par vos OPCOs.{" "}
       </h3>
-      <div className={styles.paragraphe}>
+      <div
+        className={
+          "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+        }
+      >
         {" "}
         Newbrain est certifier Qualiopi et propose des solutions de financement
         pour vos formations
@@ -606,26 +704,54 @@ export default function Body() {
       <div
         className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-5 `}
       >
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Pour les Entreprises</h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Pour les Entreprises
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Nos Formations sont éligibles au plans de déveppement des
             compétences. Vous pouvez donc béneficier des subventions par les
             Opco et FNE
           </div>
         </div>
-        <div className={styles.card}>
-          <FaSink className={styles.cardIcon} />
-          <h3 className={styles.cardGridTitle}>Pour les particuliers </h3>
-          <div className={styles.paragraphe}>
+        <div
+          className={
+            "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
+          }
+        >
+          <FaSink className={"text-4xl text-orange-600 mb-2"} />
+          <h3
+            className={"text-center text-lg font-semibold text-gray-100 mt-2"}
+          >
+            Pour les particuliers{" "}
+          </h3>
+          <div
+            className={
+              "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            }
+          >
             Formations financiables à 100% grace aux aides à la formation et au
             CPF.
           </div>
         </div>
       </div>
-      <div className={styles.buttons}>
-        <button className={`${styles.button} ${styles.btnAppointment}`}>
+      <div
+        className={"py-0 px-6 flex justify-center gap-2 mt-5 font-sans text-sm"}
+      >
+        <button
+          className={`${"!py-4 !px-6 !border-none rounded-md cursor-pointer font-sans text-sm transition-transform duration-200 ease-in-out"} ${"!border-orange-600"}`}
+        >
           Prenez rendez-vous
         </button>
       </div>

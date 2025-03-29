@@ -48,11 +48,11 @@ const Navigation: React.FC = () => {
             menuOpen ? "max-md:top-28" : "max-md:top-[-300]"
           }`}
         >
-          <nav className="flex md:bg-[#444] !px-5 !py-3 !gap-5 max-md:flex-col max-md:!p-0">
+          <nav className="flex md:bg-[#444] !rounded-md !px-5 !py-4 !gap-5 max-md:flex-col max-md:!p-0">
             {navLinks.map((link) => {
               return (
                 <Link
-                  className="!text-white hover:!text-yellow-600 transition-all"
+                  className="!text-white hover:!text-[#ff6600] transition-all"
                   onClick={() => setMenuOpen(!menuOpen)}
                   key={link.label}
                   href={link.href}
@@ -64,9 +64,9 @@ const Navigation: React.FC = () => {
           </nav>
           <Link
             href={"contact"}
-            className="!bg-orange-400 !rounded-md !h-fit !text-white !p-3 hover:!font-semibold cursor-pointer flex items-center"
+            className="!bg-[#ff6600] !rounded-md !h-fit !text-white !p-3  cursor-pointer flex items-center"
           >
-            prendre un rendez-vous
+            Prendre un rendez-vous
           </Link>
         </div>
       </div>
