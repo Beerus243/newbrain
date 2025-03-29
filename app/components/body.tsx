@@ -15,6 +15,7 @@ import Image from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
 import Audit from "./audit";
 import Formation from "./formation";
+import { StatsSection } from "./stats";
 
 type Formation = {
   id: number;
@@ -210,68 +211,8 @@ export default function Body() {
       </div>
 
       {/* Reste du composant Body (statistiques, Newbrain, etc.) */}
-      <div className={"pb-12 pt-12 w-full"}>
-        <div className={"flex justify-around flex-wrap gap-5 !p-10"}>
-          <div
-            className={
-              "bg-[#2a2a2a] rounded-lg !p-3 h-50 w-80 text-center shadow-lg "
-            }
-          >
-            <FaChartLine className={"text-6xl text-orange-600 p-4"} />
-            <div
-              className={
-                "text-6xl font-bold text-orange-600 !pb-6 animate-fadeInUp"
-              }
-            >
-              +27%
-            </div>
-            <div className={"text-xl  text-white font-medium"}>
-              de Productivité
-            </div>
-          </div>
-          <div
-            className={
-              "bg-[#2a2a2a] rounded-lg !p-3 w-80 text-center shadow-lg "
-            }
-          >
-            <FaMoneyBillWave className={"text-6xl text-orange-600 "} />
-            <div
-              className={
-                " text-5xl font-bold text-orange-600 mb-2 animate-fadeInUp"
-              }
-            >
-              +30%
-            </div>
-            <div
-              className={
-                "text-xl bg-[#2a2a2a] border rounded-md text-center w-full text-gray-100"
-              }
-            >
-              d'économie grâce à l'IA
-            </div>
-          </div>
-          <div
-            className={
-              "bg-[#2a2a2a] rounded-lg !p-6 h-50  w-80 text-center shadow-lg "
-            }
-          >
-            <FaUserGraduate className={"text-6xl text-orange-600 p-4"} />
-            <div
-              className={
-                "text-5xl font-bold text-orange-600 mb-2 animate-fadeInUp"
-              }
-            >
-              +1000
-            </div>
-            <div
-              className={
-                "text-xl border border-gray-700 p-5 rounded-md text-center w-full text-gray-100"
-              }
-            >
-              apprenants formés
-            </div>
-          </div>
-        </div>
+      <div className={"w-full"}>
+        <StatsSection />
 
         <section
           className={"p-10 border-t border-gray-300 flex flex-col gap-10"}
