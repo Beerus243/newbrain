@@ -13,7 +13,7 @@ type Formation = {
   image: string;
 };
 
-const formations: Formation[] = [
+export const formations: Formation[] = [
   {
     id: 1,
     title: "1. Initiation à l'IA pour les Entreprises",
@@ -82,60 +82,60 @@ const formations: Formation[] = [
   },
 ];
 
-const FormationPage = () => {
+export const FormationCard = (formation: Formation) => {
   const router = useRouter();
 
-  // Fonction pour ouvrir la page de détails de formation
-  const handleVoirFormation = (formationId: number) => {
-    router.push(`/Formation/${formationId}`);
-  };
+  return (
+    <div
+      className={`bg-[#2a2a2a] max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-lg !border-2 !border-[#444] overflow-x-hidden`}
+    >
+      <Image
+        src={formation.image}
+        alt={formation.title}
+        height={300}
+        width={400}
+        sizes="100vw"
+        className={`w-full !border-b-5 !border-orange-600`}
+      />
+      <div className={"!p-5 !flex h-full !flex-col gap-5 !justify-start "}>
+        <h3 className={"!text-xl"}>{formation.title}</h3>
+        {formation.points ? (
+          <div className="">
+            <ul className={"!h-full flex flex-col gap-3"}>
+              {formation.points.map((point, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <span className="text-green-700">
+                    <IoIosCheckmark size={30} />
+                  </span>{" "}
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <p className={"flex-1"}>{formation.description}</p>
+        )}
+      </div>
+      <button
+        onClick={() => router.push(`/Formation/${formation.id}`)}
+        className={`w-auto text-nowrap !mx-2.5 !mb-2.5 !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md`}
+      >
+        Voir la Formation
+      </button>
+    </div>
+  );
+};
 
+const FormationPage = () => {
   return (
     <>
       <Header />
       {/* Espace pour ne pas masquer le header fixe */}
       <div className="h-40"></div>
 
-      <div className="md:grid text-white md:grid-cols-3 gap-5 flex w-full overflow-x-auto py-9">
+      <div className="md:grid text-white md:grid-cols-3 gap-5  flex flex-col max-w-5xl !mx-auto !p-10 w-full overflow-x-auto ">
         {formations.map((formation) => (
-          <div
-            key={formation.id}
-            className="bg-[#2a2a2a] !w-full max-md:!w-[1000px] !rounded-lg !border-2 !border-[#444]"
-          >
-            <Image
-              src={formation.image}
-              alt={formation.title}
-              height={300}
-              width={400}
-              sizes="100vw"
-              className="w-full max-md:!w-[400px]"
-            />
-            <div className="!p-5 !flex !flex-col gap-5 !justify-between max-md:!w-[350px]">
-              <h3 className="!text-2xl">{formation.title}</h3>
-              {formation.points ? (
-                <div className="flex-1">
-                  <ul className="!h-full flex flex-col gap-3">
-                    {formation.points.map((point, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <span className="text-green-700">
-                          <IoIosCheckmark size={30} />
-                        </span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                <p className="flex-1">{formation.description}</p>
-              )}
-              <button
-                onClick={() => handleVoirFormation(formation.id)}
-                className="w-full text-nowrap !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md"
-              >
-                Voir la Formation
-              </button>
-            </div>
-          </div>
+          <FormationCard key={formation.id} {...formation} />
         ))}
       </div>
 

@@ -26,25 +26,22 @@ export function StatsSection() {
     },
   ];
   return (
-    <div className={"max-w-5xl flex gap-5 !py-10 !mx-auto"}>
+    <div className={"max-w-5xl flex gap-5 !py-10 !mx-auto !px-5"}>
       {stats.map((stat) => {
         return (
           <div
+            key={stat.unity}
             className={
-              "bg-[#2a2a2a] rounded-lg !p-3 h-50 w-full text-center shadow-lg "
+              "bg-[#2a2a2a] rounded-lg !p-5 h-auto w-full text-center shadow-lg "
             }
           >
             <stat.icon size={30} className={"text-orange-600"} />
             <div
-              className={
-                "text-6xl font-bold text-orange-600 !pb-6 animate-fadeInUp"
-              }
+              className={"text-2xl font-bold text-orange-600 animate-fadeInUp"}
             >
               {stat.stat}
             </div>
-            <div className={"text-xl  text-white font-medium"}>
-              {stat.unity}
-            </div>
+            <div className={"text-sm  text-white"}>{stat.unity}</div>
           </div>
         );
       })}
