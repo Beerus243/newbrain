@@ -99,7 +99,9 @@ export default function Body() {
       <div
         className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
       >
-        <h5 className={`bg-[#f5f5f5] !w-fit  !mx-auto !px-5 !text-sm/5`}>
+        <h5
+          className={`bg-[#f5f5f5] text-black !w-fit  !mx-auto !px-5 !text-sm/5`}
+        >
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h5>
         <h1
@@ -122,15 +124,16 @@ export default function Body() {
           <button
             onClick={() => router.push("/contact")}
             className={
-              "!bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit !text-white !text-xl !p-5 cursor-pointer flex items-center"
+              "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit !text-white !text-xl !p-5 cursor-pointer flex items-center"
             }
           >
+            <span className="group-hover:scale-110"></span>
             Prenez rendez-vous
           </button>
 
           <button
             className={
-              "!h-fit !text-white !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-orange"
+              "!h-fit !text-white !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-[#ff6600]"
             }
           >
             Nos formations
@@ -304,27 +307,6 @@ export default function Body() {
             </span>
           </div>
 
-          {/* Card dédiée à l'Audit */}
-
-          <div className={" !p-7 text-center text-gray-100 font-sans"}>
-            <h3
-              className={
-                "font-sans   text-center justify-center  items-center !pt-7 !text-5xl !font-bold text-gray-100"
-              }
-            >
-              Audit de Maturité IA
-            </h3>
-            <p
-              className={
-                "text-center font-sans text-gray-100 !leading-6 !pb-5 !pt-7 !text-3xl !mb-6"
-              }
-            >
-              Une approche personnalisée pour favoriser la collaboration et
-              l’innovation
-            </p>
-          </div>
-
-          {/* Grille de cards pour l'Audit */}
           <Audit />
 
           <br />

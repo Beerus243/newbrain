@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 body {
-  color: var(--foreground);
+  color: white;
   background-color: #171717;
   font-family: "Roboto", sans-serif; /* Utilisez la police Roboto */
 }
