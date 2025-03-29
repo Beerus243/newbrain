@@ -24,8 +24,13 @@ export default function Body() {
   return (
     <>
       <div
-        className={`flex flex-col !mt-[12%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto `}
+        className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto  !p-5 overflow-hidden relative`}
       >
+        <div
+          className="absolute z-[-10] inset-0 bg-[url('https://media.gq-magazine.co.uk/photos/65d4c4485f50a90e34ff3308/16:9/w_2560%2Cc_limit/La-Liga-netflix-documentary.jpeg')] bg-cover bg-center"
+          style={{ filter: "blur(2px) brightness(50%)" }} // Applique un flou et assombrit
+        ></div>
+
         <h5
           className={`bg-[#f5f5f5] text-black !w-fit  !mx-auto !px-5 !text-sm/5`}
         >
