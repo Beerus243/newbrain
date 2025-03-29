@@ -7,7 +7,7 @@ import { IoIosCheckmark } from "react-icons/io";
 import Audit from "./audit";
 import Formation from "./formation-info";
 import { StatsSection } from "./stats";
-import { FormationCard, formations } from "../Formation/page";
+import { FormationCard, formations } from "../components/formationCard";
 
 type Formation = {
   id: number;
