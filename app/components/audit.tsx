@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { FaUserFriends } from "react-icons/fa";
-interface AuditCard {
+export interface AuditCard {
   icon: IconType;
   title: string;
   points: string[];

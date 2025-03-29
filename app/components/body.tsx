@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { IoIosCheckmark } from "react-icons/io";
 import Audit from "./audit";
+import Formation from "./formation";
 
 type Formation = {
   id: number;
@@ -272,7 +273,9 @@ export default function Body() {
           </div>
         </div>
 
-        <section className={"py-10 px-10 mt-10 border-t border-gray-300"}>
+        <section
+          className={"p-10 border-t border-gray-300 flex flex-col gap-10"}
+        >
           <h2
             className={
               " !text-7xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
@@ -308,144 +311,7 @@ export default function Body() {
           </div>
 
           <Audit />
-
-          <br />
-
-          {/* Grille de cards pour la Formation */}
-
-          <div
-            className={
-              "bg-gray-900 rounded-lg shadow-md p-8 mt-8 text-center text-white"
-            }
-          >
-            <h3 className={"font-sans text-lg font-bold mb-4 text-white"}>
-              {" "}
-              Récommandation post-formation
-            </h3>
-            <div className={"text-white mt-2 text-left"}>
-              Livrable de la fin de la formation rédigé par nos consultants.
-              <br />
-              Proposition de la road map d'Implémentation des outils IA.
-            </div>
-          </div>
-          <div
-            className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}
-          >
-            <h3
-              className={
-                "font-sans text-center justify-center  items-center pt-7 text-2xl font-bold text-gray-100"
-              }
-            >
-              Implémentation{" "}
-            </h3>
-            <div
-              className={
-                "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
-              }
-            >
-              Une approche personnalisée pour favoriser la collaboration et
-              l'innovation
-            </div>
-          </div>
-
-          {/* Grille de cards pour la Formation */}
-          <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 bg-blue-400`}
-          >
-            <div
-              className={
-                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
-              }
-            >
-              <FaCalendarAlt className={"text-4xl text-orange-600 mb-2"} />
-              <h3
-                className={
-                  "text-center text-lg font-semibold text-gray-100 mt-2"
-                }
-              >
-                Evaluation du degré de maturité en IA
-              </h3>
-              <ul className={"list-none"}>
-                <li>
-                  Mise en place d'un questionnaire en ligne pour évaluer la
-                  maturité, la vision et les attentes des collaborateurs en
-                  matière d'IA.
-                </li>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div
-              className={
-                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
-              }
-            >
-              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
-              <h3
-                className={
-                  "text-center text-lg font-semibold text-gray-100 mt-2"
-                }
-              >
-                Identification des inefficacités opérationnelles
-              </h3>
-              <ul className={"list-none"}>
-                <li>
-                  Utilisation de matrices d'évaluation et scoring des données.
-                </li>
-              </ul>
-            </div>
-            <div
-              className={
-                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
-              }
-            >
-              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
-              <h3
-                className={
-                  "text-center text-lg font-semibold text-gray-100 mt-2"
-                }
-              >
-                Réalisation de l'audit
-              </h3>
-              <ul className={"list-none"}>
-                <li>
-                  {" "}
-                  Recueillir les informations détaillées sur les modes
-                  opératoires, les outilsutilisés et la culture d'entreprise.
-                </li>
-              </ul>
-              <ul className={"list-none"}>
-                <li>
-                  Définition des priorités et choix des cas d'usages à
-                  prioriser.
-                </li>
-              </ul>
-            </div>
-            <div
-              className={
-                "border border-gray-700 p-5 rounded-md bg-gray-800 text-center w-full text-gray-100"
-              }
-            >
-              <FaUserFriends className={"text-4xl text-orange-600 mb-2"} />
-              <h3
-                className={
-                  "text-center text-lg font-semibold text-gray-100 mt-2"
-                }
-              >
-                Création de la road map de formation
-              </h3>
-              <div className={"text-white mt-2 text-left"}>
-                <ul className={"list-none"}>
-                  <li>
-                    Rapport d'audit: Synthèse des données collectées, analyses
-                    effectuées et conclusions tirées.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Formation />
 
           <div
             className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}
