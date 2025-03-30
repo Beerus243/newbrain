@@ -27,7 +27,7 @@ export default function Body() {
         className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto  !p-5 overflow-hidden relative`}
       >
         <div
-          className="absolute z-[-10] inset-0 bg-[url('/image/cover2.png')] bg-cover bg-center"
+          className="absolute z-[-10] inset-0 bg-[url('/image/cover1.jpeg')] bg-cover bg-center"
           style={{ filter: "blur(6px) brightness(40%)" }} // Applique un flou et assombrit
         ></div>
 
@@ -78,7 +78,7 @@ export default function Body() {
       </div>
 
       <div className="w-full max-w-5xl !mx-auto">
-        <h2 className="text-center text-white !text-2xl !font-bold !mb-7 !mt-7 !p-4">
+        <h2 className="text-center text-white !text-2xl !font-bold !mb-4 !mt-4 !p-4">
           L'avenir avec l'ia
         </h2>
         <ImageSlider
