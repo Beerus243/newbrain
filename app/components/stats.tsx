@@ -26,13 +26,13 @@ export function StatsSection() {
     },
   ];
   return (
-    <div className={"max-w-5xl flex gap-5 !py-10 !mx-auto !px-5"}>
+    <div className={"!max-w-5xl !flex !gap-5 !py-10 !mx-auto !px-5"}>
       {stats.map((stat) => {
         return (
           <div
             key={stat.unity}
             className={
-              "bg-[#2a2a2a] rounded-lg !p-5 h-auto w-full text-center shadow-lg "
+              "!bg-[#2a2a2a] !rounded-lg !p-5 !h-auto !w-full !text-center !shadow-lg "
             }
           >
             <stat.icon size={30} className={"text-orange-600"} />

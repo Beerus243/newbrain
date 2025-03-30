@@ -12,39 +12,29 @@ const Services = () => {
   const auditServices: AuditCard[] = [
     {
       icon: FaCalendarAlt,
-      title: "Evaluation du degré de maturité en IA",
+      title: "Formation IA",
       points: [
         "Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.",
         "Définition des priorités et choix des cas d'usages à prioriser.",
+        "Montez en compétences sur les fondamentaux et les techniques de l'IA générative",
+        "	Formations adaptées pour vos collaborateurs ou particuliers, afin de comprendre cette révolution technologique et ses applications concrètes.",
+        "Intégrez les outils IA les plus pertinents pour optimiser vos processus.",
+        "Acquérez les bases essentielles du Prompt Engineering pour maximiser l'efficacité des outils IA.",
+        "Sessions disponibles en présentiel ou à distance, selon vos préférences.",
       ],
     },
     {
       icon: FaUserFriends,
-      title: "Identification des inefficacités opérationnelles",
-      points: ["Utilisation de matrices d'évaluation et scoring des données."],
-    },
-    {
-      icon: FaUserFriends,
-      title: "Réalisation de l'audit",
+      title: "Audit et Conseil en IA",
       points: [
-        " Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.",
+        "Utilisation de matrices d'évaluation et scoring des données.",
+        "Découvrez des opportunités d'innovation et de croissance grâce à notre expertise",
+        "Un audit sur mesure pour aligner votre stratégie technologique avec vos objectifs business.",
+        "Questionnaire préparatoire pour cerner vos besoins.",
+        "Revue complète des outils IA disponibles sur le marché.",
+        "Entretiens approfondis avec vos équipes, par métier, pour identifier les axes d'amélioration.",
+        "Remise d'un rapport détaillé avec des recommandations stratégiques.",
       ],
-    },
-    {
-      icon: FaUserFriends,
-      title: "Réalisation de l'audit 3",
-      points: [
-        "Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.",
-        "Définition des priorités et choix des cas d'usages à prioriser.",
-      ],
-    },
-    {
-      icon: FaUserFriends,
-      title: "Récommandation post-formation",
-      points: [
-        "Livrable de la fin de la formation rédigé par nos consultants. Proposition de la road map d'Implémentation des outils IA.",
-      ],
-      className: "col-span-full",
     },
   ];
   return (
@@ -55,7 +45,7 @@ const Services = () => {
             "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
           }
         >
-          Les Services Newbrain{" "}
+          Les Services NewBrain{" "}
         </h3>
         <div
           className={

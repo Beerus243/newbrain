@@ -8,43 +8,32 @@ export interface AuditCard {
   className?: string;
 }
 
-const Implementation = () => {
+const Services = () => {
   const auditServices: AuditCard[] = [
     {
       icon: FaCalendarAlt,
-      title: "Evaluation du degré de maturité en IA",
+      title: "Expertise reconnue",
       points: [
-        "Mise en place d'un questionnaire en ligne pour évaluer la maturité, la vision et les attentes des collaborateurs en matière d'IA.",
-        "Définition des priorités et choix des cas d'usages à prioriser.",
+        "Nos formateurs et consultants sont des spécialistes des outils IA, adaptés à votre secteur d'activité.",
+        "Ils identifient et mettent en œuvre les solutions les plus performantes pour maximiser votre efficacité.",
       ],
     },
     {
       icon: FaUserFriends,
-      title: "Identification des inefficacités opérationnelles",
-      points: ["Utilisation de matrices d'évaluation et scoring des données."],
-    },
-    {
-      icon: FaUserFriends,
-      title: "Réalisation de l'audit",
+      title: "Une méthode personnalisée",
       points: [
-        " Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.",
+        "Pendant l'audit, nos experts analysent vos processus et vos besoins spécifiques.",
+        "Nous concevons un parcours sur mesure, basé sur les informations recueillies en interne.",
+        "Développement d'automatisations et d'assistants IA conçus spécialement pour vous.",
       ],
     },
     {
       icon: FaUserFriends,
-      title: "Réalisation de l'audit 3",
+      title: "Un retour sur investissement tangible",
       points: [
-        "Recueillir les informations détaillées sur les modes opératoires, les outilsutilisés et la culture d'entreprise.",
-        "Définition des priorités et choix des cas d'usages à prioriser.",
+        "Nos formations et solutions vous offrent des résultats mesurables.",
+        "Réduction des coûts opérationnels, augmentation de la productivité et renforcement des compétences de vos équipes.",
       ],
-    },
-    {
-      icon: FaUserFriends,
-      title: "Récommandation post-formation",
-      points: [
-        "Livrable de la fin de la formation rédigé par nos consultants. Proposition de la road map d'Implémentation des outils IA.",
-      ],
-      className: "col-span-full",
     },
   ];
   return (
@@ -55,18 +44,23 @@ const Implementation = () => {
             "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
           }
         >
-          implementation{" "}
+          Pourquoi choisir NewBrain{" "}
         </h3>
         <div
           className={
-            "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base mb-6"
+            "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base !mt-2"
           }
         >
-          Une approche personnalisée pour favoriser la collaboration et
-          l'innovation
+          Nous vous accompagnons dans la maîtrise de l'IA et boostons la
+          productivité de votre entreprise.
+          <br />
+          <span className={"text-lg font-bold !mb-7"}>
+            {" "}
+            Notre approche repose sur trois piliers fondamentaux :
+          </span>
         </div>
       </div>
-      <div className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5`}>
+      <div className={`max-w-5xl text-white grid grid-cols-3 gap-5 !p-5`}>
         {auditServices.map((field) => {
           return (
             <div
@@ -93,4 +87,4 @@ const Implementation = () => {
   );
 };
 
-export default Implementation;
+export default Services;
