@@ -28,7 +28,7 @@ export default function Body() {
       >
         <div
           className="absolute z-[-10] inset-0 bg-[url('/image/Brain.png')] bg-cover bg-center"
-          style={{ filter: "blur(3px) brightness(70%)" }} // Applique un flou et assombrit
+          style={{ filter: "blur(4px) brightness(90%)" }} // Applique un flou et assombrit
         ></div>
 
         <h5
