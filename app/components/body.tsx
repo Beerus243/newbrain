@@ -27,8 +27,8 @@ export default function Body() {
         className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto  !p-5 overflow-hidden relative`}
       >
         <div
-          className="absolute z-[-10] inset-0 bg-[url('/image/cover1.jpeg')] bg-cover bg-center"
-          style={{ filter: "blur(6px) brightness(40%)" }} // Applique un flou et assombrit
+          className="absolute z-[-10] inset-0 bg-[url('/image/Brain.png')] bg-cover bg-center"
+          style={{ filter: "blur(3px) brightness(70%)" }} // Applique un flou et assombrit
         ></div>
 
         <h5
