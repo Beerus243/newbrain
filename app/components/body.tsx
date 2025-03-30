@@ -78,13 +78,18 @@ export default function Body() {
       </div>
 
       <div className="w-full max-w-5xl !mx-auto">
-        <h2 className="text-center text-2xl font-bold mb-4">Nos Sponsors</h2>
+        <h2 className="text-center text-white !text-2xl !font-bold !mb-7 !mt-7 !p-4">
+          L'avenir avec l'ia
+        </h2>
         <ImageSlider
           logos={[
-            "/image/call.jpg",
-            "/image/call.jpg",
-            "/image/call.jpg",
-            "/image/call.jpg",
+            "/image/chatgpt.jpeg",
+            "/image/DeepSeek.jpeg",
+            "/image/gemini.jpeg",
+            "/image/grok.png",
+            "/image/copilot.jpeg",
+            "/image/grok.png",
+            "/image/Midjourney.png",
           ]}
         />
       </div>
