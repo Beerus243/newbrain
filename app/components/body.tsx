@@ -11,6 +11,8 @@ import Services from "./services-newbrain";
 import ImageSlider from "./infiniteCarousel";
 import Implementation from "./implementation";
 import Chose from "./Chose";
+import Card from "../Card/page";
+import Faq from "./Faq";
 
 type Formation = {
   id: number;
@@ -28,7 +30,7 @@ export default function Body() {
         className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !px-5 max-w-6xl !mx-auto  !p-5 overflow-hidden relative`}
       >
         <div
-          className="absolute z-[-10] inset-0 bg-[url('/image/Brain.png')] bg-cover bg-center"
+          className="absolute z-[-10] inset-0 bg-[url('/image/')] bg-cover bg-center"
           style={{ filter: "blur(4px) brightness(90%)" }} // Applique un flou et assombrit
         ></div>
 
@@ -129,6 +131,7 @@ export default function Body() {
           >
             Newbrain
           </h2>
+          <Card />
 
           <Audit />
           <Formation />
@@ -136,6 +139,7 @@ export default function Body() {
           <Services />
           <Chose />
         </section>
+        <Faq />
       </div>
     </>
   );

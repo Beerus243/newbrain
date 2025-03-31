@@ -48,7 +48,7 @@ const Formation = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className={`flex flex-col items-center gap-5`}>
       <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
         <h3
           className={
