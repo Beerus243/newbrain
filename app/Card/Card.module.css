@@ -30,6 +30,11 @@ body {
   }
 }
 
+/* Position relative pour la carte */
+.card {
+  position: relative;
+}
+
 /* Styles personnalisés pour la carte */
 .card::after,
 .card::before {
@@ -55,6 +60,6 @@ body {
 }
 
 .card::before {
-  filter: blur(1.5rem);
+  filter: blur(0.5rem);
   opacity: 0.5;
 }

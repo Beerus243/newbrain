@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import { FaChartLine, FaMoneyBillWave, FaUserGraduate } from "react-icons/fa";
+import styles from "../Card/Card.module.css";
 
 interface StatCardType {
   icon: IconType;
@@ -31,9 +32,7 @@ export function StatsSection() {
         return (
           <div
             key={stat.unity}
-            className={
-              "!bg-[#2a2a2a] !rounded-lg !p-5 !h-auto !w-full !text-center !shadow-lg "
-            }
+            className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg  ${styles.card}`}
           >
             <stat.icon size={30} className={"text-orange-600"} />
             <div

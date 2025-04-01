@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import { FaUserFriends } from "react-icons/fa";
+import styles from "../Card/Card.module.css";
 export interface AuditCard {
   icon: IconType;
   title: string;
@@ -55,9 +56,9 @@ const Audit = () => {
         {auditServices.map((field) => {
           return (
             <div
-              className={
-                "bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg"
-              }
+              className={`${styles.card} 
+                "relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg"
+              `}
             >
               <field.icon size={30} className={" text-orange-600"} />
               <h3

@@ -39,9 +39,7 @@ export default function Body() {
         >
           FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
         </h5>
-        <h1
-          className={`text-white !text-5xl  max-md:!text-3xl !font-extrabold`}
-        >
+        <h1 className={`!text-5xl  max-md:!text-3xl !font-extrabold`}>
           Pro ou Enrepeneur <br />
           <span
             className={`!text-orange-500  max-md:!text-3xl !font-extrabold`}
@@ -49,7 +47,7 @@ export default function Body() {
             Libérez votre potentiel avec l'IA{" "}
           </span>
         </h1>
-        <div className="text-white !text-xl sm:text-lg md:text-xl lg:text-2xl !p-5">
+        <div className=" !text-xl sm:text-lg md:text-xl lg:text-2xl !p-5">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
           optimiser vos processus. Concentrez-vous sur les activités qui
@@ -59,7 +57,7 @@ export default function Body() {
           <button
             onClick={() => router.push("/contact")}
             className={
-              "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit !text-white !text-xl !p-5 cursor-pointer flex items-center"
+              "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit  !text-xl !p-5 cursor-pointer flex items-center"
             }
           >
             <span className="!group-hover:scale-110"></span>
@@ -68,7 +66,7 @@ export default function Body() {
 
           <button
             className={
-              "!h-fit !text-white !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-[#ff6600]"
+              "!h-fit  !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-[#ff6600]"
             }
           >
             Nos formations
@@ -131,7 +129,6 @@ export default function Body() {
           >
             Newbrain
           </h2>
-          <Card />
 
           <Audit />
           <Formation />
