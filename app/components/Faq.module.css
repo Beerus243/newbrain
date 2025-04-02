@@ -2,9 +2,9 @@
 
 /* Police personnalisée et fond global */
 .faqContainer {
-  padding: 5rem;
+  padding: 3rem;
   font-family: "Poppins", sans-serif;
-  background-color: #1c1c1c;
+  background-color: #2a2a2a;
   color: #f0f0f0;
 }
 
@@ -23,7 +23,7 @@
   padding: 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 

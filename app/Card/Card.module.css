@@ -43,7 +43,7 @@
   /* Ajustez le padding pour renforcer l'effet */
   padding: 10px;
   border-radius: 10px;
-  animation: spin 1s linear infinite;
+  animation: spin 1.9s linear infinite;
 }
 
 .card::before {

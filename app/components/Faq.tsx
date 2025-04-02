@@ -45,7 +45,7 @@ const FAQ: React.FC = () => {
     <>
       <div className={styles.faqContainer}>
         <div
-          className={" !text-5xl  !font-bold !text-gray-100 !text-center !p-5"}
+          className={" !text-xl  !font-bold !text-gray-100 !text-center !p-5"}
         >
           {" "}
           FAQ
