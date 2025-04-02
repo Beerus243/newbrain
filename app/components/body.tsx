@@ -31,7 +31,7 @@ export default function Body() {
           className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto  !px-5 max-w-8xl !mx-auto  !p-5 overflow-hidden relative`}
         >
           <div
-            className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center !border-4 !border-orange-500 !box-border"
+            className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center !border-4 "
             style={{
               filter: "blur(1px) brightness(90%)",
               transform: "scale(1.1)",
