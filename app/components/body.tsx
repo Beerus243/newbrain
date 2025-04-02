@@ -31,7 +31,8 @@ export default function Body() {
           className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto  !px-5 max-w-8xl !mx-auto  !p-5 overflow-hidden relative`}
         >
           <div
-            className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center !border-4 "
+            className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center
+            "
             style={{
               filter: "blur(1px) brightness(90%)",
               transform: "scale(1.1)",
@@ -43,7 +44,9 @@ export default function Body() {
           >
             FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
           </h5>
-          <h1 className={`!text-5xl  max-md:!text-3xl !font-extrabold`}>
+          <h1
+            className={`!text-5xl  max-md:!text-3xl !font-extrabold !font-Poppins`}
+          >
             Pro ou Enrepeneur <br />
             <span
               className={`!text-orange-500  max-md:!text-3xl !font-extrabold`}
@@ -70,7 +73,7 @@ export default function Body() {
 
             <button
               className={
-                "!h-fit  !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-[#ff6600]"
+                "!h-fit  !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-3 !border-white !rounded-md  hover:!border-[#ff6600]"
               }
             >
               Nos formations
