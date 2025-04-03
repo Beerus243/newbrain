@@ -8,3 +8,20 @@ body {
   background-color: #272727;
   font-family: "Poppins", "Arial Narrow", Arial, sans-serif;
 }
+
+.fadeInUpContainer {
+  position: relative;
+  z-index: 1; /* S'assure que le contenu animé est au-dessus du fond */
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
