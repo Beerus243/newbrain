@@ -45,16 +45,16 @@ export default function Body() {
             FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
           </h5>
           <h1
-            className={`!text-5xl  max-md:!text-3xl !font-extrabold !font-Poppins`}
+            className={`!text-5xl  max-md:!text-2xl !font-extrabold !font-Poppins`}
           >
             Pro ou Enrepeneur <br />
             <span
-              className={`!text-orange-500  max-md:!text-3xl !font-extrabold`}
+              className={`!text-orange-500  max-md:!text-2xl !font-extrabold`}
             >
               Libérez votre potentiel avec l'IA{" "}
             </span>
           </h1>
-          <div className=" !text-xl sm:text-lg md:text-xl lg:text-2xl !p-5">
+          <div className=" !text-lg sm:text-lg md:text-lg lg:text-2xl !p-5">
             Équipez vos équipes avec les compétences nécessaires et intégrez les
             solutions d'intelligence artificielle les plus pertinentes pour
             optimiser vos processus. Concentrez-vous sur les activités qui
@@ -64,7 +64,7 @@ export default function Body() {
             <button
               onClick={() => router.push("/contact")}
               className={
-                "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit  !text-xl !p-5 cursor-pointer flex items-center"
+                "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit  !text-xl !p-5 cursor-pointer flex items-center hover:!border-white"
               }
             >
               <span className="!group-hover:scale-110"></span>
@@ -130,9 +130,9 @@ export default function Body() {
             "p-10 border-t border-gray-300 flex flex-col gap-10 !bg-[#27272727]"
           }
         >
+          <StatsSection />
           <section />
 
-          <StatsSection />
           <h2
             className={
               " !text-5xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
@@ -146,6 +146,7 @@ export default function Body() {
           <Implementation />
           <Services />
           <Chose />
+          <About />
         </section>
         <Faq />
       </div>
