@@ -19,7 +19,7 @@ export const detailFormation: DataFormation[] = [
     title: "Initiation à l'IA pour les Entreprises",
     presentation:
       "Découvrez les bases de l'intelligence artificielle et ses applications en entreprise.",
-    image: "https://picsum.photos/seed/formation1/400/300",
+    image: "/image/discours.jpg",
     prerequisites: "Aucune connaissance préalable requise.",
     evaluationModalities: "QCM et études de cas.",
     targetAudience: "Entrepreneurs et managers.",
@@ -33,7 +33,7 @@ export const detailFormation: DataFormation[] = [
     title: "IA pour les Organisations",
     presentation:
       "Une formation dédiée à l'intégration de l'IA dans la gestion d'entreprise.",
-    image: "https://picsum.photos/seed/formation1/400/300",
+    image: "/image/workshop.jpeg",
     prerequisites: "Connaissances de base en informatique.",
     evaluationModalities: "Projets pratiques et simulations.",
     targetAudience: "Dirigeants et cadres.",
@@ -46,7 +46,7 @@ export const detailFormation: DataFormation[] = [
     id: 3,
     title: "IA pour les Équipes Commerciales",
     presentation: "Boostez vos équipes commerciales grâce à l'IA.",
-    image: "https://picsum.photos/seed/formation1/400/300",
+    image: "/image/devantpc.jpg",
     prerequisites: "Notions de marketing et vente.",
     evaluationModalities: "Ateliers et exercices pratiques.",
     targetAudience: "Commerciaux et responsables marketing.",
@@ -59,7 +59,7 @@ export const detailFormation: DataFormation[] = [
     title: "IA Appliquée au Marketing",
     presentation:
       "Exploitez l'IA pour créer des campagnes marketing innovantes.",
-    image: "https://picsum.photos/seed/formation1/400/300",
+    image: "/image/robot1.jpg",
     prerequisites: "Connaissances de base en marketing digital.",
     evaluationModalities: "Études de cas et travaux pratiques.",
     targetAudience: "Marketers et publicitaires.",
@@ -72,7 +72,7 @@ export const detailFormation: DataFormation[] = [
     title: "IA pour les Ressources Humaines",
     presentation:
       "Optimisez le recrutement et la gestion des talents avec l'IA.",
-    image: "/images/formation5.jpg",
+    image: "/image/robot2.jpg",
     prerequisites: "Connaissances de base en RH.",
     evaluationModalities: "Simulations et cas pratiques.",
     targetAudience: "Responsables RH et recruteurs.",
@@ -85,7 +85,7 @@ export const detailFormation: DataFormation[] = [
     id: 6,
     title: "Découverte de l'Intelligence Artificielle",
     presentation: "Une immersion complète dans le monde de l'IA.",
-    image: "/images/formation6.jpg",
+    image: "/image/services.jpgs",
     prerequisites: "Intérêt pour la technologie et la nouveauté.",
     evaluationModalities: "QCM, ateliers pratiques et débats.",
     targetAudience: "Tous publics, professionnels ou curieux.",

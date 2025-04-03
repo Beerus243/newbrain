@@ -21,7 +21,7 @@ export const formations: Formation[] = [
       "Découverte des outils IA essentiels (ChatGPT, Claude, Perplexity, etc.)",
       "Mise en pratique immédiate avec des exemples concrets et applicables dès le départ",
     ],
-    image: "https://picsum.photos/seed/formation1/400/300",
+    image: "/image/discours.jpg",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const formations: Formation[] = [
       "Élaboration et mise en œuvre d'une stratégie IA sur mesure",
       "Accompagnement personnalisé pour évaluer les résultats tangibles",
     ],
-    image: "https://picsum.photos/seed/formation2/400/300",
+    image: "/image/workshop.jpeg",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const formations: Formation[] = [
       "Boostez la performance de vos équipes commerciales",
       "Prenez des décisions éclairées grâce à des données précises",
     ],
-    image: "https://picsum.photos/seed/formation3/400/300",
+    image: "/image/devantpc.jpg",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const formations: Formation[] = [
       "Analysez et exploitez vos données de manière plus efficace",
       "Personnalisez l'expérience client pour maximiser l'engagement",
     ],
-    image: "https://picsum.photos/seed/formation4/400/300",
+    image: "/image/robot1.jpg",
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const formations: Formation[] = [
       "Renforcez la fidélisation des talents",
       "Libérez du temps pour des initiatives stratégiques",
     ],
-    image: "https://picsum.photos/seed/formation5/400/300",
+    image: "/image/robot2.jpg",
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ export const formations: Formation[] = [
       "Maîtrise des outils d'IA générative",
       "Mise en pratique avec des cas concrets dès le premier jour",
     ],
-    image: "https://picsum.photos/seed/formation6/400/300",
+    image: "/image/services.jpg",
   },
 ];
 
@@ -93,10 +93,10 @@ export const FormationCard = (formation: Formation) => {
         height={300}
         width={400}
         sizes="100vw"
-        className={`w-full !border-b-5 !border-orange-600`}
+        className={` !w-100 !h-70 !border-b-4 !border-orange-600`}
       />
       <div className={"!p-5 !flex h-full !flex-col gap-5 !justify-start "}>
-        <h3 className={"!text-xl"}>{formation.title}</h3>
+        <h3 className={"!text-xl !font-bold"}>{formation.title}</h3>
         {formation.points ? (
           <div className="">
             <ul className={"!h-full flex flex-col gap-3"}>

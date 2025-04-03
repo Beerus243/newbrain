@@ -1,7 +1,6 @@
 import { IconType } from "react-icons";
 import { FaChartLine, FaMoneyBillWave, FaUserGraduate } from "react-icons/fa";
 import styles from "../Card/Card.module.css";
-import "../components/stat.module.css"; // Contient la définition de .fadeInUpContainer
 import React, { useRef, useEffect, useState } from "react";
 
 interface StatCardType {

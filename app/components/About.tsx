@@ -39,10 +39,27 @@ export const formations: About[] = [
 const AboutComponent = () => {
   return (
     <div className="flex flex-col items-center gap-5">
-      <div className="mb-b p-5 text-center text-gray-100 font-sans text-lg">
-        <h3 className="font-sans text-center justify-center items-center pt-7 !text-2xl !font-bold text-gray-100 grid">
-          NewBrain est un leader dans l'apprentissage sur l'IA
+      <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
+        <h3
+          className={
+            "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
+          }
+        >
+          Pourquoi choisir NewBrain{" "}
         </h3>
+        <div
+          className={
+            "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base !mt-2"
+          }
+        >
+          Nous vous accompagnons dans la maîtrise de l'IA et boostons la
+          productivité de votre entreprise.
+          <br />
+          <span className={"text-lg font-bold !mb-7"}>
+            {" "}
+            Notre approche repose sur trois piliers fondamentaux :
+          </span>
+        </div>
       </div>
       <div className="max-w-5xl text-white grid grid-cols-3 gap-5 !p-5">
         {formations.map((field) => {

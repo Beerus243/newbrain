@@ -10,7 +10,6 @@ import { FormationCard, formations } from "../components/formationCard";
 import Services from "./services-newbrain";
 import ImageSlider from "./infiniteCarousel";
 import Implementation from "./implementation";
-import Chose from "./Chose";
 import Faq from "./Faq";
 import About from "./About";
 
@@ -45,7 +44,7 @@ export default function Body() {
             FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
           </h5>
           <h1
-            className={`!text-5xl  max-md:!text-2xl !font-extrabold !font-Poppins`}
+            className={`!text-4xl  max-md:!text-2xl !font-extrabold !font-Poppins`}
           >
             Pro ou Enrepeneur <br />
             <span
@@ -64,7 +63,7 @@ export default function Body() {
             <button
               onClick={() => router.push("/contact")}
               className={
-                "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit  !text-xl !p-5 cursor-pointer flex items-center hover:!border-white"
+                "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center !h-fit  !text-xl !p-4 cursor-pointer flex items-center hover:!border-white"
               }
             >
               <span className="!group-hover:scale-110"></span>
@@ -73,7 +72,7 @@ export default function Body() {
 
             <button
               className={
-                "!h-fit  !text-xl  !justify-center !text-center !p-5 cursor-pointer flex items-center !border-3 !border-white !rounded-md  hover:!border-[#ff6600]"
+                "!h-fit  !text-xl  !justify-center !text-center !p-4 cursor-pointer flex items-center !border-3 !border-white !rounded-md  hover:!border-[#ff6600]"
               }
             >
               Nos formations
@@ -145,7 +144,7 @@ export default function Body() {
           <Formation />
           <Implementation />
           <Services />
-          <Chose />
+
           <About />
         </section>
         <Faq />
