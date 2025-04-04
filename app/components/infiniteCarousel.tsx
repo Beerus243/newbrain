@@ -10,18 +10,19 @@ const SponsorSlider: React.FC<SponsorSliderProps> = ({ logos }) => {
   const repeatedLogos = Array(10).fill(logos).flat(); // Répète 5 fois le tableau (ajustable)
 
   return (
-    <div className="w-full overflow-hidden py-4">
+    <div className="w-full overflow-hidden py-2">
       <div className="relative">
         <div
           className="flex animate-marquee gap-5 whitespace-nowrap"
           style={{
+            filter: "grayscale(100%)", // Applique un filtre de désaturation
             animationDuration: `${logos.length * 1}s`, // Durée plus longue pour un effet fluide
           }}
         >
           {repeatedLogos.map((logo, index) => (
             <Image
-              width={50}
-              height={50}
+              width={30}
+              height={30}
               key={index}
               src={logo}
               alt={`Sponsor ${index + 1}`}

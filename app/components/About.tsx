@@ -72,7 +72,7 @@ const AboutComponent = () => {
                 <img
                   src={field.imageUrl}
                   alt={field.title}
-                  className="!w-100 !h-60 object-cover !mb-8 !rounded-t-lg !border-4 !border-orange-500"
+                  className="!w-100 !h-60 object-cover !mb-9 !rounded-t-lg !border-4 !border-orange-500"
                 />
               )}
               <h3 className="text-left !text-xl !font-bold text-gray-50 !mb-5">
