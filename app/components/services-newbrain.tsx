@@ -57,11 +57,13 @@ const Services = () => {
           l'innovation
         </div>
       </div>
-      <div className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5`}>
+      <div
+        className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5`}
+      >
         {auditServices.map((field) => {
           return (
             <div
-              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card}`}
+              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[300px]`}
             >
               <field.icon size={30} className={" text-orange-600"} />
               <h3

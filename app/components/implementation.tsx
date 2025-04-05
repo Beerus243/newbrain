@@ -53,7 +53,7 @@ const Implementation = () => {
       <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
         <h3
           className={
-            "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
+            "font-sans text-center justify-center items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
           }
         >
           implementation{" "}
@@ -67,11 +67,12 @@ const Implementation = () => {
           l'innovation
         </div>
       </div>
-      <div className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5`}>
+      {/* Conteneur responsive */}
+      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
         {auditServices.map((field) => {
           return (
             <div
-              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card}`}
+              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[300px]`}
             >
               <field.icon size={30} className={" text-orange-600"} />
               <h3

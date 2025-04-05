@@ -43,7 +43,7 @@ const Audit = () => {
     <div className="w-full flex items-center flex-col">
       <h3
         className={
-          "font-sans   text-center justify-center items-center !text-2xl !font-bold text-gray-100"
+          "font-sans text-center justify-center items-center !text-2xl !font-bold text-gray-100"
         }
       >
         Audit de Maturité IA
@@ -52,15 +52,15 @@ const Audit = () => {
         Une approche personnalisée pour favoriser la collaboration et
         l’innovation
       </p>
-      <div className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5`}>
+      {/* Conteneur responsive */}
+      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
         {auditServices.map((field) => {
           return (
             <div
               className={`${styles.card} 
-                "relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg"
-              `}
+                relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg max-md:!min-w-[300px]`}
             >
-              <field.icon size={30} className={" text-orange-600"} />
+              <field.icon size={30} className={"text-orange-600"} />
               <h3
                 className={"text-left !text-xl !font-bold text-gray-50 !mb-5"}
               >
@@ -68,7 +68,7 @@ const Audit = () => {
               </h3>
               <ul className={"list-none flex flex-col gap-3"}>
                 {field.points.map((puce) => (
-                  <li key={puce} className="text-md text-start ">
+                  <li key={puce} className="text-md text-start">
                     {"✅"} {puce}
                   </li>
                 ))}
