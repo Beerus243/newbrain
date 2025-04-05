@@ -61,12 +61,12 @@ const AboutComponent = () => {
           </span>
         </div>
       </div>
-      <div className="max-w-5xl text-white grid grid-cols-3 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
+      <div className="max-w-5xl text-white grid w-full grid-cols-3 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
         {formations.map((field) => {
           return (
             <div
               key={field.title}
-              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[300px]`}
+              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[350px]`}
             >
               {field.imageUrl && (
                 <img

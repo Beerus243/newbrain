@@ -26,13 +26,13 @@ export default function Body() {
     <>
       <div className={""}>
         <div
-          className={`flex flex-col !mt-[9%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto  !px-5 max-w-8xl !mx-auto  !p-5 overflow-hidden relative`}
+          className={`flex flex-col !mt-[7%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto  !px-5  !mx-auto md:!p-10 !p-5 overflow-hidden relative`}
         >
           <div
             className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center
             "
             style={{
-              filter: "blur(1px) brightness(90%)",
+              filter: "blur(2px) brightness(80%)",
               transform: "scale(1.1)",
             }} // Applique un flou et assombrit
           ></div>
@@ -52,7 +52,7 @@ export default function Body() {
               Libérez votre potentiel avec l'IA{" "}
             </span>
           </h1>
-          <div className=" !text-md !sm:text-md !md:text-lg !lg:text-xl !p-5">
+          <div className=" !text-md !sm:text-md !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-5">
             Équipez vos équipes avec les compétences nécessaires et intégrez les
             solutions d'intelligence artificielle les plus pertinentes pour
             optimiser vos processus. Concentrez-vous sur les activités qui

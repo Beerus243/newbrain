@@ -76,7 +76,11 @@ export function StatsSection() {
   ];
 
   return (
-    <div className={"!max-w-5xl !flex !gap-5 !py-10 !mx-auto !px-5"}>
+    <div
+      className={
+        "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto !px-5 max-lg:flex-col"
+      }
+    >
       {stats.map((stat, index) => (
         <StatCard key={stat.unity} stat={stat} index={index} />
       ))}

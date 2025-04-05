@@ -49,7 +49,7 @@ const Implementation = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5 !p-5">
       <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
         <h3
           className={
@@ -68,7 +68,7 @@ const Implementation = () => {
         </div>
       </div>
       {/* Conteneur responsive */}
-      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
+      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap w-full max-md:gap-5">
         {auditServices.map((field) => {
           return (
             <div

@@ -39,7 +39,7 @@ const Services = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5 !p-5">
       <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
         <h3
           className={
@@ -58,12 +58,12 @@ const Services = () => {
         </div>
       </div>
       <div
-        className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5`}
+        className={`max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap w-full max-md:gap-5`}
       >
         {auditServices.map((field) => {
           return (
             <div
-              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[300px]`}
+              className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${field.className} ${styles.card} max-md:!min-w-[350px]`}
             >
               <field.icon size={30} className={" text-orange-600"} />
               <h3

@@ -15,10 +15,10 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <header className="!fixed flex justify-center w-full top-5 !px-5  !z-11">
+    <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full p-5 flex m-5 relative  !px-5 h-fit items-center rounded-lg bg-[#333333d7] !z-[1000] max-md:justify-between"
+          "w-full p-5 flex m-5 relative  !px-5 h-fit items-center rounded-lg max-w-5xl bg-[#333333d7] !z-[1000] max-md:justify-between"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>

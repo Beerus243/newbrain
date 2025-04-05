@@ -40,7 +40,7 @@ const Audit = () => {
     },
   ];
   return (
-    <div className="w-full flex items-center flex-col">
+    <div className="w-full flex items-center flex-col !p-5">
       <h3
         className={
           "font-sans text-center justify-center items-center !text-2xl !font-bold text-gray-100"
@@ -53,10 +53,11 @@ const Audit = () => {
         l’innovation
       </p>
       {/* Conteneur responsive */}
-      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
-        {auditServices.map((field) => {
+      <div className="max-w-5xl text-white grid grid-cols-2 gap-5 !w-full !mx-5 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
+        {auditServices.map((field, index) => {
           return (
             <div
+              key={`${field.title}-${field.icon}-${index}`}
               className={`${styles.card} 
                 relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg max-md:!min-w-[300px]`}
             >
