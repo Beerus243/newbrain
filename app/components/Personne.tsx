@@ -54,18 +54,18 @@ export function EmployeeCarousel() {
         {Employees.map((employee, index) => (
           <div
             key={employee.id}
-            className={`flex-shrink-0 m-7 w-62 h-76 flex flex-col items-center justify-center mx-4 transition-transform duration-700 ${
-              index === currentIndex ? "scale-110 z-10" : "scale-90 opacity-50"
+            className={`flex-shrink-0 m-7 w-57 h-56 flex flex-col items-center justify-center mx-4 transition-transform duration-700 ${
+              index === currentIndex ? "scale-108 z-10" : "scale-85 opacity-50"
             }`}
           >
-            <div className="card shadow-lg rounded-lg p-6 border border-white flex flex-col justify-center items-center">
+            <div className="card shadow-lg  p-9 flex flex-col justify-center items-center">
               <img
                 src={employee.imageUrl}
                 alt={employee.name}
-                className="w-full h-64 object-cover rounded-lg mb-4 border-4 border-orange-500"
+                className="w-full h-full object-cover  mb-4 !border-1 !border-orange-500"
               />
               {/* Conteneur pour le nom et le rôle */}
-              <div className="bg-white text-black p-4 rounded-lg shadow-md w-full text-center">
+              <div className="bg-black text-white !p-5 shadow-md w-full text-center !border-4 !border-orange-500">
                 <h3 className="text-lg font-bold">{employee.name}</h3>
                 <p className="text-sm">{employee.role}</p>
               </div>
@@ -76,15 +76,19 @@ export function EmployeeCarousel() {
       {/* Navigation Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-white p-2 rounded-full hover:bg-gray-600"
+        className="absolute left-70 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full hover:bg-[#FF6600] transition-colors"
+        aria-label="Précédent"
       >
-        &#8592;
+        {/* Emoji pour flèche gauche */}
+        ⬅️
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-white p-2 rounded-full hover:bg-gray-600"
+        className="absolute right-70 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full hover:bg-[#FF6600] transition-colors"
+        aria-label="Suivant"
       >
-        &#8594;
+        {/* Emoji pour flèche droite */}
+        ➡️
       </button>
     </div>
   );
