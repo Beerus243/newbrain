@@ -24,16 +24,15 @@ export default function Body() {
   const router = useRouter();
   return (
     <>
-      <div className={""}>
+      <div className={"!pt-10"}>
         <div
-          className={`flex flex-col !mt-[7%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto  !px-5  !mx-auto md:!p-10 !p-5 overflow-hidden relative`}
+          className={`flex flex-col !mt-[7%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto !px-5 !mx-auto md:!p-10 !p-5 overflow-hidden relative !pt-10`}
         >
           <div
             className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center
             "
             style={{
               filter: "blur(2px) brightness(80%)",
-              transform: "scale(1.1)",
             }} // Applique un flou et assombrit
           ></div>
 

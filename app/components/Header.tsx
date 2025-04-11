@@ -4,21 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLargeLine } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 
 const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const pathname = usePathname(); // Hook pour récupérer le chemin courant
+
+  // Définition des liens de navigation
   const navLinks: { label: string; href: string }[] = [
     { label: "accueil", href: "/" },
     { label: "formation ai", href: "/Formation" },
-    { label: "audit et consulting", href: "/" },
-    { label: "ressource", href: "/" },
+    { label: "Cas Clients", href: "/Client" }, // Lien vers la page des succès stories
+    { label: "Audit et Consulting", href: "/Audit" },
   ];
 
   return (
     <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full p-5 flex m-5 relative  !px-5 h-fit items-center rounded-lg max-w-5xl bg-[#333333d7] !z-[1000] max-md:justify-between"
+          "w-full p-5 flex m-5 relative !px-5 h-fit items-center rounded-lg max-w-7xl bg-[#333333d7] !z-[1000] max-md:justify-between"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>
@@ -45,17 +49,26 @@ const Navigation: React.FC = () => {
 
         <div
           className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col z-20 transition-all max-md:w-full left-0 max-md:bg-[#000000e5] max-md:!p-5 ${
-            menuOpen ? "max-md:top-28" : "max-md:top-[-300]"
+            menuOpen ? "max-md:top-28" : "max-md:top-[-300px]"
           }`}
         >
           <nav className="flex md:bg-[#444] !rounded-md !px-5 !py-4 !gap-5 max-md:flex-col max-md:!p-0">
             {navLinks.map((link) => {
+              // Vérifie si le lien correspond exactement au chemin courant
+              const isActive = pathname === link.href; // Vérifie si le chemin actuel correspond au lien
               return (
                 <Link
-                  className="!text-white hover:!text-[#ff6600] transition-all"
-                  onClick={() => setMenuOpen(!menuOpen)}
                   key={link.label}
                   href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`
+                    transition-all
+                    ${
+                      isActive
+                        ? "!text-orange-500 !font-bold animate-pulse" // Style actif
+                        : "!text-white hover:!text-[#ff6600]" // Style par défaut
+                    }
+                  `}
                 >
                   {link.label.toUpperCase()}
                 </Link>
@@ -63,8 +76,9 @@ const Navigation: React.FC = () => {
             })}
           </nav>
           <Link
-            href={"contact"}
-            className="!bg-[#ff6600] !rounded-md !h-fit !text-white !p-3  cursor-pointer flex items-center"
+            href={"/contact"}
+            onClick={() => setMenuOpen(false)}
+            className="!bg-[#ff6600] !rounded-md !h-fit !text-white !p-3 cursor-pointer flex items-center"
           >
             Prendre un rendez-vous
           </Link>
