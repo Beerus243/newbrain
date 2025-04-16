@@ -15,7 +15,7 @@ const Navigation: React.FC = () => {
     { label: "accueil", href: "/" },
     { label: "formation ai", href: "/Formation" },
     { label: "Cas Clients", href: "/Client" }, // Lien vers la page des succès stories
-    { label: "Audit et Consulting", href: "/Audit" },
+    { label: "A propos", href: "/Apropos" },
   ];
 
   return (
