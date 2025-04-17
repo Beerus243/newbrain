@@ -12,9 +12,9 @@ const Navigation: React.FC = () => {
 
   // Définition des liens de navigation
   const navLinks: { label: string; href: string }[] = [
-    { label: "accueil", href: "/" },
+    { label: "Accueil", href: "/" },
     { label: "formation ai", href: "/Formation" },
-    { label: "Cas Clients", href: "/Client" }, // Lien vers la page des succès stories
+    { label: "", href: "/Client" }, // Lien vers la page des succès stories
     { label: "A propos", href: "/Apropos" },
   ];
 
@@ -22,11 +22,11 @@ const Navigation: React.FC = () => {
     <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full p-5 flex m-5 relative !px-5 h-fit items-center rounded-3xl max-w-7xl bg-gray-500 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
+          "w-full !p-2 flex m-5 relative !px-5 h-fit items-center rounded-3xl max-w-7xl bg-gray-500 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>
-          <Image src="/image/logo.png" alt="Logo" width={80} height={80} />
+          <Image src="/image/logo.png" alt="Logo" width={100} height={100} />
         </Link>
 
         <span
