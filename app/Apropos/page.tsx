@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Header from "../components/Header";
-import styles from "../Card/Card.module.css";
+
 import { useRouter } from "next/navigation"; // Remplacez next/router par next/navigation
 import Footer from "../components/Footer";
 
@@ -84,7 +84,7 @@ const Apropos = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`!relative !bg-[#2a2a2a] !rounded-lg !p-9 !h-auto !w-full !text-center !shadow-lg ${styles.card} !max-md:!min-w-[350px]`}
+            className={`!relative bg-white !rounded-lg !p-9 !h-auto !w-full !text-center !shadow-lg border border-black !max-md:!min-w-[350px]`}
           >
             {/* Image */}
             {card.imageUrl && (
@@ -95,7 +95,7 @@ const Apropos = () => {
               />
             )}
             {/* Contenu */}
-            <h3 className="text-left !text-xl !font-bold text-gray-50 !mb-5">
+            <h3 className="text-left !text-xl !font-bold text-black !mb-5">
               {card.title}
             </h3>
             <p className="text-md text-start">{card.description}</p>
@@ -108,18 +108,19 @@ const Apropos = () => {
         {values.map((value, index) => (
           <div
             key={index}
-            className={`!relative !bg-[#2a2a2a] !rounded-lg !p-9 !h-auto !w-full !text-center !shadow-lg ${styles.card} !max-md:!min-w-[350px]`}
+            className={`!relative bg-white !rounded-lg !p-9 !h-auto !w-full !text-center !shadow-lg !border-1 !border-black !max-md:!min-w-[350px]`}
           >
             {/* Emoji */}
             <div className="text-4xl mb-5">{value.emoji}</div>
             {/* Contenu */}
-            <h3 className="text-left !text-xl !font-bold text-gray-50 !mb-5">
+            <h3 className="text-left !text-xl !font-bold text-black !mb-5">
               {value.title}
             </h3>
             <p className="text-md text-start">{value.description}</p>
           </div>
         ))}
       </div>
+
       <div className="relative">
         {/* Bannière */}
         <div
@@ -128,7 +129,7 @@ const Apropos = () => {
             filter: "blur(2px) brightness(80%)",
           }}
         ></div>
-        <div className="!flex !flex-col !items-center !justify-center !text-center !text-white !py-20">
+        <div className="!flex !flex-col !items-center !justify-center !text-center !text-black !py-20">
           <h1 className="!text-4xl !font-bold mb-5">
             Prêt à transformer votre entreprise avec l'IA ?
           </h1>

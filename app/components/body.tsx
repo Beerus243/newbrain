@@ -50,7 +50,7 @@ export default function Body() {
               Prenez rendez-vous
             </button>
           </div>
-          <div className=" !text-md !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
+          <div className=" !text-md !font-robotto !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
             Équipez vos équipes avec les compétences nécessaires et intégrez les
             solutions d'intelligence artificielle les plus pertinentes pour
             optimiser vos processus. Concentrez-vous sur les activités qui

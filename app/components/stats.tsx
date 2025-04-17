@@ -48,8 +48,8 @@ function StatCard({ stat, index }: { stat: StatCardType; index: number }) {
         className={animate ? "fadeInUpContainer" : ""}
         style={{ animationDelay: `${index * 0.2}s` }}
       >
-        <stat.icon size={30} className={"text-orange-600"} />
-        <div className={"text-2xl font-bold text-orange-600"}>{stat.stat}</div>
+        <stat.icon size={30} className={"text-white"} />
+        <div className={"text-2xl font-bold text-gray-50"}>{stat.stat}</div>
         <div className={"text-sm text-white"}>{stat.unity}</div>
       </div>
     </div>
@@ -83,6 +83,12 @@ export function StatsSection() {
         >
           Notre Mission
         </h3>
+        <div className="text-left font-robotto text-gray-100 leading-6 pb-5 !p-4 text-base !mt-2">
+          Chez Newbrain , nous rendons l'intelligence Artificielle accessible et
+          concrète pour tous. Notre mission est d'accompagner les entreprises
+          dans leur transformation digitale en formant leurs équipes aux usages
+          pratiques de l'IA.
+        </div>
         <div
           className={
             "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto !px-5 max-lg:flex-col"
