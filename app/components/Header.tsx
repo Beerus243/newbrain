@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
     <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full p-5 flex m-5 relative !px-5 h-fit items-center rounded-lg max-w-7xl bg-[#333333d7] !z-[1000] max-md:justify-between"
+          "w-full p-5 flex m-5 relative !px-5 h-fit items-center rounded-3xl max-w-7xl bg-gray-500 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>
@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
             menuOpen ? "max-md:top-28" : "max-md:top-[-300px]"
           }`}
         >
-          <nav className="flex md:bg-[#444] !rounded-md !px-5 !py-4 !gap-5 max-md:flex-col max-md:!p-0">
+          <nav className="flex !px-5 !py-4 !gap-5 max-md:flex-col max-md:!p-0">
             {navLinks.map((link) => {
               // Vérifie si le lien correspond exactement au chemin courant
               const isActive = pathname === link.href; // Vérifie si le chemin actuel correspond au lien
@@ -65,8 +65,8 @@ const Navigation: React.FC = () => {
                     transition-all
                     ${
                       isActive
-                        ? "!text-orange-500 !font-bold animate-pulse" // Style actif
-                        : "!text-white hover:!text-[#ff6600]" // Style par défaut
+                        ? "!text-black !font-bold animate-pulse" // Style actif
+                        : "!text-white hover:!text-black hover:!font-bold" // Style par défaut
                     }
                   `}
                 >
@@ -78,7 +78,7 @@ const Navigation: React.FC = () => {
           <Link
             href={"/contact"}
             onClick={() => setMenuOpen(false)}
-            className="!bg-[#ff6600] !rounded-md !h-fit !text-white !p-3 cursor-pointer flex items-center"
+            className="!bg-black !rounded-4xl  !text-white !p-4 cursor-pointer !flex !items-center hover:!bg-gray-50 hover:!text-black"
           >
             Prendre un rendez-vous
           </Link>

@@ -24,94 +24,55 @@ export default function Body() {
   const router = useRouter();
   return (
     <>
-      <div className={"!pt-10"}>
-        <div
-          className={`flex flex-col !mt-[7%] max-md:!mt-[30%] m-screen gap-5 !justify-center !text-center !h-auto !px-5 !mx-auto md:!p-10 !p-5 overflow-hidden relative !pt-10`}
-        >
-          <div
-            className="absolute z-[-10] inset-0 bg-[url('/image/cover4.jpg')] bg-cover bg-center
-            "
-            style={{
-              filter: "blur(2px) brightness(80%)",
-            }} // Applique un flou et assombrit
-          ></div>
-
-          <h5
-            className={`bg-[#f5f5f5] text-black !w-fit  !mx-auto !px-5 !text-sm/5`}
-          >
-            FORMATION IA POUR PROFESSIONNELS & PARTICULIERS
-          </h5>
-          <h1
-            className={`!text-3xl  max-md:!text-2xl !font-extrabold !font-Poppins`}
-          >
-            Pro ou Enrepeneur <br />
-            <span
-              className={`!text-orange-500  max-md:!text-xl !font-extrabold`}
+      <div className={""}>
+        <div className="bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] pb-20">
+          <div className="relative h-80  max-md:!h-60 flex items-center justify-center">
+            <h1
+              className={`absolute bottom-5 text-center !text-5xl max-md:!text-2xl !font-extrabold !font-Poppins text-white leading-15 max-md:leading-10`}
             >
-              Libérez votre potentiel avec l'IA{" "}
-            </span>
-          </h1>
-          <div className=" !text-md !sm:text-md !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-5">
-            Équipez vos équipes avec les compétences nécessaires et intégrez les
-            solutions d'intelligence artificielle les plus pertinentes pour
-            optimiser vos processus. Concentrez-vous sur les activités qui
-            génèrent le plus d'impact.
+              Pro ou Entrepreneur <br />
+              Libérez votre potentiel <br />{" "}
+              <span
+                className={`!text-[#5E17EB] max-md:!text-xl !font-extrabold`}
+              >
+                avec l'IA
+              </span>
+            </h1>
           </div>
           <div className="flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
             <button
               onClick={() => router.push("/contact")}
               className={
-                "!group !bg-[#ff6600] !rounded-md  !justify-center !text-center  !text-md !p-3 cursor-pointer flex items-center hover:!border-white"
+                "!bg-black !rounded-4xl  !text-white pt-3 !p-4 cursor-pointer !flex !items-center hover:!bg-gray-50 hover:!text-black"
               }
             >
               <span className="!group-hover:scale-110"></span>
               Prenez rendez-vous
             </button>
-
-            <button
-              className={
-                " !text-md  !justify-center !text-center !p-3 cursor-pointer flex items-center !border-2 !border-white !rounded-md  hover:!border-[#ff6600]"
-              }
-            >
-              Nos formations
-            </button>
           </div>
-          <p className={"text-center text-xl text-white"}>
-            Ils ont bénéficié de l'expertise et de l'accompagnement de nos
-            formateurs spécialisés.
-          </p>
+          <div className=" !text-md !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-5">
+            Équipez vos équipes avec les compétences nécessaires et intégrez les
+            solutions d'intelligence artificielle les plus pertinentes pour
+            optimiser vos processus. Concentrez-vous sur les activités qui
+            génèrent le plus d'impact.
+          </div>
         </div>
-        <div className="w-full max-w-5xl !mx-auto">
-          <h2 className="text-center text-white !text-xl  !mb-4 !mt-4 !p-4">
-            L'avenir avec l'ia
-          </h2>
-          <ImageSlider
-            logos={[
-              "/image/chatgpt.jpeg",
-              "/image/DeepSeek.jpeg",
-              "/image/gemini.jpeg",
-              "/image/grok.png",
-              "/image/copilot.jpeg",
-              "/image/grok.png",
-              "/image/Midjourney.png",
-            ]}
-          />
-        </div>
+
         <div className="!p-5 max-w-5xl !mx-auto flex justify-center flex-col gap-5">
-          <h2
-            className={`text-white !text-3xl text-center max-md:!text-xl !font-semibold`}
-          >
-            Nos programmes de formation en intelligence artificielle{" "}
+          <h2 className={` !text-3xl max-md:!text-xl !font-semibold text-left`}>
+            Nos Services{" "}
           </h2>
-          <div className={"text-amber-50 text-center text-md"}>
-            <p className={"text-amber-50 text-center text-md"}>
-              De nombreux parcours de formation en IA sont disponibles pour
-              accompagner les entreprises face aux défis actuels.
+          <div className={" text-black  text-md text-left"}>
+            <p className={" text-md"}>
+              Une formation pratique et non Théorique.
+              <br />
+              Maitriser les fondamentaux de ChatGPT avec une approche
+              directement applicable à vos taches quotidiennes. <br />
             </p>
           </div>
 
           <div
-            className={`md:grid text-white md:grid-cols-3 gap-5 flex w-full !max-w-5xl overflow-x-auto !py-5 `}
+            className={`md:grid  md:grid-cols-3 gap-5 flex w-full !max-w-5xl overflow-x-auto !py-5 `}
           >
             {formations.map((formation) => (
               <FormationCard key={formation.id} {...formation} />

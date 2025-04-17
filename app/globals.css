@@ -4,8 +4,8 @@
 @import "tailwindcss/utilities";
 
 body {
-  color: white;
-  background-color: #272727;
+  color: black;
+  background-color: white;
   font-family: "Poppins", "Arial Narrow", Arial, sans-serif;
 }
 

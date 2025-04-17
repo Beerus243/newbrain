@@ -14,69 +14,27 @@ export type Formation = {
 export const formations: Formation[] = [
   {
     id: 1,
-    title: "1. Initiation à l'IA pour les Entreprises",
+    title: "1. Accuration A IA",
     points: [
-      "Audit complet en intelligence artificielle inclus",
-      "Programmes sur mesure, adaptés à votre domaine d'activité",
-      "Découverte des outils IA essentiels (ChatGPT, Claude, Perplexity, etc.)",
-      "Mise en pratique immédiate avec des exemples concrets et applicables dès le départ",
+      "Axe sur les cas d'usage Des exercices concrets adaptés à votre secteur d'activité et vos besoins spécifiques",
     ],
     image: "/image/discours.jpg",
   },
   {
     id: 2,
-    title: "2. IA pour les Organisations",
+    title: "2.Formation et Coaching",
     points: [
-      "Audit IA intégré",
-      "Concentration sur les outils d'aide à la décision et de gestion",
-      "Élaboration et mise en œuvre d'une stratégie IA sur mesure",
-      "Accompagnement personnalisé pour évaluer les résultats tangibles",
+      "Gains de Productivité immédiats Obtenez des gains de productivité concrets et mesurables dès la fin de la formation.",
     ],
     image: "/image/workshop.jpeg",
   },
   {
     id: 3,
-    title: "3. IA pour les Équipes Commerciales",
+    title: "3. Programme de Transformation ",
     points: [
-      "Automatisez la recherche de prospects grâce à l'IA",
-      "Améliorez la qualification des leads",
-      "Boostez la performance de vos équipes commerciales",
-      "Prenez des décisions éclairées grâce à des données précises",
+      "Nous vous accompagnons stratégiquement por intégrer l'IA dans votre culture et processus de votre entreprise",
     ],
     image: "/image/devantpc.jpg",
-  },
-  {
-    id: 4,
-    title: "4. IA Appliquée au Marketing",
-    points: [
-      "Générez du contenu marketing avec l'intelligence artificielle",
-      "Optimisez vos campagnes publicitaires",
-      "Analysez et exploitez vos données de manière plus efficace",
-      "Personnalisez l'expérience client pour maximiser l'engagement",
-    ],
-    image: "/image/robot1.jpg",
-  },
-  {
-    id: 5,
-    title: "5. IA pour les Ressources Humaines",
-    points: [
-      "Simplifiez le recrutement grâce à l'IA",
-      "Automatisez les tâches administratives récurrentes",
-      "Renforcez la fidélisation des talents",
-      "Libérez du temps pour des initiatives stratégiques",
-    ],
-    image: "/image/robot2.jpg",
-  },
-  {
-    id: 6,
-    title: "6. Découverte de l'Intelligence Artificielle",
-    points: [
-      "Exploration des fondamentaux de l'IA",
-      "Formation adaptée à votre secteur d'activité",
-      "Maîtrise des outils d'IA générative",
-      "Mise en pratique avec des cas concrets dès le premier jour",
-    ],
-    image: "/image/services.jpg",
   },
 ];
 
