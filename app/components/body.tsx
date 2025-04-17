@@ -84,9 +84,7 @@ export default function Body() {
       {/* Reste du composant Body (statistiques, Newbrain, etc.) */}
       <div className={"w-full"}>
         <section
-          className={
-            "p-10 border-t border-gray-300 flex flex-col gap-10 !bg-[#27272727]"
-          }
+          className={"p-10 border-t border-gray-300 flex flex-col gap-10"}
         >
           <StatsSection />
           <section />
