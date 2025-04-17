@@ -80,7 +80,7 @@ const Navigation: React.FC = () => {
             onClick={() => setMenuOpen(false)}
             className="!bg-black !rounded-4xl  !text-white !p-4 cursor-pointer !flex !items-center hover:!bg-gray-50 hover:!text-black"
           >
-            Prendre un rendez-vous
+            Prendre rendez-vous
           </Link>
         </div>
       </div>
