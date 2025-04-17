@@ -43,7 +43,7 @@ export const FormationCard = (formation: Formation) => {
 
   return (
     <div
-      className={`bg-[#2a2a2a] max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-lg !border-2 !border-[#444] overflow-x-hidden`}
+      className={`bg-gray-50- max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-lg !border-2 !border-[#444] overflow-x-hidden`}
     >
       <Image
         src={formation.image}

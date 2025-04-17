@@ -38,18 +38,18 @@ export const formations: About[] = [
 
 const AboutComponent = () => {
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5 bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] pb-20">
       <div className={"mb-b p-5 text-center text-gray-100 font-sans text-lg"}>
         <h3
           className={
-            "font-sans text-center justify-center  items-center pt-7 !text-2xl !font-bold text-gray-100 grid"
+            "font-sans !text-left pt-7 !text-3xl !font-bold text-gray-100 grid"
           }
         >
           Pourquoi choisir NewBrain{" "}
         </h3>
         <div
           className={
-            "text-center font-sans text-gray-100 leading-6 pb-5 pt-7 text-base !mt-2"
+            "text-left font-sans text-gray-100 leading-6 pb-5 pt-7 text-base !mt-2"
           }
         >
           Nous vous accompagnons dans la maîtrise de l'IA et boostons la
