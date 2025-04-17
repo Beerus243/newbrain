@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
   const navLinks: { label: string; href: string }[] = [
     { label: "Accueil", href: "/" },
     { label: "formation ai", href: "/Formation" },
-    { label: "", href: "/Client" }, // Lien vers la page des succès stories
+    { label: "Nos Ressources", href: "/Client" }, // Lien vers la page des succès stories
     { label: "A propos", href: "/Apropos" },
   ];
 
