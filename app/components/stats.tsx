@@ -78,7 +78,9 @@ export function StatsSection() {
   return (
     <>
       <div className="relative bottom-0 bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] !p-15 pb-0">
-        <h3 className={"mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold"}>
+        <h3
+          className={"mb-5 p-5 text-left-50 text-gray-100 !text-3xl !font-bold"}
+        >
           Notre Mission
         </h3>
         <div

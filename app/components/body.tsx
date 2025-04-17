@@ -25,10 +25,10 @@ export default function Body() {
   return (
     <>
       <div className={""}>
-        <div className="bg-gradient-to-r !p-15 from-[#004AAD] to-[#CB6CE6] pb-20">
+        <div className="bg-gradient-to-r !p-20 from-[#004AAD] to-[#CB6CE6] pb-20">
           <div className="relative h-80  max-md:!h-60 flex items-center justify-center">
             <h1
-              className={`absolute bottom-5 text-center !text-5xl max-md:!text-2xl !font-extrabold !font-Poppins text-white leading-15 max-md:leading-10`}
+              className={`absolute bottom-5 text-center !text-7xl max-md:!text-2xl !font-extrabold !font-Poppins text-white leading-20 max-md:leading-10`}
             >
               Pro ou Entrepreneur <br />
               Libérez votre potentiel <br />{" "}
