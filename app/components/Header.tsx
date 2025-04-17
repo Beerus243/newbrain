@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
     <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full !p-2 flex m-5 relative !px-5 h-fit items-center rounded-3xl max-w-7xl bg-gray-500 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
+          "w-full !p-2 flex m-5 relative !px-5 h-fit items-center rounded-4xl max-w-7xl bg-gray-500 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>
@@ -78,7 +78,7 @@ const Navigation: React.FC = () => {
           <Link
             href={"/contact"}
             onClick={() => setMenuOpen(false)}
-            className="!bg-black !rounded-4xl  !text-white !p-4 cursor-pointer !flex !items-center hover:!bg-gray-50 hover:!text-black"
+            className="!bg-black !rounded-4xl !w-60 justify-center !text-white !p-2 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102"
           >
             Prendre rendez-vous
           </Link>

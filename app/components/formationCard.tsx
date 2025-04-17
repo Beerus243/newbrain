@@ -74,7 +74,7 @@ export const FormationCard = (formation: Formation) => {
       </div>
       <button
         onClick={() => router.push(`/Formation/${formation.id}`)}
-        className={`w-auto text-nowrap !mx-2.5 !mb-2.5 !py-2.5 cursor-pointer !px-5 !bg-orange-600 !rounded-md`}
+        className={`w-auto text-nowrap !mx-2.5 !mb-2.5 !py-2.5 cursor-pointer !px-5 !bg-black !text-white !rounded-md hover:!bg-white hover:!border-black hover:!text-black !border-2 !border-transparent transition duration-300 ease-in-out transform hover:scale-102`}
       >
         Voir la Formation
       </button>

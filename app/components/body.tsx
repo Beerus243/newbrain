@@ -25,7 +25,7 @@ export default function Body() {
   return (
     <>
       <div className={""}>
-        <div className="bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] pb-20">
+        <div className="bg-gradient-to-r !p-15 from-[#004AAD] to-[#CB6CE6] pb-20">
           <div className="relative h-80  max-md:!h-60 flex items-center justify-center">
             <h1
               className={`absolute bottom-5 text-center !text-5xl max-md:!text-2xl !font-extrabold !font-Poppins text-white leading-15 max-md:leading-10`}
@@ -43,14 +43,14 @@ export default function Body() {
             <button
               onClick={() => router.push("/contact")}
               className={
-                "!bg-black !rounded-4xl  !text-white pt-3 !p-4 cursor-pointer !flex !items-center hover:!bg-gray-50 hover:!text-black"
+                "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-2 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 max-md:!mx-auto"
               }
             >
               <span className="!group-hover:scale-110"></span>
               Prenez rendez-vous
             </button>
           </div>
-          <div className=" !text-md !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-5">
+          <div className=" !text-md !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
             Équipez vos équipes avec les compétences nécessaires et intégrez les
             solutions d'intelligence artificielle les plus pertinentes pour
             optimiser vos processus. Concentrez-vous sur les activités qui
@@ -59,10 +59,12 @@ export default function Body() {
         </div>
 
         <div className="!p-5 max-w-5xl !mx-auto flex justify-center flex-col gap-5">
-          <h2 className={` !text-3xl max-md:!text-xl !font-semibold text-left`}>
+          <h2
+            className={` !text-4xl !pt-8 max-md:!text-xl !font-bold text-left`}
+          >
             Nos Services{" "}
           </h2>
-          <div className={" text-black  text-md text-left"}>
+          <div className={" text-black  !text-md !text-left"}>
             <p className={" text-md"}>
               Une formation pratique et non Théorique.
               <br />
@@ -86,23 +88,10 @@ export default function Body() {
         <section
           className={"p-10 border-t border-gray-300 flex flex-col gap-10"}
         >
-          <StatsSection />
           <section />
-
-          <h2
-            className={
-              " !text-5xl border-white border-b-2 !font-bold text-gray-100 text-center !p-5"
-            }
-          >
-            Newbrain
-          </h2>
-
-          <Audit />
-          <Formation />
-          <Implementation />
-          <Services />
-
           <About />
+          <StatsSection />
+
           <EmployeesData />
         </section>
         <Faq />

@@ -76,14 +76,21 @@ export function StatsSection() {
   ];
 
   return (
-    <div
-      className={
-        "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto !px-5 max-lg:flex-col"
-      }
-    >
-      {stats.map((stat, index) => (
-        <StatCard key={stat.unity} stat={stat} index={index} />
-      ))}
-    </div>
+    <>
+      <div className="relative bottom-0 bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] !p-15 pb-0">
+        <h3 className={"mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold"}>
+          Notre Mission
+        </h3>
+        <div
+          className={
+            "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto !px-5 max-lg:flex-col"
+          }
+        >
+          {stats.map((stat, index) => (
+            <StatCard key={stat.unity} stat={stat} index={index} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
