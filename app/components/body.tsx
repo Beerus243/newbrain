@@ -29,25 +29,25 @@ export default function Body() {
         style={{ fontFamily: "TT Norms, sans-serif" }}
       >
         <div className="relative h-[500px] max-md:!h-auto flex items-center justify-center">
-          <div className="flex md:flex-row items-center justify-between w-full max-w-7xl px-5">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-0 gap-0">
             {/* Texte */}
-            <div className="flex md:w-1/2 text-center md:text-left">
-              <h1 className="!text-5xl max-md:!text-3xl !font-extrabold text-white leading-tight max-md:leading-snug">
-                Pro ou Entrepreneur <br />
-                <span className="block mt-2">Libérez votre potentiel</span>{" "}
+            <div className="md:w-auto text-center md:text-left flex-shrink-0 flex items-center">
+              <h1 className="!text-5xl max-md:text-3xl !font-extrabold text-white leading-tight max-md:leading-snug">
+                Pro ou Entrepreneur
                 <br />
-                <span className="!text-[#5E17EB] max-md:!text-2xl !font-bold">
-                  avec l'IA
+                <span className="block mt-2 text-[#5E17EB]">
+                  Libérez votre potentiel
                 </span>
+                <span>avec l'IA</span>
               </h1>
             </div>
 
             {/* Image */}
-            <div className="md:w-1/2 flex justify-center">
+            <div className="md:w-auto flex justify-center items-center flex-shrink-0">
               <img
                 src="/image/banner.png"
                 alt="Pro et Entrepreneur"
-                className="w-50 h-50 object-cover rounded-lg shadow-lg"
+                className="w-60 h-60 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function Body() {
           <button
             onClick={() => router.push("/contact")}
             className={
-              "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-2 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 max-md:!mx-auto"
+              "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-3 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 max-md:!mx-auto"
             }
           >
             <span className="!group-hover:scale-110"></span>
