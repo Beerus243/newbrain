@@ -25,44 +25,41 @@ export default function Body() {
   return (
     <>
       <div
-        className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] pb-20"
+        className="relative h-160 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
         style={{ fontFamily: "TT Norms, sans-serif" }}
       >
-        <div className="relative h-[500px] max-md:!h-auto flex items-center justify-center">
-          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-0 gap-0">
+        <div className="max-md:!h-auto flex items-center justify-center !pt-30">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}
-            <div className="md:w-auto text-center md:text-left flex-shrink-0 flex items-center">
-              <h1 className="!text-5xl max-md:text-3xl !font-extrabold text-white leading-tight max-md:leading-snug">
+            <div className="md:w-auto text-center md:text-left flex-shrink-0 flex flex-col items-center">
+              <h1 className="!text-6xl text-center max-md:text-3xl !font-extrabold text-white max-md:leading-snug">
                 Pro ou Entrepreneur
                 <br />
-                <span className="block mt-2 text-[#5E17EB]">
-                  Libérez votre potentiel
-                </span>
-                <span>avec l'IA</span>
+                <span className=" text-[#5E17EB]">Libérez votre potentiel</span>
+                <br />
+                <span className="block text-center">avec l'IA</span>
               </h1>
+              <button
+                onClick={() => router.push("/contact")}
+                className={
+                  "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-3 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 mt-5"
+                }
+              >
+                Prenez rendez-vous
+              </button>
             </div>
 
             {/* Image */}
-            <div className="md:w-auto flex justify-center items-center flex-shrink-0">
+            <div className="block md:w-auto justify-center !gap-5 items-center max-md:hidden">
               <img
                 src="/image/banner.png"
                 alt="Pro et Entrepreneur"
-                className="w-60 h-60 object-cover rounded-lg shadow-lg"
+                className="w-70 h-80 object-cover  rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
-        <div className="flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
-          <button
-            onClick={() => router.push("/contact")}
-            className={
-              "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-3 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 max-md:!mx-auto"
-            }
-          >
-            <span className="!group-hover:scale-110"></span>
-            Prenez rendez-vous
-          </button>
-        </div>
+        <div className="flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8"></div>
         <div className="!text-md !font-robotto !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
