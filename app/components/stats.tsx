@@ -41,16 +41,16 @@ function StatCard({ stat, index }: { stat: StatCardType; index: number }) {
 
   return (
     <div
-      className={`relative bg-[#2a2a2a] rounded-lg !p-9 h-auto w-full text-center shadow-lg ${styles.card}`}
+      className={`relative bg-gray-50 rounded-lg !p-7 !text-black h-auto w-full text-center shadow-lg ${styles.card}`}
     >
       <div
         ref={textRef}
         className={animate ? "fadeInUpContainer" : ""}
         style={{ animationDelay: `${index * 0.2}s` }}
       >
-        <stat.icon size={30} className={"text-white"} />
-        <div className={"text-2xl font-bold text-gray-50"}>{stat.stat}</div>
-        <div className={"text-sm text-white"}>{stat.unity}</div>
+        <stat.icon size={30} className={"text-black"} />
+        <div className={"text-2xl font-bold text-black"}>{stat.stat}</div>
+        <div className={"text-sm text-black"}>{stat.unity}</div>
       </div>
     </div>
   );
@@ -77,13 +77,11 @@ export function StatsSection() {
 
   return (
     <>
-      <div className="relative bottom-0 bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] !p-15 pb-0">
-        <h3
-          className={"mb-5 p-5 text-left-50 text-gray-100 !text-3xl !font-bold"}
-        >
+      <div className="relative bottom-0 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !p-10">
+        <h3 className={"mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold"}>
           Notre Mission
         </h3>
-        <div className="text-left font-robotto text-gray-100 leading-6 pb-5 !p-4 text-base !mt-2">
+        <div className="text-left  bg-gray-50 rounded-xl text-black leading-6 pb-5 !p-4 text-base !mt-2">
           Chez Newbrain , nous rendons l'intelligence Artificielle accessible et
           concrète pour tous. Notre mission est d'accompagner les entreprises
           dans leur transformation digitale en formant leurs équipes aux usages

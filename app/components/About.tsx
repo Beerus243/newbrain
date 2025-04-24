@@ -38,18 +38,15 @@ export const formations: About[] = [
 
 const AboutComponent = () => {
   return (
-    <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] pb-20">
-      <div className={"mb-b p-5 text-left text-gray-100 font-sans text-lg"}>
-        <h3 className="font-sans !text-left pt-7 !text-3xl !font-bold text-gray-100 !pl-5">
+    <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
+      <div className={"mb-b p-5 !text-left text-gray-100 font-sans text-lg"}>
+        <h3 className="font-sans !text-left pt-7 !text-4xl !font-bold text-gray-100 !pr-200">
           Pourquoi choisir NewBrain
         </h3>
-        <div className="text-left font-sans text-gray-100 leading-6 pb-5 pt-7 text-base !mt-2">
+        <br />
+        <div className="text-left font-sans !p-4 rounded-xl bg-amber-50 text-black leading-6 pb-5 pt-7 text-base !mt-2">
           Nous vous accompagnons dans la maîtrise de l'IA et boostons la
           productivité de votre entreprise.
-          <br />
-          <span className="text-lg font-bold !mb-7">
-            Notre approche repose sur trois piliers fondamentaux :
-          </span>
         </div>
       </div>
       <div className="max-w-5xl text-white grid w-full grid-cols-3 !gap-9 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
@@ -57,22 +54,22 @@ const AboutComponent = () => {
           return (
             <div
               key={field.title}
-              className={`relative bg-white !text-black rounded-lg !p-9 h-auto w-full text-center !shadow-lg !border-1 !border-black ${field.className} ${styles.card} max-md:!min-w-[350px]`}
+              className={`relative bg-white  text-black rounded-lg !p-9 h-auto w-full text-start !shadow-lg ${field.className} ${styles.card} max-md:!min-w-[350px]`}
             >
               {field.imageUrl && (
                 <img
                   src={field.imageUrl}
                   alt={field.title}
-                  className="!w-100 !h-60 object-cover !mb-9 !rounded-t-lg !border-4 !border-orange-500"
+                  className="!w-100 !h-60 object-cover !mb-9 !rounded-t-lg"
                 />
               )}
-              <h3 className="text-left !text-xl !font-bold text-gray-50 !mb-5">
+              <h3 className="text-center !text-xl !font-bold text-blak !mb-5">
                 {field.title}
               </h3>
               <ul className="list-none flex flex-col gap-3">
                 {field.points.map((puce, i) => (
-                  <li key={i} className="text-md text-start">
-                    {"✅"} {puce}
+                  <li key={i} className="flex items-center  gap-3 text-black">
+                    {puce}
                   </li>
                 ))}
               </ul>

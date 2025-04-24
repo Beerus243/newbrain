@@ -43,15 +43,14 @@ export const FormationCard = (formation: Formation) => {
 
   return (
     <div
-      className={`bg-gray-50- max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-lg !border-2 !border-[#444] overflow-x-hidden`}
+      className={`bg-gray-50 hover:bg-[#402049] hover:text-gray-50 hover:cursor-pointer max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-xl !border-2 !border-[#444] overflow-x-hidden`}
     >
       <Image
         src={formation.image}
         alt={formation.title}
-        height={300}
-        width={400}
-        sizes="100vw"
-        className={` !w-100 !h-70 !border-b-4 !border-orange-600`}
+        height={800}
+        width={800}
+        className={` !w-100 !h-55 !border-b-4 !p-2 !rounded-t-lg object-cover`}
       />
       <div className={"!p-5 !flex h-full !flex-col gap-5 !justify-start "}>
         <h3 className={"!text-xl !font-bold"}>{formation.title}</h3>
@@ -60,9 +59,6 @@ export const FormationCard = (formation: Formation) => {
             <ul className={"!h-full flex flex-col gap-3"}>
               {formation.points.map((point, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <span className="text-green-700">
-                    <IoIosCheckmark size={30} />
-                  </span>{" "}
                   {point}
                 </li>
               ))}

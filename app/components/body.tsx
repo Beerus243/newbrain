@@ -72,13 +72,15 @@ export default function Body() {
         <h2 className={` !text-4xl !pt-8 max-md:!text-xl !font-bold text-left`}>
           Nos Services{" "}
         </h2>
-        <div className={" text-black  !text-md !text-left"}>
-          <p className={" text-md"}>
-            Une formation pratique et non Théorique.
-            <br />
-            Maitriser les fondamentaux de ChatGPT avec une approche directement
-            applicable à vos taches quotidiennes. <br />
-          </p>
+        <div className={" bg-[#402049] !p-5 !shadow-lg !rounded-xl"}>
+          <div className={" text-white  !text-md !text-left"}>
+            <p className={" text-md"}>
+              Une formation pratique et non Théorique.
+              <br />
+              Maitriser les fondamentaux de ChatGPT avec une approche
+              directement applicable à vos taches quotidiennes. <br />
+            </p>
+          </div>
         </div>
 
         <div
@@ -95,9 +97,10 @@ export default function Body() {
         <section
           className={"p-10 border-t border-gray-300 flex flex-col gap-10"}
         >
-          <section />
-          <About />
-          <StatsSection />
+          <div className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
+            <About />
+            <StatsSection />
+          </div>
 
           <EmployeesData />
         </section>
