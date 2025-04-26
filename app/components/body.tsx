@@ -11,6 +11,8 @@ import Implementation from "./implementation";
 import Faq from "./Faq";
 import About from "./About";
 import EmployeesData from "./Personne"; // Ensure EmployeesData is exported as an array of employee objects
+import Valeurs from "./Valeurs";
+import Story from "./Story";
 
 type Formation = {
   id: number;
@@ -32,7 +34,7 @@ export default function Body() {
           <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}
             <div className="md:w-auto text-center md:text-left flex-shrink-0 flex flex-col items-center">
-              <h1 className="!text-6xl text-center max-md:text-3xl !font-extrabold text-white max-md:leading-snug">
+              <h1 className="!text-5xl text-center max-md:!text-3xl !font-extrabold text-white max-md:leading-snug">
                 Pro ou Entrepreneur
                 <br />
                 <span className=" text-[#5E17EB]">Libérez votre potentiel</span>
@@ -100,9 +102,12 @@ export default function Body() {
           <div className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
             <About />
             <StatsSection />
-          </div>
 
-          <EmployeesData />
+            <EmployeesData />
+
+            <Valeurs />
+            <Story />
+          </div>
         </section>
         <Faq />
       </div>
