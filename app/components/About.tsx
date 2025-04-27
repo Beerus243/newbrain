@@ -39,12 +39,16 @@ export const formations: About[] = [
 const AboutComponent = () => {
   return (
     <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
-      <div className={"mb-b p-5 !text-left text-gray-100 font-sans text-lg"}>
-        <h3 className="font-sans !text-left pt-7 !text-4xl !font-bold text-gray-100 !pr-200">
+      <div
+        className={
+          "mb-b p-5 !text-start !items-start text-gray-100 font-sans text-lg"
+        }
+      >
+        <h3 className="font-sans !text-start pt-7 !text-4xl !font-bold text-white ">
           Pourquoi choisir NewBrain
         </h3>
         <br />
-        <div className="text-left font-sans !p-4 rounded-xl bg-amber-50 text-black leading-6 pb-5 pt-7 text-base !mt-2">
+        <div className="text-start w-fit !p-4 rounded-xl bg-amber-50 text-black leading-6 pb-5 pt-7 text-base !mt-2">
           Nous vous accompagnons dans la maîtrise de l'IA et boostons la
           productivité de votre entreprise.
         </div>
@@ -60,7 +64,7 @@ const AboutComponent = () => {
                 <img
                   src={field.imageUrl}
                   alt={field.title}
-                  className="!w-100 !h-60 object-cover !mb-9 !rounded-t-lg"
+                  className="!w-90 !h-50 object-cover !mb-9 !rounded-t-lg"
                 />
               )}
               <h3 className="text-center !text-xl !font-bold text-blak !mb-5">

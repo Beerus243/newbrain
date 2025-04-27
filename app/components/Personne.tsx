@@ -25,7 +25,7 @@ export function EmployeeCarousel() {
   return (
     <div className="!p-20 text-white">
       {/* Titre */}
-      <h2 className="!text-2xl !font-extrabold !text-start !mb-8">
+      <h2 className="!text-3xl !font-extrabold !text-start !mb-8">
         Qui sommes-nous
       </h2>
 
@@ -40,7 +40,7 @@ export function EmployeeCarousel() {
             <img
               src={employee.imageUrl}
               alt={employee.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-40 object-cover"
             />
             {/* Contenu */}
             <div className="!p-4 text-center ">

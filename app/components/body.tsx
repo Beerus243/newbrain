@@ -27,14 +27,14 @@ export default function Body() {
   return (
     <>
       <div
-        className="relative h-160 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
+        className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
         style={{ fontFamily: "TT Norms, sans-serif" }}
       >
         <div className="max-md:!h-auto flex items-center justify-center !pt-30">
           <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}
             <div className="md:w-auto text-center md:text-left flex-shrink-0 flex flex-col items-center">
-              <h1 className="!text-5xl text-center max-md:!text-3xl !font-extrabold text-white max-md:leading-snug">
+              <h1 className="!text-6xl text-center max-md:!text-2xl !font-extrabold !pb-5  text-white max-md:leading-snug">
                 Pro ou Entrepreneur
                 <br />
                 <span className=" text-[#5E17EB]">Libérez votre potentiel</span>
@@ -74,7 +74,7 @@ export default function Body() {
         <h2 className={` !text-4xl !pt-8 max-md:!text-xl !font-bold text-left`}>
           Nos Services{" "}
         </h2>
-        <div className={" bg-[#402049] !p-5 !shadow-lg !rounded-xl"}>
+        <div className={" bg-[#402049] w-fit !p-5 !shadow-lg !rounded-xl"}>
           <div className={" text-white  !text-md !text-left"}>
             <p className={" text-md"}>
               Une formation pratique et non Théorique.

@@ -56,24 +56,24 @@ const FAQ: React.FC = () => {
   }, []);
 
   return (
-    <div ref={faqRef} className="!p-5 bg-[#2a2a2a] text-[#f0f0f0]">
+    <div ref={faqRef} className="!p-5  text-black">
       {/* Titre */}
-      <div className="!text-xl !font-bold !text-gray-100 !text-center !p-5">
+      <div className="!text-3xl !font-bold !text-black !text-center !p-5">
         FAQ
       </div>
-      <div className="!mt-10 !text-left !text-lg !font-medium !text-gray-300">
+      <div className="!mt-10 !text-left !text-lg bg-[#402049] w-fit rounded-xl !p-4 !font-medium !text-white">
         Toutes les réponses à vos questions sont ici.
       </div>
 
       {/* Questions */}
-      <div className="flex flex-col gap-5 items-center justify-center">
+      <div className="flex flex-col gap-5 items-start justify-start">
         {faqItems.map((item, index) => (
           <div
             key={index}
             className="w-full !border !border-[#333] shadow-lg rounded-md overflow-hidden max-w-5xl !h-fit"
           >
             <div
-              className="bg-[#272727] !p-5 cursor-pointer transition-[background-color 0.3s ease, transform 0.3s ease]"
+              className=" !p-5 cursor-pointer transition-[background-color 0.3s ease, transform 0.3s ease]"
               onClick={() => toggleFAQ(index)}
             >
               {item.question}

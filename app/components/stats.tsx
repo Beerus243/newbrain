@@ -81,7 +81,7 @@ export function StatsSection() {
         <h3 className={"mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold"}>
           Notre Mission
         </h3>
-        <div className="text-left  bg-gray-50 rounded-xl text-black leading-6 pb-5 !p-4 text-base !mt-2">
+        <div className="text-left w-fit  bg-gray-50 rounded-xl text-black leading-6 pb-5 !p-4 text-base !mt-2">
           Chez Newbrain , nous rendons l'intelligence Artificielle accessible et
           concrète pour tous. Notre mission est d'accompagner les entreprises
           dans leur transformation digitale en formant leurs équipes aux usages
