@@ -58,19 +58,19 @@ const FAQ: React.FC = () => {
   return (
     <div ref={faqRef} className="!p-5  text-black">
       {/* Titre */}
-      <div className="!text-3xl !font-bold !text-black !text-center !p-5">
+      <div className="!text-3xl font-bold !text-black !text-start !p-5">
         FAQ
       </div>
-      <div className="!mt-10 !text-left !text-lg bg-[#402049] w-fit rounded-xl !p-4 !font-medium !text-white">
+      <div className=" !text-left !text-lg bg-[#402049] w-fit rounded-xl !p-4  !text-white">
         Toutes les réponses à vos questions sont ici.
       </div>
 
       {/* Questions */}
-      <div className="flex flex-col gap-5 items-start justify-start">
+      <div className="flex flex-col gap-5 items-start justify-start !pt-7">
         {faqItems.map((item, index) => (
           <div
             key={index}
-            className="w-full !border !border-[#333] shadow-lg rounded-md overflow-hidden max-w-5xl !h-fit"
+            className="w-full shadow-xl rounded-xl overflow-hidden max-w-5xl !h-fit"
           >
             <div
               className=" !p-5 cursor-pointer transition-[background-color 0.3s ease, transform 0.3s ease]"
@@ -79,7 +79,7 @@ const FAQ: React.FC = () => {
               {item.question}
             </div>
             <div
-              className={`bg-[#f5f5f5] text-black !border-t-2 !border-[#ff6600] overflow-hidden transition-[max-height 0.5s ease, padding 0.5s ease] ${
+              className={`bg-[#f5f5f5] text-black !border-b-2 !border-black overflow-hidden transition-[max-height 0.5s ease, padding 0.5s ease] ${
                 openIndex === index ? "!p-5 !max-h-[500px]" : "!max-h-0"
               }`}
             >

@@ -9,163 +9,169 @@ import {
   FaPhone,
   FaEnvelopeOpen,
   FaTelegramPlane,
-  FaFacebook,
 } from "react-icons/fa";
-import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className={styles.footerSection}>
-      <div className={styles.footerCta}>
-        <div className={styles.singleCta}>
-          <FaMapMarkerAlt className={styles.icon} />
-          <div className={styles.ctaText}>
-            <h4>Find us</h4>
-            <span>1010 Avenue, sw 54321, chandigarh</span>
+    <footer className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white py-10">
+      {/* Section Contact */}
+      <div className="max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8">
+        <div className="flex !items-start !gap-4">
+          <FaMapMarkerAlt className="!text-2xl text-[#5E17EB]" />
+          <div>
+            <h4 className="text-lg !font-bold">Find us</h4>
+            <p className="text-sm text-gray-300">
+              1010 Avenue, SW 54321, Chandigarh
+            </p>
           </div>
         </div>
-        <div className={styles.singleCta}>
-          <FaPhone className={styles.icon} />
-          <div className={styles.ctaText}>
-            <h4>Call us</h4>
-            <span>9876543210 0</span>
+        <div className="flex !items-start !gap-4">
+          <FaPhone className="!text-2xl text-[#5E17EB]" />
+          <div>
+            <h4 className="text-lg !font-bold">Call us</h4>
+            <p className="text-sm text-gray-300">9876543210</p>
           </div>
         </div>
-        <div className={styles.singleCta}>
-          <FaEnvelopeOpen className={styles.icon} />
-          <div className={styles.ctaText}>
-            <h4>Mail us</h4>
-            <span>mail@info.com</span>
+        <div className="flex items-start gap-4">
+          <FaEnvelopeOpen className="!text-2xl text-[#5E17EB]" />
+          <div>
+            <h4 className="text-lg !font-bold">Mail us</h4>
+            <p className="text-sm text-gray-300">mail@info.com</p>
           </div>
         </div>
       </div>
-      <div className={styles.footerContent}>
-        <div className={styles.footerWidget}>
-          <div className={styles.footerLogo}>
-            <Link href="/" legacyBehavior>
-              <a>
-                <Image
-                  src="/image/logo.png"
-                  alt="Logo"
-                  width={80}
-                  height={80}
-                />
-              </a>
-            </Link>
-          </div>
-          <div className={styles.footerText}>
-            <p>
-              Newbrain est un cabinet de conseil spécialisé en intelligence
-              artificielle. Nous proposons des formations en intelligence
-              artificielle ainsi que des prestations d'audit et de conseil pour
-              décupler la productivité des entreprises..
-            </p>
-          </div>
-          <div className={styles.footerSocialIcon}>
-            <span>Follow us</span>
+
+      {/* Section Contenu */}
+      <div className="max-w-7xl mx-auto !px-6 !mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo et description */}
+        <div>
+          <Image
+            src="/image/logo.png"
+            alt="Logo"
+            width={80}
+            height={80}
+            className="mb-4"
+          />
+          <p className="text-sm text-gray-300">
+            Newbrain est un cabinet de conseil spécialisé en intelligence
+            artificielle. Nous proposons des formations en intelligence
+            artificielle ainsi que des prestations d'audit et de conseil pour
+            décupler la productivité des entreprises.
+          </p>
+          <div className="flex items-center gap-4 mt-4">
             <Link href="#" legacyBehavior>
-              <a>
-                <FaFacebook className={styles.facebookBg} />
+              <a className="text-[#5E17EB] hover:text-white">
+                <FaFacebookF />
               </a>
             </Link>
             <Link href="#" legacyBehavior>
-              <a>
-                <FaTwitter className={styles.twitterBg} />
+              <a className="text-[#5E17EB] hover:text-white">
+                <FaTwitter />
               </a>
             </Link>
             <Link href="#" legacyBehavior>
-              <a>
-                <FaGooglePlusG className={styles.googleBg} />
+              <a className="text-[#5E17EB] hover:text-white">
+                <FaGooglePlusG />
               </a>
             </Link>
           </div>
         </div>
-        <div className={styles.footerWidget}>
-          <div className={styles.footerWidgetHeading}>
-            <h3>Useful Links</h3>
-          </div>
-          <ul>
+
+        {/* Liens utiles */}
+        <div>
+          <h3 className="text-lg font-bold mb-4">Useful Links</h3>
+          <ul className="space-y-2">
             <li>
               <Link href="#" legacyBehavior>
-                <a>Home</a>
+                <a className="text-sm text-gray-300 hover:text-white">Home</a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>About</a>
+                <a className="text-sm text-gray-300 hover:text-white">About</a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Contact</a>
+                <a className="text-sm text-gray-300 hover:text-white">
+                  Contact
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Nos services</a>
+                <a className="text-sm text-gray-300 hover:text-white">
+                  Nos services
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Contact us</a>
+                <a className="text-sm text-gray-300 hover:text-white">
+                  Contact us
+                </a>
               </Link>
             </li>
           </ul>
         </div>
-        <div className={styles.footerWidget}>
-          <div className={styles.footerWidgetHeading}>
-            <h3>Subscribe</h3>
-          </div>
-          <div className={`${styles.footerText} mb-25`}>
-            <p>
-              Don’t miss to subscribe to our new feeds, kindly fill the form
-              below.
-            </p>
-          </div>
-          <div className={styles.subscribeForm}>
-            <form action="#">
-              <input type="text" placeholder="Email Address" />
-              <button>
-                <FaTelegramPlane />
-              </button>
-            </form>
-          </div>
+
+        {/* Formulaire d'inscription */}
+        <div>
+          <h3 className="text-lg font-bold mb-4">Subscribe</h3>
+          <p className="text-sm text-gray-300 mb-4">
+            Don’t miss to subscribe to our new feeds, kindly fill the form
+            below.
+          </p>
+          <form className="flex">
+            <input
+              type="text"
+              placeholder="Email Address"
+              className="flex-1 p-3 rounded-l-lg text-black focus:outline-none"
+            />
+            <button className="bg-[#5E17EB] text-white px-4 rounded-r-lg hover:bg-[#4a14c1] transition-all">
+              <FaTelegramPlane />
+            </button>
+          </form>
         </div>
       </div>
-      <div className={styles.copyrightArea}>
-        <div className={styles.copyrightText}>
-          <p>
+
+      {/* Section Copyright */}
+      <div className="border-t border-gray-700 mt-10 pt-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-300">
             Copyright &copy; 2023, All Right Reserved{" "}
             <Link href="#" legacyBehavior>
-              <a>Company Name</a>
+              <a className="text-[#5E17EB] hover:text-white">Company Name</a>
             </Link>
           </p>
-        </div>
-        <div className={styles.footerMenu}>
-          <ul>
+          <ul className="flex space-x-4 mt-4 md:mt-0">
             <li>
               <Link href="#" legacyBehavior>
-                <a>Home</a>
+                <a className="text-sm text-gray-300 hover:text-white">Home</a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Terms</a>
+                <a className="text-sm text-gray-300 hover:text-white">Terms</a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Privacy</a>
+                <a className="text-sm text-gray-300 hover:text-white">
+                  Privacy
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Policy</a>
+                <a className="text-sm text-gray-300 hover:text-white">Policy</a>
               </Link>
             </li>
             <li>
               <Link href="#" legacyBehavior>
-                <a>Contact</a>
+                <a className="text-sm text-gray-300 hover:text-white">
+                  Contact
+                </a>
               </Link>
             </li>
           </ul>

@@ -48,7 +48,7 @@ const AboutComponent = () => {
           Pourquoi choisir NewBrain
         </h3>
         <br />
-        <div className="text-start w-fit !p-4 rounded-xl bg-amber-50 text-black leading-6 pb-5 pt-7 text-base !mt-2">
+        <div className="text-start w-fit !p-4 rounded-xl bg-white text-black leading-6 pb-5 pt-7 text-base !mt-2">
           Nous vous accompagnons dans la maîtrise de l'IA et boostons la
           productivité de votre entreprise.
         </div>

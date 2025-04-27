@@ -13,6 +13,7 @@ import About from "./About";
 import EmployeesData from "./Personne"; // Ensure EmployeesData is exported as an array of employee objects
 import Valeurs from "./Valeurs";
 import Story from "./Story";
+import Articles from "./Articles";
 
 type Formation = {
   id: number;
@@ -110,6 +111,7 @@ export default function Body() {
           </div>
         </section>
         <Faq />
+        <Articles />
       </div>
     </>
   );
