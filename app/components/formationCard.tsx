@@ -43,7 +43,7 @@ export const FormationCard = (formation: Formation) => {
 
   return (
     <div
-      className={`bg-gray-50 hover:bg-[#402049] hover:text-gray-50 hover:cursor-pointer max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-xl !border-2 !border-[#444] overflow-x-hidden`}
+      className={`bg-gray-50 hover:bg-[#402049] text-black hover:text-gray-50 hover:cursor-pointer max-md:!min-w-[400px] !w-full flex flex-col text-wrap justify-between !rounded-xl !border-2 !border-[#444] overflow-x-hidden`}
     >
       <Image
         src={formation.image}

@@ -98,7 +98,7 @@ const Navigation: React.FC = () => {
 
                   {/* Sous-menus */}
                   {link.subLinks && (
-                    <div className="absolute top-full left-0 bg-white text-black !rounded-lg !shadow-lg !p-7 z-20 min-w-[200px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transform translate-y-2 transition-all duration-300">
+                    <div className="absolute top-full left-0 bg-gray-500 text-black !rounded-xl !shadow-lg !p-7 z-20 min-w-[200px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transform translate-y-2 transition-all duration-300">
                       {link.subLinks.map((subLink) => (
                         <Link
                           key={subLink.label}

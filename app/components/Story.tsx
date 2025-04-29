@@ -39,14 +39,14 @@ export function Story() {
   }, []);
 
   return (
-    <div className="!p-12  text-black bg-white w-full">
+    <div className="!p-12  text-black bg-white w-full !gap-7">
       {/* Titre */}
       <h2 className="!text-3xl !font-extrabold !text-start !mb-8">
         Histoires vraies <br /> transformations réels
       </h2>
 
       {/* Conteneur des cartes */}
-      <div className="relative w-full max-w-4xl !mx-auto overflow-hidden">
+      <div className="relative w-full max-w-4xl !mx-auto overflow-hidden ">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
           style={{
@@ -56,7 +56,7 @@ export function Story() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="!bg-[#D9D9D9] !text-black !rounded-lg !shadow-lg !p-9 w-full flex-shrink-0"
+              className="!bg-[#D9D9D9] !text-black !rounded-xl !shadow-lg !p-9 w-full flex-shrink-0 !gap-10"
             >
               {/* Image et informations */}
               <div className="flex items-center !mb-4">

@@ -88,11 +88,11 @@ export function Articles() {
           Votre rendez-vous régulier avec l'IA utile et concrète
         </p>
         {/* Champ email */}
-        <div className="flex w-full max-w-md">
+        <div className="flex w-full max-w-md ">
           <input
             type="email"
             placeholder="Entrez votre email"
-            className="flex-1 p-3 bg-white text-black rounded-l-lg focus:outline-none"
+            className="flex-1 p-3  text-black rounded-l-lg focus:outline-none"
           />
           <button className="bg-white text-[#402049] !font-bold !px-6 !rounded-r-lg hover:bg-gray-200 transition-all">
             S'inscrire
