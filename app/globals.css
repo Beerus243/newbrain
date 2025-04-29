@@ -24,3 +24,29 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Animation des étoiles filantes */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0.8;
+  transform: rotate(45deg);
+  animation: shooting-star 5s linear infinite;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateY(0) translateX(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50vw) rotate(45deg);
+    opacity: 0;
+  }
+}

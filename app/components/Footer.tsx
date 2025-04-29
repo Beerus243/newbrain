@@ -8,22 +8,21 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelopeOpen,
-  FaTelegramPlane,
 } from "react-icons/fa";
 
 const contactInfo = [
   {
-    icon: <FaMapMarkerAlt className="!text-2xl text-[#5E17EB]" />,
+    icon: <FaMapMarkerAlt className="!text-2xl text-white" />,
     title: "Find us",
     description: "1010 Avenue, SW 54321, Chandigarh",
   },
   {
-    icon: <FaPhone className="!text-2xl text-[#5E17EB]" />,
+    icon: <FaPhone className="!text-2xl text-white" />,
     title: "Call us",
     description: "9876543210",
   },
   {
-    icon: <FaEnvelopeOpen className="!text-2xl text-[#5E17EB]" />,
+    icon: <FaEnvelopeOpen className="!text-2xl text-white" />,
     title: "Mail us",
     description: "mail@info.com",
   },
@@ -35,19 +34,30 @@ const socialLinks = [
   { icon: <FaGooglePlusG />, href: "#" },
 ];
 
-const usefulLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
-  { label: "Nos services", href: "#" },
-  { label: "Contact us", href: "#" },
-];
-
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white !py-10">
+      {/* Animation des étoiles filantes */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          {/* Génération d'étoiles */}
+          {[...Array(30)].map((_, index) => (
+            <div
+              key={index}
+              className="shooting-star"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${Math.random() * 3 + 2}s`,
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
+
       {/* Section Contact */}
-      <div className="max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8">
+      <div className="max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8 !border-b !border-gray-700 !pb-6">
         {contactInfo.map((info, index) => (
           <div key={index} className="flex !items-start !gap-4">
             {info.icon}
@@ -60,26 +70,24 @@ const Footer = () => {
       </div>
 
       {/* Section Contenu */}
-      <div className="max-w-7xl !mx-auto !px-6 !mt-10 grid grid-cols-1 md:grid-cols-3 !gap-8">
+      <div className="max-w-7xl !mx-auto !px-6 !mt-10 grid grid-cols-1 md:grid-cols-4 !gap-8">
         {/* Logo et description */}
         <div>
           <Image
             src="/image/logo.png"
             alt="Logo"
-            width={80}
-            height={80}
+            width={100}
+            height={100}
             className="!mb-4"
           />
           <p className="!text-sm text-gray-300">
-            Newbrain est un cabinet de conseil spécialisé en intelligence
-            artificielle. Nous proposons des formations en intelligence
-            artificielle ainsi que des prestations d'audit et de conseil pour
-            décupler la productivité des entreprises.
+            Chez New Brain, nous ne transmettons pas que du savoir. Nous
+            activons les compétences.
           </p>
           <div className="flex !items-center !gap-4 !mt-4">
             {socialLinks.map((link, index) => (
               <Link key={index} href={link.href} legacyBehavior>
-                <a className="!text-[#5E17EB] hover:!text-white">
+                <a className="!w-10 !h-10 !flex !items-center !justify-center !border !border-white !rounded-full hover:!bg-white hover:!text-[#5E17EB] transition-all">
                   {link.icon}
                 </a>
               </Link>
@@ -87,61 +95,53 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Liens utiles */}
+        {/* Nos services */}
         <div>
-          <h3 className="!text-lg !font-bold !mb-4">Useful Links</h3>
+          <h3 className="!text-lg !font-bold !mb-4">Nos services</h3>
           <ul className="!space-y-2">
-            {usefulLinks.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href} legacyBehavior>
-                  <a className="!text-sm text-gray-300 hover:!text-white">
-                    {link.label}
-                  </a>
-                </Link>
-              </li>
-            ))}
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Acculturation IA
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Formation et coaching
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Programme de transformation
+            </li>
           </ul>
         </div>
 
-        {/* Formulaire d'inscription */}
+        {/* Nos ressources */}
         <div>
-          <h3 className="!text-lg !font-bold !mb-4">Subscribe</h3>
-          <p className="!text-sm text-gray-300 !mb-4">
-            Don’t miss to subscribe to our new feeds, kindly fill the form
-            below.
-          </p>
-          <form className="flex">
-            <input
-              type="text"
-              placeholder="Email Address"
-              className="!flex-1 !p-3 !rounded-l-lg !text-black focus:!outline-none"
-            />
-            <button className="!bg-[#5E17EB] !text-white !px-4 !rounded-r-lg hover:!bg-[#4a14c1] transition-all">
-              <FaTelegramPlane />
-            </button>
-          </form>
+          <h3 className="!text-lg !font-bold !mb-4">Nos ressources</h3>
+          <ul className="!space-y-2">
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              À propos
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Nos news IA
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Formation et coaching
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Gratuit
+            </li>
+          </ul>
         </div>
-      </div>
 
-      {/* Section Copyright */}
-      <div className="!border-t !border-gray-700 !mt-10 !pt-6">
-        <div className="max-w-7xl !mx-auto !px-6 flex flex-col md:flex-row !justify-between !items-center">
-          <p className="!text-sm text-gray-300">
-            Copyright &copy; 2023, All Right Reserved{" "}
-            <Link href="#" legacyBehavior>
-              <a className="!text-[#5E17EB] hover:!text-white">Company Name</a>
-            </Link>
-          </p>
-          <ul className="flex !space-x-4 !mt-4 md:!mt-0">
-            {usefulLinks.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href} legacyBehavior>
-                  <a className="!text-sm text-gray-300 hover:!text-white">
-                    {link.label}
-                  </a>
-                </Link>
-              </li>
-            ))}
+        {/* Mentions légales */}
+        <div>
+          <h3 className="!text-lg !font-bold !mb-4">Mentions légales</h3>
+          <ul className="!space-y-2">
+            <li className="!text-sm text-gray-300 hover:!text-white">Home</li>
+            <li className="!text-sm text-gray-300 hover:!text-white">Terms</li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Privacy Policy
+            </li>
+            <li className="!text-sm text-gray-300 hover:!text-white">
+              Contact
+            </li>
           </ul>
         </div>
       </div>
