@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
       href: "/Formation",
       subLinks: [
         { label: "A propos", href: "/Apropos" },
-        { label: "Nos news", href: "/News" },
+        { label: "Nos news", href: "/Articles" },
         { label: "Formation", href: "/Formation" },
         { label: "Coaching", href: "/Coaching" },
       ],
