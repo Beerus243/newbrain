@@ -45,7 +45,7 @@ export default function Body() {
               <button
                 onClick={() => router.push("/contact")}
                 className={
-                  "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-3 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 mt-5"
+                  "!bg-black !rounded-4xl !w-60 !justify-center !text-white !p-3 cursor-pointer !flex !items-center hover:!bg-white hover:!text-black hover:!border-black !border-2 !border-transparent transition-all duration-300 ease-in-out transform hover:scale-102 !mt-7"
                 }
               >
                 Prenez rendez-vous
@@ -57,13 +57,13 @@ export default function Body() {
               <img
                 src="/image/banner.png"
                 alt="Pro et Entrepreneur"
-                className="w-70 h-80 object-cover  rounded-lg shadow-lg"
+                className="w-70 h-90 object-cover  rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
         <div className="flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8"></div>
-        <div className="!text-md !font-robotto !sm:text-md text-white !md:text-lg max-w-5xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
+        <div className="!text-md !font-robotto !sm:text-md text-white !md:text-lg max-w-7xl !mx-auto !lg:text-xl !p-9 !flex !justify-center !text-center !gap-5 max-md:flex-col sm:gap-3 max-md:m-8">
           Équipez vos équipes avec les compétences nécessaires et intégrez les
           solutions d'intelligence artificielle les plus pertinentes pour
           optimiser vos processus. Concentrez-vous sur les activités qui
