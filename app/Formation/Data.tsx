@@ -4,94 +4,52 @@ export type DataFormation = {
   id: number;
   title: string;
   presentation: string;
-  image: string;
-  prerequisites: string;
-  evaluationModalities: string;
-  targetAudience: string;
-  objectives: string;
-  content: string;
-  gain: string;
+  themes: string[]; // Ajout des thèmes
+  finalText: string; // Ajout du texte final
 };
 
 export const detailFormation: DataFormation[] = [
   {
     id: 1,
-    title: "Initiation à l'IA pour les Entreprises",
+    title: "🧠 Acculturation à l’IA",
     presentation:
-      "Découvrez les bases de l'intelligence artificielle et ses applications en entreprise.",
-    image: "/image/discours.jpg",
-    prerequisites: "Aucune connaissance préalable requise.",
-    evaluationModalities: "QCM et études de cas.",
-    targetAudience: "Entrepreneurs et managers.",
-    objectives:
-      "Comprendre les fondamentaux de l'IA et ses enjeux stratégiques.",
-    content: "Histoire de l'IA, concepts de base, exemples d'application.",
-    gain: "Acquérir une vision stratégique pour booster la productivité.",
+      "Initiez vos équipes aux fondamentaux de l'IA à travers une approche accessible, concrète et inspirante.",
+    themes: [
+      "✔️ Comprendre les bases de l’IA : concepts clés, opportunités, limites",
+      "🚀 Découvrir des cas d’usage concrets selon votre secteur",
+      "❌ Dissiper les idées reçues, clarifier les enjeux",
+      "💬 S’inspirer de retours d’expérience pour lancer une dynamique d’innovation",
+    ],
+    finalText:
+      "Créez un socle de compréhension commun pour accélérer l’adoption de l’IA dans vos projets.",
   },
   {
     id: 2,
-    title: "IA pour les Organisations",
+    title: "🎯 Formation & Coaching",
     presentation:
-      "Une formation dédiée à l'intégration de l'IA dans la gestion d'entreprise.",
-    image: "/image/workshop.jpeg",
-    prerequisites: "Connaissances de base en informatique.",
-    evaluationModalities: "Projets pratiques et simulations.",
-    targetAudience: "Dirigeants et cadres.",
-    objectives:
-      "Développer une stratégie IA adaptée à l'organisation Développer une stratégie IA adaptée à l'organisationDévelopper une stratégie IA adaptée à l'organisation.",
-    content: "Audit IA, outils de gestion, études de cas réels.",
-    gain: "Optimisation des processus et prise de décision améliorée.",
+      "Donnez à vos équipes les clés pour utiliser l’IA de manière autonome, efficace et pertinente.",
+    themes: [
+      "🛠️ Prise en main des outils IA : ChatGPT, Perplexity, Gemini…",
+      "📚 Cas pratiques adaptés à vos métiers et problématiques",
+      "💡 Coaching individualisé et montée en compétences",
+      "📈 Gains de productivité mesurables dès la fin de la formation",
+    ],
+    finalText: "Apprenez à maîtriser l'IA pour booster vos performances.",
   },
   {
     id: 3,
-    title: "IA pour les Équipes Commerciales",
-    presentation: "Boostez vos équipes commerciales grâce à l'IA.",
-    image: "/image/devantpc.jpg",
-    prerequisites: "Notions de marketing et vente.",
-    evaluationModalities: "Ateliers et exercices pratiques.",
-    targetAudience: "Commerciaux et responsables marketing.",
-    objectives: "Automatiser et optimiser la prospection.",
-    content: "Outils d'IA, CRM intelligent, analyse de données.",
-    gain: "Augmentation des taux de conversion et efficacité commerciale.",
-  },
-  {
-    id: 4,
-    title: "IA Appliquée au Marketing",
+    title: "🚀 Programme de transformation IA",
     presentation:
-      "Exploitez l'IA pour créer des campagnes marketing innovantes.",
-    image: "/image/robot1.jpg",
-    prerequisites: "Connaissances de base en marketing digital.",
-    evaluationModalities: "Études de cas et travaux pratiques.",
-    targetAudience: "Marketers et publicitaires.",
-    objectives: "Personnaliser l'expérience client grâce à l'IA.",
-    content: "Automatisation, personnalisation, optimisation des campagnes.",
-    gain: "Meilleur engagement client et retour sur investissement marketing amélioré.",
-  },
-  {
-    id: 5,
-    title: "IA pour les Ressources Humaines",
-    presentation:
-      "Optimisez le recrutement et la gestion des talents avec l'IA.",
-    image: "/image/robot2.jpg",
-    prerequisites: "Connaissances de base en RH.",
-    evaluationModalities: "Simulations et cas pratiques.",
-    targetAudience: "Responsables RH et recruteurs.",
-    objectives:
-      "Automatiser le processus de recrutement et la gestion des compétences.",
-    content: "Outils de recrutement automatisés, analyses prédictives.",
-    gain: "Gain de temps et amélioration de la qualité des recrutements.",
-  },
-  {
-    id: 6,
-    title: "Découverte de l'Intelligence Artificielle",
-    presentation: "Une immersion complète dans le monde de l'IA.",
-    image: "/image/services.jpgs",
-    prerequisites: "Intérêt pour la technologie et la nouveauté.",
-    evaluationModalities: "QCM, ateliers pratiques et débats.",
-    targetAudience: "Tous publics, professionnels ou curieux.",
-    objectives: "Comprendre les bases de l'IA et ses implications.",
-    content: "Concepts, applications, enjeux éthiques et pratiques.",
-    gain: "Acquérir des connaissances fondamentales pour aborder l'IA au quotidien.",
+      "Accompagnez votre entreprise dans une transition durable vers l’intelligence artificielle.",
+    themes: [
+      "📊 Audit de maturité IA : analyse de vos processus, outils actuels et potentiel de gains",
+      "🧩 Définition d’une feuille de route IA adaptée à vos objectifs métiers",
+      "⚙️ Intégration progressive d’outils IA dans vos flux de travail existants",
+      "🧠 Acculturation des équipes & accompagnement au changement",
+      "📈 Suivi de la performance et ajustements continus des solutions IA mises en place",
+    ],
+    finalText:
+      "Ce programme sur-mesure s’adresse aux dirigeants, managers et équipes opérationnelles souhaitant placer l’IA au cœur de leur stratégie d’innovation.",
   },
 ];
 

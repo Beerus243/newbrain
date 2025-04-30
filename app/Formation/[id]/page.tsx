@@ -1,50 +1,32 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { useParams } from "next/navigation";
-import Footer from "../../components/Footer";
+
+import React from "react";
+import { useParams, useRouter } from "next/navigation"; // Utilisez useParams et useRouter pour récupérer l'ID et naviguer
+import detailFormation from "../Data";
 import Header from "../../components/Header";
-import { detailFormation } from "../Data"; // Vérifiez le chemin
-import Page from "../page";
+import Footer from "@/app/components/Footer";
 
-export type DataFormation = {
-  id: number;
-  title: string;
-  presentation: string;
-  image: string;
-  prerequisites: string;
-  evaluationModalities: string;
-  targetAudience: string;
-  objectives: string;
-  content: string;
-  gain: string;
-};
+const FormationPage = () => {
+  const { id } = useParams(); // Récupère l'ID depuis l'URL
+  const router = useRouter(); // Initialise le router pour la navigation
 
-const FormationDetailPage: React.FC = () => {
-  const { id } = useParams();
-  const [formation, setFormation] = useState<DataFormation | null>(null);
+  // Trouve la formation correspondante
+  const formation = detailFormation.find(
+    (formation) => formation.id === parseInt(id as string, 10)
+  );
 
-  useEffect(() => {
-    if (id) {
-      const found = detailFormation.find((f) => f.id === Number(id));
-      if (found) setFormation(found);
-    }
-  }, [id]);
-
+  // Si aucune formation n'est trouvée, affiche un message d'erreur
   if (!formation) {
     return (
       <>
         <Header />
-        <div className="h-40"></div>
-        <section className="text-white text-center py-20">
-          <h1 className="text-3xl font-bold tracking-wide">
-            Formation non trouvée
-          </h1>
-          <p className="text-white mt-4">
-            La formation demandée n'existe pas ou n'a pas pu être chargée.
+
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-black">
+          <h1 className="text-3xl font-bold">Formation introuvable</h1>
+          <p className="text-lg mt-4">
+            La formation que vous recherchez n'existe pas.
           </p>
-        </section>
-        <Footer />
+        </div>
       </>
     );
   }
@@ -52,73 +34,44 @@ const FormationDetailPage: React.FC = () => {
   return (
     <>
       <Header />
-      {/* Espace pour compenser le header fixe */}
-      <div className="h-40"></div>
-      <main className="max-w-6xl !mx-auto !p-10 flex flex-col gap-5">
-        {/* Titre principal */}
-        {/* <section className="mb-12"> */}
-        <h1 className="!text-4xl !font-extrabold text-white text-center !drop-shadow-lg">
-          {formation.title}
-        </h1>
-        {/* </section> */}
+      <div className="h-40 bg-gray-50"></div>
+      <div className="flex flex-col items-center gap-10 p-10 bg-gray-100 min-h-screen">
+        <div className="w-full max-w-4xl bg-[#402049] text-white !rounded-xl shadow-lg !p-8">
+          {/* Titre */}
+          <h2 className="!text-3xl !font-bold !mb-4 !text-start">
+            {formation.title}
+          </h2>
 
-        {/* Section Présentation et Image */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
-          <div>
-            <h1 className="!text-4xl !font-bold text-white !pt-8 !pb-8">
-              Présentation
-            </h1>
-            <p className="text-xl text-white leading-relaxed">
-              {formation.presentation}
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <Image
-              src={formation.image}
-              alt={formation.title}
-              width={550}
-              height={350}
-              className="rounded-xl shadow-2xl object-cover border border-gray-700"
-            />
-          </div>
-        </section>
+          {/* Présentation */}
+          <p className="text-lg !mb-6">{formation.presentation}</p>
 
-        {/* Section Détails sous forme de cartes */}
-        <section className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {[
-              { title: "Prérequis", content: formation.prerequisites },
-              {
-                title: "Modalités d’évaluation",
-                content: formation.evaluationModalities,
-              },
-              { title: "Public cible", content: formation.targetAudience },
-              { title: "Objectifs", content: formation.objectives },
-              { title: "Contenu", content: formation.content },
-              { title: "Gain", content: formation.gain },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="!p-6 bg-[#2a2a2a] border border-white-700 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col gap-3"
-              >
-                <h3 className="text-2xl !font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="text-gray-200 text-lg leading-relaxed">
-                  {item.content}
-                </p>
-              </div>
-            ))}
+          {/* Thèmes */}
+          <div className="!mb-6">
+            <h3 className="!text-xl !font-semibold !mb-3">Thèmes abordés :</h3>
+            <ul className="list-disc list-inside space-y-2">
+              {formation.themes.map((theme, index) => (
+                <li key={index} className="text-base">
+                  {theme}
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
-      </main>
-      <div className="text-5xl text-center text-white pt-6 font-bold">
-        {" "}
-        Nos autres Formations
+          {/* Texte final */}
+          <p className="text-lg  !font-medium !mb-6">{formation.finalText}</p>
+        </div>
+
+        {/* Bouton en dehors du div */}
+        <button
+          className="!bg-[#402049] !justify-center !items-center !cursor-pointer !text-white hover:text-gray-900 !px-6 !py-3 !rounded-xl !hover:bg-[#4a14c1] !transition-all "
+          onClick={() => router.push("/contact")}
+        >
+          Prenez un rendez-vous
+        </button>
       </div>
-      <Page />
+      <Footer />{" "}
+      {/* Assurez-vous d'importer le composant Footer si nécessaire */}
     </>
   );
 };
 
-export default FormationDetailPage;
+export default FormationPage;

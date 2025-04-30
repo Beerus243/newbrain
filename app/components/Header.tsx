@@ -107,10 +107,10 @@ const Navigation: React.FC = () => {
                           className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 hover:text-white rounded transition-all duration-200 cursor-pointer"
                         >
                           {/* Emoji ajouté */}
-                          {subLink.label === "A propos" && "ℹ️"}
-                          {subLink.label === "Nos news" && "📰"}
-                          {subLink.label === "Formation" && "📚"}
-                          {subLink.label === "Coaching" && "🎯"}
+                          {subLink.label === "A propos"}
+                          {subLink.label === "Nos news"}
+                          {subLink.label === "Formation"}
+                          {subLink.label === "Coaching"s}
                           <span>{subLink.label}</span>
                         </Link>
                       ))}

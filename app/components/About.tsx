@@ -39,26 +39,20 @@ export const formations: About[] = [
 const AboutComponent = () => {
   return (
     <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
-      <div
-        className={
-          "mb-b p-5 !text-start !items-start text-gray-100 font-sans text-lg"
-        }
-      >
-        <h3 className="font-sans !text-start pt-7 !text-4xl !font-bold text-white ">
+      {/* Titre aligné à gauche */}
+      <div className="mb-8 p-5 text-start items-start text-gray-100 font-sans text-lg w-full">
+        <h3 className="font-sans text-start pt-7 text-4xl font-bold text-white">
           Pourquoi choisir NewBrain
         </h3>
-        <br />
-        <div className="text-start w-fit !p-4 rounded-xl bg-white text-black leading-6 pb-5 pt-7 text-base !mt-2">
-          Nous vous accompagnons dans la maîtrise de l'IA et boostons la
-          productivité de votre entreprise.
-        </div>
       </div>
+
+      {/* Section Formations */}
       <div className="max-w-5xl text-white grid w-full grid-cols-3 !gap-9 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
         {formations.map((field) => {
           return (
             <div
               key={field.title}
-              className={`relative bg-white  text-black rounded-lg !p-9 h-auto w-full text-start !shadow-lg ${field.className} ${styles.card} max-md:!min-w-[350px]`}
+              className={`relative bg-white text-black rounded-lg !p-9 h-auto w-full text-start !shadow-lg ${field.className} ${styles.card} max-md:!min-w-[350px]`}
             >
               {field.imageUrl && (
                 <img
@@ -67,12 +61,12 @@ const AboutComponent = () => {
                   className="!w-90 !h-50 object-cover !mb-9 !rounded-t-lg"
                 />
               )}
-              <h3 className="text-center !text-xl !font-bold text-blak !mb-5">
+              <h3 className="text-center !text-xl !font-bold text-black !mb-5">
                 {field.title}
               </h3>
               <ul className="list-none flex flex-col gap-3">
                 {field.points.map((puce, i) => (
-                  <li key={i} className="flex items-center  gap-3 text-black">
+                  <li key={i} className="flex items-center gap-3 text-black">
                     {puce}
                   </li>
                 ))}
