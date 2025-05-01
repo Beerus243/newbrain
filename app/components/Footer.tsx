@@ -13,18 +13,18 @@ import {
 const contactInfo = [
   {
     icon: <FaMapMarkerAlt className="!text-2xl text-white" />,
-    title: "Find us",
-    description: "1010 Avenue, SW 54321, Chandigarh",
+    title: "Adresse",
+    description: "80 Av.du Loup Pendu,69140 Rillieux-la-Pape",
   },
   {
     icon: <FaPhone className="!text-2xl text-white" />,
-    title: "Call us",
+    title: "Phone",
     description: "9876543210",
   },
   {
     icon: <FaEnvelopeOpen className="!text-2xl text-white" />,
-    title: "Mail us",
-    description: "mail@info.com",
+    title: "Email",
+    description: "newbrain@gmail.com",
   },
 ];
 

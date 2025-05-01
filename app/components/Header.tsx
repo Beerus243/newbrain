@@ -71,8 +71,8 @@ const Navigation: React.FC = () => {
         )}
 
         <div
-          className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col z-20 transition-all max-md:w-full left-0 max-md:bg-[#000000e5] max-md:!p-5 ${
-            menuOpen ? "max-md:top-28" : "max-md:top-[-300px]"
+          className={`flex !gap-5 justify-end w-full !px-5 max-md:fixed max-md:flex-col z-20 transition-all max-md:w-full left-0 max-md:bg-gray-500 max-md:!p-5 ${
+            menuOpen ? " max-md:top-18" : "max-md:top-[-300px]"
           }`}
         >
           <nav className="flex !px-5 !py-4 !gap-5 max-md:flex-col max-md:!p-0">

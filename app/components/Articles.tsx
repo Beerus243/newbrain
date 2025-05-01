@@ -30,14 +30,14 @@ const articles = [
   },
 ];
 
-export function Articles() {
+const Articles = () => {
   return (
-    <div className="!p-20  text-white">
+    <div className="!p-20 text-white">
       {/* Titre principal */}
       <h2 className="!text-4xl text-black !font-extrabold !text-starts !mb-6">
-        Nos News <span className="text-[#402049]"> IA</span>
+        Nos News <span className="text-[#402049]">IA</span>
       </h2>
-      <p className="!text-md !text-start bg-[#402049]  !p-4 w-fit !text-white rounded-lg !mb-7">
+      <p className="!text-md !text-start bg-[#402049] !p-4 w-fit !text-white rounded-lg !mb-7">
         Toutes nos articles qui traitent de l'Actualités autour de l'IA
       </p>
 
@@ -58,10 +58,10 @@ export function Articles() {
             <div className="!p-6">
               {/* Catégorie et date */}
               <div className="flex justify-between items-center !mb-4">
-                <span className="text-sm !font-bold text-white uppercase bg-[#402049]  p-6">
+                <span className="text-sm !font-bold text-white uppercase bg-[#402049] p-6">
                   {article.category}
                 </span>
-                <span className="text-sm ">{article.date}</span>
+                <span className="text-sm">{article.date}</span>
               </div>
               {/* Titre */}
               <h3 className="!text-xl font-bold !mb-3">{article.title}</h3>
@@ -88,11 +88,11 @@ export function Articles() {
           Votre rendez-vous régulier avec l'IA utile et concrète
         </p>
         {/* Champ email */}
-        <div className="flex w-full max-w-md ">
+        <div className="flex w-full max-w-md">
           <input
             type="email"
             placeholder="Entrez votre email"
-            className="flex-1 p-3  text-black rounded-l-lg focus:outline-none"
+            className="flex-1 p-3 text-black rounded-l-lg focus:outline-none"
           />
           <button className="bg-white text-[#402049] !font-bold !px-6 !rounded-r-lg hover:bg-gray-200 transition-all">
             S'inscrire
@@ -101,6 +101,6 @@ export function Articles() {
       </div>
     </div>
   );
-}
+};
 
 export default Articles;
