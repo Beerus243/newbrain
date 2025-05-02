@@ -38,14 +38,27 @@ const socialLinks = [
 const Footer = () => {
   useEffect(() => {
     const container = document.getElementById("shooting-stars-container");
+    const meteorCount = 30; // ajustez selon l'effet désiré
+
     if (container) {
-      for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < meteorCount; i++) {
         const star = document.createElement("div");
-        star.className = "shooting-star";
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 5}s`;
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        star.classList.add("shooting-star");
+
+        // paramètres aléatoires
+        const startX = Math.random() * 100; // position horizontale de départ (en %)
+        const delay = Math.random() * 10; // délai avant apparition (en secondes)
+        const duration = 0.5 + Math.random() * 1.5; // durée du trajet (entre 0.5s et 2s)
+        const length = 20 + Math.random() * 60; // longueur du trait (entre 20px et 80px)
+        const opacity = 0.2 + Math.random() * 0.8; // opacité initiale
+
+        // on assigne ces valeurs aux variables CSS
+        star.style.setProperty("--start-x", `${startX}vw`);
+        star.style.setProperty("--delay", `${delay}s`);
+        star.style.setProperty("--duration", `${duration}s`);
+        star.style.setProperty("--length", `${length}px`);
+        star.style.setProperty("--opacity", opacity.toString());
+
         container.appendChild(star);
       }
     }
@@ -56,10 +69,8 @@ const Footer = () => {
       {/* Animation des étoiles filantes */}
       <div
         id="shooting-stars-container"
-        className="absolute top-0 left-0 w-full h-full overflow-hidden"
-      >
-        {/* Les étoiles filantes seront ajoutées ici */}
-      </div>
+        className="absolute w-full h-full overflow-hidden"
+      ></div>
 
       {/* Section Contact */}
       <div className="relative max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8 !border-b !border-gray-700 !pb-6 z-10">

@@ -25,26 +25,45 @@ type Formation = {
 
 export default function Body() {
   const router = useRouter();
+
   useEffect(() => {
     const container = document.getElementById("shooting-stars-container");
+    const meteorCount = 30; // ajustez selon l'effet désiré
+
     if (container) {
-      for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < meteorCount; i++) {
         const star = document.createElement("div");
-        star.className = "shooting-star";
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 5}s`;
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        star.classList.add("shooting-star");
+
+        // paramètres aléatoires
+        const startX = Math.random() * 100; // position horizontale de départ (en %)
+        const delay = Math.random() * 10; // délai avant apparition (en secondes)
+        const duration = 0.5 + Math.random() * 1.5; // durée du trajet (entre 0.5s et 2s)
+        const length = 20 + Math.random() * 60; // longueur du trait (entre 20px et 80px)
+        const opacity = 0.2 + Math.random() * 0.8; // opacité initiale
+
+        // on assigne ces valeurs aux variables CSS
+        star.style.setProperty("--start-x", `${startX}vw`);
+        star.style.setProperty("--delay", `${delay}s`);
+        star.style.setProperty("--duration", `${duration}s`);
+        star.style.setProperty("--length", `${length}px`);
+        star.style.setProperty("--opacity", opacity.toString());
+
         container.appendChild(star);
       }
     }
   }, []);
+
   return (
     <>
       <div
-        className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
+        className="relative h-160 max-md:!h-135 rounded-b-3xl bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
         style={{ fontFamily: "TT Norms, sans-serif" }}
       >
+        <div
+          id="shooting-stars-container"
+          className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+        ></div>
         <div className="max-md:!h-auto flex items-center justify-center !pt-30">
           <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}
