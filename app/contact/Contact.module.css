@@ -1,5 +1,4 @@
 .container {
-
   max-width: 1000px;
   margin: 2rem auto;
   margin-top: 11%;
@@ -11,21 +10,21 @@
 
 .title {
   font-size: 3rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   margin-bottom: 1.5rem;
   color: #333;
 }
 
 .switcher {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
 }
 
 .switchButton {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #ddd;
   border: none;
   padding: 0.5rem 1rem;
@@ -42,7 +41,7 @@
 }
 
 .active {
-  background-color: #ff6600;
+  background-color: #402049;
   color: #fff;
 }
 
@@ -55,7 +54,7 @@
 }
 
 .form {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   flex: 1;
   min-width: 300px;
 }
@@ -81,7 +80,7 @@
 }
 
 .submitButton {
-  background-color: #ff6600;
+  background-color: #402049;
   color: white;
   border: none;
   padding: 0.75rem;
@@ -93,7 +92,7 @@
 }
 
 .submitButton:hover {
-  background-color: #e65c00;
+  background-color: #402049;
 }
 
 .imageContainer {
@@ -110,7 +109,6 @@
   height: auto;
 }
 
-
 /* Responsive design */
 @media screen and (max-width: 768px) {
   .contactWrapper {
@@ -118,12 +116,12 @@
     align-items: center;
     gap: 1rem;
   }
-  
+
   .form {
     width: 100%;
     min-width: 100%;
   }
-  
+
   .imageContainer {
     display: none;
   }

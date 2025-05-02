@@ -41,13 +41,14 @@ export default function Body() {
   }, []);
   return (
     <>
-      <div className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50">
+      <div
+        className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
+        style={{ fontFamily: "TT Norms, sans-serif" }}
+      >
         <div
           id="shooting-stars-container"
-          className="absolute w-full h-160 overflow-hidden"
-        >
-          {/* Les étoiles filantes seront ajoutées ici */}
-        </div>
+          className="absolute top-0 left-0 w-full h-full overflow-hidden"
+        ></div>
         <div className="max-md:!h-auto flex items-center justify-center !pt-30">
           <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}

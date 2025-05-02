@@ -52,7 +52,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="relative bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white !py-10">
+    <footer className="relative rounded-t-3xl bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white !py-10">
       {/* Animation des étoiles filantes */}
       <div
         id="shooting-stars-container"
