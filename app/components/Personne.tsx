@@ -23,7 +23,7 @@ const Employees = [
 
 export function EmployeeCarousel() {
   return (
-    <div className="!p-20 text-white">
+    <div id="about" className="!p-20 text-white">
       {/* Titre */}
       <h2 className="!text-3xl !font-extrabold !text-start !mb-8">
         Qui sommes-nous
