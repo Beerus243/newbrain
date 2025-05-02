@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Audit from "./audit";
 import Formation from "./formation-info";
@@ -25,12 +25,29 @@ type Formation = {
 
 export default function Body() {
   const router = useRouter();
+  useEffect(() => {
+    const container = document.getElementById("shooting-stars-container");
+    if (container) {
+      for (let i = 0; i < 30; i++) {
+        const star = document.createElement("div");
+        star.className = "shooting-star";
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        container.appendChild(star);
+      }
+    }
+  }, []);
   return (
     <>
-      <div
-        className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50"
-        style={{ fontFamily: "TT Norms, sans-serif" }}
-      >
+      <div className="relative h-160 max-md:!h-135 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !pb-50">
+        <div
+          id="shooting-stars-container"
+          className="absolute w-full h-160 overflow-hidden"
+        >
+          {/* Les étoiles filantes seront ajoutées ici */}
+        </div>
         <div className="max-md:!h-auto flex items-center justify-center !pt-30">
           <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-2 !gap-2">
             {/* Texte */}

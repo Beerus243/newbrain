@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -35,29 +36,33 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  useEffect(() => {
+    const container = document.getElementById("shooting-stars-container");
+    if (container) {
+      for (let i = 0; i < 30; i++) {
+        const star = document.createElement("div");
+        star.className = "shooting-star";
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        container.appendChild(star);
+      }
+    }
+  }, []);
+
   return (
-    <footer className="bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white !py-10">
+    <footer className="relative bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] text-white !py-10">
       {/* Animation des étoiles filantes */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          {/* Génération d'étoiles */}
-          {[...Array(30)].map((_, index) => (
-            <div
-              key={index}
-              className="shooting-star"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${Math.random() * 3 + 2}s`,
-              }}
-            ></div>
-          ))}
-        </div>
+      <div
+        id="shooting-stars-container"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden"
+      >
+        {/* Les étoiles filantes seront ajoutées ici */}
       </div>
 
       {/* Section Contact */}
-      <div className="max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8 !border-b !border-gray-700 !pb-6">
+      <div className="relative max-w-7xl !mx-auto !px-6 grid grid-cols-1 md:grid-cols-3 !gap-8 !border-b !border-gray-700 !pb-6 z-10">
         {contactInfo.map((info, index) => (
           <div key={index} className="flex !items-start !gap-4">
             {info.icon}
@@ -70,7 +75,7 @@ const Footer = () => {
       </div>
 
       {/* Section Contenu */}
-      <div className="max-w-7xl !mx-auto !px-6 !mt-10 grid grid-cols-1 md:grid-cols-4 !gap-8">
+      <div className="relative max-w-7xl !mx-auto !px-6 !mt-10 grid grid-cols-1 md:grid-cols-4 !gap-8">
         {/* Logo et description */}
         <div>
           <Image

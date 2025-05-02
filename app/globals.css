@@ -26,6 +26,16 @@ body {
 }
 
 /* Animation des étoiles filantes */
+#shooting-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Assurez-vous que les étoiles sont derrière le contenu */
+}
+
 .shooting-star {
   position: absolute;
   width: 2px;

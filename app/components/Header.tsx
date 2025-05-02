@@ -45,7 +45,7 @@ const Navigation: React.FC = () => {
     <header className="!fixed flex justify-center w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full !p-3 flex m-5 relative !px-5 h-fit items-center rounded-4xl max-w-7xl bg-gray-500 !border-black !border-1 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
+          "w-full !p-3 flex m-5 relative !px-5 h-fit items-center rounded-4xl  bg-gray-500 !border-black !border-1 !z-[1000] max-md:justify-between opacity-93 transition-all duration-300"
         }
       >
         <Link href="/" legacyBehavior onClick={() => setMenuOpen(false)}>
