@@ -68,14 +68,14 @@ const Apropos = () => {
             filter: "blur(2px) brightness(80%)",
           }}
         ></div>
-        <div className="!flex !flex-col !items-center !justify-center !text-center !text-white !py-20">
-          <h1 className="!text-4xl !font-bold mb-5">Notre Mission</h1>
-          <p className="text-lg max-w-3xl">
+        <div className="!flex !flex-col !items-center !justify-center !text-center !text-white !py-20 !max-w-5xl !mx-auto">
+          {/* <h1 className="!text-4xl !font-bold mb-5">Notre Mission</h1>
+          <p className="text-lg !max-w-3xl">
             Chez NewBrain, nous rendons l'intelligence Artificielle accessible
             et concrète pour tous. Notre mission est d'accompagner les
             entreprises dans leur transformation digitale en formant leurs
             équipes aux usages pratiques de l'IA.
-          </p>
+          </p> */}
         </div>
       </div>
 

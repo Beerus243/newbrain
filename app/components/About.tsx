@@ -38,16 +38,16 @@ export const formations: About[] = [
 
 const AboutComponent = () => {
   return (
-    <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000]">
+    <div className="flex flex-col !p-10 items-center gap-5 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] ">
       {/* Titre aligné à gauche */}
-      <div className="mb-8 p-5 text-start items-start text-gray-100 font-sans text-lg w-full">
-        <h3 className="font-sans text-start pt-7 text-4xl font-bold text-white">
+      <div className="mb-8 p-5 text-start items-start text-gray-100 font-sans text-lg w-full max-w-5xl mx-auto">
+        <h3 className="font-sans text-start pt-7 !text-4xl !font-bold text-white">
           Pourquoi choisir NewBrain
         </h3>
       </div>
 
       {/* Section Formations */}
-      <div className="max-w-5xl text-white grid w-full grid-cols-3 !gap-9 !p-5 overflow-x-auto max-md:flex max-md:flex-nowrap max-md:gap-5">
+      <div className="max-w-5xl text-white grid w-full grid-cols-3 !gap-9 overflow-x-auto overflow-y-hidden max-md:flex max-md:flex-nowrap max-md:gap-5">
         {formations.map((field) => {
           return (
             <div

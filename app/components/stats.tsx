@@ -77,11 +77,15 @@ export function StatsSection() {
 
   return (
     <>
-      <div className="relative bottom-0 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !p-10">
-        <h3 className={"mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold"}>
+      <div className="relative bottom-0 bg-gradient-to-r from-[#151f2b] via-[#402049] to-[#000000] !p-10 max-md:px-5 flex flex-col items-center gap-5">
+        <h3
+          className={
+            "mb-5 p-5 text-left text-gray-100 !text-3xl !font-bold max-w-5xl mx-auto"
+          }
+        >
           Notre Mission
         </h3>
-        <div className="text-left w-fit  bg-gray-50 rounded-xl text-black leading-6 pb-5 !p-4 text-base !mt-2">
+        <div className="text-left w-fit  bg-gray-50 rounded-xl text-black leading-6 pb-5 !p-4 text-base !mt-2 max-w-5xl mx-auto">
           Chez Newbrain , nous rendons l'intelligence Artificielle accessible et
           concrète pour tous. Notre mission est d'accompagner les entreprises
           dans leur transformation digitale en formant leurs équipes aux usages
@@ -89,7 +93,7 @@ export function StatsSection() {
         </div>
         <div
           className={
-            "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto !px-5 max-lg:flex-col"
+            "!max-w-5xl !flex w-full !gap-5 !py-10 !mx-auto max-lg:flex-col"
           }
         >
           {stats.map((stat, index) => (

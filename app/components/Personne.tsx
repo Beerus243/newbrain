@@ -23,18 +23,18 @@ const Employees = [
 
 export function EmployeeCarousel() {
   return (
-    <div id="about" className="!p-20 text-white">
+    <div id="about" className="!p-20 text-white flex flex-col items-center">
       {/* Titre */}
-      <h2 className="!text-3xl !font-extrabold !text-start !mb-8">
+      <h2 className="!text-3xl !font-extrabold !text-start !mb-8 max-w-5xl mx-auto ">
         Qui sommes-nous
       </h2>
 
       {/* Cartes des employés */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 max-md:w-full">
         {Employees.map((employee) => (
           <div
             key={employee.id}
-            className="bg-[#402049] hover:bg-white shadow-lg overflow-hidden max-w-xs w-full md:w-1/3 transition-transform transform text-white hover:text-black !rounded-3xl hover:scale-101"
+            className="bg-[#402049] hover:bg-white shadow-lg overflow-hidden max-w-xs !w-full max-md:!w-full transition-transform transform text-white hover:text-black !rounded-3xl hover:scale-101"
           >
             {/* Image */}
             <img

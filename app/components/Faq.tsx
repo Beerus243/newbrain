@@ -56,7 +56,10 @@ const FAQ: React.FC = () => {
   }, []);
 
   return (
-    <div ref={faqRef} className="!p-5  text-black">
+    <div
+      ref={faqRef}
+      className="!p-5 text-black flex flex-col items-center !max-w-5xl !mx-auto"
+    >
       {/* Titre */}
       <div className="!text-3xl font-bold !text-black !text-start !p-5">
         FAQ
