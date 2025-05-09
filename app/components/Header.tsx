@@ -20,10 +20,10 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <header className="!fixed flex justify-center max-md:w-screen w-full top-5 !px-5 !z-11">
+    <header className="!fixed flex justify-center max-md:w-screen !w-full top-5 !px-5 !z-11">
       <div
         className={
-          "w-full !p-3 flex m-5 relative !px-5 h-fit items-center rounded-4xl bg-gray-500 !border-black !border-1 !z-[1000] max-md:justify-between transition-all duration-300"
+          "w-full !p-3 flex m-5 !px-5 h-fit items-center rounded-4xl bg-gray-500 border-black border-1 !z-[1000] max-md:justify-between transition-all duration-300"
         }
       >
         {/* Logo */}
@@ -86,7 +86,7 @@ const Navigation: React.FC = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`w-full text-start !py-4 !border-b !border-gray-600 text-lg font-bold transition-all ${
+                  className={`w-full text-start !py-4 max-md:!border-b max-md:!border-gray-600 text-lg font-bold transition-all ${
                     isActive ? "!text-black animate-pulse" : "!hover:text-black"
                   }`}
                 >
